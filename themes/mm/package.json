@@ -1,0 +1,11 @@
+{
+  "name": "mm",
+  "version": "1.0.0",
+  "description": "Hugo theme for maxmilton.com",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Max Milton <max@wearegenki.com>",
+  "license": "ISC"
+}
