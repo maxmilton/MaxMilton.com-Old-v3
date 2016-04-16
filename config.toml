@@ -12,4 +12,5 @@ disableRSS = true
   subtitle = "Self-experimentation, Exploration, Startups, & CX"
 	description = "TODO: WRITE SITE DESCRIPTION."
 	author = "Max Milton"
-  theme-colour = "#308ad8"
+  # TODO: Change themecolour depending on what the site main brand colour is
+  themecolour = "#308ad8"
