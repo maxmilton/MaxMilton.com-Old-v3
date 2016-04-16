@@ -6,13 +6,13 @@ TODO: Write overview
 
 # How To Build
 
-## For Development
+### For Development
 
 1. `# cd themes/mm`
 2. `# npm install`
 3. `# gulp`
 
-## For Production
+### For Production
 
 Run build script
 
