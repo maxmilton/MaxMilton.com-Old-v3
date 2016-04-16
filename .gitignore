@@ -1,0 +1,12 @@
+# Node
+node_modules
+npm-debug.log
+
+# Hugo
+content/drafts/*
+public
+
+# Compiled assets
+app.js
+app.css
+*.map
