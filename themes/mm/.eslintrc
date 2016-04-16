@@ -1,22 +1,19 @@
 {
   "extends": [
     "eslint:recommended",
-    # "airbnb/base",
-    # "angular",
   ],
 
   "rules": {
-    "no-console": 0, # Console is fine with node
+    "no-console": 0, # Console is fine in Gulp, just don't use in site JS
     "no-multi-spaces": [1, {
       "exceptions": { "VariableDeclarator": true }
     }],
-    # "no-fallthrough": 0, # Meh, seams fine to me
   },
 
   "env": {
     # "es6"     : 1,
     "browser" : 1,
     "node"    : 1, # We're working with Gulp
-    # "jquery"  : 1,
+    "jquery"  : 1,
   },
 }

@@ -10,13 +10,20 @@ MM    MM MM    MM
   MaxMilton.com
 
 -->" | safeHTML }}
-<html lang="en-AU">
+<html lang="en-UK">
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-  <title></title>
-  <meta name="description" content="">
+  {{ if eq .URL "/" }}
+  <!-- Unique meta on homepage -->
+  <title>{{ .Site.Title }} - {{ .Site.Params.subtitle }}</title>
+  <meta name="description" content="{{ .Site.Params.description }}">
+  {{ else }}
+  <!-- Unique meta on other pages -->
+  <title>{{ .Title }} | {{ .Site.Title }}</title>
+  <meta name="description" content="{{ .Description }}">
+  {{ end }}
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -32,12 +39,13 @@ MM    MM MM    MM
   ga('send', 'pageview');
   </script>
   <script async src='https://www.google-analytics.com/analytics.js'></script>
-  <script async src='js/autotrack.js'></script>
+  <script async src='/js/autotrack.js'></script>
 </head>
 <body>
 
-  <nav>
-    <a class="" href="#">Home</a>
-  </nav>
-
-  <p>Hello world! This is HTML5 Boilerplate.</p>
+<nav class="nav nav-inline">
+  {{ $currentNode := . }}
+  {{ range .Site.Menus.main }}
+  ><a href="{{ .URL }}" class="nav-link{{ if $currentNode.IsMenuCurrent "main" . }} active{{ end }}"{{ if in .URL "http" }} target="_blank"{{ end }}>{{ .Name }}</a>
+  {{ end }}
+</nav>

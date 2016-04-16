@@ -4,32 +4,11 @@ languageCode = "en-uk"
 title = "Max Milton"
 theme = "mm"
 
-# TODO: Create nginx thing to remap .html to no extention
 uglyUrls = true
 #canonifyurls = true
 disableRSS = true
 
 [params]
-    slogan = "Self-experimentation, Exploration, Startups, & CX"
-    sloganjp = "REWRITE SLOGAN IN JAPANESE, WILL LOOK COOL IN DESIGN"
-	description = "PUT SITE META DESCRIPTION HERE."
+  subtitle = "Self-experimentation, Exploration, Startups, & CX"
+	description = "TODO: WRITE SITE DESCRIPTION."
 	author = "Max Milton"
-
-#[[menu.main]]
-#    parent = "More"
-#    name = "---"
-#    weight = 60
-#    identifier = "divider 1"
-#
-#[[menu.main]]
-#    parent = "More"
-#    name = "---"
-#    weight = 80
-#    identifier = "divider 2"
-#
-#[[menu.main]]
-#    parent = "More"
-#    name = "Client Login"
-#    weight = 90
-#    url = "https://clients.wearegenki.com"
-#    target = "_blank"
