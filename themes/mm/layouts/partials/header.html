@@ -25,10 +25,12 @@ MM    MM MM    MM
   <meta name="description" content="{{ .Description }}">
   {{ end }}
 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="apple-touch-icon" href="apple-touch-icon.png">
-
   <link rel="stylesheet" href="/css/app.css">
+
+  <link rel="canonical" href="{{ .Permalink }}">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="{{ .Site.Params.theme-colour }}">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
   <!-- Google Analytics -->
   <script>
