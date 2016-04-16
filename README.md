@@ -4,11 +4,13 @@ TODO: Write intro
 
 TODO: Write overview
 
-# How To Build
+## How To Build
 
 ### For Development
 
-1. `# cd themes/mm`
+1. Install [Node.js](https://nodejs.org/)
+2. Install [Hugo](https://github.com/spf13/hugo/releases)
+2. `# cd themes/mm`
 2. `# npm install`
 3. `# gulp`
 
@@ -20,9 +22,9 @@ Run build script
 
 # Licence
 
-Blog content is licenced under the Creative Commons Attribution No Derivatives 4.0 ([CC-BY-ND-4.0](http://creativecommons.org/licenses/by-nd/4.0/legalcode)).
+Blog content is licenced under Creative Commons Attribution No Derivatives 4.0 ([CC-BY-ND-4.0](http://creativecommons.org/licenses/by-nd/4.0/legalcode)).
 
-Site hugo theme is licenced ISC, see LICENCE.md in theme directory.
+Site theme is licenced ISC, see LICENCE.md in the themes/mm directory.
 
 # Author
 
