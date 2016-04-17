@@ -1,13 +1,13 @@
 #!/bin/bash
 
-################################################
+#----------------------------------------------#
 # Build a deployable package of a hugo website #
-################################################
+#----------------------------------------------#
 #
 # For developer ease of use and happiness; it's easier to run
 # a script than to remember all these commands in order!
 #
-# Licence: ISC
+# Licence: ISC (see ./themes/mm/LICENCE.md)
 # Author: Max Milton <max@wearegenki.com>
 #
 
