@@ -1,6 +1,21 @@
 {{ partial "header.html" . }}
 
-<!-- TODO: Decide if I'm using bootstrap OR remove markup -->
+<h1>{{ .Site.Title }}</h1>
+<h2>{{ .Site.Params.subtitle }}</h2>
+
+<div class="container subscribe">
+  <div class="col-sm-12 col-md-10 col-md-offset-1">
+    <form class="form-inline">
+      <p>TODO: Write subscribe text; why subscribe?</p>
+      <div class="form-group">
+        <label for="exampleInputEmail2">Email</label>
+        <input type="email" class="form-control" id="email" placeholder="jane.doe@example.com">
+      </div>
+      <button type="submit" class="btn btn-primary">Subscribe</button>
+    </form>
+  </div>
+</div>
+
 <div class="container">
   <div class="col-sm-12 col-md-10 col-md-offset-1">
     <!-- TODO: Create homepage content -->

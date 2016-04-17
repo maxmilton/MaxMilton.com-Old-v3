@@ -1,11 +1,91 @@
 // Roboto Regular
+// @font-face {
+//     font-family: 'Roboto';
+//     src: url('../fonts/roboto-regular.eot');
+//     src: url('../fonts/roboto-regular.eot?#iefix') format('embedded-opentype'),
+//          url('../fonts/roboto-regular.woff2') format('woff2'),
+//          url('../fonts/roboto-regular.woff') format('woff'),
+//          url('../fonts/roboto-regular.ttf') format('truetype');
+//     font-weight: normal;
+//     font-style: normal;
+// }
+
+// EXPERIMENTAL: Overpass fonts
+// TODO: Decide if keeping this font
+// TODO: Remove unnecessary font weights/styles
 @font-face {
-    font-family: 'Roboto Regular';
-    src: url('../fonts/roboto-regular.eot');
-    src: url('../fonts/roboto-regular.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/roboto-regular.woff2') format('woff2'),
-         url('../fonts/roboto-regular.woff') format('woff'),
-         url('../fonts/roboto-regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'Overpass';
+  src: url('../fonts/overpass-extralight.eot');
+  src: url('../fonts/overpass-extralight.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/overpass-extralight.woff2') format('woff2'),
+       url('../fonts/overpass-extralight.woff') format('woff'),
+       url('../fonts/overpass-extralight.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Overpass';
+  src: url('../fonts/overpass-extralight_italic.eot');
+  src: url('../fonts/overpass-extralight_italic.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/overpass-extralight_italic.woff2') format('woff2'),
+       url('../fonts/overpass-extralight_italic.woff') format('woff'),
+       url('../fonts/overpass-extralight_italic.ttf') format('truetype');
+  font-weight: 100;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Overpass';
+  src: url('../fonts/overpass-light.eot');
+  src: url('../fonts/overpass-light.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/overpass-light.woff2') format('woff2'),
+       url('../fonts/overpass-light.woff') format('woff'),
+       url('../fonts/overpass-light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Overpass';
+  src: url('../fonts/overpass-light-italic.eot');
+  src: url('../fonts/overpass-light-italic.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/overpass-light-italic.woff2') format('woff2'),
+       url('../fonts/overpass-light-italic.woff') format('woff'),
+       url('../fonts/overpass-light-italic.ttf') format('truetype');
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Overpass';
+  src: url('../fonts/overpass-regular.eot');
+  src: url('../fonts/overpass-regular.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/overpass-regular.woff2') format('woff2'),
+       url('../fonts/overpass-regular.woff') format('woff'),
+       url('../fonts/overpass-regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Overpass';
+  src: url('../fonts/overpass-regular-italic.eot');
+  src: url('../fonts/overpass-regular-italic.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/overpass-regular-italic.woff2') format('woff2'),
+       url('../fonts/overpass-regular-italic.woff') format('woff'),
+       url('../fonts/overpass-regular-italic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Overpass';
+  src: url('../fonts/overpass-bold.eot');
+  src: url('../fonts/overpass-bold.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/overpass-bold.woff2') format('woff2'),
+       url('../fonts/overpass-bold.woff') format('woff'),
+       url('../fonts/overpass-bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
 }

@@ -57,7 +57,8 @@ $brand-danger:              #d9534f !default;
 
 // $enable-flex:               false !default;
 $enable-flex:               true !default;
-$enable-rounded:            true !default;
+// $enable-rounded:            true !default;
+$enable-rounded:            false !default;
 $enable-shadows:            false !default;
 $enable-gradients:          false !default;
 // $enable-transitions:        false !default;
@@ -157,7 +158,7 @@ $grid-gutter-width: 30px !default;
 // Font, line-height, and color for body text, headings, and more.
 
 // $font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif !default;
-$font-family-sans-serif: "Roboto Regular", sans-serif !default;
+$font-family-sans-serif: "Overpass", sans-serif !default;
 // $font-family-serif:      Georgia, "Times New Roman", Times, serif !default;
 $font-family-serif:      serif !default;
 // $font-family-monospace:  Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
