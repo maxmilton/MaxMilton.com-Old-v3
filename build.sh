@@ -1,14 +1,18 @@
 #!/bin/bash
 
+################################################
+# Build a deployable package of a hugo website #
+################################################
 #
-# Build a deployable package of the website
+# For developer ease of use and happiness; it's easier to run
+# a script than to remember all these commands in order!
 #
-# For developer ease of use and happiness; it's way easier to run a script than
-# to remember all these commands in order!
+# Licence: ISC
+# Author: Max Milton <max@wearegenki.com>
 #
 
 # Define variables
-THEME_DIR="./themes/rfb-event-01"
+THEME_DIR="./themes/mm"
 
 # Check if Hugo is installed
 hash hugo 2>/dev/null || {
