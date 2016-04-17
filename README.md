@@ -8,6 +8,8 @@ TODO: Write overview
 
 ### For Development
 
+Install prerequisites then run gulp to start a local dev server.
+
 1. Install [Node.js](https://nodejs.org/)
 2. Install [Hugo](https://github.com/spf13/hugo/releases)
 2. `# cd themes/mm`

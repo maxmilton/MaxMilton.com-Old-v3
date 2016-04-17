@@ -5,14 +5,11 @@
 @import "variables";
 @import "animations";
 @import "fonts";
+@import "bootstrap-v4/bootstrap-flex";
 
 //------------------------------
 // Global Theme
 //------------------------------
-
-body {
-  font-family: 'Roboto Regular', sans-serif;
-}
 
 nav {
   .brand {
