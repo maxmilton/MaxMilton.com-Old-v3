@@ -1,1 +1,29 @@
-// TODO
+//------------------------------
+// Imports
+//------------------------------
+
+@import "variables";
+@import "animations";
+@import "fonts";
+
+//------------------------------
+// Global Theme
+//------------------------------
+
+body {
+  font-family: 'Roboto Regular', sans-serif;;
+}
+
+.nav .brand {
+  font-size: 30px;
+}
+
+footer {
+  color: #ccc;
+  text-align: center;
+
+  & > a {
+    color: inherit;
+    text-decoration: none;
+  }
+}

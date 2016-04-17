@@ -1,5 +1,5 @@
 <!doctype html>
-{{ "<!--!\n\nMM    MM MM    MM\nMMM  MMM MMM  MMM\nMM MM MM MM MM MM\nMM    MM MM    MM\nMM    MM MM    MM\n\n  MaxMilton.com\n\n-->" | safeHTML }}
+{{ "<!--!\n\nMM    MM MM    MM\nMMM  MMM MMM  MMM\nMM MM MM MM MM MM\nMM    MM MM    MM\nMM    MM MM    MM\n\n © MaxMilton.com\n\n-->" | safeHTML }}
 <html lang="en-UK">
 <head>
   <meta charset="utf-8">
@@ -36,8 +36,9 @@
 <body>
 
 <nav class="nav nav-inline">
+   <a class="brand" href="#">{{ .Site.Title }}</a>
   {{ $currentNode := . }}
   {{ range .Site.Menus.main }}
-  ><a href="{{ .URL }}" class="nav-link{{ if $currentNode.IsMenuCurrent "main" . }} active{{ end }}"{{ if in .URL "http" }} target="_blank"{{ end }}>{{ .Name }}</a>
+  <a href="{{ .URL }}" class="nav-link{{ if $currentNode.IsMenuCurrent "main" . }} active{{ end }}"{{ if in .URL "http" }} target="_blank"{{ end }}>{{ .Name }}</a>
   {{ end }}
 </nav>
