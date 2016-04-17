@@ -23,8 +23,9 @@ gulp.task('serve', ['sass', 'js'], function() {
     server: './../../public',
   });
 
-  gulp.watch('./scss/**/*.scss', ['sass']);
-  gulp.watch('./static/js/**/*.js', ['js']);
+  // FIXME: Run hugo AFTER sass/js to avoid having to save twice to see a change
+  gulp.watch('./scss/**/*.scss', ['sass', 'hugo']);
+  gulp.watch('./static/js/**/*.js', ['js', 'hugo']);
   gulp.watch(['./layouts/**/*.html', './../../content/**/*.md'], ['hugo']);
   gulp.watch(['./../../public/**/*.html']).on('change', browserSync.reload);
 });

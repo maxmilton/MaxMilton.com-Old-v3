@@ -11,11 +11,13 @@
 //------------------------------
 
 body {
-  font-family: 'Roboto Regular', sans-serif;;
+  font-family: 'Roboto Regular', sans-serif;
 }
 
-.nav .brand {
-  font-size: 30px;
+nav {
+  .brand {
+    font-size: 30px;
+  }
 }
 
 footer {
