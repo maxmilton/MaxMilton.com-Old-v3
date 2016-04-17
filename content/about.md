@@ -11,3 +11,7 @@ description = "TODO: Write me"
 # About Max Milton
 
 TODO: Write me
+
+<!-- TODO: Write intro -->
+
+<!-- TODO: Create contact form -->

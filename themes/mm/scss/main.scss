@@ -11,6 +11,14 @@
 // Global Theme
 //------------------------------
 
+html {
+  font-weight: 300; // TEMP
+}
+
+body {
+  background-color: $gray-lighter;
+}
+
 nav {
   .brand {
     font-size: 30px;
@@ -26,3 +34,25 @@ footer {
     text-decoration: none;
   }
 }
+
+//------------------------------
+// Homepage
+//------------------------------
+
+.home-intro {
+  text-align: center;
+}
+
+.subscribe {
+  background-color: $gray-light;
+  color: $white;
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+//------------------------------
+// About Page
+//------------------------------
+
+// TODO

@@ -1,10 +1,12 @@
 {{ partial "header.html" . }}
 
-<h1>{{ .Site.Title }}</h1>
-<h2>{{ .Site.Params.subtitle }}</h2>
+<div class="home-intro">
+  <h1>{{ .Site.Title }}</h1>
+  <h2>{{ .Site.Params.subtitle }}</h2>
+</div>
 
 <div class="container subscribe">
-  <div class="col-sm-12 col-md-10 col-md-offset-1">
+  <div class="col-sm-12">
     <form class="form-inline">
       <p>TODO: Write subscribe text; why subscribe?</p>
       <div class="form-group">
@@ -18,7 +20,7 @@
 
 <div class="container">
   <div class="col-sm-12 col-md-10 col-md-offset-1">
-    <!-- TODO: Create homepage content -->
+    <!-- TODO: Create homepage content: blog psot index OR navigation? -->
     <p>Test.</p>
   </div>
 </div>

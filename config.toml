@@ -9,7 +9,7 @@ uglyUrls = true
 disableRSS = true
 
 [params]
-  subtitle = "Self-experimentation, Exploration, Startups, & CX"
+  subtitle = "Self-experimentation, Exploration, & Startups"
 	description = "TODO: WRITE SITE DESCRIPTION."
 	author = "Max Milton"
   # TODO: Change themecolour depending on what the site main brand colour is
