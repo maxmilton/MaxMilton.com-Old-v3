@@ -1,0 +1,17 @@
+<div class="author">
+  <div><img src="/img/{{ .Params.author | urlize }}.jpg" alt="{{ .Params.author }}" /></div>
+  <div>{{ .Params.author }}</div>
+  <div><a href="mailto:{{ .Params.email }}">{{ .Params.email }}</a></div>
+</div>
+
+<div class="post-meta">
+  <div>{{ .Date.Format "Mon, Jan 2, 2006" }}</div>
+  <div>{{ .FuzzyWordCount }} Words</div>
+  <div>~{{ .ReadingTime }} minutes</div>
+</div>
+
+<ul id="tags">
+  {{ range .Params.tags }}
+    <li> <a href="{{ .Site.BaseURL }}/tags/{{ . | urlize }}">{{ . }}</a> </li>
+  {{ end }}
+</ul>

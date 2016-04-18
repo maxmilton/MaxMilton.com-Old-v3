@@ -1,7 +1,7 @@
 +++
 date = "2016-04-17T10:59:13+10:00"
 author = "Max Milton <max@wearegenki.com>"
-tags = ["Quick Tips, Linux"]
+tags = ["quick tips", "linux"]
 description = ""
 draft = true
 title = "vim write as sudo trick"

@@ -1,4 +1,4 @@
-TODO: Write intro
+Website of Max Milton powered by Hugo, Gulp, and Bootstrap v4 &mdash; [https://maxmilton.com/].
 
 # Overview
 

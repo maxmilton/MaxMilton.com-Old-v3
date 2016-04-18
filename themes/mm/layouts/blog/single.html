@@ -1,0 +1,20 @@
+{{ partial "header.html" . }}
+
+<div id="dope">
+
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-md-8">
+        <section id="page">
+        	{{ .Content }}
+        </section>
+      </div>
+      <div class="col-sm-12 col-md-4">
+        {{ .Render "sidebar" }}
+      </div>
+    </div>
+  </div>
+
+</div> <!-- /dope -->
+
+{{ partial "footer.html" . }}

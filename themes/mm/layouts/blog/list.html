@@ -1,0 +1,22 @@
+{{ partial "header.html" . }}
+
+<div id="dope">
+
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-md-10 col-md-offset-1">
+        <section id="catagory">
+          <h1>{{ .Title }}</h1>
+          <ul class="pages">
+            {{ range .Data.Pages }}
+            <li><span><a href="{{ .Permalink }}">{{ .Title }}</a><time class="pull-right">{{ .Date.Format "Mon, Jan 2, 2006" }}</h4></time></span></span></li>
+            {{ end }}
+          </ul>
+        </section>
+      </div>
+    </div>
+  </div>
+
+</div> <!-- /dope -->
+
+{{ partial "footer.html" . }}

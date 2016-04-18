@@ -1,4 +1,5 @@
-baseurl = "https://maxmilton.com/"
+# baseurl = "https://maxmilton.com/"
+baseurl = "http://localhost:3000/" # FIXME: CHANGE WHEN PUBLISHING
 languageCode = "en-uk"
 
 title = "Max Milton"
@@ -11,6 +12,12 @@ disableRSS = true
 [params]
   subtitle = "Self-experimentation, Exploration, & Startups"
 	description = "TODO: WRITE SITE DESCRIPTION."
-	author = "Max Milton"
+	author = "Max Milton <max@wearegenki.com>"
   # TODO: Change themecolour depending on what the site main brand colour is
   themecolour = "#308ad8"
+
+[[menu.main]]
+  name = "Blog"
+  weight = 90
+  url = "/blog"
+  # target = "_blank"

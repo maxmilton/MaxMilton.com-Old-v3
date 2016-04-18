@@ -1,5 +1,6 @@
 +++
-author = "Max Milton <max@wearegenki.com>"
+author = "Max Milton"
+email = "max@wearegenki.com"
 tags = ["Misc"]
 description = ""
 draft = true

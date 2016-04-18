@@ -1,9 +1,10 @@
 +++
 date = "2016-04-17T17:46:47+10:00"
-author = "Max Milton <max@wearegenki.com>"
-tags = ["Misc"]
+author = "Max Milton"
+email = "max@wearegenki.com"
+tags = ["misc"]
 description = ""
-draft = true
+# draft = true
 title = "hello world"
 +++
 
