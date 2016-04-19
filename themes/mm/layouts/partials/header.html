@@ -23,6 +23,7 @@
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
   <!-- Open Graph -->
+  <!-- TODO: Check these meta tags are still best practice -->
   <meta property="og:type" content="article"/>
   <meta property="og:description" content="{{ if eq .URL "/" }}{{ .Site.Params.description }}{{ else }}{{ .Description }}{{ end }}"/>
   <meta property="og:title" content="{{ .Title }} | {{ .Site.Title }}"/>

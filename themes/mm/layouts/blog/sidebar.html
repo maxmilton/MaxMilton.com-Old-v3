@@ -8,6 +8,10 @@
 
 <div class="meta">
   <time datetime="{{ .Date.Format "2006-01-02T19:00" }}">{{ .Date.Format "Mon, 2 Jan 2006" }}</time>
+  <!-- TODO: Check these meta tags are still best practice -->
+  <meta itemprop="wordCount" content="{{ .WordCount }}">
+  <meta itemprop="datePublished" content="{{ .Date.Format "2006-01-02" }}">
+  <meta itemprop="url" content="{{ .Permalink }}">
 
   <ul class="tags">
     {{ range .Params.tags }}
