@@ -1,17 +1,18 @@
-<div class="author">
+<!-- TODO: Get rid of the divs and use CSS to seperate things nicely -->
+
+<address class="author">
   <div><img src="/img/{{ .Params.author | urlize }}.jpg" alt="{{ .Params.author }}" /></div>
   <div>{{ .Params.author }}</div>
   <div><a href="mailto:{{ .Params.email }}">{{ .Params.email }}</a></div>
-</div>
+</address>
 
-<div class="post-meta">
-  <div>{{ .Date.Format "Mon, Jan 2, 2006" }}</div>
-  <div>{{ .FuzzyWordCount }} Words</div>
-  <div>~{{ .ReadingTime }} minutes</div>
-</div>
+<div class="meta">
+  <time datetime="{{ .Date.Format "2006-01-02T19:00" }}">{{ .Date.Format "Mon, 2 Jan 2006" }}</time>
 
-<ul id="tags">
-  {{ range .Params.tags }}
-    <li> <a href="{{ .Site.BaseURL }}/tags/{{ . | urlize }}">{{ . }}</a> </li>
-  {{ end }}
-</ul>
+  <ul class="tags">
+    {{ range .Params.tags }}
+      <!-- FIXME: Label style not appearing - Bootstrap v4 issue -->
+      <li class="label label-pill label-default"><a href="/tags/{{ . | urlize }}.html">{{ . }}</a></li>
+    {{ end }}
+  </ul>
+</div>

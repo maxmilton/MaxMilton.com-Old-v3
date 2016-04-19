@@ -3,16 +3,14 @@
 <div id="dope">
 
   <div class="container">
-    <div class="row">
-      <div class="col-sm-12 col-md-8">
-        <section id="page">
-        	{{ .Content }}
-        </section>
-      </div>
-      <div class="col-sm-12 col-md-4">
+    <article class="row">
+      <section class="post col-sm-12 col-md-8">
+      	{{ .Content }}
+      </section>
+      <aside class="col-sm-12 col-md-4">
         {{ .Render "sidebar" }}
-      </div>
-    </div>
+      </aside>
+    </article>
   </div>
 
 </div> <!-- /dope -->
