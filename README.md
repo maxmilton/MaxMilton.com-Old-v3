@@ -1,10 +1,10 @@
-Source for the website of Max Milton &mdash; powered by Hugo, Gulp, and Bootstrap v4 &mdash; <https://maxmilton.com/>.
+Source for the website of Max Milton &mdash; powered by Hugo, Gulp, and Bootstrap v4 &mdash; <https://maxmilton.com>.
 
 # Overview
 
-A simple blog which uses Node.js automation to make development and deployment easy. Uses Hugo, a Golang static site generator, which is super fast and makes creating websites fun again.
+A simple blog which uses Node.js automation to make development and deployment easy. Uses Hugo, a Golang static site generator, which is super fast and makes creating websites fun again. Theme uses Bootstrap v4 to make building faster.
 
-Feel free to use my Hugo theme as the base for your own site.
+Feel free to use my Hugo theme as the base for your own site. I hope you like it!
 
 ## How To Build
 
@@ -12,7 +12,7 @@ Feel free to use my Hugo theme as the base for your own site.
 
 Install prerequisites then run gulp to start a local dev server.
 
-1. Install [Node.js](https://nodejs.org/)
+1. Install [Node.js](https://nodejs.org)
 2. Install [Hugo](https://github.com/spf13/hugo/releases)
 2. `# cd themes/mm`
 2. `# npm install`
