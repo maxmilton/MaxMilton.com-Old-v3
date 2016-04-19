@@ -2,7 +2,7 @@ Source for the website of Max Milton &mdash; powered by Hugo, Gulp, and Bootstra
 
 # Overview
 
-A simple blog which uses Node.js + Gulp automation to make development and deployment easy. Site buildt with Hugo, a fast static website engine, which makes creating websites fun again. Theme uses Bootstrap v4 to make building faster.
+A simple blog which uses Node.js + Gulp automation to make development and deployment easy. Site built with Hugo, a fast static website engine, which makes creating websites fun again. Theme uses Bootstrap v4 to make building faster.
 
 Feel free to use my Hugo theme as the base for your own site. I hope you like it!
 
