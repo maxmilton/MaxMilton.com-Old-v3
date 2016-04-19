@@ -1,8 +1,10 @@
-Website of Max Milton &mdash; powered by Hugo, Gulp, and Bootstrap v4 &mdash; <https://maxmilton.com/>.
+Source for the website of Max Milton &mdash; powered by Hugo, Gulp, and Bootstrap v4 &mdash; <https://maxmilton.com/>.
 
 # Overview
 
-TODO: Write overview
+A simple blog which uses Node.js automation to make development and deployment easy. Uses Hugo, a Golang static site generator, which is super fast and makes creating websites fun again.
+
+Feel free to use my Hugo theme as the base for your own site.
 
 ## How To Build
 
@@ -26,7 +28,7 @@ Run build script
 
 Blog content is licenced under Creative Commons Attribution No Derivatives 4.0 ([CC-BY-ND-4.0](http://creativecommons.org/licenses/by-nd/4.0/legalcode)).
 
-Site theme is licenced ISC, see LICENCE.md in the themes/mm directory.
+Site theme is licenced ISC, see [themes/mm/LICENCE.md](https://github.com/MaxMilton/MaxMilton.com/blob/master/themes/mm/LICENSE.md).
 
 # Author
 
