@@ -3,8 +3,8 @@ author = "Max Milton"
 email = "max@wearegenki.com"
 date = "2016-04-19T05:46:05+10:00"
 description = ""
-tags = ["misc"]
-title = "test post"
+tags = ["misc."]
+title = "Test Post"
 # draft = true
 
 +++
