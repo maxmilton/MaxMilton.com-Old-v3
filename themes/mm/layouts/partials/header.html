@@ -57,10 +57,18 @@
 </head>
 <body>
 
+<div class="container">
+  <div class="row">
+    <div class="post col-xs-12">
+
 <nav class="nav nav-inline">
    <a class="brand" href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
   {{ $currentNode := . }}
   {{ range .Site.Menus.main }}
-  <a href="{{ .URL }}" class="nav-link{{ if $currentNode.IsMenuCurrent "main" . }} active{{ end }}"{{ if in .URL "http" }} target="_blank"{{ end }}>{{ .Name }}</a>
+  <a href="{{ .URL }}" class="nav-link{{ if $currentNode.IsMenuCurrent "main" . }} active{{ end }}{{ if .Pre }} {{ .Pre }}{{ end }}">{{ .Name }}</a>
   {{ end }}
 </nav>
+
+    </div>
+  </div>
+</div>

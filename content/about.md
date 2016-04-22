@@ -5,12 +5,13 @@ description = "TODO: Write me"
 
 [menu.main]
     name = "About"
-    weight = -10
+    weight = 10
+    pre = "pull-xs-right"
 +++
 
 # About Max Milton
 
-TODO: Write me
+> TODO: Write me.
 
 <!-- TODO: Write intro -->
 

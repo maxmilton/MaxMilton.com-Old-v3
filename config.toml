@@ -18,6 +18,10 @@ disableRSS = true
 
 [[menu.main]]
   name = "Blog"
-  weight = 90
+  weight = -20
   url = "/blog"
-  # target = "_blank"
+
+[[menu.main]]
+  name = "Quick Tips"
+  weight = -10
+  url = "/tags/quick-tips"

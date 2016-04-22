@@ -8,6 +8,4 @@ description = ""
 title = "Hello World"
 +++
 
-# Hello World
-
-TODO: Write intro blog post
+> TODO: Write intro blog post
