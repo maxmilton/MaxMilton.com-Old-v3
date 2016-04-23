@@ -17,8 +17,6 @@ description = "TODO: Write me"
 
 I run a small company, <a href="https://wearegenki.com" target="_blank">We Are Genki</a>.
 
-<!-- TODO: Create contact form -->
-
 ## Contact Me
 
 <div class="row">

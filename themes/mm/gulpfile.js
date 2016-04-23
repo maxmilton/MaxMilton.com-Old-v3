@@ -23,6 +23,7 @@ gulp.task('serve', ['sass', 'js'], function() {
     server: '../../public',
     // https: true,
     // online: false, // Uncomment when working without internet
+    notify: false, // Disable notification if it gets annoying
   });
 
   // FIXME: Run hugo AFTER sass/js to avoid having to save twice to see a change

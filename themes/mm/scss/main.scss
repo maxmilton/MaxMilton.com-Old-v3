@@ -11,17 +11,22 @@
 // Global Theme
 //------------------------------
 
-html {
+body {
   font-weight: 300;
 }
 
-body {
-  // background-color: $gray-lighter;
-}
+.nav {
+  margin-top: 1rem;
+  margin-bottom: 2.2rem;
 
-nav {
   .brand {
+    color: $gray-dark;
     font-size: 30px;
+  }
+
+  .brand,
+  .nav-link:last-child {
+    margin-right: 1rem;
   }
 }
 
@@ -36,26 +41,16 @@ footer {
   }
 }
 
+h1 {
+  margin-bottom: 3rem;
+}
+
 h2, h3, h4, h5, h6 {
   margin-top: 3rem;
 }
 
 li {
   margin-bottom: 0.75rem;
-}
-
-//------------------------------
-// Menu
-//------------------------------
-
-.nav {
-  margin-top: 1rem;
-  margin-bottom: 2.2rem;
-}
-
-.nav .brand,
-.nav .nav-link:last-child {
-  margin-right: 1rem;
 }
 
 //------------------------------
@@ -86,9 +81,3 @@ li {
   padding-top: 30px;
   padding-bottom: 30px;
 }
-
-//------------------------------
-// About Page
-//------------------------------
-
-// TODO

@@ -6,11 +6,11 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
 
   {{ if eq .URL "/" }}
-  <!-- Unique meta on homepage -->
+  <!-- Unique metadata on homepage -->
   <title>{{ .Site.Title }} - {{ .Site.Params.subtitle }}</title>
   <meta name="description" content="{{ .Site.Params.description }}">
   {{ else }}
-  <!-- Unique meta on other pages -->
+  <!-- Unique metadata on other pages -->
   <title>{{ .Title }} | {{ .Site.Title }}</title>
   <meta name="description" content="{{ .Description }}">
   {{ end }}
@@ -57,18 +57,17 @@
 </head>
 <body>
 
+<!-- Main Menu -->
 <div class="container">
   <div class="row">
     <div class="col-xs-12">
-
-<nav class="nav nav-inline">
-   <a class="brand" href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
-  {{ $currentNode := . }}
-  {{ range .Site.Menus.main }}
-  <a href="{{ .URL }}" class="nav-link{{ if $currentNode.IsMenuCurrent "main" . }} active{{ end }}{{ if .Pre }} {{ .Pre }}{{ end }}">{{ .Name }}</a>
-  {{ end }}
-</nav>
-
+      <nav class="nav nav-inline">
+         <a class="brand" href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
+        {{ $currentNode := . }}
+        {{ range .Site.Menus.main }}
+        <a href="{{ .URL }}" class="nav-link{{ if $currentNode.IsMenuCurrent "main" . }} active{{ end }}{{ if .Pre }} {{ .Pre }}{{ end }}">{{ .Name }}</a>
+        {{ end }}
+      </nav>
     </div>
   </div>
 </div>
