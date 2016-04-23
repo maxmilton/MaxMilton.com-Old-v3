@@ -4,9 +4,9 @@ date = "2016-04-23T06:40:05+10:00"
 description = ""
 email = "max@wearegenki.com"
 tags = ["quick tips"]
-title = "Quick Tips Test"
+title = "What Are Quick Tips?"
 +++
 
-> TODO: Delete this once I've published an actual quick tips post.
+> TODO: Write me.
 
-`# echo 'code test'`
+`$ echo 'code test' | wc -m`
