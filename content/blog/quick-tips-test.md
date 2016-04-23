@@ -5,7 +5,6 @@ description = ""
 email = "max@wearegenki.com"
 tags = ["quick tips"]
 title = "Quick Tips Test"
-
 +++
 
 > TODO: Delete this once I've published an actual quick tips post.

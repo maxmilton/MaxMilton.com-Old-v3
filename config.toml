@@ -15,9 +15,10 @@ disableRSS = true
 	author = "Max Milton <max@wearegenki.com>"
   # TODO: Change themecolour depending on what the site main brand colour is
   themecolour = "#308ad8"
+  googleAnalytics = "UA-64694403-1"
 
 [[menu.main]]
-  name = "Blog"
+  name = "All Posts"
   weight = -20
   url = "/blog"
 

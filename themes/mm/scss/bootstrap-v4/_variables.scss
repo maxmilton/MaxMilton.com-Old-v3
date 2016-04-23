@@ -55,15 +55,11 @@ $brand-danger:              #d9534f !default;
 //
 // Quickly modify global styling by enabling or disabling optional features.
 
-// $enable-flex:               false !default;
 $enable-flex:               true !default;
-// $enable-rounded:            true !default;
 $enable-rounded:            false !default;
 $enable-shadows:            false !default;
 $enable-gradients:          false !default;
-// $enable-transitions:        false !default;
 $enable-transitions:        true !default;
-// $enable-hover-media-query:  false !default;
 $enable-hover-media-query:  true !default;
 $enable-grid-classes:       true !default;
 $enable-print-styles:       true !default;
@@ -103,7 +99,7 @@ $border-width: 1px !default;
 //
 // Settings for the `<body>` element.
 
-$body-bg:    #fff !default;
+$body-bg:    $gray-lighter !default;
 $body-color: $gray-dark !default;
 
 
@@ -140,7 +136,7 @@ $container-max-widths: (
   sm: 576px,
   md: 720px,
   lg: 940px,
-  xl: 1140px
+  // xl: 1140px // Disable xl size
 ) !default;
 @include _assert-ascending($container-max-widths, "$container-max-widths");
 

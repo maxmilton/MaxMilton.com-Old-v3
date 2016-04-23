@@ -20,14 +20,16 @@ gulp.task('watch', ['serve']);
 // Static Server + watching scss/html files
 gulp.task('serve', ['sass', 'js'], function() {
   browserSync.init({
-    server: './../../public',
+    server: '../../public',
+    // https: true,
+    // online: false, // Uncomment when working without internet
   });
 
   // FIXME: Run hugo AFTER sass/js to avoid having to save twice to see a change
   gulp.watch('./scss/**/*.scss', ['sass', 'hugo']);
   gulp.watch('./static/js/**/*.js', ['js', 'hugo']);
-  gulp.watch(['./../../content/**/*.md', './layouts/**/*.html'], ['hugo']);
-  gulp.watch(['./../../public/**/*.html']).on('change', browserSync.reload);
+  gulp.watch(['../../content/**/*.md', './layouts/**/*.html'], ['hugo']);
+  gulp.watch(['../../public/**/*.html']).on('change', browserSync.reload);
 });
 
 //----------------------------------------

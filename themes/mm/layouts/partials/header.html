@@ -47,7 +47,7 @@
   <!-- Google Analytics -->
   <script>
   window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-  ga('create', 'UA-64694403-1', 'auto');
+  ga('create', '{{ .Site.GoogleAnalytics }}', 'auto');
   ga('require', 'linkid');
   ga('require', 'autotrack');
   ga('send', 'pageview');
@@ -59,7 +59,7 @@
 
 <div class="container">
   <div class="row">
-    <div class="post col-xs-12">
+    <div class="col-xs-12">
 
 <nav class="nav nav-inline">
    <a class="brand" href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>

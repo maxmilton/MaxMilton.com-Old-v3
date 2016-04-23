@@ -5,8 +5,8 @@ date = "2016-04-19T05:46:05+10:00"
 description = ""
 tags = ["misc."]
 title = "Test Post"
+post = true
 # draft = true
-
 +++
 
 # Yeah. Give a little credit to our public schools.

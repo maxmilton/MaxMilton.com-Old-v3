@@ -12,11 +12,11 @@
 //------------------------------
 
 html {
-  font-weight: 300; // TEMP
+  font-weight: 300;
 }
 
 body {
-  background-color: $gray-lighter;
+  // background-color: $gray-lighter;
 }
 
 nav {
@@ -28,6 +28,7 @@ nav {
 footer {
   color: #ccc;
   text-align: center;
+  margin: 2rem 0 3rem;
 
   & > a {
     color: inherit;
@@ -35,9 +36,35 @@ footer {
   }
 }
 
+h2, h3, h4, h5, h6 {
+  margin-top: 3rem;
+}
+
+li {
+  margin-bottom: 0.75rem;
+}
+
+//------------------------------
+// Menu
+//------------------------------
+
+.nav {
+  margin-top: 1rem;
+  margin-bottom: 2.2rem;
+}
+
+.nav .brand,
+.nav .nav-link:last-child {
+  margin-right: 1rem;
+}
+
 //------------------------------
 // Blog posts
 //------------------------------
+
+.post {
+  // background-color: $white;
+}
 
 .tags {
   list-style: none;
