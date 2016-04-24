@@ -6,23 +6,23 @@ title = "Max Milton"
 theme = "mm"
 
 uglyUrls = true
-#canonifyurls = true
-disableRSS = true
+# canonifyurls = true
+# disableRSS = true
+pluralizelisttitles = false
 
 [params]
   subtitle = "Self-experimentation, Exploration, & Startups"
 	description = "TODO: WRITE SITE DESCRIPTION."
 	author = "Max Milton <max@wearegenki.com>"
-  # TODO: Change themecolour depending on what the site main brand colour is
-  themecolour = "#308ad8"
+  themecolour = "#fff"
   googleAnalytics = "UA-64694403-1"
 
 [[menu.main]]
   name = "All Posts"
-  weight = -20
+  weight = 10
   url = "/blog"
 
 [[menu.main]]
   name = "Quick Tips"
-  weight = -10
+  weight = 20
   url = "/tags/quick-tips"

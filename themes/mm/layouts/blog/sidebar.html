@@ -1,9 +1,8 @@
-<!-- TODO: Get rid of the divs and use CSS to seperate things nicely -->
-
+<h3 class="hidden-md-up">Author</h3>
 <address class="author">
-  <div><img src="/img/{{ .Params.author | urlize }}.jpg" alt="{{ .Params.author }}" class="author-img" /></div>
-  <div>{{ .Params.author }}</div>
-  <div><a href="mailto:{{ .Params.email }}">{{ .Params.email }}</a></div>
+  <img src="/img/{{ .Params.author | urlize }}.jpg" alt="{{ .Params.author }}" class="author-img" />
+  {{ .Params.author }}
+  <a href="mailto:{{ .Params.email }}">{{ .Params.email }}</a>
 </address>
 
 <div class="meta">

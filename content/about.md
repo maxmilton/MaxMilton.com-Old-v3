@@ -5,7 +5,7 @@ description = "TODO: Write me"
 
 [menu.main]
     name = "About"
-    weight = 10
+    weight = 90
     pre = "pull-xs-right"
 +++
 
