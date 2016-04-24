@@ -3,7 +3,6 @@
 //------------------------------
 
 @import "variables";
-@import "animations";
 @import "fonts";
 @import "bootstrap-v4/bootstrap-flex";
 
@@ -42,16 +41,8 @@ h1 {
 }
 
 h2, h3, h4, h5, h6 {
-  margin-top: 3rem;
+  margin-top: 2.4rem;
 }
-
-// TODO: Decide on a style for links; animated vs minimal.
-// #dope {
-//   a:not(.btn) {
-//     // Includes animated underline & larger clickable area
-//     @include animate-links;
-//   }
-// }
 
 li {
   margin-bottom: 0.5rem;
