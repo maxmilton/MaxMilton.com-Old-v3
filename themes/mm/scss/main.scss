@@ -26,6 +26,7 @@ body {
 
   .brand,
   .nav-link:last-child {
+    // FIXME: Doesn't look good across window sizes.
     margin-right: 1rem;
   }
 }
@@ -49,21 +50,35 @@ h2, h3, h4, h5, h6 {
   margin-top: 3rem;
 }
 
+// TODO: Decide on a style for links; animated vs minimal.
+// #dope {
+//   a:not(.btn) {
+//     // Includes animated underline & larger clickable area
+//     @include animate-links;
+//   }
+// }
+
 li {
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.5rem;
 }
 
 //------------------------------
 // Blog posts
 //------------------------------
 
-.post {
-  // background-color: $white;
+.post {}
+
+.author-img {
+  margin-bottom: 0.35rem;
 }
 
 .tags {
   list-style: none;
   padding-left: 0;
+
+  & > li {
+    margin-bottom: 0;
+  }
 }
 
 //------------------------------
@@ -74,6 +89,7 @@ li {
   text-align: center;
 }
 
+// FIXME: This doesn't look good.
 .subscribe {
   background-color: $gray-light;
   color: $white;

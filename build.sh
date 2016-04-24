@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# FIXME: Timing is off, gzip is created before gulp html:build runs
+
 #----------------------------------------------#
 # Build a deployable package of a hugo website #
 #----------------------------------------------#
@@ -45,14 +47,14 @@ else
   npm update $THEME_DIR --save --save-dev
 fi
 
-# Remove files from any ealier builds
-rm -rf ./public
+# Remove files from ealier builds
+rm -rf ./public/{*,.*}
 
 # Run Gulp build process
 echo -e "Starting Gulp build process...\n"
 gulp --gulpfile $THEME_DIR/gulpfile.js build
 
-# Remove ealier deployable file, use -f so it doesn't fail if no file exists
+# Remove ealier deployable file
 rm -f ./deployme.tgz
 
 # Create a deployable package

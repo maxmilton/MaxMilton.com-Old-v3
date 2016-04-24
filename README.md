@@ -26,12 +26,12 @@ Run build script
 
 1. `# build.sh`
 
-# Licence
+## Licence
 
 Blog content is licenced under Creative Commons Attribution No Derivatives 4.0 ([CC-BY-ND-4.0](http://creativecommons.org/licenses/by-nd/4.0/legalcode)).
 
 Site theme is licenced ISC, see [themes/mm/LICENCE.md](https://github.com/MaxMilton/MaxMilton.com/blob/master/themes/mm/LICENSE.md).
 
-# Author
+## Author
 
 Proudly made by Max Milton &lt;<max@wearegenki.com>&gt;.

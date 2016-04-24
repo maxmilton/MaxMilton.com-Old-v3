@@ -1,7 +1,7 @@
 <!-- TODO: Get rid of the divs and use CSS to seperate things nicely -->
 
 <address class="author">
-  <div><img src="/img/{{ .Params.author | urlize }}.jpg" alt="{{ .Params.author }}" /></div>
+  <div><img src="/img/{{ .Params.author | urlize }}.jpg" alt="{{ .Params.author }}" class="author-img" /></div>
   <div>{{ .Params.author }}</div>
   <div><a href="mailto:{{ .Params.email }}">{{ .Params.email }}</a></div>
 </address>
