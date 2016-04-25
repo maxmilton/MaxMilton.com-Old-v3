@@ -13,15 +13,9 @@ description = ""
 <p class="lead bg-primary">&ldquo;Do not go where the path may lead, go instead where there is no path and leave a trail.&rdquo;<br/>
 <small>&mdash; Ralph Waldo Emerson</small></p>
 
-MaxMilton.com is the personal blog of... Max Milton (Wow, what a suprise!).
+I've lived in countries around the world and I love to travel. I'm currently based in Sydney, Australia. I work as a DevOps Engineer.
 
-Yo! Welcome to my blog.
-
-I currently live in Sydney, Australia.
-
-I'll write more about me soon, but in the meantime, all you need to know is I run a small ecommerce group, <a href="https://wearegenki.com" target="_blank">We Are Genki</a>.
-
-This website is a never-ending work in progress.
+I'll write a better about me section soon, but in the meantime, one last thing I want to add is I run a small ecommerce group, <a href="https://wearegenki.com" target="_blank">We Are Genki</a>.
 
 ## Contact Me
 
