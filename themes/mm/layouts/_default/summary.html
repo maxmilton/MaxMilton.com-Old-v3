@@ -1,11 +1,11 @@
 <div class="row">
   <div class="col-xs-12">
     <article class="summary">
-      <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+      <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
 
       {{ .Summary }}
 
-      <div class="more"><a href="{{ .Permalink }}" title="{{ .Title }}">Read more&hellip;</a></div>
+      <div class="more"><a href="{{ .RelPermalink }}" title="{{ .Title }}">Read more</a></div>
     </article>
   </div>
 </div>

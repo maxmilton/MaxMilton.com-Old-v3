@@ -104,6 +104,10 @@ a {
   margin-bottom: 1rem;
 }
 
+.summary p:last-of-type:after {
+  content: "…";
+}
+
 .more {
   margin-top: 1rem;
 }

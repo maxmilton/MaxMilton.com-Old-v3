@@ -7,7 +7,7 @@ tags = ["quick tips", "miscellaneous"]
 title = "What Are Quick Tips?"
 +++
 
-Quick tips are an ongoing series of short posts where I'll teach you something I've found useful. From time to time I'll post an insight I found to be thought provoking. Here's a simple example:
+Quick tips are an ongoing series of short posts where I'll teach you something I've found useful. From time to time I'll post an insight I found to be thought provoking. Here's a simple example<!--more-->:
 
 ## How Many Characters in a String?
 

@@ -6,14 +6,22 @@
     <div class="row">
       <div class="col-xs-12">
         <h1 class="title">404: Page Not Found</h1>
-      </div>
-
-      <div class="text-center">
       	<p class="lead">Can't find the page you wanted &hellip; Woops.</p>
-    	</div>
+      </div>
     </div> <!-- /.row -->
 
-    <!-- TODO: Implement new row with links to latest blog posts -->
+  <hr/>
+
+  <!-- If changed, also update ../_default/list.html and ../section/blog.html -->
+
+  <section class="container summaries">
+    <h2>Instead, How About Reading a Post?</h2>
+    {{ range first 10 .Data.Pages }}
+      {{ if eq .Section "blog" }}
+        <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+      {{ end }}
+    {{ end }}
+  </section>
 
   </div> <!-- /.container -->
 

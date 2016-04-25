@@ -20,10 +20,14 @@
   <link rel="canonical" href="{{ .Permalink }}">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="{{ .Site.Params.themecolour }}">
+  <!-- TODO: Design app icons -->
+  <!--
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  -->
 
   <!-- Open Graph -->
   <!-- TODO: Check these meta tags are still best practice -->
+  <!--
   <meta property="og:type" content="article"/>
   <meta property="og:description" content="{{ if eq .URL "/" }}{{ .Site.Params.description }}{{ else }}{{ .Description }}{{ end }}"/>
   <meta property="og:title" content="{{ .Title }} | {{ .Site.Title }}"/>
@@ -43,6 +47,7 @@
   {{ range .Params.tags }}<meta property="article:tag" content="{{ . }}">
   {{ end }}
   {{end}}
+  -->
 
   <!-- Google Analytics -->
   <script>

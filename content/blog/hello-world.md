@@ -11,7 +11,7 @@ Yo!
 
 Welcome to my super duper amazing shiny new blog. I'll publish posts every once and a while about the things which I find exciting.
 
-Those things may include:
+Those things may include<!--more-->:
 
 * Adventure &amp; travel
 * Urban exploring

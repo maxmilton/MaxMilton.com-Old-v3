@@ -1,7 +1,5 @@
 #!/bin/bash
 
-# FIXME: Timing is off, gzip is created before gulp html:build runs
-
 #----------------------------------------------#
 # Build a deployable package of a hugo website #
 #----------------------------------------------#

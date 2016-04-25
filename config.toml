@@ -1,5 +1,4 @@
-# baseurl = "https://maxmilton.com/"
-baseurl = "http://localhost:3000/" # FIXME: CHANGE WHEN PUBLISHING
+baseurl = "https://maxmilton.com/"
 languageCode = "en-uk"
 
 title = "Max Milton"
@@ -12,9 +11,9 @@ pluralizelisttitles = false
 
 [params]
   subtitle = "Thinker. Adventurer. World Citizen."
-	description = "TODO: WRITE SITE DESCRIPTION."
+	description = ""
 	author = "Max Milton <max@wearegenki.com>"
-  themecolour = "#fff"
+  themecolour = "#eceeef"
   googleAnalytics = "UA-64694403-1"
 
 [[menu.main]]

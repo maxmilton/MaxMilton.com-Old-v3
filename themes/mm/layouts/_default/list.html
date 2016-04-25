@@ -1,6 +1,6 @@
 {{ partial "header.html" . }}
 
-<!-- README: Also update ../section/blog.html -->
+<!-- If changed, also update ../section/blog.html and ../404.html -->
 
 <div id="dope">
 
@@ -11,7 +11,7 @@
 
         <ul class="pages">
           {{ range .Data.Pages }}
-          <li><span><a href="{{ .Permalink }}">{{ .Title }}</a><time class="pull-xs-right">{{ .Date.Format "Mon, 2 Jan 2006" }}</h4></time></span></span></li>
+          <li><a href="{{ .RelPermalink }}">{{ .Title }}</a><time class="pull-xs-right">{{ .Date.Format "Mon, 2 Jan 2006" }}</time></li>
           {{ end }}
         </ul>
       </section>
