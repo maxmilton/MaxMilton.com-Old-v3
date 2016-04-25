@@ -7,13 +7,13 @@ tags = ["quick tips", "miscellaneous"]
 title = "What Are Quick Tips?"
 +++
 
-Quick tips are an ongoing series of short posts where I'll teach you something I've found useful. From time to time I'll post an insight I found to be thought provoking. Here's a simple example<!--more-->:
+Quick tips are an ongoing series of short posts where I'll teach you something I've found useful. From time to time, I'll post insights I find thought provoking too. Here's a simple example<!--more-->:
 
 ## How Many Characters in a String?
 
-I wanted to count how many characters are in one line on this blog &mdash; UX best practice is about 70&ndash;80 per line for best readability. Using a web service is overkill for such a simple task, lets use our terminal instead.
+I wanted to count how many characters are in one line on this blog &mdash; UX best practice is about 70&ndash;80 per line for best readability. Using a web service is overkill for such a simple task, let's use our terminal instead.
 
-In your favorite Unix shell enter:
+In your favourite Unix shell enter:
 
 `$ echo 'How many characters in this?' | wc -m`
 

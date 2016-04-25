@@ -21,10 +21,12 @@ Those things may include<!--more-->:
 * Linux and open source
 * Whatever interests me at the time
 
-I know blog best practice is to choose 2 or 3 subjects and stick to writting about those... but I don't work that way. I find so many things interesting, I couldn't possibly just stick to a few. I'll start writting and see where it takes me, let's let it grow organically.
+I know blog best practice is to choose 2 or 3 subjects and stick to writing about those... but I don't work that way. I find so many things interesting, I couldn't possibly just stick to a few. I'll start writing and see where it takes me, let's let it grow organically.
 
-Posts will be short and susinct, written in an easy to digest way. They won't be perfect, but I want to push and get my thoughts out there.
+Posts will be short and succinct, written in an easy to digest way. They won't be perfect, but I want to push and get my thoughts out there.
 
 I'm not going to commit to any regular posting schedule because I probably wouldn't stick to it ;)
 
-P.s. I have a secret to admit, there's been a few times I've tried to start a blog but didn't end up following through. This time I'm determined to finaly hit publish!
+P.S. I have a secret to admit... there have been a few times that I've tried to start a blog but didn't end up following through. This time, I'm determined to finally hit publish.
+
+P.P.S. If you're reading this then I've succeeded!
