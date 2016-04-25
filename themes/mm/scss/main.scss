@@ -15,6 +15,8 @@ body {
 }
 
 .nav {
+  display: flex;
+  align-items: baseline;
   margin-top: 1rem;
   margin-bottom: 2.2rem;
 
@@ -22,6 +24,10 @@ body {
     color: $gray-dark;
     font-size: 30px;
     margin-right: 1rem;
+  }
+
+  .nav-link.about {
+    margin-left: auto;
   }
 }
 
@@ -45,7 +51,16 @@ h2, h3, h4, h5, h6 {
 }
 
 li {
+  // Add more space between list items
   margin-bottom: 0.5rem;
+}
+
+// Larger clickable area
+// README: Reduce size you experience problems with overlapping links
+a {
+  position: relative;
+  margin: -0.6em -1em;
+  padding: 0.6em 1em;
 }
 
 //------------------------------
@@ -53,7 +68,6 @@ li {
 //------------------------------
 
 .post {}
-
 .author {}
 
 .author-img {
@@ -69,6 +83,10 @@ li {
   }
 }
 
+.lead.bg-primary {
+  padding: 1rem;
+}
+
 //------------------------------
 // Homepage
 //------------------------------
@@ -77,11 +95,15 @@ li {
   text-align: center;
 }
 
-// FIXME: This doesn't look good.
 .subscribe {
-  background-color: $gray-light;
-  color: $white;
+  border-top: 1px solid lighten($gray-light, 30%);
+  border-bottom: 1px solid lighten($gray-light, 30%);
   text-align: center;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding: 2rem 0 2.4rem;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+
+.more {
+  margin-top: 1rem;
 }

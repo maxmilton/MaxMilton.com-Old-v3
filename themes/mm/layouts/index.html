@@ -4,28 +4,28 @@
   <h1>{{ .Site.Params.subtitle }}</h1>
 </div>
 
-<div class="container subscribe">
+<section class="container subscribe">
   <div class="row">
     <div class="col-xs-12">
-      <form class="form-inline">
-        <p>TODO: Write subscribe text; why subscribe?</p>
+      <form class="form-inline" action="//wearegenki.us12.list-manage.com/subscribe/post?u=8afe444812590742963d35a0d&amp;id=2a2592cf7a" method="post" target="_blank">
+        <p>Subscribe to get the latest posts in your inbox:</p>
         <div class="form-group">
-          <label for="exampleInputEmail2">Email</label>
-          <input type="email" class="form-control" id="email" placeholder="jane.doe@example.com">
+          <label for="email">Email</label>
+          <input type="email" class="form-control" name="EMAIL" id="email" placeholder="Enter email">
         </div>
         <button type="submit" class="btn btn-primary">Subscribe</button>
       </form>
     </div>
   </div>
-</div>
+</section>
 
-<div class="container">
-  <div class="row">
-    <div class="col-xs-12 col-md-10 col-md-offset-1">
-      <!-- TODO: Create homepage content: blog psot index OR navigation? -->
-      <p>Test.</p>
-    </div>
-  </div>
-</div>
+<section class="container summaries">
+  <h2>Latest Posts</h2>
+  {{ range first 4 .Data.Pages }}
+    {{ if eq .Section "blog" }}
+      {{ .Render "summary"}}
+    {{ end }}
+  {{ end }}
+</section>
 
 {{ partial "footer.html" . }}

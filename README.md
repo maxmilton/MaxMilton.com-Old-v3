@@ -26,6 +26,11 @@ Run build script
 
 1. `# build.sh`
 
+## Changelog
+
+v1.0.0
+:  Initial public release
+
 ## Licence
 
 Blog content is licenced under Creative Commons Attribution No Derivatives 4.0 ([CC-BY-ND-4.0](http://creativecommons.org/licenses/by-nd/4.0/legalcode)).

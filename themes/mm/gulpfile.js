@@ -78,7 +78,7 @@ gulp.task('css:build', ['css', 'hugo'], function () {
     browsers: ['> 1%', 'last 2 versions'],
     cascade: false,
   }))
-  .pipe(nano())
+  .pipe(nano({autoprefixer: false}))
   .pipe(gulp.dest('./static/css/'))
 });
 

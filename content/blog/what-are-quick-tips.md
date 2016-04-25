@@ -1,18 +1,13 @@
 +++
 author = "Max Milton"
-date = "2016-04-23T06:40:05+10:00"
+date = "2016-04-25T09:23:00+10:00"
 description = ""
 email = "max@wearegenki.com"
-tags = ["quick tips", "misc."]
+tags = ["quick tips", "miscellaneous"]
 title = "What Are Quick Tips?"
 +++
 
-Quick tips are short posts to teach you something I've find helpful
- or to
- be thought provoking
-  about something which blew my mind recently.
-
-Here's a simple example:
+Quick tips are an ongoing series of short posts where I'll teach you something I've found useful. From time to time I'll post an insight I found to be thought provoking. Here's a simple example:
 
 ## How Many Characters in a String?
 
@@ -22,12 +17,12 @@ In your favorite Unix shell enter:
 
 `$ echo 'How many characters in this?' | wc -m`
 
-`29`
+<samp>29</samp>
 
 Or if you want to know how many words:
 
 `$ echo 'How many characters in this?' | wc -w`
 
-`5`
+<samp>5</samp>
 
-Quick and easy :)
+Done. Quick and easy :)

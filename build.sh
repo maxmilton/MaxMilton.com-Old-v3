@@ -59,6 +59,6 @@ rm -f ./deployme.tgz
 
 # Create a deployable package
 echo -e "Creating deployable file...\n"
-tar zcf deployme.tgz ./public/*
+tar zcf deployme.tgz ./public
 
 echo -e "Build complete!"
