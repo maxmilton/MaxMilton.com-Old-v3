@@ -17,9 +17,10 @@
 
   <link rel="stylesheet" href="/css/app.css">
 
-  <link rel="canonical" href="{{ .Permalink }}">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="canonical" href="{{ .Permalink }}">
   <meta name="theme-color" content="{{ .Site.Params.themecolour }}">
+  <link href="/index.xml" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }} Blog Feed" />
   <!-- TODO: Design app icons -->
   <!--
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -51,14 +52,17 @@
 
   <!-- Google Analytics -->
   <script>
-  window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-  ga('create', '{{ .Site.GoogleAnalytics }}', 'auto');
-  ga('require', 'linkid');
-  ga('require', 'autotrack');
-  ga('send', 'pageview');
+    window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+    ga('create', '{{ .Site.GoogleAnalytics }}', 'auto');
+    ga('require', 'linkid');
+    ga('require', 'autotrack');
+    ga('send', 'pageview');
   </script>
   <script async src='https://www.google-analytics.com/analytics.js'></script>
   <script async src='/js/autotrack.js'></script>
+
+  <meta name="author" content=".Site.Author.name">
+  <meta name="robots" content="noodp">
 </head>
 <body>
 
