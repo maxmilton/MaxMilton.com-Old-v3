@@ -119,15 +119,14 @@ gulp.task('html:build', ['hugo:build'], function() {
   return gulp.src('../../public/**/*.html')
     .pipe(htmlmin({
       collapseBooleanAttributes: true,
-      collapseInlineTagWhitespace: true, //NEW
       collapseWhitespace: true,
       minifyJS: true,
       preserveLineBreaks: true,
-      quoteCharacter: '"', //NEW
+      quoteCharacter: '"',
       removeAttributeQuotes: true,
       removeComments: true,
       removeEmptyAttributes: true,
-      removeOptionalTags: true, //NEW
+      removeOptionalTags: true,
       removeRedundantAttributes: true,
     }))
     .pipe(gulp.dest('../../public'))
