@@ -1,19 +1,19 @@
 'use strict';
 
-var gulp        = require('gulp');
 var browserSync = require('browser-sync').create();
+var concat      = require('gulp-concat');
+var del         = require('del');
 var exec        = require('child_process').exec;
-var sass        = require('gulp-sass');
-var uncss       = require('gulp-uncss');
-var sourcemaps  = require('gulp-sourcemaps');
+var gulp        = require('gulp');
+var htmlmin     = require('gulp-htmlmin');
 var nano        = require('gulp-cssnano');
 var rename      = require('gulp-rename');
-var rev         = require('gulp-rev');
-var concat      = require('gulp-concat');
-var uglify      = require('gulp-uglifyjs');
-var htmlmin     = require('gulp-htmlmin');
 var replace     = require('gulp-rev-replace');
-var del         = require('del');
+var rev         = require('gulp-rev');
+var sass        = require('gulp-sass');
+var sourcemaps  = require('gulp-sourcemaps');
+var uglify      = require('gulp-uglifyjs');
+var uncss       = require('gulp-uncss');
 
 gulp.task('default', ['watch']);
 gulp.task('watch', ['serve']);
