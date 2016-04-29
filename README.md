@@ -6,9 +6,9 @@ A simple blog which uses Node.js + Gulp automation to make development and deplo
 
 NOTE: Browser-sync is used to serve the site when in development &mdash; the auto-reload is awesome and makes developing across mutliple devices easy. I much prefer it over the Hugo built in server.
 
-Feel free to use my Hugo theme as the base for your own site. I hope you like it!
+Read more about the release at <https://maxmilton.com/blog/blog-source-code-now-availiable-on-github.html>.
 
-Let me know if you use it, I'd love to see what you do with it!
+Feel free to use my Hugo theme as the base for your own site. Let me know if you use the code, I'd love to see what you do with it!
 
 ## How To Build
 
@@ -30,12 +30,15 @@ Run build script
 
 ## Changelog
 
+v1.1.0
+: 2016-04-30 - Cache busting for compiled CSS/JS, RSS feed, extra meta tags
+
 v1.0.0
-:  Initial public release
+:  2016-04-27 - Initial public release
 
 ## Licence
 
-Blog content is licenced under Creative Commons Attribution No Derivatives 4.0 ([CC-BY-ND-4.0](http://creativecommons.org/licenses/by-nd/4.0/legalcode)). When quoting my posts, please link back to the original article.
+Blog content is licenced under the Creative Commons Attribution No Derivatives 4.0 ([CC-BY-ND-4.0](http://creativecommons.org/licenses/by-nd/4.0/legalcode)) licence. When quoting my posts, please link back to the original article.
 
 Site theme is licenced ISC, see [themes/mm/LICENCE.md](https://github.com/MaxMilton/MaxMilton.com/blob/master/themes/mm/LICENSE.md).
 
