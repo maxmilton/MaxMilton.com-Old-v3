@@ -14,6 +14,8 @@
 # Define variables
 THEME_DIR="./themes/mm"
 
+echo -e "Starting build\n"
+
 # Check if Hugo is installed
 hash hugo 2>/dev/null || {
   echo >&2 "Hugo is not installed. Get it from https://github.com/spf13/hugo/releases."
