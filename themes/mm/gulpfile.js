@@ -83,7 +83,7 @@ gulp.task('css:build', ['css', 'hugo', 'clean:rev'], function() {
   }))
   .pipe(rev())
   .pipe(gulp.dest('./static/css/'))
-  .pipe(rev.manifest('./rev-manifest.json', {merge: true}))
+  .pipe(rev.manifest('./rev-manifest.json', { merge: true }))
   .pipe(gulp.dest('.'))
 });
 
@@ -105,7 +105,7 @@ gulp.task('js:build', ['js', 'clean:rev'], function() {
     .pipe(uglify())
     .pipe(rev())
     .pipe(gulp.dest('./static/js/'))
-    .pipe(rev.manifest('./rev-manifest.json', {merge: true}))
+    .pipe(rev.manifest('./rev-manifest.json', { merge: true }))
     .pipe(gulp.dest('.'))
 });
 
@@ -134,7 +134,7 @@ gulp.task('html:rev', ['html:build'], function() {
   var manifest = gulp.src('./rev-manifest.json');
 
   return gulp.src('../../public/**/*.html')
-  .pipe(replace({manifest: manifest}))
+  .pipe(replace({ manifest: manifest }))
   .pipe(gulp.dest('../../public/'));
 });
 
