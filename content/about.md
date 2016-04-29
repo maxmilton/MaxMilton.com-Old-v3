@@ -15,7 +15,7 @@ description = ""
 
 I've lived in countries around the world and I love to travel. I'm currently based in Sydney, Australia. I work as a DevOps Engineer.
 
-I'll write a better about me section soon, but in the meantime, one last thing I want to add is I run a small ecommerce group, <a href="https://wearegenki.com" target="_blank">We Are Genki</a>.
+I'll write a better about me section eventually, but in the meantime, one last thing I want to add is I run a small ecommerce group, <a href="https://wearegenki.com" target="_blank">We Are Genki</a>.
 
 ## Contact Me
 
