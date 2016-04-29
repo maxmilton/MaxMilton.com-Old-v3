@@ -43,7 +43,7 @@ gulp.task('serve', ['css', 'js'], function() {
 gulp.task('hugo', function(fetch) {
   exec('hugo -s ../../ --baseUrl="http://localhost:3000/"', function(err, stdout, stderr) {
     console.log(stdout); // Hugo output
-    console.log(stderr); // Debugging
+    console.log(stderr); // Errors
     fetch(err);
   })
 });
@@ -51,7 +51,7 @@ gulp.task('hugo', function(fetch) {
 gulp.task('hugo:build', ['css:build', 'js:build'], function(fetch) {
   exec('hugo -s ../../', function(err, stdout, stderr) {
     console.log(stdout); // Hugo output
-    console.log(stderr); // Debugging
+    console.log(stderr); // Errors
     fetch(err);
   })
 });
@@ -62,6 +62,7 @@ gulp.task('hugo:build', ['css:build', 'js:build'], function(fetch) {
 
 gulp.task('css', function() {
   return gulp.src('./scss/main.scss')
+    // FIXME: CSS sourcemaps are not being generated/saved - gulp-sass issue?
     .pipe(sourcemaps.init())
     .pipe(sass().on('error', sass.logError))
     .pipe(sourcemaps.write('./maps'))
