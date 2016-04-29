@@ -17,7 +17,7 @@ var del         = require('del');
 
 gulp.task('default', ['watch']);
 gulp.task('watch', ['serve']);
-gulp.task('build', ['css:build', 'js:build', 'html:build', 'html:rev']);
+gulp.task('build', ['css:build', 'js:build', 'html:build', 'html:rev', 'clean:build']);
 
 //----------------------------------------
 // Browser Sync
@@ -147,4 +147,14 @@ gulp.task('clean:rev', function(){
     './static/css/app-*.css',
     './static/js/app-*.js',
   ])
+});
+
+gulp.task('clean:build', ['html:rev'], function(){
+  return del([
+    '../../public/css/maps',
+    '../../public/js/maps',
+    '../../public/css/app.css',
+    '../../public/js/app.js',
+    '../../public/js/main.js',
+  ], { force:true })
 });
