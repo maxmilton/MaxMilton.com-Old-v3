@@ -62,11 +62,10 @@ gulp.task('hugo:build', ['css:build', 'js:build'], function(fetch) {
 
 gulp.task('css', function() {
   return gulp.src('./scss/main.scss')
-    // FIXME: CSS sourcemaps are not being generated/saved - gulp-sass issue?
     .pipe(sourcemaps.init())
     .pipe(sass().on('error', sass.logError))
-    .pipe(sourcemaps.write('./maps'))
     .pipe(rename('app.css'))
+    .pipe(sourcemaps.write('./maps'))
     .pipe(gulp.dest('./static/css/'))
     .pipe(browserSync.stream());
 });
@@ -80,7 +79,6 @@ gulp.task('css:build', ['css', 'hugo', 'clean:rev'], function() {
     autoprefixer: {
       browsers: ['> 1%', 'last 2 versions'],
       add: true,
-      cascade: false,
     },
   }))
   .pipe(rev())
