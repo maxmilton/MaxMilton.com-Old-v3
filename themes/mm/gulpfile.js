@@ -7,25 +7,26 @@ var sass        = require('gulp-sass');
 var uncss       = require('gulp-uncss');
 var sourcemaps  = require('gulp-sourcemaps');
 var nano        = require('gulp-cssnano');
-var prefix      = require('gulp-autoprefixer');
 var rename      = require('gulp-rename');
+var rev         = require('gulp-rev');
 var concat      = require('gulp-concat');
 var uglify      = require('gulp-uglifyjs');
 var htmlmin     = require('gulp-htmlmin');
+var replace     = require('gulp-rev-replace');
+var del         = require('del');
 
 gulp.task('default', ['watch']);
-gulp.task('build', ['css:build', 'js:build', 'html:build']);
 gulp.task('watch', ['serve']);
+gulp.task('build', ['css:build', 'js:build', 'html:build', 'html:rev']);
 
 //----------------------------------------
 // Browser Sync
 //----------------------------------------
 
-// Static Server + watching scss/html files
 gulp.task('serve', ['css', 'js'], function() {
   browserSync.init({
     server: '../../public',
-    notify: false,
+    // notify: false,
   });
 
   // FIXME: Run hugo AFTER sass/js to avoid having to save twice to see a change
@@ -40,7 +41,7 @@ gulp.task('serve', ['css', 'js'], function() {
 //----------------------------------------
 
 gulp.task('hugo', function(fetch) {
-  exec('hugo -s ../../', function(err, stdout, stderr) {
+  exec('hugo -s ../../ --baseUrl="http://localhost:3000/"', function(err, stdout, stderr) {
     console.log(stdout); // Hugo output
     console.log(stderr); // Debugging
     fetch(err);
@@ -59,7 +60,7 @@ gulp.task('hugo:build', ['css:build', 'js:build'], function(fetch) {
 // CSS
 //----------------------------------------
 
-gulp.task('css', function () {
+gulp.task('css', function() {
   return gulp.src('./scss/main.scss')
     .pipe(sourcemaps.init())
     .pipe(sass().on('error', sass.logError))
@@ -69,24 +70,29 @@ gulp.task('css', function () {
     .pipe(browserSync.stream());
 });
 
-gulp.task('css:build', ['css', 'hugo'], function () {
+gulp.task('css:build', ['css', 'hugo', 'clean:rev'], function() {
   return gulp.src('./static/css/app.css')
   .pipe(uncss({
     html: ['../../public/**/*.html'],
   }))
-  .pipe(prefix({
-    browsers: ['> 1%', 'last 2 versions'],
-    cascade: false,
+  .pipe(nano({
+    autoprefixer: {
+      browsers: ['> 1%', 'last 2 versions'],
+      add: true,
+      cascade: false,
+    },
   }))
-  .pipe(nano({autoprefixer: false}))
+  .pipe(rev())
   .pipe(gulp.dest('./static/css/'))
+  .pipe(rev.manifest('./rev-manifest.json', {merge: true}))
+  .pipe(gulp.dest('.'))
 });
 
 //----------------------------------------
 // JS
 //----------------------------------------
 
-gulp.task('js', function () {
+gulp.task('js', function() {
   return gulp.src(['./static/js/main.js'])
     .pipe(sourcemaps.init())
     .pipe(concat('app.js'))
@@ -95,30 +101,52 @@ gulp.task('js', function () {
     .pipe(browserSync.stream());
 });
 
-gulp.task('js:build', ['js'], function () {
+gulp.task('js:build', ['js', 'clean:rev'], function() {
   return gulp.src('./static/js/app.js')
     .pipe(uglify())
+    .pipe(rev())
     .pipe(gulp.dest('./static/js/'))
+    .pipe(rev.manifest('./rev-manifest.json', {merge: true}))
+    .pipe(gulp.dest('.'))
 });
 
 //----------------------------------------
 // HTML
 //----------------------------------------
 
-gulp.task('html:build', ['hugo:build'], function () {
+gulp.task('html:build', ['hugo:build'], function() {
   return gulp.src('../../public/**/*.html')
     .pipe(htmlmin({
       collapseBooleanAttributes: true,
-      // collapseInlineTagWhitespace: true, //NEW
+      collapseInlineTagWhitespace: true, //NEW
       collapseWhitespace: true,
       minifyJS: true,
       preserveLineBreaks: true,
-      // quoteCharacter: '"', //NEW
+      quoteCharacter: '"', //NEW
       removeAttributeQuotes: true,
       removeComments: true,
       removeEmptyAttributes: true,
-      // removeOptionalTags: true, //NEW
+      removeOptionalTags: true, //NEW
       removeRedundantAttributes: true,
     }))
     .pipe(gulp.dest('../../public'))
+});
+
+gulp.task('html:rev', ['html:build'], function() {
+  var manifest = gulp.src('./rev-manifest.json');
+
+  return gulp.src('../../public/**/*.html')
+  .pipe(replace({manifest: manifest}))
+  .pipe(gulp.dest('../../public/'));
+});
+
+//----------------------------------------
+// Misc.
+//----------------------------------------
+
+gulp.task('clean:rev', function(){
+  return del([
+    './static/css/app-*.css',
+    './static/js/app-*.js',
+  ])
 });
