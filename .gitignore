@@ -14,3 +14,6 @@ app.css
 app-*.css
 *.map
 deployme.tgz
+
+# Misc.
+deploy.sh
