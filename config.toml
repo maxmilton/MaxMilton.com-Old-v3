@@ -6,13 +6,18 @@ theme = "mm"
 
 uglyUrls = true
 # canonifyurls = true
-# disableRSS = true
+disableRSS = false
 pluralizelisttitles = false
+
+copyright = "Blog posts are licensed under a Creative Commons Attribution No Derivatives 4.0 (CC-BY-ND-4.0) licence. When quoting my posts, please link back to the original article."
+
+[author]
+    name = "Max Milton"
+    email = "max@wearegenki.com"
 
 [params]
   subtitle = "Thinker. Adventurer. World Citizen."
 	description = ""
-	author = "Max Milton <max@wearegenki.com>"
   themecolour = "#eceeef"
   googleAnalytics = "UA-64694403-1"
 
