@@ -18,20 +18,26 @@ Install prerequisites then run `gulp` to start a local dev server.
 
 1. Install [Node.js](https://nodejs.org)
 2. Install [Hugo](https://github.com/spf13/hugo/releases)
-2. `$ cd themes/mm`
-2. `$ npm install`
-3. `$ gulp`
+3. `$ cd themes/mm`
+4. `$ npm install`
+5. `$ gulp`
 
 ### For Production
 
-Run build script
+**Test build only:**
 
 1. `$ build.sh`
+
+**Production deployment:**
+
+1. Copy the deploy script: `cp deploy.sh.sample deploy.sh`
+2. Edit `deploy.sh` to suit your needs
+3. `$ deploy.sh`
 
 ## Changelog
 
 v1.1.0
-: 2016-04-30 - Cache busting for compiled CSS/JS, RSS feed, extra meta tags
+: 2016-04-30 - Add sample deployment script, cache busting for compiled CSS/JS, RSS feed, extra meta tags
 
 v1.0.0
 :  2016-04-27 - Initial public release
