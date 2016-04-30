@@ -13,7 +13,7 @@ description = ""
 <p class="lead bg-primary">&ldquo;Do not go where the path may lead, go instead where there is no path and leave a trail.&rdquo;<br/>
 <small>&mdash; Ralph Waldo Emerson</small></p>
 
-I've lived in countries around the world and I love to travel. I'm currently based in Sydney, Australia. I work as a DevOps Engineer.
+I've lived in countries around the world and I love to travel. I'm currently based in Sydney, Australia, where I work as a DevOps Engineer.
 
 I'll write a better about me section eventually, but in the meantime, one last thing I want to add is I run a small ecommerce group, <a href="https://wearegenki.com" target="_blank">We Are Genki</a>.
 
