@@ -1,0 +1,48 @@
+#!/bin/bash
+
+#-------------------------------------------#
+# Deploy the site to your production server #
+#-------------------------------------------#
+#
+# INSTRUCTIONS:
+#   1. Copy this this file: `cp deploy.sh.sample deploy.sh`
+#   2. Change the variables bellow to match your setup
+#   3. Modify the remote commands to suit your deployment workflow
+#
+#  NOTE: This file should NOT be publicly available since it contains your private info.
+#
+
+# Define variables
+DEPLOY_FILE="deployme.tgz"
+PROD_SERVER="user@yoursite.com"
+REMOTE_DIR="/var/www/yoursite.com"
+FS_PERMISSIONS="www-data:www-data"
+CLOUDFLARE_SITE="yoursite.com"
+
+# Run build
+source build.sh
+
+# Upload deploy file to the production server
+echo -e "Uploading package to $PROD_SERVER server...\n"
+scp $DEPLOY_FILE $PROD_SERVER:~/
+
+# Execute the follow commands on the remote server
+echo -e "Executing commands on $PROD_SERVER server...\n"
+ssh $PROD_SERVER DEPLOY_FILE=$DEPLOY_FILE REMOTE_DIR=$REMOTE_DIR FS_PERMISSIONS=$FS_PERMISSIONS 'bash -s' <<'ENDSSH'
+  sudo mv ~/$DEPLOY_FILE $REMOTE_DIR
+  sudo tar -zcf $REMOTE_DIR/html-backup-$(date --iso-8601=minutes).tar.gz $REMOTE_DIR/html
+  sudo rm -rf $REMOTE_DIR/html
+  sudo tar zxf $REMOTE_DIR/$DEPLOY_FILE -C $REMOTE_DIR
+  sudo mv $REMOTE_DIR/public $REMOTE_DIR/html
+  sudo chown -R $FS_PERMISSIONS $REMOTE_DIR/html
+  sudo rm -f $REMOTE_DIR/$DEPLOY_FILE
+  sudo service nginx reload
+ENDSSH
+
+# Clean up left over file
+rm -f $DEPLOY_FILE
+
+# Open CloudFlare in a browser to purge the CDN cache
+xdg-open "https://www.cloudflare.com/a/caching/$CLOUDFLARE_SITE"
+
+echo -e "\nDeployment complete!"
