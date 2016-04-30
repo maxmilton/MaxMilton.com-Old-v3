@@ -6,8 +6,8 @@ theme = "mm"
 
 uglyUrls = true
 # canonifyurls = true
-disableRSS = false
 pluralizelisttitles = false
+rssuri = "atom.xml"
 
 copyright = "Blog posts are licensed under a Creative Commons Attribution No Derivatives 4.0 (CC-BY-ND-4.0) licence. When quoting my posts, please link back to the original article."
 
