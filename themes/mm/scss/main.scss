@@ -104,7 +104,7 @@ a {
   margin-bottom: 1rem;
 }
 
-.summary p:last-of-type:after {
+.summaries > article > p:last-of-type:after {
   content: "…";
 }
 
