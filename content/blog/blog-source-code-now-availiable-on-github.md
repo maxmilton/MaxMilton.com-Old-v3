@@ -3,7 +3,7 @@ author = "Max Milton"
 date = "2016-04-30T05:30:00+10:00"
 description = ""
 email = "max@wearegenki.com"
-tags = ["miscellaneous"]
+tags = ["open source", "miscellaneous"]
 title = "Blog Source Code Now Availiable on Github"
 +++
 
