@@ -4,12 +4,16 @@
 # Deploy the site to your production server #
 #-------------------------------------------#
 #
+# REQUIREMENTS:
+#   * A Linux web server with SSH access
+#   * SSH user should have sudo privileges
+#
 # INSTRUCTIONS:
 #   1. Copy this this file: `cp deploy.sh.sample deploy.sh`
 #   2. Change the variables bellow to match your setup
 #   3. Modify the remote commands to suit your deployment workflow
 #
-#  NOTE: This file should NOT be publicly available since it contains your private info.
+#  NOTE: This file should NOT be publicly available as it contains your private info.
 #
 
 # Define variables
