@@ -70,6 +70,7 @@ gulp.task('css', function() {
     .pipe(browserSync.stream());
 });
 
+// TODO: Add combine media queries step (if I add media queries to main.scss)
 gulp.task('css:build', ['css', 'hugo', 'clean:rev'], function() {
   return gulp.src('./static/css/app.css')
   .pipe(uncss({
