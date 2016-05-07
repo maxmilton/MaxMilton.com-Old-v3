@@ -3,8 +3,8 @@ license = "ISC"
 licenselink = "https://github.com/MaxMilton/MaxMilton.com/blob/master/themes/mm/LICENSE.md"
 description = "A simple theme designed for Max Milton's blog."
 homepage = "https://github.com/MaxMilton/MaxMilton.com"
-tags = ["miscellaneous", "quick tips", "open source", "linux"]
-features = ["blog", "nodejs build atuomation", "gulp", "browser-sync", "bootstrap v4"]
+tags = ["blog", "open source", "linux"]
+features = ["nodejs build atuomation", "gulp", "browser-sync", "bootstrap v4"]
 min_version = 0.14
 
 [author]
