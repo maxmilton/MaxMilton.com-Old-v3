@@ -64,6 +64,41 @@ a {
   padding: 0.6em 1em;
 }
 
+table {
+  @extend .table;
+  @extend .table-bordered;
+  // @extend .table-inverse;
+}
+
+thead {
+  // @extend .thead-inverse; // TODO: Decide if I want to keep this OR remove
+}
+
+// TODO: FOLLWING IS SIMPLY AN EXAMPLE, CHANGE TO SUIT MY NEEDS (OBVOUSLY NOT FONT SIZES)
+@include media-breakpoint-up(xs) {
+  html {
+    // font-size: 16px;
+  }
+}
+
+@include media-breakpoint-up(sm) {
+  html {
+    // font-size: 16px;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  html {
+    // font-size: 20px;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  html {
+    // font-size: 28px;
+  }
+}
+
 //------------------------------
 // Blog posts
 //------------------------------
@@ -86,6 +121,10 @@ a {
 
 .lead.bg-primary {
   padding: 1rem;
+}
+
+.footnote-ref {
+  margin-left: 0.2rem;
 }
 
 //------------------------------
