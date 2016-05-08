@@ -41,7 +41,7 @@ gulp.task('serve', ['css', 'js'], function() {
 //----------------------------------------
 
 gulp.task('hugo', function(fetch) {
-  exec('hugo -s ../../ --baseUrl="http://localhost:3000/"', function(err, stdout, stderr) {
+  exec('hugo -s ../../ --buildDrafts --baseUrl="http://localhost:3000/"', function(err, stdout, stderr) {
     console.log(stdout); // Hugo output
     console.log(stderr); // Errors
     fetch(err);
@@ -71,6 +71,7 @@ gulp.task('css', function() {
 });
 
 // TODO: Add combine media queries step (if I add media queries to main.scss)
+// ↳ Check if this is necessary because of how Bootstrap handles media queries
 gulp.task('css:build', ['css', 'hugo', 'clean:rev'], function() {
   return gulp.src('./static/css/app.css')
   .pipe(uncss({
@@ -145,6 +146,7 @@ gulp.task('html:rev', ['html:build'], function() {
 
 gulp.task('clean:rev', function(){
   return del([
+    // Remove old revisioned files
     './static/css/app-*.css',
     './static/js/app-*.js',
   ])
@@ -152,10 +154,13 @@ gulp.task('clean:rev', function(){
 
 gulp.task('clean:build', ['html:rev'], function(){
   return del([
+    // Remove development and non-revisioned files
     '../../public/css/maps',
     '../../public/js/maps',
     '../../public/css/app.css',
     '../../public/js/app.js',
     '../../public/js/main.js',
+    // Remove blog post drafts
+    '../../public/drafts',
   ], { force:true })
 });
