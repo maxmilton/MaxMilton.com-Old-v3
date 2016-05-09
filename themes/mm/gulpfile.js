@@ -162,5 +162,6 @@ gulp.task('clean:build', ['html:rev'], function(){
     '../../public/js/main.js',
     // Remove blog post drafts
     '../../public/drafts',
+    '../../public/drafts.html',
   ], { force:true })
 });
