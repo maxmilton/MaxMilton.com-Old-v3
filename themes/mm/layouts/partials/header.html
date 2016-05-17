@@ -15,13 +15,13 @@
   <meta name="description" content="{{ .Description }}">
   {{ end }}
 
-  <link rel="stylesheet" href="/css/app.css">
+  <link href="/css/app.css" rel="stylesheet">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="canonical" href="{{ .Permalink }}">
+  <link href="{{ .Permalink }}" rel="canonical">
   <meta name="theme-color" content="{{ .Site.Params.themecolour }}">
-  <link rel="alternate" type="application/atom+xml" href="/atom.xml" title="{{ .Title }}" />
-  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link href="/atom.xml" rel="alternate" type="application/atom+xml" title="{{ .Title }}" />
+  <link href="apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Open Graph -->
   <!-- TODO: Check these meta tags are still best practice -->
@@ -67,7 +67,7 @@
   <div class="row">
     <div class="col-xs-12">
       <nav class="nav nav-inline">
-         <a class="brand" href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
+         <a href="{{ .Site.BaseURL }}" class="brand">{{ .Site.Title }}</a>
         {{ $currentNode := . }}
         {{ range .Site.Menus.main }}
         <a href="{{ .URL }}" class="nav-link{{ if $currentNode.IsMenuCurrent "main" . }} active{{ end }}{{ if .Pre }} {{ .Pre }}{{ end }}">{{ .Name }}</a>
