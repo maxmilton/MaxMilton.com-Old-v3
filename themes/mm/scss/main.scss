@@ -74,28 +74,15 @@ thead {
   // @extend .thead-inverse; // TODO: Decide if I want to keep this OR remove
 }
 
-// TODO: FOLLWING IS SIMPLY AN EXAMPLE, CHANGE TO SUIT MY NEEDS (OBVOUSLY NOT FONT SIZES)
-@include media-breakpoint-up(xs) {
-  html {
-    // font-size: 16px;
-  }
-}
+@include media-breakpoint-up(xs) {}
 
-@include media-breakpoint-up(sm) {
-  html {
-    // font-size: 16px;
-  }
-}
+@include media-breakpoint-up(sm) {}
 
-@include media-breakpoint-up(md) {
-  html {
-    // font-size: 20px;
-  }
-}
+@include media-breakpoint-up(md) {}
 
 @include media-breakpoint-up(lg) {
-  html {
-    // font-size: 28px;
+  h1 {
+    margin: 1.3rem 0 2.3rem;
   }
 }
 
@@ -103,11 +90,26 @@ thead {
 // Blog posts
 //------------------------------
 
-.post {}
-.author {}
+.page,
+.post {
+  margin-left: auto;
+  margin-right: auto;
 
-.author-img {
-  margin-bottom: 0.35rem;
+  & > h1 {
+    text-align: center;
+  }
+}
+
+.meta {
+  margin-top: 1.8rem;
+}
+
+.author {
+  white-space: pre-line;
+}
+
+.img-author {
+  // margin-bottom: 0.35rem;
 }
 
 .tags {

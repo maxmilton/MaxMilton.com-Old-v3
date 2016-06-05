@@ -2,17 +2,19 @@
 
 <div id="dope">
 
-  <div class="container">
-    <article class="row">
+  <article class="container">
+    <div class="row">
       <section class="post col-xs-12 col-md-9">
         <h1>{{ .Title }}</h1>
       	{{ .Content }}
       </section>
-      <aside class="col-xs-12 col-md-3">
-        {{ .Render "sidebar" }}
+    </div>
+    <div class="row">
+      <aside class="meta col-xs-12 text-xs-center">
+        {{ .Render "meta" }}
       </aside>
-    </article>
-  </div> <!-- /.container -->
+    </div>
+  </article> <!-- /.container -->
 
 </div> <!-- /#dope -->
 
