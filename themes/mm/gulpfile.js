@@ -27,6 +27,7 @@ gulp.task('serve', ['css', 'js'], function() {
   browserSync.init({
     server: '../../public',
     // notify: false,
+    // online: false,
   });
 
   // FIXME: Run hugo AFTER sass/js to avoid having to save twice to see a change
