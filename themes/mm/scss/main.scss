@@ -75,6 +75,10 @@ thead {
   // @extend .thead-inverse; // TODO: Decide if I want to keep this OR remove
 }
 
+kbd {
+  white-space: nowrap;
+}
+
 @include media-breakpoint-down(xs) {
   .nav .brand {
     width: 100%;
