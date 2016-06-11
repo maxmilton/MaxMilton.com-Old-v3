@@ -16,6 +16,7 @@ body {
 
 .nav {
   display: flex;
+  flex-wrap: wrap;
   align-items: baseline;
   margin-top: 1rem;
   margin-bottom: 2.2rem;
@@ -72,6 +73,15 @@ table {
 
 thead {
   // @extend .thead-inverse; // TODO: Decide if I want to keep this OR remove
+}
+
+@include media-breakpoint-down(xs) {
+  .nav .brand {
+    width: 100%;
+    text-align: center;
+    margin: 0 0 0.7rem;
+    padding: 0;
+  }
 }
 
 @include media-breakpoint-up(xs) {}
