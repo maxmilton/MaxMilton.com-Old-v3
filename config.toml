@@ -5,9 +5,10 @@ title = "Max Milton"
 theme = "mm"
 
 uglyUrls = true
-# canonifyurls = true
 pluralizelisttitles = false
 rssuri = "atom.xml"
+
+hasCJKLanguage = true
 
 copyright = "Blog posts are licensed under a Creative Commons Attribution No Derivatives 4.0 (CC-BY-ND-4.0) licence. When quoting my posts, please link back to the original article."
 
@@ -24,9 +25,9 @@ copyright = "Blog posts are licensed under a Creative Commons Attribution No Der
 [[menu.main]]
   name = "All Posts"
   weight = 10
-  url = "/blog"
+  url = "/blog.html"
 
 [[menu.main]]
   name = "Quick Tips"
   weight = 20
-  url = "/tags/quick-tips"
+  url = "/tags/quick-tips.html"
