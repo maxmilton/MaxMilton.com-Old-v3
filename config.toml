@@ -6,7 +6,7 @@ theme = "mm"
 
 uglyUrls = true
 pluralizelisttitles = false
-rssuri = "atom.xml"
+rssuri = "rss.xml"
 
 hasCJKLanguage = true
 
