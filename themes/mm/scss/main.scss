@@ -75,6 +75,11 @@ thead {
   // @extend .thead-inverse; // TODO: Decide if I want to keep this OR remove
 }
 
+abbr[title] {
+  border-bottom: 2px dotted $gray;
+  text-decoration: none;
+}
+
 kbd {
   white-space: nowrap;
 }
