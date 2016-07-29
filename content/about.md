@@ -19,6 +19,8 @@ I'm Max. I've lived in countries around the world and I love to travel. I'm curr
 
 I'll write a better about me section eventually, but in the meantime, one last thing I want to add is I run a small ecommerce group, <a href="https://wearegenki.com" target="_blank">We Are Genki</a>.
 
+Disclaimer: Opinions expressed here are my own.
+
 ## Contact Me
 
 <div class="row">
