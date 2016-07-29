@@ -36,6 +36,9 @@ Install prerequisites then run `gulp` to start a local dev server.
 
 ## Changelog
 
+v1.3.0
+:  2016-07-29 - Update Bootstrap and npm moudles
+
 v1.2.1
 :  2016-06-11 - Fix nav on small screens and various minor style tweaks
 
