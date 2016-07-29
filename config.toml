@@ -6,6 +6,7 @@ theme = "mm"
 
 uglyUrls = true
 pluralizelisttitles = false
+DisableHugoGeneratorInject = true
 rssuri = "rss.xml"
 
 hasCJKLanguage = true
