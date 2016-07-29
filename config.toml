@@ -5,10 +5,10 @@ title = "Max Milton"
 theme = "mm"
 
 uglyUrls = true
-pluralizelisttitles = false
-rssuri = "rss.xml"
-
 hasCJKLanguage = true
+pluralizelisttitles = false
+disableHugoGeneratorInject = true
+rssuri = "rss.xml"
 
 copyright = "Blog posts are licensed under a Creative Commons Attribution No Derivatives 4.0 (CC-BY-ND-4.0) licence. When quoting my posts, please link back to the original article."
 
