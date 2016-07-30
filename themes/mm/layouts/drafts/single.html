@@ -1,0 +1,21 @@
+{{ partial "header.html" . }}
+
+<div id="dope">
+
+  <article class="container">
+    <div class="row">
+      <section class="post col-xs-12 col-md-9">
+        <h1>{{ .Title }}</h1>
+      	{{ .Content }}
+      </section>
+    </div>
+    <div class="row">
+      <aside class="meta col-xs-12 text-xs-center">
+        {{ .Render "meta" }}
+      </aside>
+    </div>
+  </article> <!-- /.container -->
+
+</div> <!-- /#dope -->
+
+{{ partial "footer.html" . }}
