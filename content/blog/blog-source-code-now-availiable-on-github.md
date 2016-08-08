@@ -18,13 +18,13 @@ For now, I plan to keep the site minimalist. The theme is as simple as I could m
 * No images outside of blog posts.
 * No commenting system.
 * Simple web fonts served locally.
-* The whole site is static; everything is generated using [Hugo](https://github.com/spf13/hugo/releases).
+* The whole site is static; everything generated using [Hugo](https://github.com/spf13/hugo/releases).
 * Uses Node.js and Gulp for build automation.
 
 ## Interesting Points
 
 * Bootstrap v4 alpha CSS framework. Not sure if I'll keep this but it sure makes it easy to get started.
-* UnCSS is used to remove any unused CSS rules. Even though I'm using Bootstrap the final CSS file is only 3 KB (gzip'd).
+* UnCSS removes unused CSS rules. Even though I'm using Bootstrap the final CSS file is only 3 KB (gzip'd).
 * Great performance. Pages less than 50 KB, caching, and use of CloudFlare CDN results in fast page load times.
 
 Feel free to use my Hugo theme as the base for your own site. Let me know if you use the code, I'd love to see what you do with it!
