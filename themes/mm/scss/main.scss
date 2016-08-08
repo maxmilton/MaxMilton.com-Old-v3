@@ -57,7 +57,7 @@ li {
 }
 
 // Larger clickable area
-// README: Reduce size you experience problems with overlapping links
+// README: Reduce size if you experience problems with overlapping links
 // ↳ For debugging enable CSS Outlining at http://localhost:3001/remote-debug
 a {
   position: relative;
@@ -68,7 +68,7 @@ a {
 table {
   @extend .table;
   @extend .table-bordered;
-  // @extend .table-inverse;
+  // @extend .table-inverse; // TODO: Decide if I want to keep this OR remove
 }
 
 thead {
