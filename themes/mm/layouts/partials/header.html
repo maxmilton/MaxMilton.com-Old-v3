@@ -67,7 +67,10 @@
   <div class="row">
     <div class="col-xs-12">
       <nav class="nav nav-inline">
-         <a href="{{ .Site.BaseURL }}" class="brand">{{ .Site.Title }}</a>
+        <a href="{{ .Site.BaseURL }}" class="brand">{{ .Site.Title }}</a>
+        {{ if .Site.BuildDrafts }}
+        <a href="/drafts.html" class="nav-link drafts">Drafts</a>
+        {{ end }}
         {{ $currentNode := . }}
         {{ range .Site.Menus.main }}
         <a href="{{ .URL }}" class="nav-link{{ if $currentNode.IsMenuCurrent "main" . }} active{{ end }}{{ if .Pre }} {{ .Pre }}{{ end }}">{{ .Name }}</a>
