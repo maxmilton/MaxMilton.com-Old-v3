@@ -1,22 +1,3 @@
-<!-- <h3 class="hidden-md-up">Author</h3> -->
+<!-- README: Params in drafts is breaking builds, removed this for now -->
 
-<address class="author">
-  <img src="/img/{{ .Params.author | urlize }}.jpg" alt="{{ .Params.author }}" class="img-author img-circle" />
-  {{ .Params.author }}
-  <a href="mailto:{{ .Params.email }}">{{ .Params.email }}</a>
-</address>
-
-<time datetime="{{ .Date.Format "2006-01-02T19:00" }}">{{ .Date.Format "Mon, 2 Jan 2006" }}</time>
-<!-- TODO: Check these meta tags are still best practice -->
-<!--
-<meta itemprop="wordCount" content="{{ .WordCount }}">
-<meta itemprop="datePublished" content="{{ .Date.Format "2006-01-02" }}">
-<meta itemprop="url" content="{{ .Permalink }}">
--->
-
-<ul class="tags">
-  {{ range .Params.tags }}
-    <!-- FIXME: Label style not appearing - Bootstrap v4 issue -->
-    <li class="label label-pill label-default"><a href="/tags/{{ . | urlize }}.html">{{ . }}</a></li>
-  {{ end }}
-</ul>
+# TODO: Fix draft metadata
