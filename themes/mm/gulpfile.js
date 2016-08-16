@@ -1,3 +1,5 @@
+'use strict';
+
 var browserSync = require('browser-sync').create();
 var concat      = require('gulp-concat');
 var del         = require('del');
