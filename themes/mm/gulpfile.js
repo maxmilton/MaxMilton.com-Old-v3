@@ -1,5 +1,3 @@
-'use strict';
-
 var browserSync = require('browser-sync').create();
 var concat      = require('gulp-concat');
 var del         = require('del');
@@ -15,6 +13,34 @@ var sourcemaps  = require('gulp-sourcemaps');
 var uglify      = require('gulp-uglifyjs');
 var uncss       = require('gulp-uncss');
 
+var paths = {
+  public: {
+    root: '../../public',
+    html: '../../public/**/*.html',
+  },
+  scss: {
+    src: './scss/**/*.scss',
+    main: './scss/main.scss',
+    dest: './static/css/',
+    built: '',
+  },
+  js: {
+    src: './static/js/**/*.js',
+    main: './static/js/main.js',
+    dest: './static/js',
+    built: '',
+  },
+  static: {
+    css: './static/css/app.css',
+    js: './static/js/app.js',
+  },
+  config: '../../config.toml',
+  content: '../../content/**/*.md',
+  layouts: './layouts/**/*.html',
+  maps: './maps',
+  manifest: './rev-manifest.json',
+};
+
 gulp.task('default', ['watch']);
 gulp.task('watch', ['serve']);
 gulp.task('build', ['css:build', 'js:build', 'html:build', 'html:rev', 'clean:build']);
@@ -25,16 +51,16 @@ gulp.task('build', ['css:build', 'js:build', 'html:build', 'html:rev', 'clean:bu
 
 gulp.task('serve', ['css', 'js'], function() {
   browserSync.init({
-    server: '../../public',
+    server: paths.public.root,
     // notify: false, // Disable Browsersync notification
     // online: false, // Uncomment if no internet connection
   });
 
   // FIXME: Run hugo AFTER sass/js to avoid having to save twice to see a change
-  gulp.watch('./scss/**/*.scss', ['css', 'hugo']);
-  gulp.watch('./static/js/**/*.js', ['js', 'hugo']);
-  gulp.watch(['../../content/**/*.md', './layouts/**/*.html', '../../config.toml'], ['hugo']);
-  gulp.watch(['../../public/**/*.html']).on('change', browserSync.reload);
+  gulp.watch(paths.scss.src, ['css', 'hugo']);
+  gulp.watch(paths.js.src, ['js', 'hugo']);
+  gulp.watch([paths.content, paths.layouts, paths.config], ['hugo']);
+  gulp.watch([paths.public.html]).on('change', browserSync.reload);
 });
 
 //----------------------------------------
@@ -62,21 +88,21 @@ gulp.task('hugo:build', ['css:build', 'js:build'], function(fetch) {
 //----------------------------------------
 
 gulp.task('css', function() {
-  return gulp.src('./scss/main.scss')
+  return gulp.src(paths.scss.main)
     .pipe(sourcemaps.init())
     .pipe(sass().on('error', sass.logError))
     .pipe(rename('app.css'))
-    .pipe(sourcemaps.write('./maps'))
-    .pipe(gulp.dest('./static/css/'))
+    .pipe(sourcemaps.write(paths.maps))
+    .pipe(gulp.dest(paths.scss.dest))
     .pipe(browserSync.stream());
 });
 
 // TODO: Add combine media queries step (if I add media queries to main.scss)
 // ↳ Check if this is necessary because of how Bootstrap handles media queries
 gulp.task('css:build', ['css', 'hugo', 'clean:rev'], function() {
-  return gulp.src('./static/css/app.css')
+  return gulp.src(paths.static.css)
   .pipe(uncss({
-    html: ['../../public/**/*.html'],
+    html: [paths.public.html],
   }))
   .pipe(nano({
     autoprefixer: {
@@ -85,8 +111,8 @@ gulp.task('css:build', ['css', 'hugo', 'clean:rev'], function() {
     },
   }))
   .pipe(rev())
-  .pipe(gulp.dest('./static/css/'))
-  .pipe(rev.manifest('./rev-manifest.json', { merge: true }))
+  .pipe(gulp.dest(paths.scss.dest))
+  .pipe(rev.manifest(paths.manifest, { merge: true }))
   .pipe(gulp.dest('.'))
 });
 
@@ -95,20 +121,20 @@ gulp.task('css:build', ['css', 'hugo', 'clean:rev'], function() {
 //----------------------------------------
 
 gulp.task('js', function() {
-  return gulp.src(['./static/js/main.js'])
+  return gulp.src([paths.js.main])
     .pipe(sourcemaps.init())
     .pipe(concat('app.js'))
-    .pipe(sourcemaps.write('./maps'))
-    .pipe(gulp.dest('./static/js'))
+    .pipe(sourcemaps.write(paths.maps))
+    .pipe(gulp.dest(paths.js.dest))
     .pipe(browserSync.stream());
 });
 
 gulp.task('js:build', ['js', 'clean:rev'], function() {
-  return gulp.src('./static/js/app.js')
+  return gulp.src(paths.static.js)
     .pipe(uglify())
     .pipe(rev())
-    .pipe(gulp.dest('./static/js/'))
-    .pipe(rev.manifest('./rev-manifest.json', { merge: true }))
+    .pipe(gulp.dest(paths.js.dest))
+    .pipe(rev.manifest(paths.manifest, { merge: true }))
     .pipe(gulp.dest('.'))
 });
 
@@ -117,7 +143,7 @@ gulp.task('js:build', ['js', 'clean:rev'], function() {
 //----------------------------------------
 
 gulp.task('html:build', ['hugo:build'], function() {
-  return gulp.src('../../public/**/*.html')
+  return gulp.src(paths.public.html)
     .pipe(htmlmin({
       collapseBooleanAttributes: true,
       collapseWhitespace: true,
@@ -130,15 +156,15 @@ gulp.task('html:build', ['hugo:build'], function() {
       removeOptionalTags: true,
       removeRedundantAttributes: true,
     }))
-    .pipe(gulp.dest('../../public'))
+    .pipe(gulp.dest(paths.public.root))
 });
 
 gulp.task('html:rev', ['html:build'], function() {
-  var manifest = gulp.src('./rev-manifest.json');
+  var manifest = gulp.src(paths.manifest);
 
-  return gulp.src('../../public/**/*.html')
+  return gulp.src(paths.public.html)
   .pipe(replace({ manifest: manifest }))
-  .pipe(gulp.dest('../../public/'));
+  .pipe(gulp.dest(paths.public.root));
 });
 
 //----------------------------------------
@@ -148,21 +174,21 @@ gulp.task('html:rev', ['html:build'], function() {
 gulp.task('clean:rev', function(){
   return del([
     // Remove old revisioned files
-    './static/css/app-*.css',
-    './static/js/app-*.js',
+    paths.scss.dest + '/app-*.css',
+    paths.js.dest + '/app-*.js',
   ])
 });
 
 gulp.task('clean:build', ['html:rev'], function(){
   return del([
     // Remove development and non-revisioned files
-    '../../public/css/maps',
-    '../../public/js/maps',
-    '../../public/css/app.css',
-    '../../public/js/app.js',
-    '../../public/js/main.js',
+    paths.public.root + '/css/maps',
+    paths.public.root + '/css/app.css',
+    paths.public.root + '/js/maps',
+    paths.public.root + '/js/app.js',
+    paths.public.root + '/js/main.js',
     // Remove blog post drafts
-    '../../public/drafts',
-    '../../public/drafts.html',
+    paths.public.root + '/drafts',
+    paths.public.root + '/drafts.html',
   ], { force:true })
 });
