@@ -11,6 +11,7 @@ disableHugoGeneratorInject = true
 rssuri = "rss.xml"
 
 copyright = "Blog posts are licensed under a Creative Commons Attribution No Derivatives 4.0 (CC-BY-ND-4.0) licence. When quoting my posts, please link back to the original article."
+googleAnalytics = "UA-64694403-1"
 
 [author]
     name = "Max Milton"
@@ -20,7 +21,6 @@ copyright = "Blog posts are licensed under a Creative Commons Attribution No Der
   subtitle = "Live life to the Max."
 	description = "The personal blog of Max Milton."
   themecolour = "#eceeef"
-  googleAnalytics = "UA-64694403-1"
 
 [[menu.main]]
   name = "All Posts"
