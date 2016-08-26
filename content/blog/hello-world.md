@@ -17,7 +17,7 @@ Those things may include<!--more-->:
 * Ecommerce
 * Web design and development
 * Linux and open source
-* Whatever interests me at the time
+* Whatever else interests me at the time
 
 I know blog best practice is to choose 2 or 3 subjects and stick to writing about those... but I don't work that way. I find so many things interesting, I couldn't possibly just stick to a few. I'll start writing and see where it takes me, let's let it grow organically.
 

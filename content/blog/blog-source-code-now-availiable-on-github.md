@@ -23,7 +23,7 @@ For now, I plan to keep the site minimalist. The theme is as simple as I could m
 
 ## Interesting Points
 
-* Bootstrap v4 alpha CSS framework. Not sure if I'll keep this but it sure makes it easy to get started.
+* Bootstrap v4 CSS framework. Not sure if I'll keep this but it sure makes it easy to get started.
 * UnCSS removes unused CSS rules. Even though I'm using Bootstrap the final CSS file is only 3 KB (gzip'd).
 * Great performance. Pages less than 50 KB, caching, and use of CloudFlare CDN results in fast page load times.
 
