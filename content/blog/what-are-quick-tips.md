@@ -1,7 +1,7 @@
 +++
 author = "Max Milton"
 date = "2016-04-25T09:23:00+10:00"
-description = ""
+description = "Quick tips, insights, and other thought provoking posts."
 email = "max@wearegenki.com"
 tags = ["quick tips", "miscellaneous"]
 title = "What Are Quick Tips?"

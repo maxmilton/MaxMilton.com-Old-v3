@@ -1,7 +1,7 @@
 +++
 author = "Max Milton"
 date = "2016-05-08T08:07:30+10:00"
-description = ""
+description = "Make your atom code editor fly with key bindings you probably didn't even know existed."
 email = "max@wearegenki.com"
 tags = ["quick tips", "programming"]
 title = "Top 12 Lesser Known Atom Editor Shortcuts"

@@ -1,8 +1,7 @@
 +++
 author = "Max Milton"
 date = "2016-08-27T00:00:00+10:00"
-description = ""
-draft = true
+description = "When was the last time you had a good hard look at yourself and truly thought \"Yep, I'm happy.\"?"
 email = "max@wearegenki.com"
 tags = ["challenge", "hacks"]
 title = "100 Days"

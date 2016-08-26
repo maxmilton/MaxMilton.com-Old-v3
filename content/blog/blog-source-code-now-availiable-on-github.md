@@ -1,7 +1,7 @@
 +++
 author = "Max Milton"
 date = "2016-04-30T05:30:00+10:00"
-description = ""
+description = "Free and open source hugo theme. Bootstrap v4, Gulp, Node.js. Includes build and deploy scripts!"
 email = "max@wearegenki.com"
 tags = ["open source"]
 title = "Blog Source Code Now Availiable on Github"
