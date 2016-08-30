@@ -12,7 +12,7 @@ var replace     = require('gulp-rev-replace');
 var rev         = require('gulp-rev');
 var sass        = require('gulp-sass');
 var sourcemaps  = require('gulp-sourcemaps');
-var uglify      = require('gulp-uglifyjs');
+var uglify      = require('gulp-uglify');
 var uncss       = require('gulp-uncss');
 
 var paths = {
