@@ -37,22 +37,22 @@ Install prerequisites then run `gulp` to start a local dev server.
 ## Changelog
 
 v1.4.0
-:  2016-09-07 - Add an easy way view drafts, capture custom GA data + fix GA tracking ID, update bootstrap to v4.0.0-alpha.4
+:  2016-09-07 — Add an easy way view drafts, capture custom GA data + fix GA tracking ID, update bootstrap to v4.0.0-alpha.4
 
 v1.3.0
-:  2016-07-29 - Update Bootstrap and npm moudles, small screens header fix
+:  2016-07-29 — Update Bootstrap and npm moudles, small screens header fix
 
 v1.2.1
-:  2016-06-11 - Fix nav on small screens and minor style tweaks
+:  2016-06-11 — Fix nav on small screens and minor style tweaks
 
 v1.2.0
-:  2016-06-04 - Move author and meta section to bottom of posts and centre page content
+:  2016-06-04 — Move author and meta section to bottom of posts and centre page content
 
 v1.1.0
-: 2016-04-30 - Add sample deployment script, cache busting for compiled CSS/JS, RSS feed, extra meta tags
+: 2016-04-30 — Add sample deployment script, cache busting for compiled CSS/JS, RSS feed, extra meta tags
 
 v1.0.0
-:  2016-04-27 - Initial public release
+:  2016-04-27 — Initial public release
 
 ## Licence
 
