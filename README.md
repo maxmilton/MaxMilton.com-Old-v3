@@ -36,11 +36,14 @@ Install prerequisites then run `gulp` to start a local dev server.
 
 ## Changelog
 
+v1.4.0
+:  2016-09-07 - Add an easy way view drafts, capture custom GA data + fix GA tracking ID, update bootstrap to v4.0.0-alpha.4
+
 v1.3.0
 :  2016-07-29 - Update Bootstrap and npm moudles, small screens header fix
 
 v1.2.1
-:  2016-06-11 - Fix nav on small screens and various minor style tweaks
+:  2016-06-11 - Fix nav on small screens and minor style tweaks
 
 v1.2.0
 :  2016-06-04 - Move author and meta section to bottom of posts and centre page content
@@ -53,9 +56,9 @@ v1.0.0
 
 ## Licence
 
-Blog content is licenced under the Creative Commons Attribution No Derivatives 4.0 ([CC-BY-ND-4.0](http://creativecommons.org/licenses/by-nd/4.0/legalcode)) licence. When quoting my posts, please link back to the original article.
+Blog content licenced under the Creative Commons Attribution No Derivatives 4.0 ([CC-BY-ND-4.0](http://creativecommons.org/licenses/by-nd/4.0/legalcode)) licence. When quoting my posts, please link back to the original article.
 
-Site theme is licenced ISC, see [themes/mm/LICENCE.md](https://github.com/MaxMilton/MaxMilton.com/blob/master/themes/mm/LICENSE.md).
+Site theme licenced ISC, see [themes/mm/LICENCE.md](https://github.com/MaxMilton/MaxMilton.com/blob/master/themes/mm/LICENSE.md).
 
 ## Author
 
