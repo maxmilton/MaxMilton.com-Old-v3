@@ -21,8 +21,8 @@ var paths = {
     html: '../../public/**/*.html',
   },
   scss: {
-    src: './scss/**/*.scss',
-    main: './scss/main.scss',
+    src: './sass/**/*.scss',
+    main: './sass/main.scss',
     dest: './static/css/',
     built: '',
   },
