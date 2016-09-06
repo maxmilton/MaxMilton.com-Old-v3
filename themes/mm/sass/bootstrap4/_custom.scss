@@ -2,3 +2,28 @@
 //
 // Copy variables from `_variables.scss` to this file to override default values
 // without modifying source files.
+
+$gray-light:              #ccc;
+// $brand-primary:             #8e24aa; // Royal purple
+
+$enable-flex:             true;
+$enable-rounded:          false;
+$enable-print-styles:     false;
+
+$body-bg:                 $gray-lighter;
+
+$grid-breakpoints: (
+  xl: none // Disable xl size
+);
+
+$container-max-widths: (
+  xl: none // Disable xl size
+);
+
+$font-family-sans-serif:  "Overpass", sans-serif;
+$font-family-serif:       serif;
+$font-family-monospace:   "Roboto Mono", $font-family-monospace;
+
+$font-size-root:          21px;
+
+$table-border-color:      $gray-light;
