@@ -44,13 +44,11 @@
 
 $gray-dark:                 #373a3c !default;
 $gray:                      #55595c !default;
-// $gray-light:                #818a91 !default;
-$gray-light:                #ccc !default;
+$gray-light:                #818a91 !default;
 $gray-lighter:              #eceeef !default;
 $gray-lightest:             #f7f7f9 !default;
 
-$brand-primary:             #0275d8 !default; // Default blue
-// $brand-primary:             #8e24aa !default; // Royal purple
+$brand-primary:             #0275d8 !default;
 $brand-success:             #5cb85c !default;
 $brand-info:                #5bc0de !default;
 $brand-warning:             #f0ad4e !default;
@@ -62,14 +60,14 @@ $brand-inverse:             $gray-dark !default;
 //
 // Quickly modify global styling by enabling or disabling optional features.
 
-$enable-flex:               true !default;
-$enable-rounded:            false !default;
+$enable-flex:               false !default;
+$enable-rounded:            true !default;
 $enable-shadows:            false !default;
 $enable-gradients:          false !default;
 $enable-transitions:        false !default;
 $enable-hover-media-query:  false !default;
 $enable-grid-classes:       true !default;
-$enable-print-styles:       false !default;
+$enable-print-styles:       true !default;
 
 
 // Spacing
@@ -106,7 +104,7 @@ $border-width: 1px !default;
 //
 // Settings for the `<body>` element.
 
-$body-bg:    $gray-lighter !default;
+$body-bg:    #fff !default;
 $body-color: $gray-dark !default;
 
 
@@ -130,7 +128,7 @@ $grid-breakpoints: (
   sm: 544px,
   md: 768px,
   lg: 992px,
-  // xl: 1200px // Disable xl size
+  xl: 1200px
 ) !default;
 @include _assert-ascending($grid-breakpoints, "$grid-breakpoints");
 
@@ -143,7 +141,7 @@ $container-max-widths: (
   sm: 576px,
   md: 720px,
   lg: 940px,
-  // xl: 1140px // Disable xl size
+  xl: 1140px
 ) !default;
 @include _assert-ascending($container-max-widths, "$container-max-widths");
 
@@ -160,13 +158,13 @@ $grid-gutter-width: 30px !default;
 //
 // Font, line-height, and color for body text, headings, and more.
 
-$font-family-sans-serif: "Overpass", sans-serif !default;
-$font-family-serif:      serif !default;
-$font-family-monospace:  "Roboto Mono", Menlo, Monaco, Consolas, "Liberation Mono", monospace !default;
+$font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !default;
+$font-family-serif:      Georgia, "Times New Roman", Times, serif !default;
+$font-family-monospace:  Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 $font-family-base:       $font-family-sans-serif !default;
 
 // Pixel value used to responsively scale all typography. Applied to the `<html>` element.
-$font-size-root: 21px !default;
+$font-size-root: 16px !default;
 
 $font-size-base: 1rem !default;
 $font-size-lg:   1.25rem !default;
@@ -256,7 +254,7 @@ $table-bg-hover:                rgba(0,0,0,.075) !default;
 $table-bg-active:               $table-bg-hover !default;
 
 $table-border-width:            $border-width !default;
-$table-border-color:            $gray-light !default;
+$table-border-color:            $gray-lighter !default;
 
 
 // Buttons
@@ -687,7 +685,7 @@ $modal-sm:                    300px !default;
 //
 // Define alert colors, border radius, and padding.
 
-$alert-padding:               15px !default;
+$alert-padding:               1rem !default;
 $alert-border-radius:         $border-radius !default;
 $alert-link-font-weight:      bold !default;
 $alert-border-width:          $border-width !default;
