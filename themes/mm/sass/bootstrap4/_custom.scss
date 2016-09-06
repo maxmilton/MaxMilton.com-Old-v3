@@ -4,7 +4,8 @@
 // without modifying source files.
 
 $gray-light:              #ccc;
-// $brand-primary:             #8e24aa; // Royal purple
+$gray-lighter:            #eceeef; // Same as default but needed for $body-bg
+// $brand-primary:           #8e24aa; // Royal purple
 
 $enable-flex:             true;
 $enable-rounded:          false;
@@ -12,17 +13,18 @@ $enable-print-styles:     false;
 
 $body-bg:                 $gray-lighter;
 
-$grid-breakpoints: (
-  xl: none // Disable xl size
-);
-
-$container-max-widths: (
-  xl: none // Disable xl size
-);
+// FIXME: Couldn't get this working, still have to comment out in _variables.scss
+// $grid-breakpoints: (
+//   xl: 0 // Disable xl size
+// );
+//
+// $container-max-widths: (
+//   xl: 0 // Disable xl size
+// );
 
 $font-family-sans-serif:  "Overpass", sans-serif;
 $font-family-serif:       serif;
-$font-family-monospace:   "Roboto Mono", $font-family-monospace;
+$font-family-monospace:   "Roboto Mono", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 
 $font-size-root:          21px;
 
