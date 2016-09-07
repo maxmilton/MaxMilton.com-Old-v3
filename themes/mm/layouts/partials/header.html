@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   {{ if eq .URL "/" }}
   <!-- Unique metadata on homepage -->
@@ -17,7 +18,6 @@
 
   <link href="/css/app.css" rel="stylesheet">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link href="{{ .Permalink }}" rel="canonical">
   <meta name="theme-color" content="{{ .Site.Params.themecolour }}">
   <link href="/rss.xml" rel="alternate" type="application/rss+xml" title="{{ .Title }}" />
