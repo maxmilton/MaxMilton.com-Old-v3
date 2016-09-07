@@ -52,11 +52,11 @@ gulp.task('build', ['css:build', 'js:build', 'html:build', 'html:rev', 'clean:bu
 // Browser Sync
 //----------------------------------------
 
-// FIXME: Set up css/js injecting rather than having the page reload
+// FIXME: Set up css/js injecting rather than full page reload
 gulp.task('serve', ['css', 'js'], function() {
   browserSync.init({
     server: paths.public.root,
-    reloadDelay: 1000,
+    reloadDelay: 1000, // FIXME: Is this doing anything?
     // notify: false, // Disable Browsersync notification
     // online: false, // Uncomment if no internet connection
   });
