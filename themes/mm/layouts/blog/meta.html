@@ -14,9 +14,8 @@
 <meta itemprop="url" content="{{ .Permalink }}">
 -->
 
-<ul class="tags">
-  {{ range .Params.tags }}
-    <!-- FIXME: Label style not appearing - Bootstrap v4 issue -->
-    <li class="label label-pill label-default"><a href="/tags/{{ . | urlize }}.html">{{ . }}</a></li>
-  {{ end }}
-</ul>
+<div class="tags">
+{{ range .Params.tags }}
+  <a href="/tags/{{ . | urlize }}.html" class="tag tag-default">{{ . }}</a>
+{{ end }}
+</div>

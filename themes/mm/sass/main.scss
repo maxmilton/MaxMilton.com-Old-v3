@@ -131,13 +131,8 @@ kbd {
   margin-bottom: 0.5rem;
 }
 
-.tags {
-  list-style: none;
-  padding-left: 0;
-
-  & > li {
-    margin-bottom: 0;
-  }
+.tag {
+  margin: 0;
 }
 
 .lead.bg-primary {
