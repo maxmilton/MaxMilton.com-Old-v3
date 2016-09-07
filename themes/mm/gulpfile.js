@@ -13,6 +13,7 @@ var rev         = require('gulp-rev');
 var sass        = require('gulp-sass');
 var sourcemaps  = require('gulp-sourcemaps');
 var uglify      = require('gulp-uglify');
+var combineMq   = require('gulp-combine-mq');
 var uncss       = require('gulp-uncss');
 
 var paths = {
@@ -51,14 +52,15 @@ gulp.task('build', ['css:build', 'js:build', 'html:build', 'html:rev', 'clean:bu
 // Browser Sync
 //----------------------------------------
 
+// FIXME: Set up css/js injecting rather than having the page reload
 gulp.task('serve', ['css', 'js'], function() {
   browserSync.init({
     server: paths.public.root,
+    reloadDelay: 1000,
     // notify: false, // Disable Browsersync notification
     // online: false, // Uncomment if no internet connection
   });
 
-  // FIXME: Run hugo AFTER sass/js to avoid having to save twice to see a change
   gulp.watch(paths.sass.src, ['css', 'hugo']);
   gulp.watch(paths.js.src, ['js', 'hugo']);
   gulp.watch([paths.content, paths.layouts, paths.config], ['hugo']);
@@ -99,10 +101,11 @@ gulp.task('css', function() {
     .pipe(browserSync.stream());
 });
 
-// TODO: Add combine media queries step (if I add media queries to main.scss)
-// ↳ Check if this is necessary because of how Bootstrap handles media queries
 gulp.task('css:build', ['css', 'hugo', 'clean:rev'], function() {
   return gulp.src(paths.static.css)
+  .pipe(combineMq({
+    beautify: false,
+  }))
   .pipe(uncss({
     html: [paths.public.html],
   }))
