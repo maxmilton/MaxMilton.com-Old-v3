@@ -1,3 +1,19 @@
-<!-- README: Params in drafts is breaking builds, removed this for now -->
+<address class="author">
+  <img src="/img/{{ .Params.author | urlize }}.jpg" alt="{{ .Params.author }}" class="img-author img-circle" />
+  {{ .Params.author }}
+  <a href="mailto:{{ .Params.email }}">{{ .Params.email }}</a>
+</address>
 
-# TODO: Fix draft metadata
+<time datetime="{{ .Date.Format "2006-01-02T19:00" }}">{{ .Date.Format "Mon, 2 Jan 2006" }}</time>
+<!-- TODO: Check these meta tags are still best practice -->
+<!--
+<meta itemprop="wordCount" content="{{ .WordCount }}">
+<meta itemprop="datePublished" content="{{ .Date.Format "2006-01-02" }}">
+<meta itemprop="url" content="{{ .Permalink }}">
+-->
+
+<div class="tags">
+{{ range .Params.tags }}
+  <a href="/tags/{{ . | urlize }}.html" class="tag tag-default">{{ . }}</a>
+{{ end }}
+</div>
