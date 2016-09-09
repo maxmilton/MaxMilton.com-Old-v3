@@ -56,7 +56,6 @@ gulp.task('build', ['css:build', 'js:build', 'html:build', 'html:rev', 'clean:bu
 gulp.task('serve', ['css', 'js'], function() {
   browserSync.init({
     server: paths.public.root,
-    reloadDelay: 1000, // FIXME: Is this doing anything?
     // notify: false, // Disable Browsersync notification
     // online: false, // Uncomment if no internet connection
   });
