@@ -16,6 +16,9 @@ copyright = "Blog posts are licensed under a Creative Commons Attribution No Der
   name = "Max Milton"
   email = "max@wearegenki.com"
 
+[blackfriday]
+  hrefTargetBlank = true
+
 [params]
   subtitle = "Live life to the Max."
 	description = "The personal blog of Max Milton."
