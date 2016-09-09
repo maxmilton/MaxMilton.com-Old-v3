@@ -2,9 +2,9 @@
 // Imports
 //------------------------------
 
-@import "variables";
-@import "fonts";
-@import "bootstrap4/bootstrap-flex";
+@import 'variables';
+@import 'fonts';
+@import 'bootstrap4/bootstrap-flex';
 
 //------------------------------
 // Global Theme
@@ -15,11 +15,11 @@ body {
 }
 
 .nav {
+  align-items: baseline;
   display: flex;
   flex-wrap: wrap;
-  align-items: baseline;
-  margin-top: 1rem;
   margin-bottom: 2.2rem;
+  margin-top: 1rem;
 
   .brand {
     color: $gray-dark;
@@ -34,10 +34,10 @@ body {
 
 .footer {
   color: $gray-light;
-  text-align: center;
   margin: 2rem 0 3rem;
+  text-align: center;
 
-  & > a {
+  > a {
     color: inherit;
     text-decoration: none;
   }
@@ -47,36 +47,34 @@ h1 {
   margin-bottom: 1.7rem;
 }
 
-h2, h3, h4, h5, h6 {
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin-top: 2rem;
 }
 
 li {
   // Add more space between list items
-  margin-bottom: 0.5rem;
+  margin-bottom: .5rem;
 }
 
 // Larger clickable area
 // README: Reduce size if you experience problems with overlapping links
 // ↳ For debugging enable CSS Outlining at http://localhost:3001/remote-debug
 a {
+  margin: -.6em -1em;
+  padding: .6em 1em;
   position: relative;
-  margin: -0.6em -1em;
-  padding: 0.6em 1em;
 }
 
 table {
   @extend .table;
-  @extend .table-bordered;
-  // @extend .table-inverse; // TODO: Decide if I want to keep this OR remove
-}
-
-thead {
-  // @extend .thead-inverse; // TODO: Decide if I want to keep this OR remove
 }
 
 abbr[title] {
-  border-bottom: 2px dotted $gray;
+  border-bottom: 2px dotted $gray-light;
   text-decoration: none;
 }
 
@@ -86,10 +84,10 @@ kbd {
 
 @include media-breakpoint-down(xs) {
   .nav .brand {
-    width: 100%;
-    text-align: center;
-    margin: 0 0 0.7rem;
+    margin: 0 0 .7rem;
     padding: 0;
+    text-align: center;
+    width: 100%;
   }
 }
 
@@ -114,7 +112,7 @@ kbd {
   margin-left: auto;
   margin-right: auto;
 
-  & > h1 {
+  > h1 {
     text-align: center;
   }
 }
@@ -128,7 +126,7 @@ kbd {
 }
 
 .img-author {
-  margin-bottom: 0.5rem;
+  margin-bottom: .5rem;
 }
 
 .tag {
@@ -140,7 +138,7 @@ kbd {
 }
 
 .footnote-ref {
-  margin-left: 0.2rem;
+  margin-left: .2rem;
 }
 
 //------------------------------
@@ -152,16 +150,16 @@ kbd {
 }
 
 .subscribe {
-  border-top: 1px solid $gray-light;
   border-bottom: 1px solid $gray-light;
-  text-align: center;
-  padding: 2rem 0 2.4rem;
-  margin-top: 3rem;
+  border-top: 1px solid $gray-light;
   margin-bottom: 1rem;
+  margin-top: 3rem;
+  padding: 2rem 0 2.4rem;
+  text-align: center;
 }
 
-.summaries > article > p:last-of-type:after {
-  content: "…";
+.summaries > article > p:last-of-type::after {
+  content: '…';
 }
 
 .more {
