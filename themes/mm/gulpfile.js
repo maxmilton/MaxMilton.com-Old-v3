@@ -113,6 +113,9 @@ gulp.task('css:build', ['css', 'hugo', 'clean:rev'], function() {
       browsers: ['> 1%', 'last 2 versions'],
       add: true,
     },
+    discardComments: {
+      removeAll: true,
+    },
   }))
   .pipe(rev())
   .pipe(gulp.dest(paths.sass.dest))
