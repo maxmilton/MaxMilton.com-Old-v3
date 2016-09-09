@@ -36,8 +36,11 @@ Install prerequisites then run `gulp` to start a local dev server.
 
 ## Changelog
 
+v1.5.0
+:  2016-09-10 — Add combine CSS media queries step to build, modernize font stack; remove unnecessary fonts, fix tags on posts, restore author metadata in drafts, make external links open in a new tab
+
 v1.4.0
-:  2016-09-07 — Add an easy way view drafts, capture custom GA data + fix GA tracking ID, update bootstrap to v4.0.0-alpha.4
+:  2016-09-07 — Add an easy way to view drafts, capture custom GA data + fix GA tracking ID, update bootstrap to v4.0.0-alpha.4
 
 v1.3.0
 :  2016-07-29 — Update Bootstrap and npm moudles, small screens header fix
