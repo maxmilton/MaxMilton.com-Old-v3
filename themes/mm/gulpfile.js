@@ -24,18 +24,14 @@ var paths = {
   sass: {
     src: './sass/**/*.scss',
     main: './sass/main.scss',
-    dest: './static/css/',
-    built: '',
+    dest: '../../public/css/',
+    static: '../../public/css/app.css',
   },
   js: {
     src: './static/js/**/*.js',
     main: './static/js/main.js',
-    dest: './static/js',
-    built: '',
-  },
-  static: {
-    css: './static/css/app.css',
-    js: './static/js/app.js',
+    dest: '../../public/js',
+    static: '../../public/js/app.js',
   },
   config: '../../config.toml',
   content: '../../content/**/*.md',
@@ -53,15 +49,15 @@ gulp.task('build', ['css:build', 'js:build', 'html:build', 'html:rev', 'clean:bu
 //----------------------------------------
 
 // FIXME: Set up css/js injecting rather than full page reload
-gulp.task('serve', ['css', 'js'], function() {
+gulp.task('serve', ['hugo', 'css', 'js'], function() {
   browserSync.init({
     server: paths.public.root,
     // notify: false, // Disable Browsersync notification
     // online: false, // Uncomment if no internet connection
   });
 
-  gulp.watch(paths.sass.src, ['css', 'hugo']);
-  gulp.watch(paths.js.src, ['js', 'hugo']);
+  gulp.watch(paths.sass.src, ['css']);
+  gulp.watch(paths.js.src, ['js']);
   gulp.watch([paths.content, paths.layouts, paths.config], ['hugo']);
   gulp.watch([paths.public.html]).on('change', browserSync.reload);
 });
@@ -97,11 +93,11 @@ gulp.task('css', function() {
     .pipe(rename('app.css'))
     .pipe(sourcemaps.write(paths.maps))
     .pipe(gulp.dest(paths.sass.dest))
-    .pipe(browserSync.stream());
+    .pipe(browserSync.stream({match: '**/*.css'}));
 });
 
 gulp.task('css:build', ['css', 'hugo', 'clean:rev'], function() {
-  return gulp.src(paths.static.css)
+  return gulp.src(paths.sass.static)
   .pipe(combineMq({
     beautify: false,
   }))
@@ -133,11 +129,11 @@ gulp.task('js', function() {
     .pipe(concat('app.js'))
     .pipe(sourcemaps.write(paths.maps))
     .pipe(gulp.dest(paths.js.dest))
-    .pipe(browserSync.stream());
+    .pipe(browserSync.stream({match: '**/*.js'}));
 });
 
 gulp.task('js:build', ['js', 'clean:rev'], function() {
-  return gulp.src(paths.static.js)
+  return gulp.src(paths.js.static)
     .pipe(uglify())
     .pipe(rev())
     .pipe(gulp.dest(paths.js.dest))
