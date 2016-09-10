@@ -2,9 +2,9 @@
 // Imports
 //------------------------------
 
-@import 'variables';
-@import 'fonts';
-@import 'bootstrap4/bootstrap-flex';
+@import "variables";
+@import "fonts";
+@import "bootstrap4/bootstrap-flex";
 
 //------------------------------
 // Global Theme
@@ -15,16 +15,16 @@ body {
 }
 
 .nav {
-  align-items: baseline;
   display: flex;
-  flex-wrap: wrap;
-  margin-bottom: 2.2rem;
   margin-top: 1rem;
+  margin-bottom: 2.2rem;
+  align-items: baseline;
+  flex-wrap: wrap;
 
   .brand {
-    color: $gray-dark;
-    font-size: 30px;
     margin-right: 1rem;
+    font-size: 30px;
+    color: $gray-dark;
   }
 
   .nav-link.about {
@@ -33,8 +33,8 @@ body {
 }
 
 .footer {
-  color: $gray-light;
   margin: 2rem 0 3rem;
+  color: $gray-light;
   text-align: center;
 
   > a {
@@ -64,9 +64,9 @@ li {
 // README: Reduce size if you experience problems with overlapping links
 // ↳ For debugging enable CSS Outlining at http://localhost:3001/remote-debug
 a {
-  margin: -.6em -1em;
-  padding: .6em 1em;
   position: relative;
+  padding: .6em 1em;
+  margin: -.6em -1em;
 }
 
 table {
@@ -74,8 +74,8 @@ table {
 }
 
 abbr[title] {
-  border-bottom: 2px dotted $gray-light;
   text-decoration: none;
+  border-bottom: 2px dotted $gray-light;
 }
 
 kbd {
@@ -84,10 +84,10 @@ kbd {
 
 @include media-breakpoint-down(xs) {
   .nav .brand {
-    margin: 0 0 .7rem;
-    padding: 0;
-    text-align: center;
     width: 100%;
+    padding: 0;
+    margin: 0 0 .7rem;
+    text-align: center;
   }
 }
 
@@ -109,8 +109,8 @@ kbd {
 
 .page,
 .post {
-  margin-left: auto;
   margin-right: auto;
+  margin-left: auto;
 
   > h1 {
     text-align: center;
@@ -150,16 +150,16 @@ kbd {
 }
 
 .subscribe {
-  border-bottom: 1px solid $gray-light;
-  border-top: 1px solid $gray-light;
-  margin-bottom: 1rem;
-  margin-top: 3rem;
   padding: 2rem 0 2.4rem;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
   text-align: center;
+  border-top: 1px solid $gray-light;
+  border-bottom: 1px solid $gray-light;
 }
 
 .summaries > article > p:last-of-type::after {
-  content: '…';
+  content: "…";
 }
 
 .more {
