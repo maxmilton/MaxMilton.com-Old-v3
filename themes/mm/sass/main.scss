@@ -69,6 +69,22 @@ a {
   margin: -.6em -1em;
 }
 
+blockquote {
+  @extend .blockquote;
+  border-left-color: $gray-light;
+
+  > p:last-of-type {
+    @extend .m-b-0;
+  }
+}
+
+// Add extra whitespace to quotes directly after headings
+h1, h2, h3, h4, h5, h6 {
+  + blockquote {
+    margin-top: $spacer-y;
+  }
+}
+
 table {
   @extend .table;
 
