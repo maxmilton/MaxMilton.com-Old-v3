@@ -9,9 +9,7 @@ title = "100 Days"
 
 When was the last time you had a good hard look at yourself and truly thought "Yep, I'm happy."? For me, well... its been a while, a real long while. Let's fix that.
 
-<!--more-->
-
-To get my body and mind to a point I'm happy with, I'll spend 100 days cleaning out my old habits and replacing them with habits that help. This is my 100 day challenge. 100 days may sound like a long time, but in the grand scheme of things, it's totally a worthwhile investment.
+To get my body and mind to a point I'm happy with, I'll<!--more--> spend 100 days cleaning out my old habits and replacing them with habits that help. This is my 100 day challenge. 100 days may sound like a long time, but in the grand scheme of things, it's totally a worthwhile investment.
 
 ## 100 Days Of:
 
