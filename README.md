@@ -36,6 +36,9 @@ Install prerequisites then run `gulp` to start a local dev server.
 
 ## Changelog
 
+v1.5.1
+:  2016-09-10 — Fix Browsersync reloading and CSS/JS injecting, cleaner looking tables, tweak CSS build for slightly smaller files
+
 v1.5.0
 :  2016-09-10 — Add combine CSS media queries step to build, modernize font stack; remove unnecessary fonts, fix tags on posts, restore author metadata in drafts, make external links open in a new tab
 
