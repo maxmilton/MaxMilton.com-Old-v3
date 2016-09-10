@@ -23,11 +23,14 @@ REMOTE_DIR="/var/www/yoursite.com"
 FS_PERMISSIONS="www-data:www-data"
 CLOUDFLARE_SITE="yoursite.com"
 
+# Print banner
+echo -e "\n\033[1mMM    MM MM    MM\nMMM  MMM MMM  MMM\nMM MM MM MM MM MM\nMM    MM MM    MM\nMM    MM MM    MM\n\n © MaxMilton.com\033[0m\n\n"
+
 # Run build
 source build.sh
 
 # Upload deploy file to the production server
-echo -e "Uploading package to $PROD_SERVER_SSH server...\n"
+echo -e "\nUploading package to $PROD_SERVER_SSH server...\n"
 scp $DEPLOY_FILE $PROD_SERVER_SSH:~/
 
 # Execute the follow commands on the remote server
@@ -49,4 +52,4 @@ rm -f $DEPLOY_FILE
 # Open CloudFlare in a browser to purge the CDN cache
 xdg-open "https://www.cloudflare.com/a/caching/$CLOUDFLARE_SITE"
 
-echo -e "\nDeployment complete!"
+echo -e "\n\033[1;33mDeployment complete!\033[0m"

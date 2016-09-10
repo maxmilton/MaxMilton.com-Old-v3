@@ -14,7 +14,7 @@
 # Define variables
 THEME_DIR="./themes/mm"
 
-echo -e "Starting build\n"
+echo -e "\033[1;33mStarting build\033[0m\n"
 
 # Check if Hugo is installed
 hash hugo 2>/dev/null || {
@@ -47,19 +47,19 @@ else
   npm update $THEME_DIR --save --save-dev
 fi
 
-# Remove files from ealier builds
-rm -rf ./public/{*,.*}
 
-# Run Gulp build process
 echo -e "Starting Gulp build process...\n"
+
+# Remove files from ealier builds
 gulp --gulpfile $THEME_DIR/gulpfile.js clean
+# Run Gulp build process
 gulp --gulpfile $THEME_DIR/gulpfile.js build
 
 # Remove ealier deployable file
 rm -f ./deployme.tgz
 
 # Create a deployable package
-echo -e "Creating deployable file...\n"
+echo -e "\nCreating deployable file...\n"
 tar zcf deployme.tgz ./public
 
-echo -e "Build complete!"
+echo -e "\033[1;33mBuild complete!\033[0m"
