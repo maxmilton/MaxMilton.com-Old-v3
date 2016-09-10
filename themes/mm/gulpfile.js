@@ -49,7 +49,6 @@ gulp.task('clean', ['clean:public']);
 // Browser Sync
 //----------------------------------------
 
-// FIXME: Set up css/js injecting rather than full page reload
 gulp.task('serve', ['hugo', 'css', 'js'], function() {
   browserSync.init({
     server: paths.public.root,
