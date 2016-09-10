@@ -1,7 +1,7 @@
 +++
 author      = "Max Milton"
 email       = "max@wearegenki.com"
-tags        = ["miscellaneous"]
+tags        = ["misc."]
 description = ""
 draft       = true
 +++
