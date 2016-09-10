@@ -16,13 +16,13 @@ body {
 
 .nav {
   display: flex;
-  margin-top: 1rem;
-  margin-bottom: 2.2rem;
+  margin-top: $spacer;
+  margin-bottom: $spacer * 2.2;
   align-items: baseline;
   flex-wrap: wrap;
 
   .brand {
-    margin-right: 1rem;
+    margin-right: $spacer;
     font-size: 30px;
     color: $gray-dark;
   }
@@ -32,32 +32,14 @@ body {
   }
 }
 
-.footer {
-  margin: 2rem 0 3rem;
-  color: $gray-light;
-  text-align: center;
-
-  > a {
-    color: inherit;
-    text-decoration: none;
-  }
-}
-
-h1 {
-  margin-bottom: 1.7rem;
-}
-
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin-top: 2rem;
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  margin-top: $spacer * 1.5;
 }
 
 li {
   // Add more space between list items
-  margin-bottom: .5rem;
+  margin-bottom: $spacer / 2;
 }
 
 // Larger clickable area
@@ -81,7 +63,7 @@ blockquote {
 // Add extra whitespace to quotes directly after headings
 h1, h2, h3, h4, h5, h6 {
   + blockquote {
-    margin-top: $spacer-y;
+    margin-top: $spacer;
   }
 }
 
@@ -102,6 +84,17 @@ kbd {
   white-space: nowrap;
 }
 
+.footer {
+  margin: 2rem 0 3rem;
+  color: $gray-light;
+  text-align: center;
+
+  > a {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
 @include media-breakpoint-down(xs) {
   .nav .brand {
     width: 100%;
@@ -113,7 +106,7 @@ kbd {
 
 @include media-breakpoint-up(lg) {
   h1 {
-    margin: 1.3rem 0 2.3rem;
+    margin: .9rem 0 2.3rem;
   }
 }
 
@@ -132,7 +125,7 @@ kbd {
 }
 
 .meta {
-  margin-top: 1.3rem;
+  margin-top: $spacer * 1.3;
 }
 
 .author {
@@ -140,7 +133,7 @@ kbd {
 }
 
 .img-author {
-  margin-bottom: .5rem;
+  margin-bottom: $spacer / 2;
 }
 
 .tag {
@@ -148,7 +141,7 @@ kbd {
 }
 
 .lead.bg-primary {
-  padding: 1rem;
+  padding: $spacer;
 }
 
 .footnote-ref {
@@ -164,9 +157,9 @@ kbd {
 }
 
 .subscribe {
-  padding: 2rem 0 2.4rem;
-  margin-top: 3rem;
-  margin-bottom: 1rem;
+  padding: ($spacer-y * 2) 0 ($spacer-y * 2.4);
+  margin-top: $spacer * 3;
+  margin-bottom: $spacer;
   text-align: center;
   border-top: 1px solid $gray-light;
   border-bottom: 1px solid $gray-light;
@@ -177,5 +170,5 @@ kbd {
 }
 
 .more {
-  margin-top: 1rem;
+  margin-top: $spacer;
 }
