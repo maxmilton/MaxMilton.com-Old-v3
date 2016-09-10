@@ -53,6 +53,7 @@ gulp.task('clean', ['clean:public']);
 gulp.task('serve', ['hugo', 'css', 'js'], function() {
   browserSync.init({
     server: paths.public.root,
+    reloadDebounce: 200, // Give hugo a moment to generate pages
     // notify: false, // Disable Browsersync notification
     // online: false, // Uncomment if no internet connection
   });
