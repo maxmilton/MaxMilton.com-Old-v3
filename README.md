@@ -1,4 +1,4 @@
-Source for the website of Max Milton &mdash; powered by Hugo, Gulp, and Bootstrap v4 &mdash; <https://maxmilton.com>.
+Source for the website of Max Milton &mdash; powered by Hugo, Gulp, and Bootstrap 4 &mdash; <https://maxmilton.com>.
 
 # Overview
 
