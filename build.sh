@@ -52,6 +52,7 @@ rm -rf ./public/{*,.*}
 
 # Run Gulp build process
 echo -e "Starting Gulp build process...\n"
+gulp --gulpfile $THEME_DIR/gulpfile.js clean
 gulp --gulpfile $THEME_DIR/gulpfile.js build
 
 # Remove ealier deployable file
