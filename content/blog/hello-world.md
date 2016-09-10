@@ -1,10 +1,10 @@
 +++
-author = "Max Milton"
-date = "2016-04-25T09:22:00+10:00"
+author      = "Max Milton"
+date        = "2016-04-25T09:22:00+10:00"
 description = "Welcome to my super duper amazing shiny new blog."
-email = "max@wearegenki.com"
-tags = ["miscellaneous"]
-title = "Hello World"
+email       = "max@wearegenki.com"
+tags        = ["miscellaneous"]
+title       = "Hello World"
 +++
 
 Welcome to my super duper amazing shiny new blog. I'll publish posts every once and a while about the things which I find exciting.

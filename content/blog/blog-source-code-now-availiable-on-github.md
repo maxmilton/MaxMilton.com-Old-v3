@@ -1,10 +1,10 @@
 +++
-author = "Max Milton"
-date = "2016-04-30T05:30:00+10:00"
+author      = "Max Milton"
+date        = "2016-04-30T05:30:00+10:00"
 description = "Free and open source hugo theme. Bootstrap v4, Gulp, Node.js. Includes build and deploy scripts!"
-email = "max@wearegenki.com"
-tags = ["open source"]
-title = "Blog Source Code Now Availiable on Github"
+email       = "max@wearegenki.com"
+tags        = ["open source"]
+title       = "Blog Source Code Now Availiable on Github"
 +++
 
 The more I participate in the open source community the more I learn. To also help others learn from how I built this blog, I've decided to open source everything. You can find the entire source code for this website at  <https://github.com/MaxMilton/MaxMilton.com>. Everything is there including markdown content, theme, build scripts, and<!--more--> instructions.

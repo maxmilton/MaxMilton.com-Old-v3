@@ -1,10 +1,10 @@
 +++
-author = "Max Milton"
-date = "2016-09-10T15:35:00+10:00"
-description = ""
-email = "max@wearegenki.com"
-tags = ["quick tips", "linux"]
-title = "Write as Sudo and Other Useful Vim Tricks"
+author      = "Max Milton"
+date        = "2016-09-10T15:35:00+10:00"
+description = "You make changes only to realise you don't have write access... here's a way to save without exiting the Vim session."
+email       = "max@wearegenki.com"
+tags        = ["quick tips", "linux"]
+title       = "Write as Sudo and Other Useful Vim Tricks"
 +++
 
 If you do any command line Vim editing, I'm sure you've run into this situation... you make changes to a file only to realise you don't have write access with your current user and should have used sudo.

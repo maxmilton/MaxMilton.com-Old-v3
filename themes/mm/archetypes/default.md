@@ -1,9 +1,9 @@
 +++
-author = "Max Milton"
-email = "max@wearegenki.com"
-tags = ["miscellaneous"]
+author      = "Max Milton"
+email       = "max@wearegenki.com"
+tags        = ["miscellaneous"]
 description = ""
-draft = true
+draft       = true
 +++
 
 > TODO: Write me.
