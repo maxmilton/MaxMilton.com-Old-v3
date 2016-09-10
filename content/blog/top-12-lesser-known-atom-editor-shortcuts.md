@@ -28,4 +28,4 @@ _NOTE: Square brackets indicate third party packages._
 
 ## Bonus
 
-Combine this with the _atom-vim_ package for VIM style key bindings and you've got yourself one hell of a code editor!
+Combine this with the _atom-vim_ package for Vim style key bindings and you've got yourself one hell of a code editor!
