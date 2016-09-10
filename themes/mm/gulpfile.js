@@ -43,6 +43,7 @@ var paths = {
 gulp.task('default', ['watch']);
 gulp.task('watch', ['serve']);
 gulp.task('build', ['css:build', 'js:build', 'html:build', 'html:rev', 'clean:build']);
+gulp.task('clean', ['clean:public']);
 
 //----------------------------------------
 // Browser Sync
@@ -193,5 +194,13 @@ gulp.task('clean:build', ['html:rev'], function(){
     // Remove blog post drafts
     paths.public.root + '/drafts',
     paths.public.root + '/drafts.html',
+  ], { force:true })
+});
+
+gulp.task('clean:public', function(){
+  return del([
+    // Remove entire public directory contents
+    paths.public.root + '/*',
+    paths.public.root + '/.*',
   ], { force:true })
 });
