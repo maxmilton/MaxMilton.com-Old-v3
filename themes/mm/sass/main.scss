@@ -10,12 +10,14 @@
 // Global Theme
 //------------------------------
 
+html {
+  @include media-breakpoint-down(xs) {
+    font-size: round($font-size-root / 1.12);
+  }
+}
+
 body {
   font-weight: 300;
-
-  @include media-breakpoint-down(xs) {
-    font-size: $font-size-root / 1.12;
-  }
 }
 
 .nav {
@@ -61,7 +63,7 @@ h1 {
 
 h2 {
   @include media-breakpoint-down(xs) {
-    font-size: 1.8rem;
+    font-size: 1.85rem;
   }
 }
 
@@ -120,6 +122,13 @@ kbd {
   > a {
     color: inherit;
     text-decoration: none;
+  }
+}
+
+@include media-breakpoint-down(xs) {
+  .lead,
+  blockquote {
+    font-size: 1rem;
   }
 }
 
