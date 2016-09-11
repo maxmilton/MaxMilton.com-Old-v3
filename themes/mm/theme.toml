@@ -4,7 +4,7 @@ licenselink = "https://github.com/MaxMilton/MaxMilton.com/blob/master/themes/mm/
 description = "A simple theme designed for Max Milton's blog."
 homepage = "https://github.com/MaxMilton/MaxMilton.com"
 tags = ["blog", "open source", "linux"]
-features = ["nodejs build atuomation", "gulp", "browser-sync", "bootstrap v4"]
+features = ["Node.js build atuomation", "gulp", "Browsersync", "Bootstrap 4"]
 min_version = 0.14
 
 [author]
