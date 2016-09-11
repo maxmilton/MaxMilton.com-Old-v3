@@ -7,6 +7,7 @@ var exec        = require('child_process').exec;
 var gulp        = require('gulp');
 var htmlmin     = require('gulp-htmlmin');
 var nano        = require('gulp-cssnano');
+var csso        = require('gulp-csso');
 var rename      = require('gulp-rename');
 var replace     = require('gulp-rev-replace');
 var rev         = require('gulp-rev');
@@ -110,10 +111,9 @@ gulp.task('css:build', ['css', 'hugo', 'clean:rev'], function() {
       browsers: ['> 1%', 'last 2 versions'],
       add: true,
     },
-    discardComments: {
-      removeAll: true,
-    },
+    discardComments: { removeAll: true },
   }))
+  .pipe(csso())
   .pipe(rev())
   .pipe(gulp.dest(paths.sass.dest))
   .pipe(rev.manifest(paths.manifest, { merge: true }))
