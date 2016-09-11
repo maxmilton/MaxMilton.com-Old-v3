@@ -1,11 +1,12 @@
 +++
-title = "About Max Milton"
+author      = "Max Milton"
+title       = "About Max Milton"
 description = ""
 
 [menu.main]
-  name = "About"
+  name   = "About"
   weight = 90
-  pre = "about"
+  pre    = "about"
 +++
 
 # About Max Milton
