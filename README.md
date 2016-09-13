@@ -36,6 +36,9 @@ Install prerequisites then run `gulp` to start a local dev server.
 
 ## Changelog
 
+v1.6.0
+:  2016-09-14 — Spice up the deploy scripts, remove unused directories, prevent Browsersync reloading more than once following hugo page generation, tweak typography for better spacing and on small screens
+
 v1.5.1
 :  2016-09-10 — Fix Browsersync reloading and CSS/JS injecting, clean builds every time with extra build step, cleaner looking tables, tweak CSS build for slightly smaller files
 
