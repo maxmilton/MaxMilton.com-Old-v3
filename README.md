@@ -1,10 +1,10 @@
-Source for the website of Max Milton—powered by Hugo, Gulp, and Bootstrap 4—<https://maxmilton.com>.
+Source for the website of Max Milton — powered by Hugo, Gulp, and Bootstrap 4 — <https://maxmilton.com>.
 
 # Overview
 
 A simple blog which uses Node.js + Gulp automation to make development and deployment easy. Site generated with Hugo, a fast static website engine, which makes creating websites fun again. Theme uses Bootstrap 4 for agile design.
 
-NOTE: Uses Browsersync to serve the site when in development—the auto-reload is awesome and makes developing across multiple devices at once easy. Hugo comes with it's own dev server but Browsersync is a far better tool for rapid development.
+NOTE: Uses Browsersync to serve the site when in development—the auto-reload is awesome and makes developing across multiple devices at once easy. Hugo comes with it's own dev server but Browsersync is a better tool for rapid development.
 
 Read more about the release at <https://maxmilton.com/blog/blog-source-code-now-availiable-on-github.html>.
 
