@@ -47,34 +47,34 @@ Use British English spelling and grammar. Follow the [Cambridge University Press
 
 ## Changelog
 
-v1.7.0-beta
+**v1.7.0-beta**
 :  2016-TBA — Add writing style guide
 
-v1.6.0
+**v1.6.0**
 :  2016-09-14 — Spice up the deploy scripts, remove unused directories, prevent Browsersync reloading more than once following hugo page generation, tweak typography for better spacing and on small screens
 
-v1.5.1
+**v1.5.1**
 :  2016-09-10 — Fix Browsersync reloading and CSS/JS injecting, clean builds every time with extra build step, cleaner looking tables, tweak CSS build for slightly smaller files
 
-v1.5.0
+**v1.5.0**
 :  2016-09-10 — Add combine CSS media queries step to build, modernize font stack; remove unnecessary fonts, fix tags on posts, restore author metadata in drafts, make external links open in a new tab
 
-v1.4.0
+**v1.4.0**
 :  2016-09-07 — Add an easy way to view drafts, capture custom GA data + fix GA tracking ID, update bootstrap to v4.0.0-alpha.4
 
-v1.3.0
+**v1.3.0**
 :  2016-07-29 — Update Bootstrap and npm modules, small screens header fix
 
-v1.2.1
+**v1.2.1**
 :  2016-06-11 — Fix nav on small screens and minor style tweaks
 
-v1.2.0
+**v1.2.0**
 :  2016-06-04 — Move author and meta section to bottom of posts and centre page content
 
-v1.1.0
+**v1.1.0**
 : 2016-04-30 — Add sample deployment script, cache busting for compiled CSS/JS, RSS feed, extra meta tags
 
-v1.0.0
+**v1.0.0**
 :  2016-04-27 — Initial public release
 
 ## Licence
