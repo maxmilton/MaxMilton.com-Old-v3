@@ -1,18 +1,18 @@
-Source for the website of Max Milton &mdash; powered by Hugo, Gulp, and Bootstrap 4 &mdash; <https://maxmilton.com>.
+Source for the website of Max Milton—powered by Hugo, Gulp, and Bootstrap 4—<https://maxmilton.com>.
 
 # Overview
 
-A simple blog which uses Node.js + Gulp automation to make development and deployment easy. Site generated with Hugo, a fast static website engine, which makes creating websites fun again. Theme uses Bootstrap v4 to make building faster.
+A simple blog which uses Node.js + Gulp automation to make development and deployment easy. Site generated with Hugo, a fast static website engine, which makes creating websites fun again. Theme uses Bootstrap 4 for agile design.
 
-NOTE: Browser-sync is used to serve the site when in development &mdash; the auto-reload is awesome and makes developing across mutliple devices easy. I much prefer it over the Hugo built in server.
+NOTE: Uses Browsersync to serve the site when in development—the auto-reload is awesome and makes developing across multiple devices at once easy. Hugo comes with it's own dev server but Browsersync is a far better tool for rapid development.
 
 Read more about the release at <https://maxmilton.com/blog/blog-source-code-now-availiable-on-github.html>.
 
 Feel free to use my Hugo theme as the base for your own site. Let me know if you use the code, I'd love to see what you do with it!
 
-## How To Build
+## How to build
 
-### For Development
+### For development
 
 Install prerequisites then run `gulp` to start a local dev server.
 
@@ -34,7 +34,20 @@ Install prerequisites then run `gulp` to start a local dev server.
 2. Edit `deploy.sh` to suit your needs
 3. `$ deploy.sh`
 
+## Writing guide
+
+Use British English spelling and grammar. Follow the [Cambridge University Press general style guidelines](https://authornet.cambridge.org/information/academic/downloads/General%20style%20guidelines.pdf) and the [Cambridge brand editorial style guide](https://www.cam.ac.uk/brand-resources/guidelines/editorial-style-guide).
+
+### Key points
+
+* Post titles (h1): Title Case
+* Post sub headings (h2–h6): Sentence case
+* Don't hyphenate: email, ecommerse, startups
+
 ## Changelog
+
+v1.7.0-beta
+:  2016-TBA — Add writing style guide
 
 v1.6.0
 :  2016-09-14 — Spice up the deploy scripts, remove unused directories, prevent Browsersync reloading more than once following hugo page generation, tweak typography for better spacing and on small screens
@@ -49,7 +62,7 @@ v1.4.0
 :  2016-09-07 — Add an easy way to view drafts, capture custom GA data + fix GA tracking ID, update bootstrap to v4.0.0-alpha.4
 
 v1.3.0
-:  2016-07-29 — Update Bootstrap and npm moudles, small screens header fix
+:  2016-07-29 — Update Bootstrap and npm modules, small screens header fix
 
 v1.2.1
 :  2016-06-11 — Fix nav on small screens and minor style tweaks
@@ -65,9 +78,9 @@ v1.0.0
 
 ## Licence
 
-Blog content licenced under the Creative Commons Attribution No Derivatives 4.0 ([CC-BY-ND-4.0](http://creativecommons.org/licenses/by-nd/4.0/legalcode)) licence. When quoting my posts, please link back to the original article.
+Blog content licensed under the Creative Commons Attribution No Derivatives 4.0 ([CC-BY-ND-4.0](http://creativecommons.org/licenses/by-nd/4.0/legalcode)) licence. When quoting my posts, please link back to the original article.
 
-Site theme licenced ISC, see [themes/mm/LICENCE.md](https://github.com/MaxMilton/MaxMilton.com/blob/master/themes/mm/LICENSE.md).
+Site theme licensed ISC, see [themes/mm/LICENCE.md](https://github.com/MaxMilton/MaxMilton.com/blob/master/themes/mm/LICENSE.md).
 
 ## Author
 

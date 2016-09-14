@@ -9,7 +9,7 @@ title       = "Top 12 Lesser Known Atom Editor Shortcuts"
 
 Make your atom fly with key bindings you probably didn't even know existed. These work on my favourite OS, Linux, as well as Windows. Sorry Mac users, you'll have to work out the equivalent keys on your own<!--more-->.
 
-## Lesser Known Atom Shortcuts
+## Lesser known Atom shortcuts
 
 _NOTE: Square brackets indicate third party packages._
 
