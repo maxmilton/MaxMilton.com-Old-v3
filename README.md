@@ -36,7 +36,7 @@ Install prerequisites then run `gulp` to start a local dev server.
 
 ## Writing style guide
 
-Use British English spelling and grammar. Follow the [The Guardian and Observer style guide](https://www.theguardian.com/info/series/guardian-and-observer-style-guide).
+Use British English spelling and grammar. Follow the [Guardian and Observer style guide](https://www.theguardian.com/info/series/guardian-and-observer-style-guide).
 
 ### With these additions
 
