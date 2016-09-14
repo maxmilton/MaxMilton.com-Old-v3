@@ -34,16 +34,16 @@ Install prerequisites then run `gulp` to start a local dev server.
 2. Edit `deploy.sh` to suit your needs
 3. `$ deploy.sh`
 
-## Writing guide
+## Writing style guide
 
-Use British English spelling and grammar. Follow the [Cambridge University Press general style guidelines](https://authornet.cambridge.org/information/academic/downloads/General%20style%20guidelines.pdf) and the [Cambridge brand editorial style guide](https://www.cam.ac.uk/brand-resources/guidelines/editorial-style-guide).
+Use British English spelling and grammar. Follow the [The Guardian and Observer style guide](https://www.theguardian.com/info/series/guardian-and-observer-style-guide).
 
-### Key points + extras
+### With these additions
 
 * Post titles (h1): Title Case
 * Post sub headings (h2–h6): Sentence case
-* Don't hyphenate: email, ecommerse, startups
-* No spaces around em dashes except when used in headings
+* Don't hyphenate: ecommerse
+* Use em dashes without spaces either side except in headings
 
 ## Changelog
 
