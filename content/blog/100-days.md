@@ -11,7 +11,7 @@ When was the last time you had a good hard look at yourself and truly thought "Y
 
 To get my body and mind to a point I'm happy with, I'll<!--more--> spend 100 days cleaning out my old habits and replacing them with habits that help. This is my 100 day challenge. 100 days may sound like a long time, but in the grand scheme of things, it's totally a worthwhile investment.
 
-## 100 Days Of:
+## 100 days of...
 
 **Note to self:** Do all this in the morning before leaving for work. Every day for 100 days _NO MATTER WHAT_. Don't worry about how long you do each thing; focus on being consistent.
 
@@ -29,10 +29,10 @@ I need to strengthen my back. General body image is important too. Exercise to t
 
 No eating out or buying pre-made meals, instead, cook for every meal. Eat a paleo based ketogenic diet to lose weight in a healthy way. Eat high fat, low carb, and moderate protein. Avoid carbs, gluten, additives, preservatives, and anything processed.
 
-### No Escape
+### No escape
 
 To top it all off, at all times avoid _escape activities_. Avoid YouTube, TV shows, porn, podcasts, news, blogs, needless shopping, and anything else I do to distract myself. Instead, work towards my goals.
 
-## Let's Begin...
+## Let's begin...
 
 Is it possible to undo a life's worth of bad habits in only 100 days? My 100 day challenge begins soon. More posts to come including body before photos and an in-depth look into each aspect of the challenge. [Subscribe](/) for future posts.
