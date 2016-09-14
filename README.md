@@ -38,11 +38,12 @@ Install prerequisites then run `gulp` to start a local dev server.
 
 Use British English spelling and grammar. Follow the [Cambridge University Press general style guidelines](https://authornet.cambridge.org/information/academic/downloads/General%20style%20guidelines.pdf) and the [Cambridge brand editorial style guide](https://www.cam.ac.uk/brand-resources/guidelines/editorial-style-guide).
 
-### Key points
+### Key points + extras
 
 * Post titles (h1): Title Case
 * Post sub headings (h2–h6): Sentence case
 * Don't hyphenate: email, ecommerse, startups
+* No spaces around em dashes except when used in headings
 
 ## Changelog
 
