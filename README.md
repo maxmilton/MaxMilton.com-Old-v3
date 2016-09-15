@@ -44,6 +44,9 @@ Use British English spelling and grammar. Follow the [Guardian and Observer styl
 * Post sub headings (h2–h6): Sentence case
 * Don't hyphenate: ecommerse
 * Use em dashes without spaces either side except in headings
+* Never use bold and italic together
+* Posts must have a unique description and one or more topic tags
+* Images must have an alt title
 
 ## Changelog
 
