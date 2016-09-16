@@ -44,9 +44,9 @@ Use British English spelling and grammar. Follow the [Guardian and Observer styl
 * Post sub headings (h2–h6): Sentence case
 * Common words: ecommerse, ebook, internet, website
 * Use em dashes without spaces either side---except in headings
-* Never use **bold** and _italic_ **_together_**
+* Use **bold** or _italic_, but not **_together_**
 * Posts must have a unique description and one or more topic tags
-* Images must have an alt title
+* Each image must have an alt title
 
 ## Changelog
 
