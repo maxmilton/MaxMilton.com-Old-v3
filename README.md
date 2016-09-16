@@ -40,11 +40,11 @@ Use British English spelling and grammar. Follow the [Guardian and Observer styl
 
 ### With these additions
 
-* Post titles (h1): Title Case
+* Post title (h1): Title Case
 * Post sub headings (h2–h6): Sentence case
-* Don't hyphenate: ecommerse
-* Use em dashes without spaces either side except in headings
-* Never use bold and italic together
+* Common words: ecommerse, ebook, internet, website
+* Use em dashes without spaces either side---except in headings
+* Never use **bold** and _italic_ **_together_**
 * Posts must have a unique description and one or more topic tags
 * Images must have an alt title
 
