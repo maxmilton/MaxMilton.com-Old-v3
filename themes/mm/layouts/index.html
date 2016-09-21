@@ -19,11 +19,12 @@
   <div class="row">
     <section class="col-xs-12 summaries">
       <h2>Latest Posts</h2>
-      {{ range first 4 .Data.Pages }}
-        {{ if eq .Section "blog" }}
-          {{ .Render "summary"}}
-        {{ end }}
+      {{ range where .Data.Pages "Section" "blog" | first 10 }}
+        {{ .Render "summary"}}
       {{ end }}
+      <div class="all-posts">
+        <a href="/blog.html">See all posts ›</a>
+      </div>
     </section>
   </div>
 </div> <!-- /.container -->
