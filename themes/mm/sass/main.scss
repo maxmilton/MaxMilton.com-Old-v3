@@ -178,6 +178,10 @@ kbd {
       margin-top: 0;
     }
   }
+
+  img {
+    @extend .img-fluid;
+  }
 }
 
 .meta {

@@ -13,6 +13,7 @@ app-*.js
 app.css
 app-*.css
 *.map
+/static/img/blog/*
 deployme.tgz
 
 # Misc.

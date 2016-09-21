@@ -34,6 +34,10 @@ var paths = {
     dest: '../../public/js',
     static: '../../public/js/app.js',
   },
+  img: {
+    src: '../../static/img/original/*',
+    dest: '../../static/img/blog',
+  },
   config: '../../config.toml',
   content: '../../content/**/*.md',
   layouts: './layouts/**/*.html',
@@ -43,14 +47,14 @@ var paths = {
 
 gulp.task('default', ['watch']);
 gulp.task('watch', ['serve']);
-gulp.task('build', ['css:build', 'js:build', 'html:build', 'html:rev', 'clean:build']);
+gulp.task('build', ['img', 'css:build', 'js:build', 'html:build', 'html:rev', 'clean:build']);
 gulp.task('clean', ['clean:public']);
 
 //----------------------------------------
 // Browser Sync
 //----------------------------------------
 
-gulp.task('serve', ['hugo', 'css', 'js'], function() {
+gulp.task('serve', ['hugo', 'css', 'js', 'img'], function() {
   browserSync.init({
     server: paths.public.root,
     reloadDelay: 200,     // Give hugo a moment to generate pages
@@ -143,6 +147,17 @@ gulp.task('js:build', ['js', 'clean:rev'], function() {
 });
 
 //----------------------------------------
+// Images
+//----------------------------------------
+
+gulp.task('img', function() {
+  return gulp.src([paths.img.src])
+    // TODO: Resize images
+    // TODO: Optimise images
+    .pipe(gulp.dest(paths.img.dest))
+});
+
+//----------------------------------------
 // HTML
 //----------------------------------------
 
@@ -191,6 +206,8 @@ gulp.task('clean:build', ['html:rev'], function(){
     paths.public.root + '/js/maps',
     paths.public.root + '/js/app.js',
     paths.public.root + '/js/main.js',
+    // Remove original unoptimised images
+    paths.public.root + '/img/original',
     // Remove blog post drafts
     paths.public.root + '/drafts',
     paths.public.root + '/drafts.html',
