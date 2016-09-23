@@ -7,6 +7,8 @@ tags        = ["quick tips", "programming"]
 title       = "Top 12 Lesser Known Atom Editor Shortcuts"
 +++
 
+<!-- TODO: Add an image of Atom in use -->
+
 Make your atom fly with key bindings you probably didn't even know existed. These work on my favourite OS, Linux, as well as Windows. Sorry Mac users, you'll have to work out the equivalent keys on your own<!--more-->.
 
 ## Lesser known Atom shortcuts

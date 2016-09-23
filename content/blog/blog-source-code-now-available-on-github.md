@@ -7,6 +7,8 @@ tags        = ["open source"]
 title       = "Blog Source Code Now Available On Github"
 +++
 
+<!-- TODO: Add screenshot of Github page -->
+
 The more I participate in the open source community the more I learn. To also help others learn from how I built this blog, I've decided to open source everything. You can find the entire source code for this website at  <https://github.com/MaxMilton/MaxMilton.com>. Everything is there including markdown content, theme, build scripts, and<!--more--> instructions.
 
 For now, I plan to keep the site minimalist. The theme is as simple as I could make it. I keep things fast and easy by reducing the amount of external services I rely on to an absolute minimum.
