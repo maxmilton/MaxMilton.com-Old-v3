@@ -1,6 +1,7 @@
 <article>
   <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
 
+  <!-- TODO: Strip out images and only show text in summaries -->
   {{ .Summary }}
 
   <div class="more"><a href="{{ .RelPermalink }}" title="{{ .Title }}">Read more</a></div>

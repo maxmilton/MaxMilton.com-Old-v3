@@ -1,0 +1,34 @@
+<!-- Responsive images -->
+<!-- README:
+  # About
+
+  Allows browser to load a different image based on screen width and device pixel density. This allows for a smaller file size and better load performance when users are on a lower capacity device. Uses images generated in the gulp build script. Some browsers don't support <picture> and will load the fallback <img>; see browser support: http://caniuse.com/#feat=picture
+
+  # Useage
+
+  Leave off file extention in the src and pass it to type instead (wrap in double curly braces):
+
+    < img src="/img/example" type="jpg" alt="Example" >
+
+-->
+
+<picture>
+  <!-- Large screens -->
+  <source
+    media="(min-width: 768px)"
+    srcset="{{ .Get "src" }}.{{ .Get "type" }} 1x,
+            {{ .Get "src" }}@2x.{{ .Get "type" }} 2x,
+            {{ .Get "src" }}@3x.{{ .Get "type" }} 3x">
+  <!-- Small screens -->
+  <source
+    media="(max-width: 767px)"
+    srcset="{{ .Get "src" }}-small.{{ .Get "type" }} 1x,
+            {{ .Get "src" }}-small@2x.{{ .Get "type" }} 2x,
+            {{ .Get "src" }}-small@3x.{{ .Get "type" }} 3x">
+  <!-- Fallback -->
+  <img
+    src="{{ .Get "src" }}.{{ .Get "type" }}"
+    srcset="{{ .Get "src" }}@2x.{{ .Get "type" }} 2x,
+            {{ .Get "src" }}@3x.{{ .Get "type" }} 3x"
+    alt="{{ .Get "alt" }}">
+</picture>

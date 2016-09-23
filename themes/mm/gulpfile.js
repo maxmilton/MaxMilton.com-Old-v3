@@ -16,6 +16,8 @@ var sourcemaps  = require('gulp-sourcemaps');
 var uglify      = require('gulp-uglify');
 var combineMq   = require('gulp-combine-mq');
 var uncss       = require('gulp-uncss');
+var responsive  = require('gulp-responsive');
+var image       = require('gulp-image');
 
 var paths = {
   public: {
@@ -36,7 +38,7 @@ var paths = {
   },
   img: {
     src: '../../static/img/original/*',
-    dest: '../../static/img/blog',
+    dest: '../../public/img',
   },
   config: '../../config.toml',
   content: '../../content/**/*.md',
@@ -47,7 +49,7 @@ var paths = {
 
 gulp.task('default', ['watch']);
 gulp.task('watch', ['serve']);
-gulp.task('build', ['img', 'css:build', 'js:build', 'html:build', 'html:rev', 'clean:build']);
+gulp.task('build', ['clean:build']);
 gulp.task('clean', ['clean:public']);
 
 //----------------------------------------
@@ -64,6 +66,7 @@ gulp.task('serve', ['hugo', 'css', 'js', 'img'], function() {
 
   gulp.watch(paths.sass.src, ['css']);
   gulp.watch(paths.js.src, ['js']);
+  gulp.watch(paths.img.src, ['img']);
   gulp.watch([paths.content, paths.layouts, paths.config], ['hugo']);
   gulp.watch([paths.public.html]).on('change', browserSync.reload);
 });
@@ -80,7 +83,7 @@ gulp.task('hugo', function(fetch) {
   })
 });
 
-gulp.task('hugo:build', ['css:build', 'js:build'], function(fetch) {
+gulp.task('hugo:build', ['css:build', 'js:build', 'img:build'], function(fetch) {
   exec('hugo -s ../../', function(err, stdout, stderr) {
     console.log(stdout); // Hugo output
     console.log(stderr); // Errors
@@ -152,8 +155,45 @@ gulp.task('js:build', ['js', 'clean:rev'], function() {
 
 gulp.task('img', function() {
   return gulp.src([paths.img.src])
-    // TODO: Resize images
-    // TODO: Optimise images
+    // Resize images
+    .pipe(responsive({
+      '*': [{
+          width: 546,
+          rename: { suffix: '-small' },
+        },{
+          width: 546 * 2,
+          rename: { suffix: '-small@2x' },
+        },{
+          width: 546 * 3,
+          rename: { suffix: '-small@3x' },
+        },{
+          width: 675,
+        },{
+          width: 675 * 2,
+          rename: { suffix: '@2x' },
+        },{
+          width: 675 * 3,
+          rename: { suffix: '@3x' },
+        },
+      ]
+    }))
+    .pipe(gulp.dest(paths.img.dest))
+});
+
+gulp.task('img:build', ['img'], function() {
+  return gulp.src([paths.img.dest + '/*.{jpg,png,gif,svg}'])
+    // Optimise images (* = needs external program)
+    .pipe(image({
+      pngquant: true, // *
+      optipng: true, // *
+      zopflipng: true,
+      jpegRecompress: true,
+      jpegoptim: false, // * FIXME
+      mozjpeg: true,
+      gifsicle: true, // *
+      svgo: true,
+      concurrent: 10
+    }))
     .pipe(gulp.dest(paths.img.dest))
 });
 
