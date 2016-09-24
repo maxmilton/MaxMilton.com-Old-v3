@@ -59,7 +59,7 @@ gulp.task('clean', ['clean:public']);
 gulp.task('serve', ['hugo', 'css', 'js', 'img'], function() {
   browserSync.init({
     server: paths.public.root,
-    reloadDelay: 200,     // Give hugo a moment to generate pages
+    reloadDelay: 200, // Give hugo a moment to generate pages
     // notify: false, // Disable Browsersync notification
     // online: false, // Uncomment if no internet connection
   });
@@ -78,7 +78,7 @@ gulp.task('serve', ['hugo', 'css', 'js', 'img'], function() {
 gulp.task('hugo', function(fetch) {
   exec('hugo -s ../../ --buildDrafts --baseUrl="http://localhost:3000/"', function(err, stdout, stderr) {
     console.log(stdout); // Hugo output
-    console.log(stderr); // Errors
+    console.error(stderr); // Errors
     fetch(err);
   })
 });
@@ -86,7 +86,7 @@ gulp.task('hugo', function(fetch) {
 gulp.task('hugo:build', ['css:build', 'js:build', 'img:build'], function(fetch) {
   exec('hugo -s ../../', function(err, stdout, stderr) {
     console.log(stdout); // Hugo output
-    console.log(stderr); // Errors
+    console.error(stderr); // Errors
     fetch(err);
   })
 });
@@ -159,13 +159,13 @@ gulp.task('img', function() {
     .pipe(responsive({
       '*': [{
           width: 546,
-          rename: { suffix: '-small' },
+          rename: { suffix: '-sm' },
         },{
           width: 546 * 2,
-          rename: { suffix: '-small@2x' },
+          rename: { suffix: '-sm@2x' },
         },{
           width: 546 * 3,
-          rename: { suffix: '-small@3x' },
+          rename: { suffix: '-sm@3x' },
         },{
           width: 675,
         },{
@@ -182,16 +182,9 @@ gulp.task('img', function() {
 
 gulp.task('img:build', ['img'], function() {
   return gulp.src([paths.img.dest + '/*.{jpg,png,gif,svg}'])
-    // Optimise images (* = needs external program)
+    // Optimise images
     .pipe(image({
-      pngquant: true, // *
-      optipng: true, // *
-      zopflipng: true,
-      jpegRecompress: true,
-      jpegoptim: false, // * FIXME
-      mozjpeg: true,
-      gifsicle: true, // *
-      svgo: true,
+      jpegoptim: false, // FIXME
       concurrent: 10
     }))
     .pipe(gulp.dest(paths.img.dest))
