@@ -181,6 +181,7 @@ kbd {
 
   img {
     @extend .img-fluid;
+    margin-bottom: $spacer;
   }
 }
 
