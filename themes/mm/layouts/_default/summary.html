@@ -1,8 +1,11 @@
 <article>
   <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
 
-  <!-- TODO: Strip out images and only show text in summaries -->
-  {{ .Summary }}
+  <!-- Show article summary without images -->
+  <!-- TODO: Better way of not showing images, couldn't get regex to work -->
+  {{ .Summary | replaceRE "(<picture>)" "<!--$1" | replaceRE "(</picture>)" "$1-->"  | safeHTML }}
 
-  <div class="more"><a href="{{ .RelPermalink }}" title="{{ .Title }}">Read more</a></div>
+  <div class="more">
+    <a href="{{ .RelPermalink }}" title="{{ .Title }}">Read more</a>
+  </div>
 </article>
