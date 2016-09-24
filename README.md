@@ -51,7 +51,7 @@ Use British English spelling and grammar. Follow the [Guardian and Observer styl
 ## Changelog
 
 **v1.7.1**
-:  2016-09-25 — Fix summary image removal (big thanks to @moorereason!), fix image spacing, fix error when enlarging image during resizing
+:  2016-09-25 — Fix summary image removal (big thanks to [@moorereason](https://github.com/spf13/hugo/issues/2490)!), fix image spacing, fix error when enlarging image during resizing
 
 **v1.7.0**
 :  2016-09-24 — Add responsive image shortcode, add image processing, fix homepage post summary list; show the 10 most recent published posts, add writing style guide
