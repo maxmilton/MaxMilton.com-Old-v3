@@ -1,14 +1,17 @@
-<!-- Responsive images -->
-<!-- README:
-  # About
+<!--
+#####################
+# Responsive Images #
+#####################
 
-  Allows browser to load a different image based on screen width and device pixel density. This allows for a smaller file size and better load performance when users are on a lower capacity device. Uses images generated in the gulp build script. Some browsers don't support <picture> and will load the fallback <img>; see browser support: http://caniuse.com/#feat=picture
+## README:
 
-  # Useage
+Allows browser to load a different image based on screen width and device pixel density. This allows for a smaller file size and better load performance when users are on a lower capacity device. Uses images generated in the gulp build script. Some browsers don't support <picture> and will load the fallback <img>; see browser support: http://caniuse.com/#feat=picture
 
-  Leave off file extention in the src and pass it to type instead (wrap in double curly braces):
+### Useage
 
-    < img src="/img/example" type="jpg" alt="Example" >
+Leave off file extention in the src and pass it to type instead (wrap in double curly braces):
+
+  < img src="/img/example" type="jpg" alt="Example" >
 
 -->
 
@@ -22,9 +25,9 @@
   <!-- Small screens -->
   <source
     media="(max-width: 767px)"
-    srcset="{{ .Get "src" }}-small.{{ .Get "type" }} 1x,
-            {{ .Get "src" }}-small@2x.{{ .Get "type" }} 2x,
-            {{ .Get "src" }}-small@3x.{{ .Get "type" }} 3x">
+    srcset="{{ .Get "src" }}-sm.{{ .Get "type" }} 1x,
+            {{ .Get "src" }}-sm@2x.{{ .Get "type" }} 2x,
+            {{ .Get "src" }}-sm@3x.{{ .Get "type" }} 3x">
   <!-- Fallback -->
   <img
     src="{{ .Get "src" }}.{{ .Get "type" }}"
