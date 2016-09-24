@@ -50,8 +50,8 @@ Use British English spelling and grammar. Follow the [Guardian and Observer styl
 
 ## Changelog
 
-**v1.7.0-beta**
-:  2016-TBA — Add writing style guide
+**v1.7.0**
+:  2016-09-24 — Add responsive image shortcode, add image processing, fix homepage post summary list; show the 10 most recent published posts, add writing style guide
 
 **v1.6.0**
 :  2016-09-14 — Spice up the deploy scripts, remove unused directories, prevent Browsersync reloading more than once following hugo page generation, tweak typography for better spacing and on small screens
