@@ -175,7 +175,9 @@ gulp.task('img', function() {
           width: 675 * 3,
           rename: { suffix: '@3x' },
         },
-      ]
+      ],
+    },{
+      withoutEnlargement: false, // Allow image enlargement
     }))
     .pipe(gulp.dest(paths.img.dest))
 });
