@@ -2,14 +2,7 @@
   <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
 
   <!-- Show article summary without images -->
-  <!-- FIXME: Regex wouldn't match whole string only single words, see Github issue:
-            https://github.com/spf13/hugo/issues/2490
-            In the meantime this is a less than optimal workaround.
-  -->
-  {{ .Summary | replaceRE "(<picture>)" "<!--$1" | replaceRE "(</picture>)" "$1-->"  | safeHTML }}
-
-  <!-- This should work but it's not matching the whole summary -->
-  <!-- {{ .Summary | replaceRE "<picture>.*</picture>" "" | safeHTML }} -->
+  {{ .Summary | replaceRE "(?s:<picture>.*</picture>)" "" | safeHTML }}
 
   <div class="more">
     <a href="{{ .RelPermalink }}" title="{{ .Title }}">Read more</a>
