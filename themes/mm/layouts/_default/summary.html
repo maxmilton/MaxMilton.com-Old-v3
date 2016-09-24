@@ -8,6 +8,9 @@
   -->
   {{ .Summary | replaceRE "(<picture>)" "<!--$1" | replaceRE "(</picture>)" "$1-->"  | safeHTML }}
 
+  <!-- This should work but it's not matching the whole summary -->
+  <!-- {{ .Summary | replaceRE "<picture>.*</picture>" "" | safeHTML }} -->
+
   <div class="more">
     <a href="{{ .RelPermalink }}" title="{{ .Title }}">Read more</a>
   </div>
