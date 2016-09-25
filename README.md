@@ -50,6 +50,9 @@ Use British English spelling and grammar. Follow the [Guardian and Observer styl
 
 ## Changelog
 
+**v1.8.0**
+:  2016-TBA — Change colour and link style, tweak RSS feeds
+
 **v1.7.1**
 :  2016-09-25 — Fix summary image removal (big thanks to [@moorereason](https://github.com/spf13/hugo/issues/2490)!), fix image spacing, fix error when enlarging image during resizing
 
