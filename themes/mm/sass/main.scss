@@ -236,8 +236,14 @@ kbd {
   background-color: $brand-primary;
 }
 
-.summaries > article > p:last-of-type::after {
-  content: "…";
+.summaries {
+  > h2 {
+    border-bottom: 1px solid $gray-light;
+  }
+
+  > article > p:last-of-type::after {
+    content: "…";
+  }
 }
 
 .more {
