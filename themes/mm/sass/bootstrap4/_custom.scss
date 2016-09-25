@@ -3,15 +3,19 @@
 // Copy variables from `_variables.scss` to this file to override default values
 // without modifying source files.
 
-$gray-light:              #ccc;
-$gray-lighter:            #eceeef; // Same as default but needed for $body-bg
-// $brand-primary:           #8e24aa; // Royal purple
+$gray-dark:               #373a3c; // Same as default
+$gray-light:              #cfd8dc;
+$gray-lighter:            #eceff1;
+$brand-primary:           #8852b9; // MM purple
 
 $enable-flex:             true;
 $enable-rounded:          false;
 $enable-print-styles:     false;
 
 $body-bg:                 $gray-lighter;
+$body-color:              $gray-dark; // Same as default
+
+$link-color:              $body-color;
 
 // FIXME: Couldn't get this working, still have to comment out in _variables.scss
 // $grid-breakpoints: (

@@ -45,6 +45,12 @@ body {
   }
 }
 
+.nav-link {
+  @include hover-focus {
+    text-decoration: $link-hover-decoration;
+  }
+}
+
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   margin-top: $spacer * 1.5;
@@ -84,6 +90,10 @@ a {
   position: relative;
   padding: .6em 1em;
   margin: -.6em -1em;
+}
+
+#dope :not(h1):not(h2):not(h3) > a {
+  color: $brand-primary;
 }
 
 // TODO: Decide if necessary; why arn't **bolder** fonts being rendered correctly?
@@ -221,9 +231,9 @@ kbd {
   padding: ($spacer-y * 2) 0 ($spacer-y * 2.4);
   margin-top: $spacer * 3;
   margin-bottom: $spacer;
+  color: $white;
   text-align: center;
-  border-top: 1px solid $gray-light;
-  border-bottom: 1px solid $gray-light;
+  background-color: $brand-primary;
 }
 
 .summaries > article > p:last-of-type::after {
