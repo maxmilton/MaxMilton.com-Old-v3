@@ -134,7 +134,7 @@ gulp.task('css:build', ['css', 'hugo', 'clean:rev'], function() {
 
 gulp.task('js:autotrack', function() {
   return gulp.src([paths.js.autotrack])
-    .pipe(concat('app.js'))
+    .pipe(uglify())
     .pipe(gulp.dest(paths.js.dest));
 });
 
