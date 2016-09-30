@@ -17,7 +17,7 @@ You can write as sudo using:
 
 `:w !sudo tee %`
 
-Another tip is to put this in your .vimrc file for easy use. To bind the command to <kbd><kbd>W</kbd></kbd>, add this to your .vimrc file:
+Another tip is to put this in your .vimrc file for easy use. To bind the command to <kbd><kbd>W</kbd></kbd> add this to your .vimrc file:
 
 `command W w !sudo tee % > /dev/null`
 
