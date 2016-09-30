@@ -33,6 +33,7 @@ var paths = {
   js: {
     src: './static/js/**/*.js',
     main: './static/js/main.js',
+    autotrack: './node_modules/autotrack/autotrack.js',
     dest: '../../public/js',
     static: '../../public/js/app.js',
   },
@@ -131,7 +132,13 @@ gulp.task('css:build', ['css', 'hugo', 'clean:rev'], function() {
 // JS
 //----------------------------------------
 
-gulp.task('js', function() {
+gulp.task('js:autotrack', function() {
+  return gulp.src([paths.js.autotrack])
+    .pipe(concat('app.js'))
+    .pipe(gulp.dest(paths.js.dest));
+});
+
+gulp.task('js', ['js:autotrack'], function() {
   return gulp.src([paths.js.main])
     .pipe(sourcemaps.init())
     .pipe(concat('app.js'))
