@@ -92,7 +92,8 @@ a {
   margin: -.6em -1em;
 }
 
-#dope :not(h1):not(h2):not(h3) > a {
+// TODO: May be worth refining this
+#dope :not(h1):not(h2):not(h3) > a:not(.tag) {
   color: $brand-primary;
 }
 
