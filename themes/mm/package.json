@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/MaxMilton/MaxMilton.com#readme",
   "devDependencies": {
-    "browser-sync": "^2.12.5",
+    "browser-sync": "^2.17.0",
     "del": "^2.2.2",
     "gulp": "^3.9.1",
     "gulp-combine-mq": "^0.4.0",
