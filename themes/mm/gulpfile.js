@@ -134,11 +134,11 @@ gulp.task('css:build', ['css', 'hugo', 'clean:rev'], function() {
 
 gulp.task('js:autotrack', function() {
   return gulp.src([paths.js.autotrack])
-    .pipe(concat('app.js'))
+    .pipe(uglify())
     .pipe(gulp.dest(paths.js.dest));
 });
 
-gulp.task('js', ['js:autotrack'], function() {
+gulp.task('js', function() {
   return gulp.src([paths.js.main])
     .pipe(sourcemaps.init())
     .pipe(concat('app.js'))
@@ -147,7 +147,7 @@ gulp.task('js', ['js:autotrack'], function() {
     .pipe(browserSync.stream({match: '**/*.js'}));
 });
 
-gulp.task('js:build', ['js', 'clean:rev'], function() {
+gulp.task('js:build', ['js:autotrack', 'js', 'clean:rev'], function() {
   return gulp.src(paths.js.static)
     .pipe(uglify())
     .pipe(rev())
