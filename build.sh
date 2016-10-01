@@ -13,7 +13,7 @@
 
 # Define variables
 THEME_DIR="./themes/mm"
-DEPLOY_FILE="./deployme.tgz"
+DEPLOY_FILE="deployme.tar.gz"
 
 echo -e "\033[1;33mStarting build\033[0m\n"
 
@@ -54,6 +54,6 @@ rm -f $DEPLOY_FILE
 # Create a deployable package
 echo -e "\nCreating deployable file..."
 
-tar -zcf $DEPLOY_FILE ./public && echo -e "Done; $(wc -c)\n"
+GZIP=-9 tar -czf $DEPLOY_FILE ./public && echo -e "Done; $(wc -c $DEPLOY_FILE)\n"
 
 echo -e "\033[1;33mBuild complete!\033[0m"

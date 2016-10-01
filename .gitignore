@@ -13,7 +13,7 @@ app-*.js
 app.css
 app-*.css
 *.map
-deployme.tgz
+deployme.tar.gz
 
 # Misc.
 deploy.sh
