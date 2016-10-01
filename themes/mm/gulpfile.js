@@ -109,7 +109,7 @@ gulp.task('css', function() {
 gulp.task('css:build', ['css', 'hugo', 'clean:rev'], function() {
   return gulp.src(paths.sass.static)
   .pipe(combineMq({ beautify: false }))
-  .pipe(uncss({ html: paths.public.html }))
+  .pipe(uncss({ html: [paths.public.html] }))
   .pipe(nano({
     autoprefixer: {
       browsers: ['> 2%', 'last 2 versions'],
