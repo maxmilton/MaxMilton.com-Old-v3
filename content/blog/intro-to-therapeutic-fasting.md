@@ -14,4 +14,4 @@ In the video he explains all this in an understandable way, even for people who 
 
 ## Therapeutic Fasting---Solving the Two-Compartment Problem
 
-{{< youtube tIuj-oMN-Fk >}}
+{{< youtube id="tIuj-oMN-Fk" >}}
