@@ -4,5 +4,7 @@
   <!-- Show article summary without images -->
   {{ .Summary | replaceRE "(?s:<picture>.*</picture>)" "" | safeHTML }}
 
-  <a href="{{ .RelPermalink }}" title="{{ .Title }}" class="more">Read more</a>
+  {{ if .Truncated }}
+  <a href="{{ .RelPermalink }}" class="more">Continue reading <span class="sr-only">{{ .Title }}</span></a>
+  {{ end }}
 </article>
