@@ -22,7 +22,7 @@ copyright = "Blog posts are licensed under a Creative Commons Attribution No Der
 [params]
   subtitle = "Live life to the Max."
   description = "The personal blog of Max Milton."
-  themecolour = "#eceeef"
+  themecolour = "#eceff1"
 
 [[menu.main]]
   name = "All Posts"
