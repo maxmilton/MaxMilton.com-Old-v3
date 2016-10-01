@@ -45,9 +45,9 @@ fi
 echo -e 'Starting Gulp build process...\n'
 
 # Remove files from ealier builds
-# gulp --gulpfile $THEME_DIR/gulpfile.js clean
+gulp --gulpfile $THEME_DIR/gulpfile.js clean
 # Run Gulp build process
-# gulp --gulpfile $THEME_DIR/gulpfile.js build
+gulp --gulpfile $THEME_DIR/gulpfile.js build
 
 # Remove ealier deployable file
 rm -f $DEPLOY_FILE
