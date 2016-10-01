@@ -17,7 +17,7 @@
 #
 
 # Define variables
-DEPLOY_FILE="deployme.tgz"
+# NOTE: The DEPLOY_FILE variable is set in build.sh
 PROD_SERVER_SSH="user@yoursite.com"
 REMOTE_DIR="/var/www/yoursite.com"
 FS_PERMISSIONS="www-data:www-data"

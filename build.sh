@@ -13,40 +13,33 @@
 
 # Define variables
 THEME_DIR="./themes/mm"
+DEPLOY_FILE="./deployme.tgz"
 
 echo -e "\033[1;33mStarting build\033[0m\n"
 
 # Check if Hugo is installed
 hash hugo 2>/dev/null || {
-  echo >&2 "Hugo is not installed. Get it from https://github.com/spf13/hugo/releases."
+  echo -e >&2 "Hugo is not installed. Get it from:\n\n https://github.com/spf13/hugo/releases\n"
   exit 1
 }
 
 # Check if Node.js is installed
 hash npm 2>/dev/null || {
-  echo >&2 "Node.js is not installed. Install it before continuing."
+  echo -e >&2 "NPM not found. Install Node.js to continue:\n\n  https://nodejs.org/en/\n"
   exit 1
 }
 
 # Check if Gulp is installed
 hash gulp 2>/dev/null || {
   # Install Gulp
-  npm -g i gulp-cli
+  sudo npm -g i gulp-cli
 }
 
-# Check if necessary Node modules are already install
+# Check if Node modules are already installed
 if [ ! -d "$THEME_DIR/node_modules" ]; then
-  echo -e "Installing necessary node modules...\n"
-
-  # Install Node modules
-  npm install $THEME_DIR
-else
-  echo -e "Updating node modules...\n"
-
-  # Update Node modules
-  npm update $THEME_DIR --save --save-dev
+  echo -e >&2 "You need to install the theme Node modules first, run:\n\n  1. cd theme/mm\n  2. npm install\n"
+  exit 1
 fi
-
 
 echo -e "Starting Gulp build process...\n"
 
@@ -56,10 +49,11 @@ gulp --gulpfile $THEME_DIR/gulpfile.js clean
 gulp --gulpfile $THEME_DIR/gulpfile.js build
 
 # Remove ealier deployable file
-rm -f ./deployme.tgz
+rm -f $DEPLOY_FILE
 
 # Create a deployable package
-echo -e "\nCreating deployable file...\n"
-tar zcf deployme.tgz ./public
+echo -e "\nCreating deployable file..."
+
+tar -zcf $DEPLOY_FILE ./public && echo -e "Done; $(wc -c)\n"
 
 echo -e "\033[1;33mBuild complete!\033[0m"
