@@ -3,7 +3,7 @@ author      = "Max Milton"
 date        = "2016-09-10T15:35:00+10:00"
 description = "You make changes only to realise you don't have write access... here's a way to save without exiting the Vim session."
 email       = "max@wearegenki.com"
-tags        = ["quick tips", "linux"]
+tags        = ["linux", "quick tips"]
 title       = "Write As Sudo And Other Useful Vim Tricks"
 +++
 
