@@ -1,8 +1,8 @@
 #!/bin/bash
 
-#-------------------------------------------#
-# Deploy the site to your production server #
-#-------------------------------------------#
+#---------------------------------------#
+# Deploy the blog to your remote server #
+#---------------------------------------#
 #
 # REQUIREMENTS:
 #   * A *nix web server with SSH access
@@ -17,9 +17,9 @@
 #  NOTE: This file should NOT be publicly available as it contains your private info.
 #
 
-# Define variables
-THEME_DIR='themes/mm'
-DEPLOY_FILE='deployme.tar.gz'
+# Define variables (first 2 are optional)
+#THEME_DIR='themes/mm'
+#DEPLOY_FILE='deployme.tar.gz'
 REMOTE_SSH='user@yoursite.com'
 REMOTE_DIR='/var/www/yoursite.com'
 FS_PERMISSIONS='www-data:www-data'
@@ -36,7 +36,7 @@ echo -e "\nUploading package to $REMOTE_SSH server...\n"
 scp $DEPLOY_FILE $REMOTE_SSH:~/
 
 # Execute the follow commands on the remote server
-echo -e "Executing commands on $REMOTE_SSH server...\n"
+echo -e "\nExecuting commands on $REMOTE_SSH server...\n"
 ssh $REMOTE_SSH DEPLOY_FILE=$DEPLOY_FILE REMOTE_DIR=$REMOTE_DIR FS_PERMISSIONS=$FS_PERMISSIONS 'bash -s' <<'ENDSSH'
   sudo mv ~/$DEPLOY_FILE $REMOTE_DIR
   sudo tar -zcf $REMOTE_DIR/html-backup-$(date --iso-8601=minutes).tar.gz $REMOTE_DIR/html
@@ -53,5 +53,6 @@ rm -f $DEPLOY_FILE
 
 # Open CloudFlare in a browser to purge the CDN cache
 xdg-open "https://www.cloudflare.com/a/caching/$CLOUDFLARE_SITE"
+echo -e '\nNOTE: Please purge your CloudFlare cache.\n'
 
-echo -e '\n\033[1;33mDeployment complete!\033[0m'
+echo -e '\033[1;33mDeployment complete!\033[0m'
