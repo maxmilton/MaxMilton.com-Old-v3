@@ -12,6 +12,6 @@ Great talk by Dr. Jason Fung explaining how reducing insulin is the key metaboli
 
 In the video he explains all this in an understandable way, even for people who may not be that interested in nutritional science. Truly interesting stuff, I highly recommend watching<!--more-->!
 
-## Therapeutic Fasting---Solving the Two-Compartment Problem
+## Therapeutic fasting---solving the two-compartment problem
 
 {{< youtube id="tIuj-oMN-Fk" >}}
