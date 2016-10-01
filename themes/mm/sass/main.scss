@@ -96,7 +96,7 @@ a {
 #dope :not(h1):not(h2):not(h3) > a:not(.tag) {
   color: $brand-primary;
 
-  // FIXME: Not working on Chrome on local DEV, check PROD
+  // FIXME: Not working on Chrome
   &:visited {
     color: darken($brand-primary, 25%);
   }
@@ -142,7 +142,7 @@ abbr[title] {
   }
 
   @include media-breakpoint-up(md) {
-    border-bottom: 3px dotted $gray-light;
+    border-bottom: 2px dotted $gray-light;
 
     &::after {
       content: "";
