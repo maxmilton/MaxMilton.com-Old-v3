@@ -20,5 +20,5 @@ Optionally pass autoplay or class parameter:
 -->
 
 <div class="embed-responsive embed-responsive-16by9">
-  <iframe src="https://www.youtube.com/embed/{{ .Get "id" }}{{ with .Get "autoplay" }}{{ if eq . "true" }}?autoplay=1{{ end }}{{ end }}" {{ if .Get "class" }}class="{{ .Get "class" }}"{{ end }} allowfullscreen ></iframe>
+  <iframe src="https://www.youtube.com/embed/{{ .Get "id" }}{{ with .Get "autoplay" }}{{ if eq . "true" }}?autoplay=1{{ end }}{{ end }}"{{ if .Get "class" }} class="{{ .Get "class" }}"{{ end }} allowfullscreen></iframe>
 </div>
