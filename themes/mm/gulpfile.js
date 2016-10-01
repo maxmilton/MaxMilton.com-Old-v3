@@ -108,15 +108,11 @@ gulp.task('css', function() {
 
 gulp.task('css:build', ['css', 'hugo', 'clean:rev'], function() {
   return gulp.src(paths.sass.static)
-  .pipe(combineMq({
-    beautify: false,
-  }))
-  .pipe(uncss({
-    html: [paths.public.html],
-  }))
+  .pipe(combineMq({ beautify: false }))
+  .pipe(uncss({ html: paths.public.html }))
   .pipe(nano({
     autoprefixer: {
-      browsers: ['> 1%', 'last 2 versions'],
+      browsers: ['> 2%', 'last 2 versions'],
       add: true,
     },
     discardComments: { removeAll: true },
