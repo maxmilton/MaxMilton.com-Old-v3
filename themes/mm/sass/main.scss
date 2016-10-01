@@ -189,6 +189,23 @@ kbd {
       margin-top: 0;
     }
   }
+
+  .pages {
+    list-style: none;
+
+    > li {
+      margin-bottom: $spacer * 1.2;
+    }
+  }
+
+  .tags {
+    display: inline-block;
+    margin-left: $spacer / 4;
+  }
+
+  time {
+    color: $gray;
+  }
 }
 
 //------------------------------
