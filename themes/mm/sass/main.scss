@@ -95,6 +95,11 @@ a {
 // TODO: May be worth refining this
 #dope :not(h1):not(h2):not(h3) > a:not(.tag) {
   color: $brand-primary;
+
+  // FIXME: Not working on Chrome on local DEV, check PROD
+  &:visited {
+    color: darken($brand-primary, 25%);
+  }
 }
 
 // TODO: Decide if necessary; why arn't **bolder** fonts being rendered correctly?
@@ -113,7 +118,7 @@ blockquote {
 
 table {
   @extend .table;
-  @extend .table-responsive; // TODO: May be worth setting at a per table basis instead
+  @extend .table-responsive; // TODO: Maybe set at a per table basis instead?
 
   thead th {
     border-top: 0;
