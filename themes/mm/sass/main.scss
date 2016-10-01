@@ -132,9 +132,22 @@ table {
   }
 }
 
+// Show abbreviation in brackets on small screens (because there's no hover on mobile)
 abbr[title] {
   text-decoration: none;
-  border-bottom: 2px dotted $gray-light;
+  border-bottom: 0;
+
+  &::after {
+    content: " (" attr(title) ")";
+  }
+
+  @include media-breakpoint-up(md) {
+    border-bottom: 3px dotted $gray-light;
+
+    &::after {
+      content: "";
+    }
+  }
 }
 
 kbd {
