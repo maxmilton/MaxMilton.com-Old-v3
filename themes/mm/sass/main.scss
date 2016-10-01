@@ -237,6 +237,10 @@ kbd {
   background-color: $brand-primary;
 }
 
+#email {
+  border-color: $btn-secondary-border;
+}
+
 .summaries {
   > h2 {
     border-bottom: 1px solid $gray-light;
