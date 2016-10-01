@@ -5,37 +5,39 @@
 #-------------------------------------------#
 #
 # REQUIREMENTS:
-#   * A Linux web server with SSH access
-#   * SSH user should have sudo privileges
+#   * A *nix web server with SSH access
+#   * SSH user with sudo privileges
 #
 # INSTRUCTIONS:
 #   1. Copy this this file: `cp deploy.sh.sample deploy.sh`
 #   2. Change the variables bellow to match your setup
 #   3. Modify the remote commands to suit your deployment workflow
+#   4. Run this script when you want to deploy a new version of your blog
 #
 #  NOTE: This file should NOT be publicly available as it contains your private info.
 #
 
 # Define variables
-# NOTE: The DEPLOY_FILE variable is set in build.sh
-PROD_SERVER_SSH="user@yoursite.com"
-REMOTE_DIR="/var/www/yoursite.com"
-FS_PERMISSIONS="www-data:www-data"
-CLOUDFLARE_SITE="yoursite.com"
+THEME_DIR='themes/mm'
+DEPLOY_FILE='deployme.tar.gz'
+REMOTE_SSH='user@yoursite.com'
+REMOTE_DIR='/var/www/yoursite.com'
+FS_PERMISSIONS='www-data:www-data'
+CLOUDFLARE_SITE='yoursite.com'
 
 # Print banner
-echo -e "\n\033[1mMM    MM MM    MM\nMMM  MMM MMM  MMM\nMM MM MM MM MM MM\nMM    MM MM    MM\nMM    MM MM    MM\n\n © MaxMilton.com\033[0m\n\n"
+echo -e '\n\033[1mMM    MM MM    MM\nMMM  MMM MMM  MMM\nMM MM MM MM MM MM\nMM    MM MM    MM\nMM    MM MM    MM\n\n © MaxMilton.com\033[0m\n\n'
 
 # Run build
 source build.sh
 
 # Upload deploy file to the production server
-echo -e "\nUploading package to $PROD_SERVER_SSH server...\n"
-scp $DEPLOY_FILE $PROD_SERVER_SSH:~/
+echo -e "\nUploading package to $REMOTE_SSH server...\n"
+scp $DEPLOY_FILE $REMOTE_SSH:~/
 
 # Execute the follow commands on the remote server
-echo -e "Executing commands on $PROD_SERVER_SSH server...\n"
-ssh $PROD_SERVER_SSH DEPLOY_FILE=$DEPLOY_FILE REMOTE_DIR=$REMOTE_DIR FS_PERMISSIONS=$FS_PERMISSIONS 'bash -s' <<'ENDSSH'
+echo -e "Executing commands on $REMOTE_SSH server...\n"
+ssh $REMOTE_SSH DEPLOY_FILE=$DEPLOY_FILE REMOTE_DIR=$REMOTE_DIR FS_PERMISSIONS=$FS_PERMISSIONS 'bash -s' <<'ENDSSH'
   sudo mv ~/$DEPLOY_FILE $REMOTE_DIR
   sudo tar -zcf $REMOTE_DIR/html-backup-$(date --iso-8601=minutes).tar.gz $REMOTE_DIR/html
   sudo rm -rf $REMOTE_DIR/html
@@ -52,4 +54,4 @@ rm -f $DEPLOY_FILE
 # Open CloudFlare in a browser to purge the CDN cache
 xdg-open "https://www.cloudflare.com/a/caching/$CLOUDFLARE_SITE"
 
-echo -e "\n\033[1;33mDeployment complete!\033[0m"
+echo -e '\n\033[1;33mDeployment complete!\033[0m'

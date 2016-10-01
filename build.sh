@@ -12,20 +12,21 @@
 #
 
 # Define variables
-THEME_DIR="./themes/mm"
-DEPLOY_FILE="deployme.tar.gz"
+# Use existing values if defined otherwise use fallback value
+THEME_DIR=${THEME_DIR:-'themes/mm'}
+DEPLOY_FILE=${DEPLOY_FILE:-'deployme.tar.gz'}
 
-echo -e "\033[1;33mStarting build\033[0m\n"
+echo -e '\033[1;33mStarting build\033[0m\n'
 
 # Check if Hugo is installed
 hash hugo 2>/dev/null || {
-  echo -e >&2 "Hugo is not installed. Get it from:\n\n https://github.com/spf13/hugo/releases\n"
+  echo -e >&2 'Hugo is not installed. Get it from:\n\n https://github.com/spf13/hugo/releases\n'
   exit 1
 }
 
 # Check if Node.js is installed
 hash npm 2>/dev/null || {
-  echo -e >&2 "NPM not found. Install Node.js to continue:\n\n  https://nodejs.org/en/\n"
+  echo -e >&2 'NPM not found. Install Node.js to continue:\n\n  https://nodejs.org/en/\n'
   exit 1
 }
 
@@ -37,23 +38,23 @@ hash gulp 2>/dev/null || {
 
 # Check if Node modules are already installed
 if [ ! -d "$THEME_DIR/node_modules" ]; then
-  echo -e >&2 "You need to install the theme Node modules first, run:\n\n  1. cd theme/mm\n  2. npm install\n"
+  echo -e >&2 'You need to install the theme Node modules first, run:\n\n  1. cd theme/mm\n  2. npm install\n'
   exit 1
 fi
 
-echo -e "Starting Gulp build process...\n"
+echo -e 'Starting Gulp build process...\n'
 
 # Remove files from ealier builds
-gulp --gulpfile $THEME_DIR/gulpfile.js clean
+# gulp --gulpfile $THEME_DIR/gulpfile.js clean
 # Run Gulp build process
-gulp --gulpfile $THEME_DIR/gulpfile.js build
+# gulp --gulpfile $THEME_DIR/gulpfile.js build
 
 # Remove ealier deployable file
 rm -f $DEPLOY_FILE
 
 # Create a deployable package
-echo -e "\nCreating deployable file..."
+echo -e '\nCreating deployable file...'
 
 GZIP=-9 tar -czf $DEPLOY_FILE ./public && echo -e "Done; $(wc -c $DEPLOY_FILE)\n"
 
-echo -e "\033[1;33mBuild complete!\033[0m"
+echo -e '\033[1;33mBuild complete!\033[0m'
