@@ -8,6 +8,7 @@
   },
   "author": "Max Milton <max@wearegenki.com>",
   "license": "ISC",
+  "private": true,
   "repository": {
     "type": "git",
     "url": "git+https://github.com/MaxMilton/MaxMilton.com.git"
