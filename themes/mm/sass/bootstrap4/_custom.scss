@@ -17,14 +17,20 @@ $body-color:              $gray-dark; // Same as default
 
 $link-color:              $body-color;
 
-// FIXME: Couldn't get this working, still have to comment out in _variables.scss
-// $grid-breakpoints: (
-//   xl: 0 // Disable xl size
-// );
-//
-// $container-max-widths: (
-//   xl: 0 // Disable xl size
-// );
+$grid-breakpoints: (
+  xs: 0,
+  sm: 544px,
+  md: 768px,
+  lg: 992px,
+  // xl: 1200px // Disable xl size
+);
+
+$container-max-widths: (
+  sm: 576px,
+  md: 720px,
+  lg: 940px,
+  // xl: 1140px // Disable xl size
+);
 
 $font-family-sans-serif:  "Overpass", sans-serif;
 $font-family-serif:       serif;
