@@ -2,9 +2,9 @@ Source for the website of Max Milton — powered by Hugo, Gulp, and Bootstrap 4 
 
 # Overview
 
-A simple blog which uses Node.js + Gulp automation to make development and deployment easy. Site generated with Hugo, a fast static website engine, which makes creating websites fun again. Theme uses Bootstrap 4 for agile design.
+A simple blog that uses Node.js + Gulp for automation to make development and deployment easy. The site is generated using Hugo, a fast static website engine, which makes creating websites fun again. The theme is based on Bootstrap 4 for agile design.
 
-NOTE: Uses Browsersync to serve the site when in development—the auto-reload is awesome and makes developing across multiple devices at once easy. Hugo comes with it's own dev server but Browsersync is a better tool for rapid development.
+NOTE: Uses Browsersync to serve the site when in development—the auto-reload is awesome and makes developing across multiple devices at once easy. Hugo comes with a simple server but Browsersync is better for rapid development.
 
 Read more about the release at <https://maxmilton.com/blog/blog-source-code-now-availiable-on-github.html>.
 
@@ -24,7 +24,7 @@ Install prerequisites then run `gulp` to start a local dev server.
 
 ### For Production
 
-**Test build only:**
+**Manual or test build:**
 
 1. `$ build.sh`
 
@@ -42,13 +42,16 @@ Use British English spelling and grammar. Follow the [Guardian and Observer styl
 
 * Post title (h1): Title Case
 * Post sub headings (h2–h6): Sentence case
-* Common words: ecommerse, ebook, internet, website
+* Common words: ecommerce, ebook, internet, website
 * Use em dashes without spaces either side—except in headings
 * Use **bold** or _italic_, but not **_together_**
 * Posts must have a unique description and one or more topic tags
 * Each image must have an alt title
 
 ## Changelog
+
+**v1.8.1**
+:  2016-10-TBA — Add caption support to img shortcode
 
 **v1.8.0**
 :  2016-10-02 — Change colour and link styles, clean up homepage, show tags on list pages, tweak RSS feeds, add YouTube shortcode override for Bootstrap compatibility, make `<abbr>` responsive, move vendor JS to NPM for easier management, add 'skip to main content' accessibility feature, fix datetime format
