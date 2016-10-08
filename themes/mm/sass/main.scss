@@ -230,6 +230,19 @@ kbd {
     @extend .img-fluid;
     margin-bottom: $spacer;
   }
+
+  figure {
+    @extend .figure;
+  }
+
+  .figure-img {
+    margin-bottom: $spacer / 2;
+  }
+
+  figcaption {
+    @extend .figure-caption;
+    color: $gray;
+  }
 }
 
 .meta {
