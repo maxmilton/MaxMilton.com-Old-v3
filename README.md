@@ -6,7 +6,7 @@ A simple blog that uses Node.js + Gulp for automation to make development and de
 
 NOTE: Uses Browsersync to serve the site when in development—the auto-reload is awesome and makes developing across multiple devices at once easy. Hugo comes with a simple server but Browsersync is better for rapid development.
 
-Read more about the release at <https://maxmilton.com/blog/blog-source-code-now-availiable-on-github.html>.
+Read more about the release at <https://maxmilton.com/blog/blog-source-code-now-available-on-github.html>.
 
 Feel free to use my Hugo theme as the base for your own site. Let me know if you use the code, I'd love to see what you do with it!
 
