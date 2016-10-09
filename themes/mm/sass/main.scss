@@ -281,6 +281,11 @@ kbd {
   border-color: $btn-secondary-border;
 }
 
+.btn-email {
+  // Don't load bold font on homepage to keep size down
+  font-weight: 300;
+}
+
 .summaries {
   > h2 {
     border-bottom: 1px solid $gray-light;
