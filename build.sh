@@ -55,6 +55,7 @@ rm -f $DEPLOY_FILE
 # Create a deployable package
 echo -e '\nCreating deployable file...'
 
+# FIXME: GZIP env variable has been depreciated
 GZIP=-9 tar -czf $DEPLOY_FILE ./public && echo -e "Done; $(wc -c $DEPLOY_FILE)\n"
 
 echo -e '\033[1;33mBuild complete!\033[0m'
