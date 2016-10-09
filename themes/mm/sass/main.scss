@@ -92,9 +92,11 @@ a {
   margin: -.6em -1em;
 }
 
-// TODO: May be worth refining this
-#dope :not(h1):not(h2):not(h3) > a:not(.tag) {
+// TODO: Refine this selector for performance
+#dope :not(h1):not(h2):not(h3) > a:not(.tag):not(.page-item) {
   color: $brand-primary;
+  text-decoration: underline;
+  text-decoration-color: rgba($brand-primary, .5);
 
   &:visited {
     color: darken($brand-primary, 25%);

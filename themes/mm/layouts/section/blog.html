@@ -12,7 +12,7 @@
         <ul class="pages">
           {{ range .Data.Pages }}
           <li>
-            <a href="{{ .RelPermalink }}" title="{{ .Title }}">{{ .Title }}</a>
+            <a href="{{ .RelPermalink }}" title="{{ .Title }}" class="page-item">{{ .Title }}</a>
             <div class="tags">
             {{ range .Params.tags }}
               <a href="/tags/{{ . | urlize }}.html" class="tag tag-default">{{ . }}</a>
