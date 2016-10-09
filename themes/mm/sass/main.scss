@@ -114,17 +114,12 @@ blockquote {
 
 table {
   @extend .table;
-  @extend .table-responsive; // TODO: Maybe set at a per table basis instead?
+}
 
-  thead th {
-    border-top: 0;
-  }
-
-  @include media-breakpoint-down(xs) {
-    th,
-    td {
-      padding: $table-sm-cell-padding;
-    }
+@include media-breakpoint-down(xs) {
+  th,
+  td {
+    padding: $table-sm-cell-padding;
   }
 }
 
