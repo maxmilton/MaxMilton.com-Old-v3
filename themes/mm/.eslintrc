@@ -11,7 +11,7 @@
   },
 
   "env": {
-    # "es6"     : 1,
+    "es6"     : 1,
     "browser" : 1,
     "node"    : 1, # We're working with Gulp
     "jquery"  : 1,

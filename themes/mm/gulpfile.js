@@ -1,25 +1,26 @@
-'use strict';
+const browserSync  = require('browser-sync').create();
+const concat       = require('gulp-concat');
+const del          = require('del');
+const exec         = require('child_process').exec;
+const gulp         = require('gulp');
+const htmlmin      = require('gulp-htmlmin');
+const postcss      = require('gulp-postcss');
+const autoprefixer = require('autoprefixer');
+const cssnano      = require('cssnano');
+const fixes        = require('postcss-fixes');
+const csso         = require('gulp-csso');
+const rename       = require('gulp-rename');
+const replace      = require('gulp-rev-replace');
+const rev          = require('gulp-rev');
+const sass         = require('gulp-sass');
+const sourcemaps   = require('gulp-sourcemaps');
+const uglify       = require('gulp-uglify');
+const combineMq    = require('gulp-combine-mq');
+const uncss        = require('gulp-uncss');
+const responsive   = require('gulp-responsive');
+const image        = require('gulp-image');
 
-var browserSync = require('browser-sync').create();
-var concat      = require('gulp-concat');
-var del         = require('del');
-var exec        = require('child_process').exec;
-var gulp        = require('gulp');
-var htmlmin     = require('gulp-htmlmin');
-var nano        = require('gulp-cssnano');
-var csso        = require('gulp-csso');
-var rename      = require('gulp-rename');
-var replace     = require('gulp-rev-replace');
-var rev         = require('gulp-rev');
-var sass        = require('gulp-sass');
-var sourcemaps  = require('gulp-sourcemaps');
-var uglify      = require('gulp-uglify');
-var combineMq   = require('gulp-combine-mq');
-var uncss       = require('gulp-uncss');
-var responsive  = require('gulp-responsive');
-var image       = require('gulp-image');
-
-var paths = {
+const paths = {
   public: {
     root: '../../public',
     html: '../../public/**/*.html',
@@ -69,7 +70,7 @@ gulp.task('serve', ['hugo', 'css', 'js', 'img'], function() {
   gulp.watch(paths.js.src, ['js']);
   gulp.watch(paths.img.src, ['img']);
   gulp.watch([paths.content, paths.layouts, paths.config], ['hugo']);
-  gulp.watch([paths.public.html]).on('change', browserSync.reload);
+  gulp.watch(paths.public.html).on('change', browserSync.reload);
 });
 
 //----------------------------------------
@@ -110,13 +111,16 @@ gulp.task('css:build', ['css', 'hugo', 'clean:rev'], function() {
   return gulp.src(paths.sass.static)
   .pipe(combineMq({ beautify: false }))
   .pipe(uncss({ html: [paths.public.html] }))
-  .pipe(nano({
-    autoprefixer: {
-      browsers: ['> 2%', 'last 2 versions'],
+  .pipe(postcss([
+    fixes({ preset: 'fixes-only' }),
+    autoprefixer({
+      browsers: ['> 1%', 'last 2 versions'],
       add: true,
-    },
-    discardComments: { removeAll: true },
-  }))
+    }),
+    cssnano({
+      discardComments: { removeAll: true },
+    }),
+  ]))
   .pipe(csso())
   .pipe(rev())
   .pipe(gulp.dest(paths.sass.dest))
@@ -217,7 +221,7 @@ gulp.task('html:build', ['hugo:build'], function() {
 });
 
 gulp.task('html:rev', ['html:build'], function() {
-  var manifest = gulp.src(paths.manifest);
+  const manifest = gulp.src(paths.manifest);
 
   return gulp.src(paths.public.html)
   .pipe(replace({ manifest: manifest }))

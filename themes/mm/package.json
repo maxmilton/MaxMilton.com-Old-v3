@@ -22,15 +22,17 @@
   },
   "homepage": "https://github.com/MaxMilton/MaxMilton.com#readme",
   "devDependencies": {
+    "autoprefixer": "^6.5.1",
     "browser-sync": "^2.17.0",
+    "cssnano": "^3.7.7",
     "del": "^2.2.2",
     "gulp": "^3.9.1",
     "gulp-combine-mq": "^0.4.0",
     "gulp-concat": "^2.6.0",
-    "gulp-cssnano": "^2.1.2",
     "gulp-csso": "^2.0.0",
     "gulp-htmlmin": "^3.0.0",
     "gulp-image": "^2.7.1",
+    "gulp-postcss": "^6.2.0",
     "gulp-rename": "^1.2.2",
     "gulp-responsive": "^2.6.0",
     "gulp-rev": "^7.1.2",
@@ -38,7 +40,8 @@
     "gulp-sass": "^2.3.2",
     "gulp-sourcemaps": "^1.6.0",
     "gulp-uglify": "^2.0.0",
-    "gulp-uncss": "^1.0.6"
+    "gulp-uncss": "^1.0.6",
+    "postcss-fixes": "^1.4.1"
   },
   "dependencies": {
     "autotrack": "^1.0.3"
