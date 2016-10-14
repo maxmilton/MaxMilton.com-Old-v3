@@ -108,7 +108,7 @@ blockquote {
   border-left-color: $gray-light;
 
   > p:last-of-type {
-    @extend .m-b-0;
+    @extend .mb-0;
   }
 }
 
