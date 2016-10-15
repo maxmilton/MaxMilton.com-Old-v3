@@ -87,9 +87,10 @@ li {
 // README: Reduce size if you experience problems with overlapping links
 // ↳ For debugging enable CSS Outlining at http://localhost:3001/remote-debug
 a {
-  position: relative;
+  position: relative; // TODO: Comment this line and do cross browser tests
   padding: .6em 1em;
   margin: -.6em -1em;
+  word-wrap: break-word;
 }
 
 // TODO: Refine this selector for performance
