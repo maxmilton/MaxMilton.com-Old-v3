@@ -11,7 +11,7 @@ description = ""
 
 # About Max Milton
 
-<p class="lead bg-primary">&ldquo;Do not go where the path may lead, go instead where there is no path and leave a trail.&rdquo;<br/>
+<p class="lead bg-primary text-white">&ldquo;Do not go where the path may lead, go instead where there is no path and leave a trail.&rdquo;<br/>
 <small>&mdash; Ralph Waldo Emerson</small></p>
 
 Yo!
