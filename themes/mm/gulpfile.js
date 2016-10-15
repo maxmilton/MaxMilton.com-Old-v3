@@ -162,7 +162,7 @@ gulp.task('js:build', ['js', 'js:autotrack', 'clean:rev'], function() {
 
 gulp.task('img', function() {
   return gulp.src([paths.img.src])
-    // Resize images
+    // Resize images (use with <img> shortcode in hugo)
     .pipe(responsive({
       '*': [{
           width: 546,
@@ -184,6 +184,7 @@ gulp.task('img', function() {
         },
       ],
     },{
+      silent: true,              // Don't spam the console
       withoutEnlargement: false, // Allow image enlargement
     }))
     .pipe(gulp.dest(paths.img.dest))
