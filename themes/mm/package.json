@@ -31,7 +31,7 @@
     "gulp-concat": "^2.6.0",
     "gulp-csso": "^2.0.0",
     "gulp-htmlmin": "^3.0.0",
-    "gulp-image": "^2.7.1",
+    "gulp-imagemin": "^3.0.3",
     "gulp-postcss": "^6.2.0",
     "gulp-rename": "^1.2.2",
     "gulp-responsive": "^2.6.0",
@@ -41,6 +41,7 @@
     "gulp-sourcemaps": "^2.1.1",
     "gulp-uglify": "^2.0.0",
     "gulp-uncss": "^1.0.6",
+    "imagemin-mozjpeg": "^6.0.0",
     "postcss-fixes": "^1.4.1"
   },
   "dependencies": {

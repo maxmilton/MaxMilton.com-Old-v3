@@ -18,7 +18,8 @@ const uglify       = require('gulp-uglify');
 const combineMq    = require('gulp-combine-mq');
 const uncss        = require('gulp-uncss');
 const responsive   = require('gulp-responsive');
-const image        = require('gulp-image');
+const imagemin     = require('gulp-imagemin');
+const mozjpeg      = require('imagemin-mozjpeg');
 
 const paths = {
   public: {
@@ -133,12 +134,15 @@ gulp.task('css:build', ['css', 'hugo', 'clean:rev'], function() {
 //----------------------------------------
 
 gulp.task('js', function() {
-  return gulp.src([paths.js.main])
-    .pipe(sourcemaps.init())
-    .pipe(concat('app.js'))
-    .pipe(sourcemaps.write(paths.maps))
-    .pipe(gulp.dest(paths.js.dest))
-    .pipe(browserSync.stream({match: '**/*.js'}));
+  // return gulp.src([paths.js.main])
+  //   .pipe(sourcemaps.init())
+  //   .pipe(concat('app.js'))
+  //   .pipe(sourcemaps.write(paths.maps))
+  //   .pipe(gulp.dest(paths.js.dest))
+  //   .pipe(browserSync.stream({match: '**/*.js'}));
+  
+  // NOTE: Not using any JS at the moment
+  return true;
 });
 
 gulp.task('js:autotrack', function() {
@@ -148,12 +152,15 @@ gulp.task('js:autotrack', function() {
 });
 
 gulp.task('js:build', ['js', 'js:autotrack', 'clean:rev'], function() {
-  return gulp.src(paths.js.static)
-    .pipe(uglify())
-    .pipe(rev())
-    .pipe(gulp.dest(paths.js.dest))
-    .pipe(rev.manifest(paths.manifest, { merge: true }))
-    .pipe(gulp.dest('.'))
+  // return gulp.src(paths.js.static)
+  //   .pipe(uglify())
+  //   .pipe(rev())
+  //   .pipe(gulp.dest(paths.js.dest))
+  //   .pipe(rev.manifest(paths.manifest, { merge: true }))
+  //   .pipe(gulp.dest('.'))
+
+  // NOTE: Not using any JS at the moment
+  return true;
 });
 
 //----------------------------------------
@@ -193,10 +200,13 @@ gulp.task('img', function() {
 gulp.task('img:build', ['img'], function() {
   return gulp.src([paths.img.dest + '/*.{jpg,png,gif,svg}'])
     // Optimise images
-    .pipe(image({
-      jpegoptim: false, // FIXME
-      concurrent: 10
-    }))
+    .pipe(imagemin([
+      imagemin.gifsicle(),
+      imagemin.jpegtran(),
+      imagemin.optipng(),
+      imagemin.svgo(),
+      mozjpeg(),
+    ]))
     .pipe(gulp.dest(paths.img.dest))
 });
 
