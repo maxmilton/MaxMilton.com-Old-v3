@@ -50,8 +50,11 @@ Use British English spelling and grammar. Follow the [Guardian and Observer styl
 
 ## Changelog
 
+**v1.9.0**
+:  2016-10-15 — Switch from gulp-image to gulp-imagemin (faster, more customisable, more popular), clean up gulp script, fix depreciation warning in build script, update NPM module versions and Bootstrap from upstream
+
 **v1.8.1**
-:  2016-10-TBA — Add caption support to img shortcode
+:  2016-10-10 — New link style, small tweaks to tables, add caption support to img shortcode, fix bold font not rendering
 
 **v1.8.0**
 :  2016-10-02 — Change colour and link styles, clean up homepage, show tags on list pages, tweak RSS feeds, add YouTube shortcode override for Bootstrap compatibility, make `<abbr>` responsive, move vendor JS to NPM for easier management, add 'skip to main content' accessibility feature, fix datetime format
