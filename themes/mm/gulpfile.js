@@ -1,5 +1,5 @@
 const browserSync  = require('browser-sync').create();
-const concat       = require('gulp-concat');
+// const concat       = require('gulp-concat'); // Uncomment if doing JS task
 const del          = require('del');
 const exec         = require('child_process').exec;
 const gulp         = require('gulp');
@@ -140,7 +140,7 @@ gulp.task('js', function() {
   //   .pipe(sourcemaps.write(paths.maps))
   //   .pipe(gulp.dest(paths.js.dest))
   //   .pipe(browserSync.stream({match: '**/*.js'}));
-  
+
   // NOTE: Not using any JS at the moment
   return true;
 });
@@ -201,10 +201,9 @@ gulp.task('img:build', ['img'], function() {
   return gulp.src([paths.img.dest + '/*.{jpg,png,gif,svg}'])
     // Optimise images
     .pipe(imagemin([
-      imagemin.gifsicle(),
-      imagemin.jpegtran(),
+      // imagemin.gifsicle(), // Uncomment for gif support
       imagemin.optipng(),
-      imagemin.svgo(),
+      // imagemin.svgo(),     // Uncomment for svg support
       mozjpeg(),
     ]))
     .pipe(gulp.dest(paths.img.dest))
