@@ -219,6 +219,7 @@ gulp.task('html:build', ['hugo:build'], function() {
       collapseBooleanAttributes: true,
       collapseWhitespace: true,
       decodeEntities: true,
+      minifyCSS: true,
       minifyJS: true,
       preserveLineBreaks: true,
       quoteCharacter: '"',
