@@ -17,7 +17,8 @@ copyright = "Blog posts are licensed under a Creative Commons Attribution No Der
   email = "max@wearegenki.com"
 
 [blackfriday]
-  hrefTargetBlank = true
+  # FIXME: Enable once github issue is fixed https://github.com/spf13/hugo/issues/2424
+  # hrefTargetBlank = true
 
 [params]
   subtitle = "Live life to the Max."
