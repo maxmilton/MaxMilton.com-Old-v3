@@ -50,6 +50,9 @@ Use British English spelling and grammar. Follow the [Guardian and Observer styl
 
 ## Changelog
 
+**v1.9.1**
+:  2016-10-16 — Add link hover state, fix long links overflowing, disable automated _blank on external links (not working)
+
 **v1.9.0**
 :  2016-10-15 — Switch from gulp-image to gulp-imagemin (faster, more customisable, more popular), clean up gulp script, fix depreciation warning in build script, update NPM module versions and Bootstrap from upstream
 
