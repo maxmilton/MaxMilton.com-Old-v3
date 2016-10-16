@@ -73,6 +73,8 @@ h1 {
 }
 
 h2 {
+  margin-top: $spacer * 1.9;
+
   @include media-breakpoint-down(xs) {
     font-size: 1.85rem;
   }
