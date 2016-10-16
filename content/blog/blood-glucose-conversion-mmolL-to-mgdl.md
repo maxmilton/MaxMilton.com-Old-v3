@@ -29,6 +29,7 @@ To make blood sugar conversion from mmol/L to mg/dL easy, I've put together a bl
 </div>
 
 <script>
+(function(){
   var mmoll = document.getElementById('mmoll');
   var mgdl = document.getElementById('mgdl');
   var mass = 18.016;
@@ -49,6 +50,7 @@ To make blood sugar conversion from mmol/L to mg/dL easy, I've put together a bl
 
   mmoll.oninput = getMgdl;
   mgdl.oninput = getMmoll;
+}());
 </script>
 
 -----
