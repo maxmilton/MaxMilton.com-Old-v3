@@ -95,12 +95,17 @@ a {
 
 // TODO: Refine this selector for performance
 #dope :not(h1):not(h2):not(h3) > a:not(.tag):not(.page-item) {
-  color: $brand-primary;
+  color: darken($brand-primary, 15%);
   text-decoration: underline;
   text-decoration-color: rgba($brand-primary, .5);
 
+  &:hover {
+    color: $brand-primary;
+    text-decoration: none;
+  }
+
   &:visited {
-    color: darken($brand-primary, 25%);
+    color: darken($brand-primary, 15%);
   }
 }
 
