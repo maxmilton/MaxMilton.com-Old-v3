@@ -78,19 +78,19 @@ gulp.task('serve', ['hugo', 'css', 'js', 'img'], function() {
 // Hugo
 //----------------------------------------
 
-gulp.task('hugo', function(fetch) {
+gulp.task('hugo', function(cb) {
   exec('hugo -s ../../ --buildDrafts --baseUrl="http://localhost:3000/"', function(err, stdout, stderr) {
     console.log(stdout); // Hugo output
     console.error(stderr); // Errors
-    fetch(err);
+    cb(err);
   })
 });
 
-gulp.task('hugo:build', ['css:build', 'js:build', 'img:build'], function(fetch) {
+gulp.task('hugo:build', ['css:build', 'js:build', 'img:build'], function(cb) {
   exec('hugo -s ../../', function(err, stdout, stderr) {
     console.log(stdout); // Hugo output
     console.error(stderr); // Errors
-    fetch(err);
+    cb(err);
   })
 });
 
