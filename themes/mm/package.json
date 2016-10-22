@@ -1,9 +1,11 @@
 {
   "name": "mm-hugo-theme",
-  "version": "1.9.2",
+  "version": "1.10.0",
   "description": "Hugo theme for maxmilton.com",
   "main": "gulpfile.js",
   "scripts": {
+    "build": "echo \"Run build.sh to build this!\" && exit 1",
+    "start": "gulp watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Max Milton <max@wearegenki.com>",
@@ -46,5 +48,8 @@
   },
   "dependencies": {
     "autotrack": "^1.0.3"
+  },
+  "engines": {
+    "node": ">6.9.0"
   }
 }
