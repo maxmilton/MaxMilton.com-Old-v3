@@ -1,10 +1,10 @@
 +++
-author      = "Max Milton"
 date        = "2016-08-27T00:00:00+10:00"
-description = "When was the last time you had a good hard look at yourself and truly thought \"Yep, I'm happy.\"?"
+title       = "100 Days"
+author      = "Max Milton"
 email       = "max@wearegenki.com"
 tags        = ["challenge", "hacks"]
-title       = "100 Days"
+description = "When was the last time you had a good hard look at yourself and truly thought \"Yep, I'm happy.\"?"
 +++
 
 {{< img src="/img/meditation-on-the-beach-blue" type="jpg" alt="Meditation on the beach" >}}

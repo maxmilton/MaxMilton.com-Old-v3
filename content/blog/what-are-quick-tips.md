@@ -1,10 +1,10 @@
 +++
-author      = "Max Milton"
 date        = "2016-04-25T09:23:00+10:00"
-description = "Quick tips, insights, and other thought provoking posts."
+title       = "What Are Quick Tips?"
+author      = "Max Milton"
 email       = "max@wearegenki.com"
 tags        = ["misc.", "quick tips"]
-title       = "What Are Quick Tips?"
+description = "Quick tips, insights, and other thought provoking posts."
 +++
 
 Quick tips are an ongoing series of short posts where I'll teach you something I've found useful. From time to time, I'll post insights I find thought provoking too. Here's a simple example<!--more-->:

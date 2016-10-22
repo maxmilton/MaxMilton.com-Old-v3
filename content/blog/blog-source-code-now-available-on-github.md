@@ -1,10 +1,10 @@
 +++
-author      = "Max Milton"
 date        = "2016-04-30T05:30:00+10:00"
-description = "Free and open source hugo theme. Bootstrap 4, Gulp, Node.js. Includes build and deploy scripts!"
+title       = "Blog Source Code Now Available On Github"
+author      = "Max Milton"
 email       = "max@wearegenki.com"
 tags        = ["open source"]
-title       = "Blog Source Code Now Available On Github"
+description = "Free and open source hugo theme. Bootstrap 4, Gulp, Node.js. Includes build and deploy scripts!"
 +++
 
 <!-- TODO: Add screenshot of Github page -->

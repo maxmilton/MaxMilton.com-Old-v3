@@ -1,10 +1,10 @@
 +++
-author      = "Max Milton"
 date        = "2016-10-16T12:00:00+11:00"
-description = "Blood sugar conversion from mmol/L to mg/dL calculator and chart."
+title       = "Blood Glucose Conversion mmol/L – mg/dL"
+author      = "Max Milton"
 email       = "max@wearegenki.com"
 tags        = ["nutrition"]
-title       = "Blood Glucose Conversion mmol/L – mg/dL"
+description = "Blood sugar conversion from mmol/L to mg/dL calculator and chart."
 aliases     = ["/convert"]
 +++
 

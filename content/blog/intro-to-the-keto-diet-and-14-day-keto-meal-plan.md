@@ -1,10 +1,10 @@
 +++
-author      = "Max Milton"
 date        = "2016-10-09T00:00:00+10:00"
-description = "Free 14 day keto diet meal plan. The ketogenic diet is a high-fat, adequate protein, and low-carbohydrate diet."
+title       = "Intro To The Keto Diet And 14 Day Keto Meal Plan"
+author      = "Max Milton"
 email       = "max@wearegenki.com"
 tags        = ["nutrition"]
-title       = "Intro To The Keto Diet And 14 Day Keto Meal Plan"
+description = "Free 14 day keto diet meal plan. The ketogenic diet is a high-fat, adequate protein, and low-carbohydrate diet."
 +++
 
 {{< img src="/img/simple-keto-meal-plan" type="jpg" alt="simple keto diet meal" >}}
