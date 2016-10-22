@@ -172,21 +172,21 @@ gulp.task('img', function() {
     // Resize images (use with <img> shortcode in hugo)
     .pipe(responsive({
       '*': [{
-        width: 576,
+        width: 546,
         rename: { suffix: '-sm' },
       }, {
-        width: 576 * 2,
+        width: 546 * 2,
         rename: { suffix: '-sm@2x' },
       }, {
-        width: 576 * 3,
+        width: 546 * 3,
         rename: { suffix: '-sm@3x' },
       }, {
-        width: 975,
+        width: 675,
       }, {
-        width: 975 * 2,
+        width: 675 * 2,
         rename: { suffix: '@2x' },
       }, {
-        width: 975 * 3,
+        width: 675 * 3,
         rename: { suffix: '@3x' },
       }],
     }, {
