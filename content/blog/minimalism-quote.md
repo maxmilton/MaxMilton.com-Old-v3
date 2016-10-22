@@ -1,0 +1,13 @@
++++
+date        = "2016-10-23T06:39:11+11:00"
+title       = "Minimalism Quote"
+author      = "Max Milton"
+email       = "max@wearegenki.com"
+tags        = ["quick tips"]
+description = "Quote by Miyamoto Musashi in The Book of Five Rings."
++++
+
+<blockquote class="plain bg-primary text-white">
+  &ldquo;When an excessive number of sword moves are taught, it must be to commercialize the art and impress beginners with knowledge of many moves with a sword. This attitude is to be avoided in military science.&rdquo;
+  <footer>Miyamoto Musashi in <cite title="The Book of Five Rings">The Book of Five Rings</cite></footer>
+</blockquote>
