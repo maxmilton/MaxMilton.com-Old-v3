@@ -83,7 +83,7 @@ gulp.task('hugo', function(cb) {
     console.log(stdout); // Hugo output
     console.error(stderr); // Errors
     cb(err);
-  })
+  });
 });
 
 gulp.task('hugo:build', ['css:build', 'js:build', 'img:build'], function(cb) {
@@ -91,7 +91,7 @@ gulp.task('hugo:build', ['css:build', 'js:build', 'img:build'], function(cb) {
     console.log(stdout); // Hugo output
     console.error(stderr); // Errors
     cb(err);
-  })
+  });
 });
 
 //----------------------------------------
@@ -105,7 +105,7 @@ gulp.task('css', function() {
     .pipe(rename('app.css'))
     .pipe(sourcemaps.write(paths.maps))
     .pipe(gulp.dest(paths.sass.dest))
-    .pipe(browserSync.stream({match: '**/*.css'}));
+    .pipe(browserSync.stream({ match: '**/*.css' }));
 });
 
 gulp.task('css:build', ['css', 'hugo', 'clean:rev'], function() {
@@ -126,7 +126,7 @@ gulp.task('css:build', ['css', 'hugo', 'clean:rev'], function() {
   .pipe(rev())
   .pipe(gulp.dest(paths.sass.dest))
   .pipe(rev.manifest(paths.manifest, { merge: true }))
-  .pipe(gulp.dest('.'))
+  .pipe(gulp.dest('.'));
 });
 
 //----------------------------------------
@@ -172,33 +172,32 @@ gulp.task('img', function() {
     // Resize images (use with <img> shortcode in hugo)
     .pipe(responsive({
       '*': [{
-          width: 546,
-          rename: { suffix: '-sm' },
-        },{
-          width: 546 * 2,
-          rename: { suffix: '-sm@2x' },
-        },{
-          width: 546 * 3,
-          rename: { suffix: '-sm@3x' },
-        },{
-          width: 675,
-        },{
-          width: 675 * 2,
-          rename: { suffix: '@2x' },
-        },{
-          width: 675 * 3,
-          rename: { suffix: '@3x' },
-        },
-      ],
-    },{
+        width: 576,
+        rename: { suffix: '-sm' },
+      }, {
+        width: 576 * 2,
+        rename: { suffix: '-sm@2x' },
+      }, {
+        width: 576 * 3,
+        rename: { suffix: '-sm@3x' },
+      }, {
+        width: 975,
+      }, {
+        width: 975 * 2,
+        rename: { suffix: '@2x' },
+      }, {
+        width: 975 * 3,
+        rename: { suffix: '@3x' },
+      }],
+    }, {
       silent: true,              // Don't spam the console
       withoutEnlargement: false, // Allow image enlargement
     }))
-    .pipe(gulp.dest(paths.img.dest))
+    .pipe(gulp.dest(paths.img.dest));
 });
 
 gulp.task('img:build', ['img'], function() {
-  return gulp.src([paths.img.dest + '/*.{jpg,png,gif,svg}'])
+  return gulp.src(['${paths.img.dest}/*.{jpg,png,gif,svg}'])
     // Optimise images
     .pipe(imagemin([
       // imagemin.gifsicle(), // Uncomment for gif support
@@ -206,7 +205,7 @@ gulp.task('img:build', ['img'], function() {
       // imagemin.svgo(),     // Uncomment for svg support
       mozjpeg(),
     ]))
-    .pipe(gulp.dest(paths.img.dest))
+    .pipe(gulp.dest(paths.img.dest));
 });
 
 //----------------------------------------
@@ -229,14 +228,14 @@ gulp.task('html:build', ['hugo:build'], function() {
       removeOptionalTags: true,
       removeRedundantAttributes: true,
     }))
-    .pipe(gulp.dest(paths.public.root))
+    .pipe(gulp.dest(paths.public.root));
 });
 
 gulp.task('html:rev', ['html:build'], function() {
   const manifest = gulp.src(paths.manifest);
 
   return gulp.src(paths.public.html)
-  .pipe(replace({ manifest: manifest }))
+  .pipe(replace({ manifest }))
   .pipe(gulp.dest(paths.public.root));
 });
 
@@ -244,36 +243,36 @@ gulp.task('html:rev', ['html:build'], function() {
 // Misc.
 //----------------------------------------
 
-gulp.task('clean:rev', function(){
+gulp.task('clean:rev', function() {
   return del([
     // Remove old revisioned files
-    paths.sass.dest + '/app-*.css',
-    paths.js.dest + '/app-*.js',
-  ])
+    '${paths.sass.dest}/app-*.css',
+    '${paths.js.dest}/app-*.js',
+  ]);
 });
 
-gulp.task('clean:build', ['html:rev'], function(){
+gulp.task('clean:build', ['html:rev'], function() {
   return del([
     // Remove development and non-revisioned files
-    paths.public.root + '/css/maps',
-    paths.public.root + '/css/app.css',
-    paths.public.root + '/js/maps',
-    paths.public.root + '/js/app.js',
-    paths.public.root + '/js/main.js',
+    '${paths.public.root}/css/maps',
+    '${paths.public.root}/css/app.css',
+    '${paths.public.root}/js/maps',
+    '${paths.public.root}/js/app.js',
+    '${paths.public.root}/js/main.js',
     // Remove original unoptimised images
-    paths.public.root + '/img/original',
+    '${paths.public.root}/img/original',
     // Remove blog post drafts
-    paths.public.root + '/drafts',
-    paths.public.root + '/drafts.html',
+    '${paths.public.root}/drafts',
+    '${paths.public.root}/drafts.html',
     // Remove unnecessary hugo generated file
-    paths.public.root + '/.html',
-  ], { force:true })
+    '${paths.public.root}/.html',
+  ], { force: true });
 });
 
-gulp.task('clean:public', function(){
+gulp.task('clean:public', function() {
   return del([
     // Remove entire public directory contents
-    paths.public.root + '/*',
-    paths.public.root + '/.*',
-  ], { force:true })
+    '${paths.public.root}/*',
+    '${paths.public.root}/.*',
+  ], { force: true });
 });
