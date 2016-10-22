@@ -19,30 +19,32 @@ Optional: Use the 'caption' parameter to add an image caption:
 
 -->
 
-{{ if .Get "caption"}}
-<figure>
-{{ end }}
-  <picture>
-    <!-- Large screens -->
-    <source
-      media="(min-width: 768px)"
-      srcset="{{ .Get "src" }}.{{ .Get "type" }} 1x,
-              {{ .Get "src" }}@2x.{{ .Get "type" }} 2x,
-              {{ .Get "src" }}@3x.{{ .Get "type" }} 3x">
-    <!-- Small screens -->
-    <source
-      media="(max-width: 767px)"
-      srcset="{{ .Get "src" }}-sm.{{ .Get "type" }} 1x,
-              {{ .Get "src" }}-sm@2x.{{ .Get "type" }} 2x,
-              {{ .Get "src" }}-sm@3x.{{ .Get "type" }} 3x">
-    <!-- Fallback -->
-    <img
-      src="{{ .Get "src" }}.{{ .Get "type" }}"
-      srcset="{{ .Get "src" }}@2x.{{ .Get "type" }} 2x,
-              {{ .Get "src" }}@3x.{{ .Get "type" }} 3x"
-      alt="{{ .Get "alt" }}"{{ if .Get "caption"}} class="figure-img"{{ end }}>
-  </picture>
-{{ if .Get "caption"}}
-  <figcaption class="text-xs-center">{{ .Get "caption" }}</figcaption>
-</figure>
-{{ end }}
+<div class="picture">
+  {{ if .Get "caption"}}
+  <figure>
+  {{ end }}
+    <picture>
+      <!-- Large screens -->
+      <source
+        media="(min-width: 768px)"
+        srcset="{{ .Get "src" }}.{{ .Get "type" }} 1x,
+                {{ .Get "src" }}@2x.{{ .Get "type" }} 2x,
+                {{ .Get "src" }}@3x.{{ .Get "type" }} 3x">
+      <!-- Small screens -->
+      <source
+        media="(max-width: 767px)"
+        srcset="{{ .Get "src" }}-sm.{{ .Get "type" }} 1x,
+                {{ .Get "src" }}-sm@2x.{{ .Get "type" }} 2x,
+                {{ .Get "src" }}-sm@3x.{{ .Get "type" }} 3x">
+      <!-- Fallback -->
+      <img
+        src="{{ .Get "src" }}.{{ .Get "type" }}"
+        srcset="{{ .Get "src" }}@2x.{{ .Get "type" }} 2x,
+                {{ .Get "src" }}@3x.{{ .Get "type" }} 3x"
+        alt="{{ .Get "alt" }}"{{ if .Get "caption"}} class="figure-img"{{ end }}>
+    </picture>
+  {{ if .Get "caption"}}
+    <figcaption class="text-xs-center">{{ .Get "caption" }}</figcaption>
+  </figure>
+  {{ end }}
+</div>
