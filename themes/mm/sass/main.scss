@@ -118,6 +118,19 @@ blockquote {
   > p:last-of-type {
     @extend .mb-0;
   }
+
+  &.plain {
+    padding: $spacer;
+    border-left: 0;
+
+    > footer {
+      color: $white;
+    }
+  }
+
+  > footer {
+    @extend .blockquote-footer;
+  }
 }
 
 table {
