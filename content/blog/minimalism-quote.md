@@ -1,5 +1,5 @@
 +++
-date        = "2016-10-23T06:39:11+11:00"
+date        = "2016-10-23T07:00:00+11:00"
 title       = "Minimalism Quote"
 author      = "Max Milton"
 email       = "max@wearegenki.com"
