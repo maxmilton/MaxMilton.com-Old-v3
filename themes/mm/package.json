@@ -43,10 +43,12 @@
     "gulp-sourcemaps": "^2.1.1",
     "gulp-uglify": "^2.0.0",
     "gulp-uncss": "^1.0.6",
-    "imagemin-mozjpeg": "^6.0.0",
-    "postcss-fixes": "^1.4.2"
+    "imagemin-mozjpeg": "^6.0.0"
   },
   "engines": {
     "node": ">6.9.0"
+  },
+  "dependencies": {
+    "postcss-flexbugs-fixes": "^2.0.0"
   }
 }

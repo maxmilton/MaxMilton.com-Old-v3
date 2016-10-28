@@ -6,7 +6,7 @@ const htmlmin      = require('gulp-htmlmin');
 const postcss      = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
 const cssnano      = require('cssnano');
-const fixes        = require('postcss-fixes');
+const flexFixes    = require('postcss-flexbugs-fixes');
 const csso         = require('gulp-csso');
 const rename       = require('gulp-rename');
 const replace      = require('gulp-rev-replace');
@@ -103,7 +103,7 @@ gulp.task('css:build', ['css', 'hugo', 'clean:rev'], function() {
   .pipe(combineMq({ beautify: false }))
   .pipe(uncss({ html: [paths.public.html] }))
   .pipe(postcss([
-    fixes({ preset: 'fixes-only' }),
+    flexFixes(),
     autoprefixer({
       browsers: ['> 1%', 'last 2 versions'],
       add: true,
