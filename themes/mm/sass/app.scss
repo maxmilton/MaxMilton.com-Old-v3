@@ -74,7 +74,10 @@ h1, h2, h3, h4, h5, h6,
 }
 
 h1 {
+  text-align: center;
+
   @include media-breakpoint-down(xs) {
+    margin-top: 0;
     font-size: 2rem;
   }
 
@@ -200,12 +203,6 @@ blockquote {
 // Category listing
 //------------------------------
 
-.category-h1 {
-  @include media-breakpoint-down(xs) {
-    margin-top: 0;
-  }
-}
-
 .pages {
   padding-left: 0;
   list-style: none;
@@ -240,14 +237,6 @@ blockquote {
 .post {
   margin-right: auto;
   margin-left: auto;
-
-  > h1 {
-    text-align: center;
-
-    @include media-breakpoint-down(xs) {
-      margin-top: 0;
-    }
-  }
 }
 
 .picture {

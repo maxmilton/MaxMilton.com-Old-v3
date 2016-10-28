@@ -2,29 +2,27 @@
 
 <!-- If changed, also update ../_default/list.html and ../404.html -->
 
-<div id="dope" class="dope">
+<div id="dope" class="dope container">
 
-  <div class="container">
-    <div class="row">
-      <section class="category col-xs-12">
-        <h1 class="category-h1">All Posts</h1>
+  <div class="row">
+    <section class="category col-xs-12">
+      <h1>All Posts</h1>
 
-        <ul class="pages">
-          {{ range .Data.Pages }}
-          <li class="category-item">
-            <a href="{{ .RelPermalink }}" title="{{ .Title }}">{{ .Title }}</a>
-            <div class="category-tags">
-            {{ range .Params.tags }}
-              <a href="/tags/{{ . | urlize }}.html" class="badge badge-default">{{ . }}</a>
-            {{ end }}
-            </div>
-            <time class="time push-right" datetime="{{ .Date.Format "2006-01-02T15:04:05" }}">{{ .Date.Format "Mon, 2 Jan 2006" }}</time>
-          </li>
+      <ul class="pages">
+        {{ range .Data.Pages }}
+        <li class="category-item">
+          <a href="{{ .RelPermalink }}" title="{{ .Title }}">{{ .Title }}</a>
+          <div class="category-tags">
+          {{ range .Params.tags }}
+            <a href="/tags/{{ . | urlize }}.html" class="badge badge-default">{{ . }}</a>
           {{ end }}
-        </ul>
-      </section>
-    </div>
-  </div> <!-- /.container -->
+          </div>
+          <time class="time push-right" datetime="{{ .Date.Format "2006-01-02T15:04:05" }}">{{ .Date.Format "Mon, 2 Jan 2006" }}</time>
+        </li>
+        {{ end }}
+      </ul>
+    </section>
+  </div>
 
   <!-- TODO: Once there's enough posts, implement pagination -->
 

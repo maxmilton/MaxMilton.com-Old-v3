@@ -5,6 +5,6 @@
   {{ .Summary | replaceRE "(?s:<div class=\"picture\">.*</div>)" "" | safeHTML }}
 
   {{ if .Truncated }}
-  <a href="{{ .RelPermalink }}" class="more">Continue reading <span class="sr-only">{{ .Title }}</span></a>
+  <a href="{{ .RelPermalink }}" class="more">Continue reading<span class="sr-only"> {{ .Title }}</span></a>
   {{ end }}
 </article>
