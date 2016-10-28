@@ -41,12 +41,10 @@ body {
   }
 }
 
-.about,
 .push-right {
   // Push a flex item to the right
   margin-left: auto !important;
 }
-
 
 .nav-link {
   @include hover-focus {
@@ -57,6 +55,12 @@ body {
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   margin-top: $spacer * 1.5;
+
+  // FIXME: Remove this if possible
+  > a {
+    color: $body-color !important;
+    text-decoration: none !important;
+  }
 
   + blockquote {
     // Extra whitespace for quotes directly after headings
@@ -72,6 +76,11 @@ h1, h2, h3, h4, h5, h6,
 h1 {
   @include media-breakpoint-down(xs) {
     font-size: 2rem;
+  }
+
+  @include media-breakpoint-up(lg) {
+    // More whitespace on large screens
+    margin: .9rem 0 2.3rem;
   }
 }
 
@@ -92,27 +101,30 @@ li {
 // README: Reduce size if you experience problems with overlapping links
 // ↳ For debugging enable CSS Outlining at http://localhost:3001/remote-debug
 a {
-  position: relative; // TODO: Comment this line and do cross browser tests
   padding: .6em 1em;
   margin: -.6em -1em;
   word-wrap: break-word;
 }
 
-// TODO: Refine this selector for performance
 // TODO: Design better link style that's compatibile with the larger click area
-#dope :not(h1):not(h2):not(h3):not(.category-item) > a:not(.badge) {
+.dope a {
   color: darken($brand-primary, 15%);
   text-decoration: underline;
-  text-decoration-color: rgba($brand-primary, .3);
 
   &:hover {
     color: $brand-primary;
-    text-decoration-color: $brand-primary;
   }
 
   &:visited {
     color: darken($brand-primary, 15%);
   }
+}
+
+.badge {
+  margin: 0;
+  // FIXME: Remove this if possible
+  color: $white !important;
+  text-decoration: none !important;
 }
 
 blockquote {
@@ -122,18 +134,14 @@ blockquote {
   > p:last-of-type {
     @extend .mb-0;
   }
+}
 
-  &.plain {
-    padding: $spacer;
-    border-left: 0;
+.blockquote-plain {
+  padding: $spacer;
+  border-left: 0;
 
-    > footer {
-      color: $white;
-    }
-  }
-
-  > footer {
-    @extend .blockquote-footer;
+  > .blockquote-footer {
+    color: $white;
   }
 }
 
@@ -141,14 +149,14 @@ table {
   @extend .table;
 }
 
-@include media-breakpoint-down(xs) {
-  th,
-  td {
+th,
+td {
+  @include media-breakpoint-down(xs) {
     padding: $table-sm-cell-padding;
   }
 }
 
-// Show abbreviation in brackets on small screens (because there's no hover on mobile)
+// Show abbreviation in brackets on small screens (there's no hover on mobile)
 abbr[title] {
   text-decoration: none;
   border-bottom: 0;
@@ -181,17 +189,10 @@ kbd {
   }
 }
 
-@include media-breakpoint-down(xs) {
-  .lead,
-  blockquote {
+.lead,
+blockquote {
+  @include media-breakpoint-down(xs) {
     font-size: 1rem;
-  }
-}
-
-@include media-breakpoint-up(lg) {
-  h1 {
-    // More whitespace on large screens
-    margin: .9rem 0 2.3rem;
   }
 }
 
@@ -199,35 +200,37 @@ kbd {
 // Category listing
 //------------------------------
 
-.category {
-  > h1 {
-    @include media-breakpoint-down(xs) {
-      margin-top: 0;
-    }
+.category-h1 {
+  @include media-breakpoint-down(xs) {
+    margin-top: 0;
   }
+}
 
-  .pages {
-    padding-left: 0;
-    list-style: none;
-
-    > li {
-      margin-bottom: $spacer * 1.2;
-    }
-  }
-
-  .tags {
-    display: inline-block;
-    margin-left: $spacer / 4;
-  }
-
-  time {
-    color: $gray;
-  }
+.pages {
+  padding-left: 0;
+  list-style: none;
 }
 
 .category-item {
   display: flex;
+  margin-bottom: $spacer * 1.2;
+
+  // FIXME: Remove this if possible
+  > a {
+    color: $body-color !important;
+    text-decoration: none !important;
+  }
 }
+
+.category-tags {
+  display: inline-block;
+  margin-left: $spacer / 4;
+}
+
+.time {
+  color: $gray;
+}
+
 
 //------------------------------
 // Blog posts
@@ -250,10 +253,6 @@ kbd {
 .picture {
   display: inline-block;
   margin-bottom: $spacer;
-
-  img {
-    @extend .img-fluid;
-  }
 }
 
 figure {
@@ -279,10 +278,6 @@ figcaption {
 
 .img-author {
   margin-bottom: $spacer / 2;
-}
-
-.badge {
-  margin: 0;
 }
 
 .lead.bg-primary {
@@ -318,14 +313,12 @@ figcaption {
   font-weight: 300;
 }
 
-.summaries {
-  > h2 {
-    border-bottom: 1px solid $gray-light;
-  }
+.summary-h2 {
+  border-bottom: 1px solid $gray-light;
+}
 
-  > article > p:last-of-type::after {
-    content: "…";
-  }
+.article-summary > p:last-of-type::after {
+  content: "…";
 }
 
 .more {

@@ -6,7 +6,7 @@ description = ""
 [menu.main]
   name   = "About"
   weight = 90
-  pre    = "about"
+  pre    = "push-right"
 +++
 
 # About Max Milton

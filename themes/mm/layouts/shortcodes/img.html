@@ -41,7 +41,7 @@ Optional: Use the 'caption' parameter to add an image caption:
         src="{{ .Get "src" }}.{{ .Get "type" }}"
         srcset="{{ .Get "src" }}@2x.{{ .Get "type" }} 2x,
                 {{ .Get "src" }}@3x.{{ .Get "type" }} 3x"
-        alt="{{ .Get "alt" }}"{{ if .Get "caption"}} class="figure-img"{{ end }}>
+        alt="{{ .Get "alt" }}"{{ if .Get "caption"}} class="img-fluid figure-img"{{ end }}>
     </picture>
   {{ if .Get "caption"}}
     <figcaption class="text-xs-center">{{ .Get "caption" }}</figcaption>

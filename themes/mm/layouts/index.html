@@ -1,6 +1,6 @@
 {{ partial "header.html" . }}
 
-<div id="dope">
+<div id="dope" class="dope">
 
   <div class="home-intro">
     <h1>{{ .Site.Params.subtitle }}</h1>
@@ -19,8 +19,8 @@
     </section>
 
     <div class="row">
-      <section class="col-xs-12 summaries">
-        <h2>Latest Posts</h2>
+      <section class="col-xs-12">
+        <h2 class="summary-h2">Latest Posts</h2>
         {{ range where .Data.Pages "Section" "blog" | first 10 }}
           {{ .Render "summary"}}
         {{ end }}
