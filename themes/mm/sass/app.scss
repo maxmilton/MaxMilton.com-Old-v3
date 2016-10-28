@@ -23,6 +23,7 @@ body {
 .nav {
   display: flex;
   flex-wrap: wrap;
+  padding-left: 15px;
   margin-top: $spacer;
   margin-bottom: $spacer * 2.2;
   align-items: baseline;
