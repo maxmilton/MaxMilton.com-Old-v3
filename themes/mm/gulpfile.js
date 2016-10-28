@@ -170,7 +170,7 @@ gulp.task('html:build', ['hugo:build'], function() {
       decodeEntities: true,
       minifyCSS: true,
       minifyJS: true,
-      preserveLineBreaks: true,
+      preserveLineBreaks: false,
       quoteCharacter: '"',
       removeAttributeQuotes: true,
       removeComments: true,
