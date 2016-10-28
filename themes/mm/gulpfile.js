@@ -1,5 +1,4 @@
 const browserSync  = require('browser-sync').create();
-// const concat       = require('gulp-concat'); // Uncomment if doing JS task
 const del          = require('del');
 const exec         = require('child_process').exec;
 const gulp         = require('gulp');
@@ -14,7 +13,6 @@ const replace      = require('gulp-rev-replace');
 const rev          = require('gulp-rev');
 const sass         = require('gulp-sass');
 const sourcemaps   = require('gulp-sourcemaps');
-const uglify       = require('gulp-uglify');
 const combineMq    = require('gulp-combine-mq');
 const uncss        = require('gulp-uncss');
 const responsive   = require('gulp-responsive');
@@ -31,13 +29,6 @@ const paths = {
     main: './sass/main.scss',
     dest: '../../public/css/',
     static: '../../public/css/app.css',
-  },
-  js: {
-    src: './static/js/**/*.js',
-    main: './static/js/main.js',
-    autotrack: './node_modules/autotrack/autotrack.js',
-    dest: '../../public/js',
-    static: '../../public/js/app.js',
   },
   img: {
     src: '../../static/img/original/*',
@@ -59,7 +50,7 @@ gulp.task('clean', ['clean:public']);
 // Browser Sync
 //----------------------------------------
 
-gulp.task('serve', ['hugo', 'css', 'js', 'img'], function() {
+gulp.task('serve', ['hugo', 'css', 'img'], function() {
   browserSync.init({
     server: paths.public.root,
     reloadDelay: 200, // Give hugo a moment to generate pages
@@ -68,7 +59,6 @@ gulp.task('serve', ['hugo', 'css', 'js', 'img'], function() {
   });
 
   gulp.watch(paths.sass.src, ['css']);
-  gulp.watch(paths.js.src, ['js']);
   gulp.watch(paths.img.src, ['img']);
   gulp.watch([paths.content, paths.layouts, paths.config], ['hugo']);
   gulp.watch(paths.public.html).on('change', browserSync.reload);
@@ -86,7 +76,7 @@ gulp.task('hugo', function(cb) {
   });
 });
 
-gulp.task('hugo:build', ['css:build', 'js:build', 'img:build'], function(cb) {
+gulp.task('hugo:build', ['css:build', 'img:build'], function(cb) {
   exec('hugo -s ../../', function(err, stdout, stderr) {
     console.log(stdout); // Hugo output
     console.error(stderr); // Errors
@@ -127,34 +117,6 @@ gulp.task('css:build', ['css', 'hugo', 'clean:rev'], function() {
   .pipe(gulp.dest(paths.sass.dest))
   .pipe(rev.manifest(paths.manifest, { merge: true }))
   .pipe(gulp.dest('.'));
-});
-
-//----------------------------------------
-// JS
-//----------------------------------------
-
-gulp.task('js', function() {
-  // return gulp.src([paths.js.main])
-  //   .pipe(sourcemaps.init())
-  //   .pipe(concat('app.js'))
-  //   .pipe(sourcemaps.write(paths.maps))
-  //   .pipe(gulp.dest(paths.js.dest))
-  //   .pipe(browserSync.stream({match: '**/*.js'}));
-
-  // NOTE: Not using any JS at the moment
-  return true;
-});
-
-gulp.task('js:build', ['js', 'clean:rev'], function() {
-  // return gulp.src(paths.js.static)
-  //   .pipe(uglify())
-  //   .pipe(rev())
-  //   .pipe(gulp.dest(paths.js.dest))
-  //   .pipe(rev.manifest(paths.manifest, { merge: true }))
-  //   .pipe(gulp.dest('.'))
-
-  // NOTE: Not using any JS at the moment
-  return true;
 });
 
 //----------------------------------------
@@ -241,7 +203,6 @@ gulp.task('clean:rev', function() {
   return del([
     // Remove old revisioned files
     '${paths.sass.dest}/app-*.css',
-    '${paths.js.dest}/app-*.js',
   ]);
 });
 
@@ -250,9 +211,6 @@ gulp.task('clean:build', ['html:rev'], function() {
     // Remove development and non-revisioned files
     '${paths.public.root}/css/maps',
     '${paths.public.root}/css/app.css',
-    '${paths.public.root}/js/maps',
-    '${paths.public.root}/js/app.js',
-    '${paths.public.root}/js/main.js',
     // Remove original unoptimised images
     '${paths.public.root}/img/original',
     // Remove blog post drafts
