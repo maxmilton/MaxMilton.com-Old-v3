@@ -1,23 +1,20 @@
-const browserSync  = require('browser-sync').create();
-const del          = require('del');
-const exec         = require('child_process').exec;
-const gulp         = require('gulp');
-const htmlmin      = require('gulp-htmlmin');
-const postcss      = require('gulp-postcss');
-const autoprefixer = require('autoprefixer');
-const cssnano      = require('cssnano');
-const flexFixes    = require('postcss-flexbugs-fixes');
-const csso         = require('gulp-csso');
-const rename       = require('gulp-rename');
-const replace      = require('gulp-rev-replace');
-const rev          = require('gulp-rev');
-const sass         = require('gulp-sass');
-const sourcemaps   = require('gulp-sourcemaps');
-const combineMq    = require('gulp-combine-mq');
-const uncss        = require('gulp-uncss');
-const responsive   = require('gulp-responsive');
-const imagemin     = require('gulp-imagemin');
-const mozjpeg      = require('imagemin-mozjpeg');
+const autoprefixer  = require('autoprefixer');
+const browserSync   = require('browser-sync').create();
+const cleanCSS      = require('gulp-clean-css');
+const del           = require('del');
+const exec          = require('child_process').exec;
+const flexFixes     = require('postcss-flexbugs-fixes');
+const gulp          = require('gulp');
+const htmlmin       = require('gulp-htmlmin');
+const imagemin      = require('gulp-imagemin');
+const mozjpeg       = require('imagemin-mozjpeg');
+const postcss       = require('gulp-postcss');
+const replace       = require('gulp-rev-replace');
+const responsive    = require('gulp-responsive');
+const rev           = require('gulp-rev');
+const sass          = require('gulp-sass');
+const sourcemaps    = require('gulp-sourcemaps');
+const uncss         = require('gulp-uncss');
 
 const paths = {
   public: {
@@ -26,7 +23,7 @@ const paths = {
   },
   sass: {
     src: './sass/**/*.scss',
-    main: './sass/main.scss',
+    main: './sass/app.scss',
     dest: '../../public/css/',
     static: '../../public/css/app.css',
   },
@@ -91,8 +88,7 @@ gulp.task('hugo:build', ['css:build', 'img:build'], function(cb) {
 gulp.task('css', function() {
   return gulp.src(paths.sass.main)
     .pipe(sourcemaps.init())
-    .pipe(sass().on('error', sass.logError))
-    .pipe(rename('app.css'))
+      .pipe(sass().on('error', sass.logError))
     .pipe(sourcemaps.write(paths.maps))
     .pipe(gulp.dest(paths.sass.dest))
     .pipe(browserSync.stream({ match: '**/*.css' }));
@@ -100,7 +96,6 @@ gulp.task('css', function() {
 
 gulp.task('css:build', ['css', 'hugo', 'clean:rev'], function() {
   return gulp.src(paths.sass.static)
-  .pipe(combineMq({ beautify: false }))
   .pipe(uncss({ html: [paths.public.html] }))
   .pipe(postcss([
     flexFixes(),
@@ -108,11 +103,10 @@ gulp.task('css:build', ['css', 'hugo', 'clean:rev'], function() {
       browsers: ['> 1%', 'last 2 versions'],
       add: true,
     }),
-    cssnano({
-      discardComments: { removeAll: true },
-    }),
   ]))
-  .pipe(csso())
+  .pipe(cleanCSS({
+    keepSpecialComments: 0,
+  }))
   .pipe(rev())
   .pipe(gulp.dest(paths.sass.dest))
   .pipe(rev.manifest(paths.manifest, { merge: true }))
