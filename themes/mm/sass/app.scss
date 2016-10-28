@@ -26,24 +26,27 @@ body {
   margin-top: $spacer;
   margin-bottom: $spacer * 2.2;
   align-items: baseline;
+}
 
-  .brand {
-    margin-right: $spacer;
-    font-size: 30px;
-    color: $gray-dark;
+.brand {
+  margin-right: $spacer;
+  font-size: 30px;
+  color: $gray-dark;
 
-    @include media-breakpoint-down(xs) {
-      width: 100%;
-      padding: 0;
-      margin: 0 0 .7rem;
-      text-align: center;
-    }
-  }
-
-  .nav-link.about {
-    margin-left: auto;
+  @include media-breakpoint-down(xs) {
+    width: 100%;
+    padding: 0;
+    margin: 0 0 .7rem;
+    text-align: center;
   }
 }
+
+.about,
+.push-right {
+  // Push a flex item to the right
+  margin-left: auto !important;
+}
+
 
 .nav-link {
   @include hover-focus {
@@ -96,7 +99,8 @@ a {
 }
 
 // TODO: Refine this selector for performance
-#dope :not(h1):not(h2):not(h3) > a:not(.tag):not(.page-item) {
+// TODO: Design better link style that's compatibile with the larger click area
+#dope :not(h1):not(h2):not(h3):not(.category-item) > a:not(.badge) {
   color: darken($brand-primary, 15%);
   text-decoration: underline;
   text-decoration-color: rgba($brand-primary, .3);
@@ -221,6 +225,10 @@ kbd {
   }
 }
 
+.category-item {
+  display: flex;
+}
+
 //------------------------------
 // Blog posts
 //------------------------------
@@ -273,7 +281,7 @@ figcaption {
   margin-bottom: $spacer / 2;
 }
 
-.tag {
+.badge {
   margin: 0;
 }
 

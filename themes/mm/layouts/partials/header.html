@@ -32,30 +32,6 @@
   <link href="/rss.xml" rel="alternate" type="application/rss+xml" title="{{ .Title }}" />
   <link href="apple-touch-icon.png" rel="apple-touch-icon">
 
-  <!-- Open Graph -->
-  <!-- TODO: Check these meta tags are still best practice -->
-  <!--
-  <meta property="og:type" content="article"/>
-  <meta property="og:description" content="{{ if eq .URL "/" }}{{ .Site.Params.description }}{{ else }}{{ .Description }}{{ end }}"/>
-  <meta property="og:title" content="{{ .Title }} | {{ .Site.Title }}"/>
-  <meta property="og:site_name" content="{{ .Site.Title }} - {{ .Site.Params.description }}"/>
-  <meta property="og:image" content="" />
-  <meta property="og:image:type" content="image/jpeg" />
-  <meta property="og:image:width" content="" />
-  <meta property="og:image:height" content="" />
-  <meta property="og:url" content="{{ .Permalink }}">
-  <meta property="og:locale" content="en_UK">
-  <meta property="article:published_time" content="{{ .Date.Format "2006-01-02" }}"/>
-  <meta property="article:modified_time" content="{{ .Date.Format "2006-01-02" }}"/>
-  {{if .Keywords }}
-  {{ range .Keywords }}<meta property="article:tag" content="{{ . }}">
-  {{ end }}
-  {{else if isset .Params "tags" }}
-  {{ range .Params.tags }}<meta property="article:tag" content="{{ . }}">
-  {{ end }}
-  {{end}}
-  -->
-
   <!-- Google Analytics -->
   <script>
     window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
@@ -68,7 +44,6 @@
   <meta name="robots" content="noodp">
 </head>
 <body>
-<a href="#dope" class="sr-only sr-only-focusable">Skip to main content</a>
 
 <!-- Main Menu -->
 <div class="container">
