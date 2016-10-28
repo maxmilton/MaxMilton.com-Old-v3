@@ -44,4 +44,4 @@ Disclaimer: Opinions expressed here are my own.
 
 -----
 
-Alternatively, send an email to <a href="mailto:max@wearegenki.com" onClick="ga('send','event','contact','click','email', {useBeacon: true});">max@wearegenki.com</a>.
+Alternatively, send an email to <a href="mailto:max@wearegenki.com">max@wearegenki.com</a>.
