@@ -22,10 +22,10 @@ body {
 
 .nav {
   display: flex;
+  flex-wrap: wrap;
   margin-top: $spacer;
   margin-bottom: $spacer * 2.2;
   align-items: baseline;
-  flex-wrap: wrap;
 
   .brand {
     margin-right: $spacer;
