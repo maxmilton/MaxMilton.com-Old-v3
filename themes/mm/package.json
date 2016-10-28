@@ -46,9 +46,6 @@
     "imagemin-mozjpeg": "^6.0.0",
     "postcss-fixes": "^1.4.2"
   },
-  "dependencies": {
-    "autotrack": "^1.0.3"
-  },
   "engines": {
     "node": ">6.9.0"
   }

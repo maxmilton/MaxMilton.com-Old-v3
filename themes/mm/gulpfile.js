@@ -145,13 +145,7 @@ gulp.task('js', function() {
   return true;
 });
 
-gulp.task('js:autotrack', function() {
-  return gulp.src([paths.js.autotrack])
-    .pipe(uglify())
-    .pipe(gulp.dest(paths.js.dest));
-});
-
-gulp.task('js:build', ['js', 'js:autotrack', 'clean:rev'], function() {
+gulp.task('js:build', ['js', 'clean:rev'], function() {
   // return gulp.src(paths.js.static)
   //   .pipe(uglify())
   //   .pipe(rev())
