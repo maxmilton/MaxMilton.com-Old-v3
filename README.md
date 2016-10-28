@@ -50,6 +50,12 @@ Use British English spelling and grammar. Follow the [Guardian and Observer styl
 
 ## Changelog
 
+**v1.11.0**
+:  2016-10-28 — Simplify CSS build process, optimise CSS selectors, simplify HTML, remove GA autotrack, update Bootstrap, more aggressive HTML minification, new ASCII art in source, completely remove all JavaScript build tasks
+
+**v1.10.0**
+:  2016-10-16 — Many small changes to the build script, switch to using Yarn instead of NPM and add yarn.lock file
+
 **v1.9.1**
 :  2016-10-16 — Add link hover state, fix long links overflowing, disable automated _blank on external links (not working)
 
