@@ -1,20 +1,20 @@
-const autoprefixer  = require('autoprefixer');
-const browserSync   = require('browser-sync').create();
-const cleanCSS      = require('gulp-clean-css');
-const del           = require('del');
-const exec          = require('child_process').exec;
-const flexFixes     = require('postcss-flexbugs-fixes');
-const gulp          = require('gulp');
-const htmlmin       = require('gulp-htmlmin');
-const imagemin      = require('gulp-imagemin');
-const mozjpeg       = require('imagemin-mozjpeg');
-const postcss       = require('gulp-postcss');
-const replace       = require('gulp-rev-replace');
-const responsive    = require('gulp-responsive');
-const rev           = require('gulp-rev');
-const sass          = require('gulp-sass');
-const sourcemaps    = require('gulp-sourcemaps');
-const uncss         = require('gulp-uncss');
+const browserSync = require('browser-sync').create();
+const cleanCSS    = require('gulp-clean-css');
+const del         = require('del');
+const exec        = require('child_process').exec;
+const flexFixes   = require('postcss-flexbugs-fixes');
+const gulp        = require('gulp');
+const htmlmin     = require('gulp-htmlmin');
+const imagemin    = require('gulp-imagemin');
+const mozjpeg     = require('imagemin-mozjpeg');
+const postcss     = require('gulp-postcss');
+const prefixer    = require('autoprefixer');
+const replace     = require('gulp-rev-replace');
+const responsive  = require('gulp-responsive');
+const rev         = require('gulp-rev');
+const sass        = require('gulp-sass');
+const sourcemaps  = require('gulp-sourcemaps');
+const uncss       = require('gulp-uncss');
 
 const paths = {
   public: {
@@ -67,7 +67,7 @@ gulp.task('serve', ['hugo', 'css', 'img'], function() {
 
 gulp.task('hugo', function(cb) {
   exec('hugo -s ../../ --buildDrafts --baseUrl="http://localhost:3000/"', function(err, stdout, stderr) {
-    console.log(stdout); // Hugo output
+    console.log(stdout);   // Hugo output
     console.error(stderr); // Errors
     cb(err);
   });
@@ -75,7 +75,7 @@ gulp.task('hugo', function(cb) {
 
 gulp.task('hugo:build', ['css:build', 'img:build'], function(cb) {
   exec('hugo -s ../../', function(err, stdout, stderr) {
-    console.log(stdout); // Hugo output
+    console.log(stdout);   // Hugo output
     console.error(stderr); // Errors
     cb(err);
   });
@@ -99,7 +99,7 @@ gulp.task('css:build', ['css', 'hugo', 'clean:rev'], function() {
   .pipe(uncss({ html: [paths.public.html] }))
   .pipe(postcss([
     flexFixes(),
-    autoprefixer({
+    prefixer({
       browsers: ['> 1%', 'last 2 versions'],
       add: true,
     }),
