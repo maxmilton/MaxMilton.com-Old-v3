@@ -1,13 +1,13 @@
 {{ partial "header.html" . }}
 
-<div id="dope" class="dope container">
+<div id="dope" class="dope">
 
   <div class="home-intro">
     <h1>{{ .Site.Params.subtitle }}</h1>
   </div>
 
-  <section class="row subscribe text-white">
-    <form action="https://wearegenki.us12.list-manage.com/subscribe/post?u=8afe444812590742963d35a0d&amp;id=2a2592cf7a" class="form-inline col-xs" method="post" target="_blank">
+  <section class="subscribe text-white">
+    <form action="https://wearegenki.us12.list-manage.com/subscribe/post?u=8afe444812590742963d35a0d&amp;id=2a2592cf7a" class="form-inline" method="post" target="_blank">
       <p class="lead">Get the latest posts in your inbox:</p>
       <div class="form-group">
         <label for="email" class="sr-only">Email</label>
@@ -17,16 +17,18 @@
     </form>
   </section>
 
-  <div class="row">
-    <section class="col-xs">
-      <h2 class="summary-h2">Latest Posts</h2>
-      {{ range where .Data.Pages "Section" "blog" | first 10 }}
-        {{ .Render "summary"}}
-      {{ end }}
-      <div class="all-posts">
-        <a href="/blog.html">See all posts ›</a>
-      </div>
-    </section>
+  <div class="container">
+    <div class="row">
+      <section class="col-xs">
+        <h2 class="summary-h2">Latest Posts</h2>
+        {{ range where .Data.Pages "Section" "blog" | first 10 }}
+          {{ .Render "summary"}}
+        {{ end }}
+        <div class="all-posts">
+          <a href="/blog.html">See all posts ›</a>
+        </div>
+      </section>
+    </div>
   </div>
 
 </div> <!-- /#dope -->
