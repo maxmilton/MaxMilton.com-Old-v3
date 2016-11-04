@@ -6,7 +6,6 @@
 $white: #fff;
 $black: #000;
 
-
 //------------------------------
 // Bootstrap Overrides
 //------------------------------
@@ -16,14 +15,14 @@ $gray:                    #55595c; // Same as default
 $gray-dark:               #373a3c; // Same as default
 $gray-light:              #cfd8dc;
 $gray-lighter:            #eceff1;
-$brand-primary:           #8852b9; // MM purple
+$brand-primary:           #145cad; // MM royal blue
 
 $enable-flex:             true;
 $enable-rounded:          false;
 $enable-print-styles:     false;
 
 $body-bg:                 $gray-lighter;
-$body-color:              $gray-dark; // Same as default
+$body-color:              #1d2029; // Dark grey with hint of blue
 
 $link-color:              $body-color;
 
