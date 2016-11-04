@@ -68,8 +68,11 @@ h1, h2, h3, h4, h5, h6,
     margin-top: $spacer;
   }
 
+  @include media-breakpoint-down(md) {
+    line-height: 1.4;
+  }
+
   @include media-breakpoint-down(xs) {
-    // Less whitespace on small screens
     line-height: 1.1;
   }
 }
@@ -287,7 +290,7 @@ figcaption {
 }
 
 .subscribe {
-  padding: ($spacer-y * 2) 0 ($spacer-y * 2.4);
+  padding: ($spacer-y * 2.1) 0 ($spacer-y * 2.4);
   margin-top: $spacer * 3;
   margin-bottom: $spacer;
   text-align: center;
