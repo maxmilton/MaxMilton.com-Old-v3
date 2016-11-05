@@ -113,19 +113,33 @@ a {
   word-wrap: break-word;
 }
 
-// TODO: Design better link style that's compatibile with the larger click area
-.dope a {
-  color: darken($brand-primary, 15%);
-  text-decoration: underline;
+.dope {
+  // TODO: Design better link style that's compatibile with the larger click area
+  a {
+    color: darken($brand-primary, 15%);
+    text-decoration: underline;
 
-  &:hover {
-    color: $brand-primary;
+    &:hover {
+      color: $brand-primary;
+    }
+
+    &:visited {
+      color: darken($brand-primary, 15%);
+    }
   }
 
-  &:visited {
-    color: darken($brand-primary, 15%);
+  // FIXME: Remove this if possible
+  .btn {
+    margin: 0;
+    text-decoration: none;
+  }
+
+  .btn-secondary {
+    // FIXME: Remove this if possible
+    color: $btn-secondary-color !important;
   }
 }
+
 
 .badge {
   margin: 0;
