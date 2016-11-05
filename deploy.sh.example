@@ -19,7 +19,7 @@
 
 # Define variables (first 2 are optional)
 #THEME_DIR='themes/mm'
-#DEPLOY_FILE='deployme.tar.gz'
+#DEPLOY_FILE='deployme.tar.xz'
 REMOTE_SSH='user@yoursite.com'
 REMOTE_DIR='/var/www/yoursite.com'
 FS_PERMISSIONS='www-data:www-data'
@@ -41,7 +41,7 @@ ssh $REMOTE_SSH DEPLOY_FILE=$DEPLOY_FILE REMOTE_DIR=$REMOTE_DIR FS_PERMISSIONS=$
   sudo mv ~/$DEPLOY_FILE $REMOTE_DIR
   sudo tar -zcf $REMOTE_DIR/html-backup-$(date --iso-8601=minutes).tar.gz $REMOTE_DIR/html
   sudo rm -rf $REMOTE_DIR/html
-  sudo tar zxf $REMOTE_DIR/$DEPLOY_FILE -C $REMOTE_DIR
+  sudo tar xJf $REMOTE_DIR/$DEPLOY_FILE -C $REMOTE_DIR
   sudo mv $REMOTE_DIR/public $REMOTE_DIR/html
   sudo chown -R $FS_PERMISSIONS $REMOTE_DIR/html
   sudo rm -f $REMOTE_DIR/$DEPLOY_FILE

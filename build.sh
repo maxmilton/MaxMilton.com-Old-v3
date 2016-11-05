@@ -14,7 +14,7 @@
 # Define variables
 # Use existing values if defined otherwise use fallback value
 THEME_DIR=${THEME_DIR:-'themes/mm'}
-DEPLOY_FILE=${DEPLOY_FILE:-'deployme.tar.gz'}
+DEPLOY_FILE=${DEPLOY_FILE:-'deployme.tar.xz'}
 
 echo -e '\033[1;33mStarting build\033[0m\n'
 
@@ -55,6 +55,6 @@ rm -f $DEPLOY_FILE
 # Create a deployable package
 echo -e '\nCreating deployable file...'
 
-tar -czf $DEPLOY_FILE ./public && echo -e "Done; $(wc -c $DEPLOY_FILE)\n"
+tar -cJf $DEPLOY_FILE ./public && echo -e "Done; $(wc -c $DEPLOY_FILE)\n"
 
 echo -e '\033[1;33mBuild complete!\033[0m'
