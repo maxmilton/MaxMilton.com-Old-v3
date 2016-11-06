@@ -159,9 +159,11 @@ blockquote {
 
 .blockquote-plain {
   padding: $spacer;
+  margin-bottom: $spacer * 2;
   border-left: 0;
 
   > .blockquote-footer {
+    margin-top: $spacer * .2;
     color: $white;
   }
 }
