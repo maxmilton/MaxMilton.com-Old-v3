@@ -35,7 +35,7 @@ I'm always up for new experiences. Love learning new things. The world is full o
 * I've been using Linux as my main OS for more than 9 years --- both on my web servers and my desktop workstations.
 * I've lived in over 10 cities since moving out as a teenager.
 * When I move to a new city I make friends by going to tech and business meetups.
-* I eat a diet consisting mostly of fat.
+* I eat a [diet consisting mostly of fat]({{<relref "intro-to-the-keto-diet-and-14-day-keto-meal-plan.md">}}).
 
 ## Contact Me
 
