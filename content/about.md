@@ -11,16 +11,31 @@ description = ""
 
 # About Max Milton
 
-<p class="lead bg-primary text-white">&ldquo;Do not go where the path may lead, go instead where there is no path and leave a trail.&rdquo;<br/>
-<small>&mdash; Ralph Waldo Emerson</small></p>
+<blockquote class="blockquote-plain bg-primary text-white">
+  &ldquo;Productivity is never an accident. It is always the result of a commitment to excellence, intelligent planning, and focused effort.&rdquo;
+  <footer class="blockquote-footer">Paul J. Meyer</footer>
+</blockquote>
 
-Yo!
+Yo ✌
 
-I'm Max. I've lived in countries around the world and I love to travel. I'm currently based in Sydney, Australia, where I work as a DevOps Engineer.
+I'm Max. I'm a tech consultant currently based in Sydney, Australia. I specialise in Ecommerce, Linux, DevOps, and Cloud Infrastructure.
 
-I'll write a better about me section eventually, but in the meantime, one last thing I want to add is I run a small ecommerce group, <a href="https://wearegenki.com" target="_blank">We Are Genki</a>.
+I also run a number of ecommerce properties via my company <a href="https://wearegenki.com" target="_blank">We Are Genki</a>. To [hire me for a consulting project, contact me](#contact-me).
 
-Disclaimer: Opinions expressed here are my own.
+I'm always up for new experiences. Love learning new things. The world is full of adventure and crazy fun times!
+
+**Find me on GitHub:**
+
+* https://github.com/MaxMilton
+* https://github.com/WeAreGenki
+
+## Things you may not know about me
+
+* I love working as a consultant --- the fast pace and ever-changing landscape mean I'm constantly learning new and better ways of doing things. I blog about many of these learnings here!
+* I've been using Linux as my main OS for more than 9 years --- both on my web servers and my desktop workstations.
+* I've lived in over 10 cities since moving out as a teenager.
+* When I move to a new city I make friends by going to tech and business meetups.
+* I eat a diet consisting mostly of fat.
 
 ## Contact Me
 
@@ -45,3 +60,9 @@ Disclaimer: Opinions expressed here are my own.
 -----
 
 Alternatively, send an email to <a href="mailto:max@wearegenki.com">max@wearegenki.com</a>.
+
+-----
+
+### Copyright
+
+Blog posts are licensed under a Creative Commons Attribution No Derivatives 4.0 ([CC-BY-ND-4.0](https://creativecommons.org/licenses/by-nd/4.0/)) licence. When quoting my posts, please link back to the original article.
