@@ -3,7 +3,7 @@ date        = "2016-10-23T07:00:00+11:00"
 title       = "Minimalism Quote"
 author      = "Max Milton"
 email       = "max@wearegenki.com"
-tags        = ["quick tips"]
+tags        = ["misc."]
 description = "Quote by Miyamoto Musashi in The Book of Five Rings."
 +++
 
