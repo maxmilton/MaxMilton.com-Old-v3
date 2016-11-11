@@ -20,7 +20,7 @@ googleAnalytics = "UA-64694403-1"
   # hrefTargetBlank = true
 
 [params]
-  subtitle = "Live life to the Max."
+  subtitle = "DevOps Engineer & Life Hacker."
   description = "The personal blog of Max Milton."
   themecolour = "#eceff1"
 
