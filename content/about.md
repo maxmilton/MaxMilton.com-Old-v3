@@ -18,9 +18,13 @@ description = ""
 
 Yo ✌
 
-I'm Max. I'm a tech consultant currently based in Sydney, Australia. I specialise in Ecommerce, Linux, DevOps, and Cloud Infrastructure. I typically work with enterprise and government on large contract projects but I love working with start-ups on occasion too.
+I'm Max. I'm a tech consultant currently based in Sydney, Australia.
 
-I also run a number of ecommerce properties via my company <a href="https://wearegenki.com" target="_blank">We Are Genki</a>. To [hire me for a consulting project, contact me](#contact-me).
+I specialise in Ecommerce, DevOps, Linux, and Cloud Infrastructure. I typically work with enterprise and government on large contract projects but I love working with start-ups on occasion too.
+
+To hire me for a project or consulting [contact me](#contact-me).
+
+I also run a number of ecommerce properties via my company <a href="https://wearegenki.com" target="_blank">We Are Genki</a>. These sites are a great example of the quality of my work.
 
 I'm always up for new experiences. Love learning new things. The world is full of adventure and crazy fun times!
 
@@ -32,7 +36,7 @@ I'm always up for new experiences. Love learning new things. The world is full o
 ## Things you may not know about me
 
 * I love working as a consultant --- the fast pace and ever-changing landscape mean I'm constantly learning new and better ways of doing things. I blog about many of these learnings here!
-* I've been using Linux as my main OS for more than 9 years --- both on my web servers and my desktop workstations.
+* I've been using Linux as my main OS for more than 10 years --- both on my web servers and my desktop workstations. I love it!
 * I've lived in 10+ cities since moving out as a teenager.
 * When I move to a new city I make friends by going to tech and business meetups.
 * I eat a [diet consisting mostly of fat]({{<relref "intro-to-the-keto-diet-and-14-day-keto-meal-plan.md">}}).
