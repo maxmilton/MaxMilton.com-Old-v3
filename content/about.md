@@ -18,7 +18,7 @@ description = ""
 
 Yo ✌
 
-I'm Max. I'm a tech consultant currently based in Sydney, Australia. I specialise in Ecommerce, Linux, DevOps, and Cloud Infrastructure.
+I'm Max. I'm a tech consultant currently based in Sydney, Australia. I specialise in Ecommerce, Linux, DevOps, and Cloud Infrastructure. I typically work with enterprise and government on large contract projects but I love working with start-ups on occasion too.
 
 I also run a number of ecommerce properties via my company <a href="https://wearegenki.com" target="_blank">We Are Genki</a>. To [hire me for a consulting project, contact me](#contact-me).
 
