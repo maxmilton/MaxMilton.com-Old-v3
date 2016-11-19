@@ -50,6 +50,9 @@ Use British English spelling and grammar. Follow the [Guardian and Observer styl
 
 ## Changelog
 
+**v1.12.0**
+:  2016-11-19 — Change colour scheme to blue instead of purple, fix button style when in a post, update Bootstrap, deploy script now cleans up old backups
+
 **v1.11.0**
 :  2016-10-28 — Simplify CSS build process, optimise CSS selectors, simplify HTML, remove GA autotrack, update Bootstrap, more aggressive HTML minification, new ASCII art in source, completely remove all JavaScript build tasks
 
