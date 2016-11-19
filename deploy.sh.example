@@ -20,10 +20,11 @@
 # Define variables (first 2 are optional)
 #THEME_DIR='themes/mm'
 #DEPLOY_FILE='deployme.tar.xz'
-REMOTE_SSH='user@yoursite.com'
-REMOTE_DIR='/var/www/yoursite.com'
-FS_PERMISSIONS='www-data:www-data'
-CLOUDFLARE_SITE='yoursite.com'
+REMOTE_SSH=user@yoursite.com
+REMOTE_DIR=/var/www/yoursite.com
+BACKUPS_TO_KEEP=5
+FS_PERMISSIONS=www-data:www-data
+CLOUDFLARE_SITE=yoursite.com
 
 # Print banner
 echo -e '\n\033[1mMM    MM MM    MM\nMMM  MMM MMM  MMM\nMM MM MM MM MM MM\nMM    MM MM    MM\nMM    MM MM    MM\n\n © MaxMilton.com\033[0m\n\n'
@@ -33,13 +34,14 @@ source build.sh
 
 # Upload deploy file to the production server
 echo -e "\nUploading package to $REMOTE_SSH server...\n"
-scp $DEPLOY_FILE $REMOTE_SSH:~/
+scp "$DEPLOY_FILE" "$REMOTE_SSH":~/
 
 # Execute the follow commands on the remote server
 echo -e "\nExecuting commands on $REMOTE_SSH server...\n"
-ssh $REMOTE_SSH DEPLOY_FILE=$DEPLOY_FILE REMOTE_DIR=$REMOTE_DIR FS_PERMISSIONS=$FS_PERMISSIONS 'bash -s' <<'ENDSSH'
+ssh "$REMOTE_SSH" DEPLOY_FILE="$DEPLOY_FILE" REMOTE_DIR="$REMOTE_DIR" BACKUPS_TO_KEEP="$BACKUPS_TO_KEEP" FS_PERMISSIONS="$FS_PERMISSIONS" 'bash -s' <<'ENDSSH'
   sudo mv ~/$DEPLOY_FILE $REMOTE_DIR
-  sudo tar -zcf $REMOTE_DIR/html-backup-$(date --iso-8601=minutes).tar.gz $REMOTE_DIR/html
+  sudo tar -cJf $REMOTE_DIR/html-backup-$(date --iso-8601=minutes).tar.xz $REMOTE_DIR/html
+  sudo rm -f $(ls -t $REMOTE_DIR/html-backup-* | awk "NR>$BACKUPS_TO_KEEP")
   sudo rm -rf $REMOTE_DIR/html
   sudo tar xJf $REMOTE_DIR/$DEPLOY_FILE -C $REMOTE_DIR
   sudo mv $REMOTE_DIR/public $REMOTE_DIR/html
@@ -49,7 +51,7 @@ ssh $REMOTE_SSH DEPLOY_FILE=$DEPLOY_FILE REMOTE_DIR=$REMOTE_DIR FS_PERMISSIONS=$
 ENDSSH
 
 # Clean up left over file
-rm -f $DEPLOY_FILE
+rm -f "$DEPLOY_FILE"
 
 # Open CloudFlare in a browser to purge the CDN cache
 xdg-open "https://www.cloudflare.com/a/caching/$CLOUDFLARE_SITE"

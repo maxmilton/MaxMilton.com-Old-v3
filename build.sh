@@ -45,16 +45,16 @@ fi
 echo -e 'Starting Gulp build process...\n'
 
 # Remove files from ealier builds
-gulp --gulpfile $THEME_DIR/gulpfile.js clean
+gulp --gulpfile "$THEME_DIR"/gulpfile.js clean
 # Run Gulp build process
-gulp --gulpfile $THEME_DIR/gulpfile.js build
+gulp --gulpfile "$THEME_DIR"/gulpfile.js build
 
 # Remove ealier deployable file
-rm -f $DEPLOY_FILE
+rm -f "$DEPLOY_FILE"
 
 # Create a deployable package
 echo -e '\nCreating deployable file...'
 
-tar -cJf $DEPLOY_FILE ./public && echo -e "Done; $(wc -c $DEPLOY_FILE)\n"
+tar -cJf "$DEPLOY_FILE" ./public && echo -e "Done; $(wc -c "$DEPLOY_FILE")\n"
 
 echo -e '\033[1;33mBuild complete!\033[0m'
