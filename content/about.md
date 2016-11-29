@@ -44,7 +44,7 @@ I'm always up for new experiences. Love learning new things. The world is full o
 ## Contact Me
 
 <div class="row">
-  <form class="col-xs-12 col-md-9" action="https://docs.google.com/a/wearegenki.com/forms/d/1viSY2eAr1kZ9cIf7vTwQpWaB4Zoix7xPnsbhTUcZrTw/formResponse" method="POST" target="_self" target="_blank">
+  <form class="col-12 col-md-9" action="https://docs.google.com/a/wearegenki.com/forms/d/1viSY2eAr1kZ9cIf7vTwQpWaB4Zoix7xPnsbhTUcZrTw/formResponse" method="POST" target="_self" target="_blank">
     <fieldset class="form-group">
     <label for="name">Name</label>
     <input type="text" class="form-control" id="name" name="entry.662797564" placeholder="Name">

@@ -14,15 +14,15 @@ To make blood sugar conversion from mmol/L to mg/dL easy, I've put together a bl
 
 -----
 
-<div class="row mb-2 flex-items-xs-center text-xs-center">
-  <div class="col-xs col-md-3">
+<div class="row mb-2 flex-items-center text-center">
+  <div class="col col-md-3">
     <label for="mmoll" class="lead">mmol/L</label>
     <input type="number" name="mmoll" id="mmoll" class="form-control form-control-lg" step="0.1" min="0" value="5">
   </div>
-  <div class="col-xs-1" style="font-size: 2rem; padding-top: 1rem; padding-left: 7px;">
+  <div class="col-1" style="font-size: 2rem; padding-top: 1rem; padding-left: 7px;">
     =
   </div>
-  <div class="col-xs col-md-3">
+  <div class="col col-md-3">
     <label for="mgdl" class="lead">mg/dL</label>
     <input type="number" name="mgdl" id="mgdl" class="form-control form-control-lg" min="0" value="90">
   </div>
@@ -126,4 +126,4 @@ Used in the UK, Canada, Australia, and China.
 
 Milligrams per decilitre, a unit used in medicine to measure the concentration of substances in the blood. 1 mg/dL equals 0.01 grams per litre (g/L).
 
-Used in U.S., France, Japan, Israel, and India.
+Used in the U.S., France, Japan, Israel, and India.
