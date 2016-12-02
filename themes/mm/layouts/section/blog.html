@@ -1,26 +1,24 @@
 {{ partial "header.html" . }}
 
-<!-- If changed, also update ../_default/list.html and ../404.html -->
+<!-- If changed, also update ../_default/list.html -->
 
 <div id="dope" class="dope container">
 
   <div class="row">
     <section class="category col">
-      <h1>All Posts</h1>
+      <h1>{{ .Title }}</h1>
 
-      <ul class="pages">
-        {{ range .Data.Pages }}
-        <li class="category-item">
-          <a href="{{ .RelPermalink }}" title="{{ .Title }}">{{ .Title }}</a>
-          <div class="category-tags">
-          {{ range .Params.tags }}
-            <a href="/tags/{{ . | urlize }}.html" class="badge badge-default">{{ . }}</a>
-          {{ end }}
-          </div>
-          <time class="time push-right" datetime="{{ .Date.Format "2006-01-02T15:04:05" }}">{{ .Date.Format "Mon, 2 Jan 2006" }}</time>
-        </li>
-        {{ end }}
-      </ul>
+      {{ range .Data.Pages.GroupByDate "2006" }}
+      <div class="category-year text-center">{{ .Key }}</div>
+
+      {{ range .Pages }}
+      <article class="category-item">
+        <a href="{{ .RelPermalink }}" title="{{ .Title }}">{{ .Title }}</a>
+        <span class="readtime">{{ .ReadingTime }} min read</span>
+      </article>
+      {{ end }}
+
+      {{ end }}
     </section>
   </div>
 

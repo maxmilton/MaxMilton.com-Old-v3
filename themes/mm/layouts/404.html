@@ -11,15 +11,14 @@
 
   <hr/>
 
-  <!-- If changed, also update ../_default/list.html and ../section/blog.html -->
-
   <section class="container summaries">
     <h2>Instead, how about reading a post?</h2>
-    {{ range first 10 .Data.Pages }}
-      {{ if eq .Section "blog" }}
-        <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
-      {{ end }}
+
+    <ul>
+    {{ range where .Data.Pages "Section" "blog" | first 5 }}
+      <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
     {{ end }}
+    </ul>
   </section>
 
 </div> <!-- /#dope -->
