@@ -19,11 +19,11 @@ To get my body and mind to a point I'm truly happy with, I'll<!--more--> spend 1
 
 ### 1. Meditation
 
-Meditate in the morning, right after waking up. Stick to mindfulness meditation and <abbr title="loving kindness">metta</abbr> meditation. Sit on a hard pillow on the floor in a quarter lotus position (one calf on top of the other) because it keeps the spine straight.
+Meditate in the morning, right after waking up. Stick to mindfulness meditation and metta (loving kindness) meditation. Sit on a hard pillow on the floor in a quarter lotus position (one calf on top of the other) because it keeps the spine straight.
 
 ### 2. Exercise
 
-Bodyweight <abbr title="high intensity training">HIT</abbr> exercises at home every second day. Every other day do a movement or play activity (e.g. go for a walk, play a sport, do yoga). Don't overdo it, be mindful of recovery too.
+Bodyweight HIT (high intensity training) exercises at home every second day. Every other day do a movement or play activity (e.g. go for a walk, play a sport, do yoga). Don't overdo it, be mindful of recovery too.
 
 I need to strengthen my back in particular but general body image is important too. Exercise to tone the body and eat healthy to lose weight.
 

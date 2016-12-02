@@ -15,7 +15,7 @@ More than likely you've either never heard of the keto diet or you've already we
 
 I'm taking the plunge and changing what I eat to a paleo based ketogenic diet. I include paleo in there because paleo seems like the most realistic nutritional theory and keto because the nutritional science looks solid. Together they're a great match for killer performance!
 
-You'll see keto referred to by various names but these are all the same thing: the keto diet, ketogenic diet, <abbr title="low-carb high-fat">LCHF</abbr>. It's different from a strictly low-carb diet in that keto requires high fat consumption and controlled protein intake with the goal of getting into a state of ketosis.
+You'll see keto referred to by various names but these are all the same thing: the keto diet, ketogenic diet, LCHF (low-carb high-fat). It's different from a strictly low-carb diet in that keto requires high fat consumption and controlled protein intake with the goal of getting into a state of ketosis.
 
 ## Nutritional ketosis
 
@@ -82,7 +82,7 @@ You should try to eat most of your fat from these common foods.
 * eggs
 * ghee
 * grass-fed butter
-* <abbr title="medium chain triglyceride">MCT</abbr> oil
+* MCT (medium chain triglyceride) oil
 * nuts (especially almonds, brazil nuts, hazelnuts, macadamia nuts, pecans, pine nuts, and walnuts)
 * olive oil
 * pork

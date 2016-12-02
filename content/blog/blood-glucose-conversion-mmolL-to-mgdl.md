@@ -118,7 +118,7 @@ To make blood sugar conversion from mmol/L to mg/dL easy, I've put together a bl
 
 ### mmol/L
 
-Millimoles per litre, the <abbr title="International System of Units">SI unit</abbr> in medicine for measuring concentrations of substances in the blood.
+Millimoles per litre, the SI unit (International System of Units) in medicine for measuring concentrations of substances in the blood.
 
 Used in the UK, Canada, Australia, and China.
 
