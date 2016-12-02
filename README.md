@@ -50,6 +50,9 @@ Use British English spelling and grammar. Follow the [Guardian and Observer styl
 
 ## Changelog
 
+**v1.13.0**
+:  2016-12-02 — Simplify category listing pages, revert link style to default, update Overpass fonts, remove abbr styles in favour of more descriptive word choice
+
 **v1.12.0**
 :  2016-11-19 — Change colour scheme to blue instead of purple, fix button style when in a post, update Bootstrap, deploy script now cleans up old backups
 
