@@ -24,8 +24,6 @@ $enable-print-styles:     false;
 $body-bg:                 $gray-lighter;
 $body-color:              #191919;
 
-$link-color:              $body-color;
-
 $blockquote-small-color:  $gray;
 
 $grid-breakpoints: (
@@ -45,11 +43,11 @@ $container-max-widths: (
 
 $font-family-sans-serif:  "Overpass", sans-serif;
 $font-family-serif:       serif;
-$font-family-monospace:   "Roboto Mono", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+$font-family-monospace:   monospace;
 
 $font-size-root:          21px;
 
-$headings-font-weight:    300;
+$headings-font-weight:    600;
 $headings-line-height:    1.7;
 
 $table-cell-padding:      .5rem .3rem;
