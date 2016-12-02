@@ -28,7 +28,7 @@ I also run a number of ecommerce properties via my company <a href="https://wear
 
 I'm always up for new experiences. Love learning new things. The world is full of adventure and crazy fun times!
 
-**Find me on GitHub:**
+## Find me on GitHub
 
 * https://github.com/MaxMilton
 * https://github.com/WeAreGenki
@@ -41,7 +41,7 @@ I'm always up for new experiences. Love learning new things. The world is full o
 * When I move to a new city I make friends by going to tech and business meetups.
 * I eat a [diet consisting mostly of fat]({{<relref "intro-to-the-keto-diet-and-14-day-keto-meal-plan.md">}}).
 
-## Contact Me
+## Contact me
 
 <div class="row">
   <form class="col-12 col-md-9" action="https://docs.google.com/a/wearegenki.com/forms/d/1viSY2eAr1kZ9cIf7vTwQpWaB4Zoix7xPnsbhTUcZrTw/formResponse" method="POST" target="_self" target="_blank">
