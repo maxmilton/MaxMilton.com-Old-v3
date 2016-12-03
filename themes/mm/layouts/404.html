@@ -14,11 +14,12 @@
   <section class="container summaries">
     <h2>Instead, how about reading a post?</h2>
 
-    <ul>
     {{ range where .Data.Pages "Section" "blog" | first 5 }}
-      <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+    <article class="category-item">
+      <a href="{{ .RelPermalink }}" title="{{ .Title }}">{{ .Title }}</a>
+      <span class="readtime">{{ .ReadingTime }} min read</span>
+    </article>
     {{ end }}
-    </ul>
   </section>
 
 </div> <!-- /#dope -->
