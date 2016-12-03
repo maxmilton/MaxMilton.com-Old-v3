@@ -33,7 +33,7 @@ I'm always up for new experiences. Love learning new things. The world is full o
 * https://github.com/MaxMilton
 * https://github.com/WeAreGenki
 
-## Things you may not know about me
+## Did you know...?
 
 * I love working as a consultant --- the fast pace and ever-changing landscape mean I'm constantly learning new and better ways of doing things. I blog about many of these learnings here!
 * I've been using Linux as my main OS for more than 10 years --- both on my web servers and my desktop workstations. I love it!
