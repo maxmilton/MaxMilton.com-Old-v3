@@ -50,6 +50,9 @@ Use British English spelling and grammar. Follow the [Guardian and Observer styl
 
 ## Changelog
 
+**v1.14.0**
+:  2016-12-10 — Improve deploy script, NPM module clean up, update Overpass fonts, remove ttf fonts as we no longer support IE8 or old mobile browsers
+
 **v1.13.0**
 :  2016-12-02 — Simplify category listing pages, revert link style to default, update Overpass fonts, remove abbr styles in favour of more descriptive word choice
 
