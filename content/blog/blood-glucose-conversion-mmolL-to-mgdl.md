@@ -35,24 +35,28 @@ To make blood sugar conversion from mmol/L to mg/dL easy, I've put together a bl
   var mass = 18.016;
 
   // Convert from mg/dL to mmol/L
-  function getMgdl(){
+  var getMgdl = function getMgdl(){
     mgdl.value = Math.round(mmoll.value * mass);
   };
 
   // Convert from mmol/L to mg/dL
-  function getMmoll(){
+  var getMmoll = function getMmoll(){
     var factor = (mgdl.value < mass) ? 100 : 10;
     mmoll.value = Math.round((mgdl.value / mass) * factor) / factor;
   };
 
   // Set number to decimal places to one for stepping up/down by 0.1
-  mmoll.onfocus = function(){
+  var setRounded = function setRounded(){
     mmoll.value = Math.round(mmoll.value * 10) / 10;
-    getMgdl();
-  };
+    getMgdl;
+  }
 
-  mmoll.oninput = getMgdl;
-  mgdl.oninput = getMmoll;
+  // Handle user input
+  mmoll.addEventListener('input', getMgdl, false);
+  mgdl.addEventListener('input', getMmoll, false);
+  
+  // Handle input focus
+  mmoll.addEventListener('focus', setRounded, false);
 }());
 </script>
 
