@@ -3,7 +3,7 @@ date        = "2016-04-25T09:23:00+10:00"
 title       = "What Are Quick Tips?"
 author      = "Max Milton"
 email       = "max@wearegenki.com"
-tags        = ["misc.", "quick tips"]
+tags        = ["misc", "quick tips"]
 description = "Quick tips, insights, and other thought provoking posts."
 +++
 

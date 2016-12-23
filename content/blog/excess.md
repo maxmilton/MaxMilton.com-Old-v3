@@ -1,9 +1,9 @@
 +++
 date        = "2016-10-23T07:00:00+11:00"
-title       = "Minimalism Quote"
+title       = "Excess"
 author      = "Max Milton"
 email       = "max@wearegenki.com"
-tags        = ["misc."]
+tags        = ["misc"]
 description = "Quote by Miyamoto Musashi in The Book of Five Rings."
 +++
 
