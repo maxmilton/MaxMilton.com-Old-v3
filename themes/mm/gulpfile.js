@@ -141,7 +141,7 @@ gulp.task('img', function() {
 });
 
 gulp.task('img:build', ['img'], function() {
-  return gulp.src(['${paths.img.dest}/*.{jpg,png,gif,svg}'])
+  return gulp.src([`${paths.img.dest}/*.{jpg,png,gif,svg}`])
     // Optimise images
     .pipe(imagemin([
       // imagemin.gifsicle(), // Uncomment for gif support
@@ -190,29 +190,29 @@ gulp.task('html:rev', ['html:build'], function() {
 gulp.task('clean:rev', function() {
   return del([
     // Remove old revisioned files
-    '${paths.sass.dest}/app-*.css',
+    `${paths.sass.dest}/app-*.css`,
   ]);
 });
 
 gulp.task('clean:build', ['html:rev'], function() {
   return del([
     // Remove development and non-revisioned files
-    '${paths.public.root}/css/maps',
-    '${paths.public.root}/css/app.css',
+    `${paths.public.root}/css/maps`,
+    `${paths.public.root}/css/app.css`,
     // Remove original unoptimised images
-    '${paths.public.root}/img/original',
+    `${paths.public.root}/img/original`,
     // Remove blog post drafts
-    '${paths.public.root}/drafts',
-    '${paths.public.root}/drafts.html',
+    `${paths.public.root}/drafts`,
+    `${paths.public.root}/drafts.html`,
     // Remove unnecessary hugo generated file
-    '${paths.public.root}/.html',
+    `${paths.public.root}/.html`,
   ], { force: true });
 });
 
 gulp.task('clean:public', function() {
   return del([
     // Remove entire public directory contents
-    '${paths.public.root}/*',
-    '${paths.public.root}/.*',
+    `${paths.public.root}/*`,
+    `${paths.public.root}/.*`,
   ], { force: true });
 });
