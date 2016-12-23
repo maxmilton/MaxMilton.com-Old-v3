@@ -2,23 +2,21 @@
 // MM Global Variables
 //------------------------------
 
-// Colours
-$white: #fff;
-$black: #000;
+// NOTE: Put non-bootstrap variables here
 
 //------------------------------
 // Bootstrap Overrides
 //------------------------------
 // NOTE: Use this file instead of bootstrap4/_custom.scss
 
-$gray:                    #55595c; // Same as default
-$gray-dark:               #373a3c; // Same as default
+$gray-dark:               #373a3c;
+$gray:                    #55595c;
 $gray-light:              #cfd8dc;
 $gray-lighter:            #f8f8f8;
 $brand-primary:           #145cad; // MM royal blue
 
-$enable-flex:             true;
 $enable-rounded:          false;
+$enable-transitions:      false;
 $enable-print-styles:     false;
 
 $body-bg:                 $gray-lighter;
@@ -28,16 +26,16 @@ $blockquote-small-color:  $gray;
 
 $grid-breakpoints: (
   xs: 0,
-  sm: 544px,
+  sm: 576px,
   md: 768px,
   lg: 992px,
   // xl: 1200px // Disable xl size
 );
 
 $container-max-widths: (
-  sm: 576px,
+  sm: 540px,
   md: 720px,
-  lg: 940px,
+  lg: 960px,
   // xl: 1140px // Disable xl size
 );
 
