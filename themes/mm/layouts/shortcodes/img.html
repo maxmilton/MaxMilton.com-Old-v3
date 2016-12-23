@@ -28,19 +28,16 @@ Optional: Use the 'caption' parameter to add an image caption:
       <source
         media="(min-width: 768px)"
         srcset="{{ .Get "src" }}.{{ .Get "type" }} 1x,
-                {{ .Get "src" }}@2x.{{ .Get "type" }} 2x,
-                {{ .Get "src" }}@3x.{{ .Get "type" }} 3x">
+                {{ .Get "src" }}@2x.{{ .Get "type" }} 2x">
       <!-- Small screens -->
       <source
         media="(max-width: 767px)"
         srcset="{{ .Get "src" }}-sm.{{ .Get "type" }} 1x,
-                {{ .Get "src" }}-sm@2x.{{ .Get "type" }} 2x,
-                {{ .Get "src" }}-sm@3x.{{ .Get "type" }} 3x">
+                {{ .Get "src" }}-sm@2x.{{ .Get "type" }} 2x">
       <!-- Fallback -->
       <img
         src="{{ .Get "src" }}.{{ .Get "type" }}"
-        srcset="{{ .Get "src" }}@2x.{{ .Get "type" }} 2x,
-                {{ .Get "src" }}@3x.{{ .Get "type" }} 3x"
+        srcset="{{ .Get "src" }}@2x.{{ .Get "type" }} 2x"
         alt="{{ .Get "alt" }}"{{ if .Get "caption"}} class="img-fluid figure-img"{{ end }}>
     </picture>
   {{ if .Get "caption"}}

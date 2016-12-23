@@ -128,16 +128,10 @@ gulp.task('img', function() {
         width: 546 * 2,
         rename: { suffix: '-sm@2x' },
       }, {
-        width: 546 * 3,
-        rename: { suffix: '-sm@3x' },
-      }, {
         width: 675,
       }, {
         width: 675 * 2,
         rename: { suffix: '@2x' },
-      }, {
-        width: 675 * 3,
-        rename: { suffix: '@3x' },
       }],
     }, {
       silent: true,              // Don't spam the console
