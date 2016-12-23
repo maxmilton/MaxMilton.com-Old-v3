@@ -105,8 +105,8 @@
 
 .thead-inverse {
   th {
-    color: #fff;
-    background-color: $table-bg-inverse;
+    color: $table-inverse-color;
+    background-color: $table-inverse-bg;
   }
 }
 
@@ -118,8 +118,8 @@
 }
 
 .table-inverse {
-  color: $body-bg;
-  background-color: $table-bg-inverse;
+  color: $table-inverse-color;
+  background-color: $table-inverse-bg;
 
   th,
   td,
@@ -143,7 +143,6 @@
 .table-responsive {
   display: block;
   width: 100%;
-  min-height: 0%; // Workaround for IE9 bug (see https://github.com/twbs/bootstrap/issues/14837)
   overflow-x: auto;
   -ms-overflow-style: -ms-autohiding-scrollbar; // See https://github.com/twbs/bootstrap/pull/10057
 
