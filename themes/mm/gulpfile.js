@@ -204,8 +204,6 @@ gulp.task('clean:build', ['html:rev'], function() {
     // Remove blog post drafts
     `${paths.public.root}/drafts`,
     `${paths.public.root}/drafts.html`,
-    // Remove unnecessary hugo generated file
-    `${paths.public.root}/.html`,
   ], { force: true });
 });
 
