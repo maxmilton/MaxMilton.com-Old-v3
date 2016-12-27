@@ -25,7 +25,7 @@ html {
 }
 
 .brand {
-  padding: $link-area-x ($link-area-y * 2);
+  padding: $link-area-y ($link-area-x * 2);
   margin-right: 0;
   margin-left: -2rem;
   font-size: 30px;
@@ -46,6 +46,10 @@ html {
 
   @include hover-focus {
     text-decoration: $link-hover-decoration;
+  }
+
+  @include media-breakpoint-down(sm) {
+    padding: $link-area-y ($link-area-x / 2);
   }
 }
 
@@ -102,8 +106,8 @@ li {
 // README: Reduce size if you experience problems with overlapping links
 // ↳ For debugging enable CSS Outlining at http://localhost:3001/remote-debug
 a {
-  padding: $link-area-x $link-area-y;
-  margin: (-$link-area-x) (-$link-area-y);
+  padding: $link-area-y $link-area-x;
+  margin: (-$link-area-y) (-$link-area-x);
   word-wrap: break-word;
 }
 
@@ -161,13 +165,6 @@ kbd {
 
 .footer-link {
   color: inherit;
-}
-
-.lead,
-.blockquote {
-  @include media-breakpoint-down(xs) {
-    font-size: 1rem;
-  }
 }
 
 //------------------------------
@@ -246,6 +243,10 @@ figcaption {
   margin-bottom: $spacer;
   text-align: center;
   background-color: $brand-primary;
+
+  @include media-breakpoint-down(sm) {
+    margin-top: $spacer * 2;
+  }
 }
 
 .subscribe-lead {
