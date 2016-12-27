@@ -41,7 +41,7 @@ $container-max-widths: (
   // xl: 1140px // Disable xl size
 );
 
-$font-family-sans-serif:  "Overpass", sans-serif;
+$font-family-sans-serif:  "Overpass", system-ui, sans-serif;
 $font-family-serif:       serif;
 $font-family-monospace:   monospace;
 
