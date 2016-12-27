@@ -1,8 +1,11 @@
 //------------------------------
 // MM Global Variables
 //------------------------------
-
 // NOTE: Put non-bootstrap variables here
+
+// Sizes for larger link clickable area
+$link-area-x:             1rem;
+$link-area-y:             1rem;
 
 //------------------------------
 // Bootstrap Overrides
@@ -50,4 +53,4 @@ $headings-line-height:    1.7;
 $table-cell-padding:      .5rem .3rem;
 $table-border-color:      $gray-light;
 
-$nav-link-padding:        .6rem 1rem;
+$nav-link-padding:        $link-area-x $link-area-y;
