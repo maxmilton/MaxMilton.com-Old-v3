@@ -50,6 +50,9 @@ Use British English spelling and grammar. Follow the [Guardian and Observer styl
 
 ## Changelog
 
+**v1.15.0**
+:  2016-12-27 — Remove x3 image size, remove copyright symbol from footer, small CSS performance optimisations, fix build error in hugo v0.18, update Bootstrap to latest git rev, update NPM packages
+
 **v1.14.0**
 :  2016-12-10 — Improve deploy script, NPM module clean up, update Overpass fonts, remove ttf fonts as we no longer support IE8 or old mobile browsers
 
