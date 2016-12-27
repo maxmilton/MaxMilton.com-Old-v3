@@ -14,7 +14,7 @@ To make blood sugar conversion from mmol/L to mg/dL easy, I've put together a bl
 
 -----
 
-<div class="row mb-2 flex-items-center text-center">
+<div class="row mb-2 justify-content-center">
   <div class="col col-md-3">
     <label for="mmoll" class="lead">mmol/L</label>
     <input type="number" name="mmoll" id="mmoll" class="form-control form-control-lg" step="0.1" min="0" value="5">
@@ -54,7 +54,7 @@ To make blood sugar conversion from mmol/L to mg/dL easy, I've put together a bl
   // Handle user input
   mmoll.addEventListener('input', getMgdl, false);
   mgdl.addEventListener('input', getMmoll, false);
-  
+
   // Handle input focus
   mmoll.addEventListener('focus', setRounded, false);
 }());
