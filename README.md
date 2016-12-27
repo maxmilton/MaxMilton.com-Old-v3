@@ -50,6 +50,9 @@ Use British English spelling and grammar. Follow the [Guardian and Observer styl
 
 ## Changelog
 
+**v1.15.1**
+:  2016-12-27 — Fix font on buttons and inputs, fix link click area size and nav links, adjust for better spacing on small breakpoints
+
 **v1.15.0**
 :  2016-12-27 — Remove x3 image size, remove copyright symbol from footer, small CSS performance optimisations, fix build error in hugo v0.18, update Bootstrap to latest git rev, update NPM packages
 
