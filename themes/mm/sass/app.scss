@@ -40,6 +40,8 @@ html {
 }
 
 .nav-link {
+  margin-right: 0;
+  margin-left: 0;
   color: $gray-dark;
 
   @include hover-focus {
