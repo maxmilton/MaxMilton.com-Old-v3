@@ -17,20 +17,17 @@ html {
 }
 
 .nav {
-  display: flex;
   flex-wrap: wrap;
   padding-left: 15px;
   margin-top: $spacer;
   margin-bottom: $spacer * 2.2;
   align-items: baseline;
-
-  > a {
-    color: $body-color;
-  }
 }
 
 .brand {
-  margin-right: $spacer;
+  padding: .6rem 2rem;
+  margin-right: 0;
+  margin-left: -2rem;
   font-size: 30px;
   color: $gray-dark;
 
@@ -42,12 +39,9 @@ html {
   }
 }
 
-.push-right {
-  // Push a flex item to the right
-  margin-left: auto !important;
-}
-
 .nav-link {
+  color: $gray-dark;
+
   @include hover-focus {
     text-decoration: $link-hover-decoration;
   }
@@ -84,7 +78,7 @@ h1 {
   }
 
   @include media-breakpoint-up(lg) {
-    // More whitespace on large screens
+    // Extra whitespace on large screens
     margin: .9rem 0 2.3rem;
   }
 }
@@ -98,7 +92,7 @@ h2 {
 }
 
 li {
-  // Add more space between list items
+  // Extra space between list items
   margin-bottom: $spacer / 2;
 }
 
@@ -116,12 +110,17 @@ a {
   margin: 0;
 }
 
+// FIXME: Temporary workaround for bootstrap issue
+.btn {
+  font-family: $font-family-sans-serif;
+}
+
 blockquote {
   @extend .blockquote;
   border-left-color: $gray-light;
 
   > p:last-of-type {
-    @extend .mb-0;
+    margin-bottom: 0;
   }
 }
 
@@ -129,11 +128,11 @@ blockquote {
   padding: $spacer;
   margin-bottom: $spacer * 2;
   border-left: 0;
+}
 
-  > .blockquote-footer {
-    margin-top: $spacer * .2;
-    color: $white;
-  }
+.blockquote-plain-footer {
+  margin-top: $spacer * .2;
+  color: $white;
 }
 
 table {
@@ -155,14 +154,14 @@ kbd {
   margin: 2rem 0 3rem;
   color: $gray-light;
   text-align: center;
+}
 
-  > a {
-    color: inherit;
-  }
+.footer-link {
+  color: inherit;
 }
 
 .lead,
-blockquote {
+.blockquote {
   @include media-breakpoint-down(xs) {
     font-size: 1rem;
   }
@@ -191,12 +190,6 @@ blockquote {
 //------------------------------
 // Blog posts
 //------------------------------
-
-.page,
-.post {
-  margin-right: auto;
-  margin-left: auto;
-}
 
 .picture {
   display: inline-block;
@@ -250,10 +243,10 @@ figcaption {
   margin-bottom: $spacer;
   text-align: center;
   background-color: $brand-primary;
+}
 
-  .lead {
-    font-weight: normal; // Prevent loading extra font on homepage
-  }
+.subscribe-lead {
+  font-weight: normal; // Avoid loading extra font on homepage
 }
 
 .email {
