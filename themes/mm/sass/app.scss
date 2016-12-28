@@ -227,10 +227,6 @@ figcaption {
 // Homepage
 //------------------------------
 
-.home-intro {
-  text-align: center;
-}
-
 .subscribe {
   padding: ($spacer-y * 2.1) 0 ($spacer-y * 2.4);
   margin-top: $spacer * 3;
@@ -258,7 +254,7 @@ figcaption {
   border-bottom: 1px solid $gray-light;
 }
 
-.article-summary > p:last-of-type::after {
+.summary-article > p:last-of-type::after {
   content: "…";
 }
 
