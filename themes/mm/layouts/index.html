@@ -1,6 +1,6 @@
 {{ partial "header.html" . }}
 
-<div id="dope" class="dope">
+<main id="dope" class="dope">
 
   <div class="container">
     <h1>{{ .Site.Params.subtitle }}</h1>
@@ -23,9 +23,8 @@
         {{ range where .Data.Pages "Section" "blog" | first 10 }}
           {{ .Render "summary"}}
         {{ end }}
-        <div class="all-posts">
-          <a href="/blog.html">See all posts ›</a>
-        </div>
+        <hr>
+        <a href="/blog.html">See all posts ›</a>
       </section>
       <aside class="col col-lg-4">
         <h3>Topics</h3>
@@ -36,6 +35,6 @@
     </div>
   </div>
 
-</div> <!-- /#dope -->
+</main> <!-- /#dope -->
 
 {{ partial "footer.html" . }}

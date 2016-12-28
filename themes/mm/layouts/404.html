@@ -1,27 +1,21 @@
 {{ partial "header.html" . }}
 
-<div id="dope" class="dope container">
+<main id="dope" class="dope container">
 
-  <div class="row">
-    <section class="system col">
-      <h1>404: Page Not Found</h1>
-      <p class="lead">Can't find the page you wanted &hellip; Woops.</p>
-    </section>
-  </div> <!-- /.row -->
+  <h1>404: Page Not Found</h1>
+  <p class="lead text-center">Can't find the page you wanted&hellip; Woops.</p>
 
   <hr/>
 
-  <section class="container summaries">
-    <h2>Instead, how about reading a post?</h2>
+  <h2>How about a post instead?</h2>
 
-    {{ range where .Data.Pages "Section" "blog" | first 5 }}
-    <article class="category-item">
-      <a href="{{ .RelPermalink }}" title="{{ .Title }}">{{ .Title }}</a>
-      <span class="readtime">{{ .ReadingTime }} min read</span>
-    </article>
-    {{ end }}
-  </section>
+  {{ range where .Data.Pages "Section" "blog" | first 6 }}
+  <article class="category-item">
+     <a href="{{ .RelPermalink }}" title="{{ .Title }}">{{ .Title }}</a>
+    <span class="readtime">{{ .ReadingTime }} min read</span>
+  </article>
+  {{ end }}
 
-</div> <!-- /#dope -->
+</main> <!-- /#dope -->
 
 {{ partial "footer.html" . }}
