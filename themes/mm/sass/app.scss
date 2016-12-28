@@ -1,10 +1,4 @@
-//------------------------------
-// Imports
-//------------------------------
-
-@import "fonts";
-@import "variables";
-@import "bootstrap4/bootstrap";
+@import "imports";
 
 //------------------------------
 // Global Theme
@@ -241,7 +235,6 @@ figcaption {
   padding: ($spacer-y * 2.1) 0 ($spacer-y * 2.4);
   margin-top: $spacer * 3;
   margin-bottom: $spacer;
-  text-align: center;
   background-color: $brand-primary;
 
   @include media-breakpoint-down(sm) {
@@ -251,6 +244,10 @@ figcaption {
 
 .subscribe-lead {
   font-weight: normal; // Avoid loading extra font on homepage
+}
+
+.subscribe-form {
+  max-width: 26rem;
 }
 
 .email {
