@@ -11,7 +11,7 @@ description = ""
 
 # About Max Milton
 
-<blockquote class="blockquote blockquote-plain bg-primary text-white">
+<blockquote class="blockquote-plain bg-primary text-white">
   &ldquo;Productivity is never an accident. It is always the result of a commitment to excellence, intelligent planning, and focused effort.&rdquo;
   <footer class="blockquote-footer blockquote-plain-footer">Paul J. Meyer</footer>
 </blockquote>
