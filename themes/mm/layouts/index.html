@@ -27,6 +27,12 @@
           <a href="/blog.html">See all posts ›</a>
         </div>
       </section>
+      <aside class="col col-lg-4">
+        <h3>Topics</h3>
+        {{ range $name, $taxonomy := .Site.Taxonomies.tags }}
+          <a href="{{ "/tags/" | relLangURL }}{{ $name | urlize }}" class="badge badge-default">{{ $name }}</a>
+        {{ end }}
+      </aside>
     </div>
   </div>
 
