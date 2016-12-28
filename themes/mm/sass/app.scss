@@ -151,6 +151,10 @@ kbd {
   white-space: nowrap;
 }
 
+hr {
+  margin-top: $spacer * 2;
+}
+
 .footer {
   margin: 2rem 0 3rem;
   color: $gray-light;
@@ -177,8 +181,10 @@ kbd {
 }
 
 .readtime {
-  margin-left: 1rem;
+  margin-left: $spacer;
+  font-size: .8rem;
   color: $gray-light;
+  vertical-align: middle;
 }
 
 //------------------------------
@@ -260,10 +266,4 @@ figcaption {
 
 .more {
   margin-top: $spacer;
-}
-
-.all-posts {
-  padding-top: $spacer;
-  margin-top: $spacer;
-  border-top: 1px solid $gray-light;
 }
