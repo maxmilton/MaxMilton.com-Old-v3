@@ -34,7 +34,11 @@ source build.sh
 
 # Upload deploy file to the production server
 echo -e "\nUploading package to $REMOTE_SSH server...\n"
-scp "$DEPLOY_FILE" "$REMOTE_SSH":~/
+upload() {
+  rsync --partial --progress --rsh=ssh "$DEPLOY_FILE" "$PROD_SERVER_SSH":~/
+}
+# Try uploading 3 times in case it fails
+upload || upload || upload || exit 2
 
 # Execute the follow commands on the remote server
 echo -e "\nExecuting commands on $REMOTE_SSH server...\n"
