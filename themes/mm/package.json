@@ -24,8 +24,8 @@
   },
   "homepage": "https://github.com/MaxMilton/MaxMilton.com#readme",
   "devDependencies": {
-    "autoprefixer": "^6.6.0",
-    "browser-sync": "^2.18.5",
+    "autoprefixer": "^6.6.1",
+    "browser-sync": "^2.18.6",
     "del": "^2.2.2",
     "gulp": "^3.9.1",
     "gulp-clean-css": "^2.3.2",
