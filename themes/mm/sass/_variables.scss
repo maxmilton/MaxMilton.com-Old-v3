@@ -3,6 +3,8 @@
 //------------------------------
 // NOTE: Put non-bootstrap variables here
 
+$font-size-root:          22px;
+
 // Sizes for larger link clickable area
 $link-area-x:             1rem;
 $link-area-y:             1rem;
@@ -44,8 +46,6 @@ $container-max-widths: (
 $font-family-sans-serif:  "Overpass", system-ui, sans-serif;
 $font-family-serif:       serif;
 $font-family-monospace:   monospace;
-
-$font-size-root:          22px;
 
 $headings-font-weight:    600;
 $headings-line-height:    1.7;

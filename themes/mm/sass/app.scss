@@ -5,6 +5,8 @@
 //------------------------------
 
 html {
+  font-size: $font-size-root;
+
   @include media-breakpoint-down(xs) {
     font-size: round($font-size-root / 1.12);
   }
