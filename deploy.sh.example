@@ -37,7 +37,7 @@ echo -e "\nUploading package to $REMOTE_SSH server...\n"
 upload() {
   rsync --partial --progress --rsh=ssh "$DEPLOY_FILE" "$PROD_SERVER_SSH":~/
 }
-# Try uploading 3 times in case it fails
+# Try uploading up to 3 times in case of errors
 upload || upload || upload || exit 2
 
 # Execute the follow commands on the remote server
