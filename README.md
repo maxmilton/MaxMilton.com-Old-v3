@@ -42,13 +42,16 @@ Use British English spelling and grammar. Follow the [Guardian and Observer styl
 
 * Post title (h1): Title Case
 * Post sub headings (h2–h6): Sentence case
-* Common words: ecommerce, ebook, internet, website
+* Common word spelling: ecommerce, ebook, internet, website
 * Use em dashes without spaces either side—except in headings
 * Use **bold** or _italic_, but not **_together_**
 * Posts must have a unique description and one or more topic tags
 * Each image must have an alt title
 
 ## Changelog
+
+**v1.15.2**
+:  2017-01-14 — Better homepage subscribe implementation, new SCSS file import strategy, improve deployment script upload robustness, upgrade Bootstrap and NPM packages
 
 **v1.15.1**
 :  2016-12-27 — Fix font on buttons and inputs, fix link click area size and nav links, adjust for better spacing on small breakpoints
