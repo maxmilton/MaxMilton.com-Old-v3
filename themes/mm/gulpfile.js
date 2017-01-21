@@ -144,9 +144,9 @@ gulp.task('img:build', ['img'], function() {
   return gulp.src([`${paths.img.dest}/*.{jpg,png,gif,svg}`])
     // Optimise images
     .pipe(imagemin([
-      // imagemin.gifsicle(), // Uncomment for gif support
+      imagemin.gifsicle(),
       imagemin.optipng(),
-      // imagemin.svgo(),     // Uncomment for svg support
+      imagemin.svgo(),
       mozjpeg(),
     ]))
     .pipe(gulp.dest(paths.img.dest));
