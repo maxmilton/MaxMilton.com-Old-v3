@@ -41,7 +41,7 @@ I also run a number of ecommerce properties via my company <a href="https://wear
 ## Contact me
 
 <div class="row">
-  <form class="col" action="https://docs.google.com/a/wearegenki.com/forms/d/1viSY2eAr1kZ9cIf7vTwQpWaB4Zoix7xPnsbhTUcZrTw/formResponse" method="POST" target="_self" target="_blank">
+  <form class="col" action="https://docs.google.com/a/wearegenki.com/forms/d/1viSY2eAr1kZ9cIf7vTwQpWaB4Zoix7xPnsbhTUcZrTw/formResponse" method="POST" target="_blank">
     <fieldset class="form-group">
       <label for="name">Name</label>
       <input type="text" class="form-control" id="name" name="entry.662797564" placeholder="Name">
