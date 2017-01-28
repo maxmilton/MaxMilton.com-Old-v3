@@ -1,6 +1,6 @@
 {
   "name": "mm-hugo-theme",
-  "version": "1.10.0",
+  "version": "1.16.0",
   "description": "Hugo theme for maxmilton.com",
   "main": "gulpfile.js",
   "scripts": {
