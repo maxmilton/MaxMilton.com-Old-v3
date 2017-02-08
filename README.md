@@ -22,7 +22,7 @@ Install prerequisites then run `gulp` to start a local dev server.
 4. `$ npm install`
 5. `$ gulp`
 
-### For Production
+### For production
 
 **Manual or test build:**
 
