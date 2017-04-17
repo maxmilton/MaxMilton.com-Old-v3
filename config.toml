@@ -11,13 +11,13 @@ disableHugoGeneratorInject = true
 rssuri = "rss.xml"
 googleAnalytics = "UA-64694403-1"
 
+[outputs]
+home = ["html", "rss", "json"]
+page = ["html", "json"]
+
 [author]
   name = "Max Milton"
   email = "max@wearegenki.com"
-
-[blackfriday]
-  # FIXME: Enable once github issue is fixed https://github.com/spf13/hugo/issues/2424
-  # hrefTargetBlank = true
 
 [params]
   subtitle = "DevOps Engineer & Life Hacker."
