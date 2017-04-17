@@ -15,14 +15,14 @@ To make blood sugar conversion from mmol/L to mg/dL easy, I've put together a bl
 -----
 
 <div class="row mb-2 justify-content-center">
-  <div class="col col-md-3">
+  <div class="col-5 col-md-3">
     <label for="mmoll" class="lead">mmol/L</label>
     <input type="number" name="mmoll" id="mmoll" class="form-control form-control-lg" step="0.1" min="0" value="5">
   </div>
   <div style="font-size: 2rem !important; padding: 1rem;">
     =
   </div>
-  <div class="col col-md-3">
+  <div class="col-5 col-md-3">
     <label for="mgdl" class="lead">mg/dL</label>
     <input type="number" name="mgdl" id="mgdl" class="form-control form-control-lg" min="0" value="90">
   </div>
