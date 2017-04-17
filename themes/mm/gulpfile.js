@@ -26,8 +26,8 @@ const paths = {
     html: '../../public/**/*.html',
   },
   sass: {
-    src: './sass/**/*.scss',
-    main: './sass/app.scss',
+    src: './scss/**/*.scss',
+    main: './scss/app.scss',
     dest: '../../public/css/',
     static: '../../public/css/app.css',
   },

@@ -230,7 +230,7 @@ figcaption {
 //------------------------------
 
 .subscribe {
-  padding: ($spacer-y * 2.1) 0 ($spacer-y * 2.4);
+  padding: ($spacer * 2.1) 0 ($spacer * 2.4);
   margin-top: $spacer * 3;
   margin-bottom: $spacer;
   background-color: $brand-primary;
@@ -249,7 +249,7 @@ figcaption {
 }
 
 .email {
-  border-color: $btn-secondary-border;
+  border-color: $btn-secondary-border-color;
 }
 
 .summary-h2 {
