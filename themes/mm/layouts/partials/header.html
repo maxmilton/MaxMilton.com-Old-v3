@@ -40,6 +40,12 @@
   </script>
   <script async src='https://www.google-analytics.com/analytics.js'></script>
 
+  <!-- Sentry -->
+  <script src="https://cdn.ravenjs.com/3.14.2/raven.min.js"></script>
+  <script>
+    Raven.config('https://f4f71b30c82946db997d9283242f20f6@errors.wearegenki.com/10').install()
+  </script>
+
   <meta name="author" content="{{ .Site.Author.name }}">
   <meta name="robots" content="noodp">
 </head>
