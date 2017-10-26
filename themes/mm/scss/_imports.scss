@@ -1,7 +1,9 @@
 @import "fonts";
 @import "variables";
+@import "bootstrap4/functions";
 @import "bootstrap4/variables";
 @import "bootstrap4/mixins";
+@import "bootstrap4/root";
 // @import "bootstrap4/print";
 @import "bootstrap4/reboot";
 @import "bootstrap4/type";
@@ -27,7 +29,6 @@
 // @import "bootstrap4/progress";
 // @import "bootstrap4/media";
 // @import "bootstrap4/list-group";
-@import "bootstrap4/responsive-embed";
 // @import "bootstrap4/close";
 // @import "bootstrap4/modal";
 // @import "bootstrap4/tooltip";

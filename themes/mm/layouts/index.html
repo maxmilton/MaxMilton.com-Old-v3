@@ -29,7 +29,7 @@
       <aside class="col-12 col-lg-4">
         <h3>Topics</h3>
         {{ range $name, $taxonomy := .Site.Taxonomies.tags }}
-          <a href="{{ "/tags/" | relLangURL }}{{ $name | urlize }}" class="badge badge-default">{{ $name }}</a>
+          <a href="{{ "/tags/" | relLangURL }}{{ $name | urlize }}" class="badge badge-secondary">{{ $name }}</a>
         {{ end }}
       </aside>
     </div>
