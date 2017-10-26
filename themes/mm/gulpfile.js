@@ -1,10 +1,8 @@
-/* eslint-disable no-console */
-/* eslint-disable comma-dangle */
-/* eslint-disable no-multi-spaces */
+/* eslint-disable no-multi-spaces, comma-dangle, function-paren-newline, no-console */
 const browserSync = require('browser-sync').create();
 const cleanCSS    = require('gulp-clean-css');
 const del         = require('del');
-const exec        = require('child_process').exec;
+const exec        = require('child_process').exec; // eslint-disable-line prefer-destructuring
 const flexFixes   = require('postcss-flexbugs-fixes');
 const gulp        = require('gulp');
 const htmlmin     = require('gulp-htmlmin');
@@ -18,7 +16,6 @@ const rev         = require('gulp-rev');
 const sass        = require('gulp-sass');
 const sourcemaps  = require('gulp-sourcemaps');
 const uncss       = require('gulp-uncss');
-/* eslint-enable no-multi-spaces */
 
 const paths = {
   public: {
@@ -92,7 +89,7 @@ gulp.task('hugo:build', ['css:build', 'img:build'], (cb) => {
 gulp.task('css', () =>
   gulp.src(paths.sass.main)
     .pipe(sourcemaps.init())
-      .pipe(sass().on('error', sass.logError))
+      .pipe(sass().on('error', sass.logError)) // eslint-disable-line indent
     .pipe(sourcemaps.write(paths.maps))
     .pipe(gulp.dest(paths.sass.dest))
     .pipe(browserSync.stream({ match: '**/*.css' }))
