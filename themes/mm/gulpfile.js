@@ -100,7 +100,10 @@ gulp.task('css', () =>
 
 gulp.task('css:build', ['css', 'hugo', 'clean:rev'], () =>
   gulp.src(paths.sass.static)
-    .pipe(uncss({ html: [paths.public.html] }))
+    .pipe(uncss({
+      html: [paths.public.html],
+      timeout: 2000,
+    }))
     .pipe(postcss([
       flexFixes(),
       prefixer({
@@ -110,6 +113,7 @@ gulp.task('css:build', ['css', 'hugo', 'clean:rev'], () =>
     ]))
     .pipe(cleanCSS({
       keepSpecialComments: 0,
+      level: 2,
     }))
     .pipe(rev())
     .pipe(gulp.dest(paths.sass.dest))
