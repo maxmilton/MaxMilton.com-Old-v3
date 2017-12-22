@@ -1,5 +1,10 @@
 # MaxMilton.com Changelog
 
+TODO: Update to new changelog format: http://keepachangelog.com/en/1.0.0/
+
+**v1.17.0**
+:  2017-12-23 — Move current master to branch `legacy-2017`, update dependencies
+
 **v1.16.0**
 :  2017-01-29 — Add ESLint config, refactor gulpfile, move changelog into its own file (it was getting a bit big!), move writing style guide into its own file, upgrade Bootstrap and NPM packages
 
