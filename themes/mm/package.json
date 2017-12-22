@@ -1,6 +1,6 @@
 {
   "name": "mm-hugo-theme",
-  "version": "1.16.0",
+  "version": "1.17.0",
   "description": "Hugo theme for maxmilton.com",
   "scripts": {
     "build": "echo \"Run build.sh to build this!\" && exit 1",
