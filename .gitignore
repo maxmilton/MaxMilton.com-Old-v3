@@ -1,20 +1,13 @@
 # Node
-node_modules
-npm-debug.log
+node_modules/
+dist/
+test/unit/coverage/
+package-lock.json*
+*.log*
+.stylelintcache
+.cache
+
 
 # Hugo
-content/drafts/*
+content/drafts/
 public
-
-# Compiled assets
-rev-manifest.json
-app.js
-app-*.js
-app.css
-app-*.css
-*.map
-deployme.tar.xz
-
-# Misc.
-deploy.sh
-.tern-project
