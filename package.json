@@ -7,20 +7,24 @@
   "private": true,
   "license": "Apache-2.0",
   "scripts": {
-    "start": "npm run dev",
-    "dev": "NODE_ENV='development' rollup -c -w",
-    "test": "npm run lint && npm run unit",
-    "pretest": "npm run build",
-    "build": "rm -rf lib/* && npm run build:css && npm run build:js",
-    "build:css": "postcss -o lib/index.css src/css/main.css",
-    "build:js": "NODE_ENV='production' rollup -c",
-    "lint": "npm run lint:css && npm run lint:js",
-    "lint:css": "stylelint \"src/**/*.marko\" \"src/**/*.css\"",
-    "lint:js": "eslint --ext .js,.marko src test",
-    "unit": "jest --config test/unit/jest.conf.js --coverage"
+    "help": "lasso --help",
+    "helpm": "marko --help",
+    "dev-clean": "rm -rf ./.cache/* ./out/*",
+    "dev-copy": "cp src/index.html out/index.html",
+    "dev-lasso-dev": "lasso src/main.css --main src/main.js --plugins lasso-marko --plugins lasso-postcss --inject-into out/index.html --output-dir out/static/ --development",
+    "dev-lasso": "NODE_ENV=production lasso src/main.css --main src/main.js --plugins lasso-marko --plugins lasso-postcss --inject-into out/index.html --output-dir out/static/ --production",
+    "dev-minify": "###(cd out/static && find . -type f -name '*.js' -exec uglifyjs --compress --mangle -o \"{}\" -- \"{}\" \\;)",
+    "dev-gzip": "(cd out/static && find . -type f ! -name '*.gz' -exec gzip --best \"{}\" \\;)",
+    "dev-serve": "NODE_ENV=production http-server ./out/ --gzip --cors",
+    "dev-build-dev": "npm run dev-copy && npm run dev-lasso-dev && npm run dev-serve",
+    "dev-build": "npm run dev-clean && npm run dev-copy && npm run dev-lasso && npm run dev-minify && npm run dev-gzip && npm run dev-serve",
+    "serve": "NODE_ENV=production node server.js"
   },
-  "peerDependencies": {
-    "codemirror": "^5.33.0",
+  "dependencies": {
+    "@lasso/marko-taglib": "^1.0.8",
+    "@wearegenki/ui": "^0.1.0",
+    "lasso": "^3.1.0",
+    "lasso-marko": "^2.4.0",
     "marko": "^4.7.4"
   },
   "devDependencies": {
@@ -33,6 +37,9 @@
     "eslint-plugin-html": "^4.0.1",
     "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-jest": "^21.5.0",
+    "http-server": "^0.10.0",
+    "lasso-cli": "^2.0.11",
+    "lasso-postcss": "^0.3.0",
     "postcss": "^6.0.14",
     "postcss-at-rules-variables": "^0.1.2",
     "postcss-calc": "^6.0.1",
@@ -48,7 +55,8 @@
     "stylelint": "^8.4.0",
     "stylelint-config-standard": "^18.0.0",
     "stylelint-order": "^0.8.0",
-    "stylelint-processor-html": "^1.0.0"
+    "stylelint-processor-html": "^1.0.0",
+    "uglify-es": "^3.2.2"
   },
   "engines": {
     "node": ">= 9.0.0",
