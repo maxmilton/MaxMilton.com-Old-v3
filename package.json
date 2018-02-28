@@ -20,6 +20,7 @@
     "hyperapp": "^1.1.2"
   },
   "devDependencies": {
+    "browser-sync": "^2.23.6",
     "eslint": "^4.13.1",
     "postcss": "^6.0.14",
     "rollup": "^0.56.3",

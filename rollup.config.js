@@ -1,8 +1,11 @@
+import browserSync from 'browser-sync';
 import buble from 'rollup-plugin-buble';
 import commonjs from 'rollup-plugin-commonjs';
 import resolve from 'rollup-plugin-node-resolve';
 import postcss from 'rollup-plugin-postcss';
 import uglify from 'rollup-plugin-uglify';
+
+const bs = browserSync.create();
 
 // const isProduction = !process.env.ROLLUP_WATCH;
 const isProduction = process.env.NODE_ENV === 'production';
@@ -33,12 +36,34 @@ const uglifyOpts = {
   warnings: !!process.env.DEBUG,
 };
 
+// FIXME: Implement hot reloading / change injection: https://browsersync.io/docs/options
+function browsersync() {
+  if (!bs.active) {
+    bs.init({
+      server: 'dist',
+      // files: 'dist',
+      // files: 'src',
+      port: 1234,
+      open: false,
+      ghostMode: false,
+      logConnections: true,
+    });
+  }
+
+  return {
+    name: 'browsersync',
+    onwrite: function (bundle) {
+      bs.reload(bundle.dest);
+    }
+  }
+}
+
 export default {
   input: 'src/index.js',
   output: {
     file: 'dist/mm.js',
     format: 'iife',
-    sourcemap: true,
+    sourcemap: isProduction,
     interop: false, // saves bytes with externs
   },
   plugins: [
@@ -52,6 +77,13 @@ export default {
       extensions: ['.js', '.jsx', '.json', '.css'],
     }),
     buble({ jsx: 'h' }),
+
+    // PRODUCTION
     isProduction && uglify(uglifyOpts),
+    // TODO: Add purgecss
+    // TODO: Add clean-css
+
+    // DEVELOPMENT
+    !isProduction && browsersync(),
   ],
 };

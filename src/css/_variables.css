@@ -5,4 +5,8 @@
   /* Fluid font size */
   --use-font-size-fluid: true;
   --container-width-max: 60rem; /* recommended when using --use-font-size-fluid */
+
+  /* Mini navbar */
+  --navbar-font-colour: #fff;
+  --navbar-bg-colour: #000;
 }
