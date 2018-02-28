@@ -5,9 +5,9 @@ import ViewPostsList from './views/ViewPostsList';
 import ViewAbout from './views/ViewAbout';
 import ViewError from './views/ViewError';
 
-// TODO: Figure out how to do dynamic imports/routes
-// const ViewAbout = import('./views/ViewAbout');
-// const ViewError = import('./views/ViewError');
+// TODO: Figure out how to do dynamic imports/routes (on both rollup and hyperapp sides)
+// const ViewAbout = () => import('./views/ViewAbout');
+// const ViewError = () => import('./views/ViewError');
 
 // export default state => (
 export default (state, actions) => (

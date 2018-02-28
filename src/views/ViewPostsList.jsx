@@ -8,8 +8,8 @@ export default (state, actions) => (attributes, children) => (
     <h1>All Posts</h1>
     <p>Loremipsum.</p>
 
-    <p>{state.count}</p>
-    <button class="btn" onclick={() => actions.down(1)}>-</button>
-    <button class="btn" onclick={() => actions.up(1)}>+</button>
+    <p>{state.__count}</p>
+    <button class="btn" onclick={() => actions.__down(1)}>-</button>
+    <button class="btn" onclick={() => actions.__up(1)}>+</button>
   </div>
 );

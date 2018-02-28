@@ -5,14 +5,14 @@
   "description": "The personal website of Max Milton",
   "repository": "https://github.com/MaxMilton/MaxMilton.com",
   "author": "Max Milton <max@wearegenki.com>",
-  "main": "src/index.ts",
   "scripts": {
     "start": "npm run dev",
     "clean": "rm -rf dist && mkdir dist",
     "static": "cp static/* dist/",
     "dev": "NODE_ENV=development rollup -c --watch",
     "prebuild": "npm run clean && npm run static",
-    "build": "NODE_ENV=production rollup -c"
+    "build": "NODE_ENV=production rollup -c",
+    "serve": "serve -n -o -l -s dist"
   },
   "dependencies": {
     "@hyperapp/router": "^0.4.1",
@@ -21,6 +21,7 @@
   },
   "devDependencies": {
     "browser-sync": "^2.23.6",
+    "connect-history-api-fallback": "^1.5.0",
     "eslint": "^4.13.1",
     "postcss": "^6.0.14",
     "rollup": "^0.56.3",

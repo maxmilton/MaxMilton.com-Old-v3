@@ -1,8 +1,9 @@
 import browserSync from 'browser-sync';
 import buble from 'rollup-plugin-buble';
 import commonjs from 'rollup-plugin-commonjs';
-import resolve from 'rollup-plugin-node-resolve';
+import historyApiFallback from 'connect-history-api-fallback';
 import postcss from 'rollup-plugin-postcss';
+import resolve from 'rollup-plugin-node-resolve';
 import uglify from 'rollup-plugin-uglify';
 
 const bs = browserSync.create();
@@ -22,8 +23,9 @@ const uglifyOpts = {
   },
   mangle: {
     properties: {
-      // Breaks: children, pathname, previous
-      regex: /^(__.*|state|actions|attributes|nodeName|isExact|subscribe|detail|params|render)$/,
+      // Bad patterns: children, pathname, previous
+      // ?? nodeName
+      regex: /^(__.*|state|actions|attributes|isExact|exact|subscribe|detail|params|render|oncreate|onupdate|onremove|ondestroy)$/,
       // debug: 'XX',
     },
   },
@@ -40,9 +42,11 @@ const uglifyOpts = {
 function browsersync() {
   if (!bs.active) {
     bs.init({
-      server: 'dist',
-      // files: 'dist',
-      // files: 'src',
+      server: {
+        baseDir: 'dist',
+        directory: true,
+        middleware: [historyApiFallback()],
+      },
       port: 1234,
       open: false,
       ghostMode: false,
@@ -60,8 +64,11 @@ function browsersync() {
 
 export default {
   input: 'src/index.js',
+  experimentalCodeSplitting: true,
+  experimentalDynamicImport: true,
   output: {
     file: 'dist/mm.js',
+    name: 'mm',
     format: 'iife',
     sourcemap: isProduction,
     interop: false, // saves bytes with externs
@@ -82,6 +89,7 @@ export default {
     isProduction && uglify(uglifyOpts),
     // TODO: Add purgecss
     // TODO: Add clean-css
+    // TODO: Add react-snap (as a package.json script NOT here)
 
     // DEVELOPMENT
     !isProduction && browsersync(),
