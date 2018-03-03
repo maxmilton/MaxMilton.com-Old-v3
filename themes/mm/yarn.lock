@@ -271,7 +271,7 @@ attempt-x@^1.1.0, attempt-x@^1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/attempt-x/-/attempt-x-1.1.1.tgz#fba64e96ce03c3e0bd92c92622061c4df387cb76"
 
-autoprefixer@^7.2.3:
+autoprefixer@7.2.3:
   version "7.2.3"
   resolved "https://registry.yarnpkg.com/autoprefixer/-/autoprefixer-7.2.3.tgz#c2841e38b7940c2d0a9bbffd72c75f33637854f8"
   dependencies:
@@ -488,7 +488,7 @@ browser-sync-ui@v1.0.1:
     socket.io-client "2.0.4"
     stream-throttle "^0.1.3"
 
-browser-sync@^2.21.0:
+browser-sync@2.21.0:
   version "2.21.0"
   resolved "https://registry.yarnpkg.com/browser-sync/-/browser-sync-2.21.0.tgz#91cde3a8452f22f355ebe717ca1b3c1dbf9ca096"
   dependencies:
@@ -1169,6 +1169,17 @@ define-property@^1.0.0:
   dependencies:
     is-descriptor "^1.0.0"
 
+del@3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/del/-/del-3.0.0.tgz#53ecf699ffcbcb39637691ab13baf160819766e5"
+  dependencies:
+    globby "^6.1.0"
+    is-path-cwd "^1.0.0"
+    is-path-in-cwd "^1.0.0"
+    p-map "^1.1.1"
+    pify "^3.0.0"
+    rimraf "^2.2.8"
+
 del@^2.0.2:
   version "2.2.2"
   resolved "https://registry.yarnpkg.com/del/-/del-2.2.2.tgz#c12c981d067846c84bcaf862cff930d907ffd1a8"
@@ -1179,17 +1190,6 @@ del@^2.0.2:
     object-assign "^4.0.1"
     pify "^2.0.0"
     pinkie-promise "^2.0.0"
-    rimraf "^2.2.8"
-
-del@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/del/-/del-3.0.0.tgz#53ecf699ffcbcb39637691ab13baf160819766e5"
-  dependencies:
-    globby "^6.1.0"
-    is-path-cwd "^1.0.0"
-    is-path-in-cwd "^1.0.0"
-    p-map "^1.1.1"
-    pify "^3.0.0"
     rimraf "^2.2.8"
 
 delayed-stream@~1.0.0:
@@ -1505,7 +1505,7 @@ escape-string-regexp@^1.0.2, escape-string-regexp@^1.0.5:
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/escape-string-regexp/-/escape-string-regexp-1.0.5.tgz#1b61c0562190a8dff6ae3bb2cf0200ca130b86d4"
 
-eslint-config-airbnb-base@^12.1.0:
+eslint-config-airbnb-base@12.1.0:
   version "12.1.0"
   resolved "https://registry.yarnpkg.com/eslint-config-airbnb-base/-/eslint-config-airbnb-base-12.1.0.tgz#386441e54a12ccd957b0a92564a4bafebd747944"
   dependencies:
@@ -1525,7 +1525,7 @@ eslint-module-utils@^2.1.1:
     debug "^2.6.8"
     pkg-dir "^1.0.0"
 
-eslint-plugin-import@^2.8.0:
+eslint-plugin-import@2.8.0:
   version "2.8.0"
   resolved "https://registry.yarnpkg.com/eslint-plugin-import/-/eslint-plugin-import-2.8.0.tgz#fa1b6ef31fcb3c501c09859c1b86f1fc5b986894"
   dependencies:
@@ -1551,7 +1551,7 @@ eslint-scope@^3.7.1:
     esrecurse "^4.1.0"
     estraverse "^4.1.1"
 
-eslint@^4.13.1:
+eslint@4.13.1:
   version "4.13.1"
   resolved "https://registry.yarnpkg.com/eslint/-/eslint-4.13.1.tgz#0055e0014464c7eb7878caf549ef2941992b444f"
   dependencies:
@@ -2351,7 +2351,7 @@ graceful-fs@~1.2.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/graceful-readlink/-/graceful-readlink-1.0.1.tgz#4cafad76bc62f02fa039b2f94e9a3dd3a391a725"
 
-gulp-clean-css@^3.9.0:
+gulp-clean-css@3.9.0:
   version "3.9.0"
   resolved "https://registry.yarnpkg.com/gulp-clean-css/-/gulp-clean-css-3.9.0.tgz#e43e4c8d695060f6ba08a154d8e76d0d87b1c822"
   dependencies:
@@ -2369,7 +2369,7 @@ gulp-decompress@^1.2.0:
     gulp-util "^3.0.1"
     readable-stream "^2.0.2"
 
-gulp-htmlmin@^3.0.0:
+gulp-htmlmin@3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/gulp-htmlmin/-/gulp-htmlmin-3.0.0.tgz#19ea8002d1231d6b1f18a12d20f2a66a77770fb3"
   dependencies:
@@ -2380,7 +2380,7 @@ gulp-htmlmin@^3.0.0:
     readable-stream "^2.0.2"
     tryit "^1.0.1"
 
-gulp-imagemin@^4.0.0:
+gulp-imagemin@4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/gulp-imagemin/-/gulp-imagemin-4.0.0.tgz#fa0b1939e86a8b387a09013399bf141c1e2f7196"
   dependencies:
@@ -2396,7 +2396,7 @@ gulp-imagemin@^4.0.0:
     imagemin-optipng "^5.2.1"
     imagemin-svgo "^6.0.0"
 
-gulp-postcss@^7.0.0:
+gulp-postcss@7.0.0:
   version "7.0.0"
   resolved "https://registry.yarnpkg.com/gulp-postcss/-/gulp-postcss-7.0.0.tgz#cfb62a19fa947f8be67ce9ecae89ceb959f0cf93"
   dependencies:
@@ -2409,7 +2409,7 @@ gulp-rename@^1.2.0:
   version "1.2.2"
   resolved "https://registry.yarnpkg.com/gulp-rename/-/gulp-rename-1.2.2.tgz#3ad4428763f05e2764dec1c67d868db275687817"
 
-gulp-responsive@^2.8.0:
+gulp-responsive@2.8.0:
   version "2.8.0"
   resolved "https://registry.yarnpkg.com/gulp-responsive/-/gulp-responsive-2.8.0.tgz#14781f435ffa00493e2adabd845c2361ace1ff0d"
   dependencies:
@@ -2422,14 +2422,14 @@ gulp-responsive@^2.8.0:
     sharp "^0.17.0"
     through2 "^2.0.0"
 
-gulp-rev-replace@^0.4.3:
+gulp-rev-replace@0.4.3:
   version "0.4.3"
   resolved "https://registry.yarnpkg.com/gulp-rev-replace/-/gulp-rev-replace-0.4.3.tgz#72b51848f5f093ad4b77b1d2411081eb78acd46e"
   dependencies:
     gulp-util "^3.0.7"
     through2 "^2.0.0"
 
-gulp-rev@^8.1.0:
+gulp-rev@8.1.0:
   version "8.1.0"
   resolved "https://registry.yarnpkg.com/gulp-rev/-/gulp-rev-8.1.0.tgz#9123f9a3f935008c66a8c768e71f8b87fb0e0cd7"
   dependencies:
@@ -2441,7 +2441,7 @@ gulp-rev@^8.1.0:
     through2 "^2.0.0"
     vinyl-file "^3.0.0"
 
-gulp-sass@^3.1.0:
+gulp-sass@3.1.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/gulp-sass/-/gulp-sass-3.1.0.tgz#53dc4b68a1f5ddfe4424ab4c247655269a8b74b7"
   dependencies:
@@ -2461,7 +2461,7 @@ gulp-sourcemaps@1.6.0:
     through2 "^2.0.0"
     vinyl "^1.0.0"
 
-gulp-sourcemaps@^2.6.2:
+gulp-sourcemaps@2.6.2:
   version "2.6.2"
   resolved "https://registry.yarnpkg.com/gulp-sourcemaps/-/gulp-sourcemaps-2.6.2.tgz#4f41c72b35a7ea06b666d2e3f57917e2c0e71c4e"
   dependencies:
@@ -2477,7 +2477,7 @@ gulp-sourcemaps@^2.6.2:
     strip-bom-string "1.X"
     through2 "2.X"
 
-gulp-uncss@^1.0.6:
+gulp-uncss@1.0.6:
   version "1.0.6"
   resolved "https://registry.yarnpkg.com/gulp-uncss/-/gulp-uncss-1.0.6.tgz#7906b642c46da9787c17595e8d519821d1e0a91b"
   dependencies:
@@ -2508,7 +2508,7 @@ gulp-util@3.0.8, gulp-util@^3.0, gulp-util@^3.0.0, gulp-util@^3.0.1, gulp-util@^
     through2 "^2.0.0"
     vinyl "^0.5.0"
 
-gulp@^3.9.1:
+gulp@3.9.1:
   version "3.9.1"
   resolved "https://registry.yarnpkg.com/gulp/-/gulp-3.9.1.tgz#571ce45928dd40af6514fc4011866016c13845b4"
   dependencies:
@@ -2792,7 +2792,7 @@ imagemin-jpegtran@^5.0.2:
     is-jpg "^1.0.0"
     jpegtran-bin "^3.0.0"
 
-imagemin-mozjpeg@^6.0.0:
+imagemin-mozjpeg@6.0.0:
   version "6.0.0"
   resolved "https://registry.yarnpkg.com/imagemin-mozjpeg/-/imagemin-mozjpeg-6.0.0.tgz#71a32a457aa1b26117a68eeef2d9b190c2e5091e"
   dependencies:
@@ -4567,7 +4567,7 @@ posix-character-classes@^0.1.0:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/posix-character-classes/-/posix-character-classes-0.1.1.tgz#01eac0fe3b5af71a2a6c02feabb8c1fef7e00eab"
 
-postcss-flexbugs-fixes@^3.2.0:
+postcss-flexbugs-fixes@3.2.0:
   version "3.2.0"
   resolved "https://registry.yarnpkg.com/postcss-flexbugs-fixes/-/postcss-flexbugs-fixes-3.2.0.tgz#9b8b932c53f9cf13ba0f61875303e447c33dcc51"
   dependencies:
