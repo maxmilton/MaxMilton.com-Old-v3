@@ -278,7 +278,7 @@ async@1.5.2, async@^1.5.2:
   version "1.5.2"
   resolved "https://registry.yarnpkg.com/async/-/async-1.5.2.tgz#ec6a61ae56480c0c3cb241c95618e20892f9672a"
 
-async@^2.0.1:
+async@^2.0.1, async@^2.6.0:
   version "2.6.0"
   resolved "https://registry.yarnpkg.com/async/-/async-2.6.0.tgz#61a29abb6fcc026fea77e56d1c6ec53a795951f4"
   dependencies:
@@ -2414,18 +2414,21 @@ gulp-rename@^1.2.0:
   version "1.2.2"
   resolved "https://registry.yarnpkg.com/gulp-rename/-/gulp-rename-1.2.2.tgz#3ad4428763f05e2764dec1c67d868db275687817"
 
-gulp-responsive@2.8.0:
-  version "2.8.0"
-  resolved "https://registry.yarnpkg.com/gulp-responsive/-/gulp-responsive-2.8.0.tgz#14781f435ffa00493e2adabd845c2361ace1ff0d"
+gulp-responsive@2.9.0:
+  version "2.9.0"
+  resolved "https://registry.yarnpkg.com/gulp-responsive/-/gulp-responsive-2.9.0.tgz#1834ff59d66fa24b3f73617397e8d783cf1a6f47"
   dependencies:
-    async "^2.0.1"
-    gulp-util "^3.0.1"
-    lodash "^4.5.0"
-    minimatch "^3.0.0"
+    async "^2.6.0"
+    chalk "^2.3.0"
+    fancy-log "^1.3.2"
+    lodash "^4.17.4"
+    minimatch "^3.0.4"
+    plugin-error "^0.1.2"
     plur "^2.1.2"
-    rename "^1.0.3"
+    rename "^1.0.4"
     sharp "^0.17.0"
-    through2 "^2.0.0"
+    through2 "^2.0.3"
+    vinyl "^2.1.0"
 
 gulp-rev-replace@0.4.3:
   version "0.4.3"
@@ -3644,7 +3647,7 @@ lodash@^3.10.1:
   version "3.10.1"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-3.10.1.tgz#5bf45e8e49ba4189e17d482789dfd15bd140b7b6"
 
-lodash@^4.0.0, lodash@^4.14.0, lodash@^4.17.4, lodash@^4.3.0, lodash@^4.5.0, lodash@~4.17.4:
+lodash@^4.0.0, lodash@^4.14.0, lodash@^4.17.4, lodash@^4.3.0, lodash@~4.17.4:
   version "4.17.4"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.4.tgz#78203a4d1c328ae1d86dca6460e369b57f4055ae"
 
@@ -4825,7 +4828,7 @@ remove-trailing-separator@^1.0.1:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/remove-trailing-separator/-/remove-trailing-separator-1.1.0.tgz#c24bce2a283adad5bc3f58e0d48249b92379d8ef"
 
-rename@^1.0.3:
+rename@^1.0.4:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/rename/-/rename-1.0.4.tgz#a0f25078fa4195e650f73050c7c12ccf689f430b"
   dependencies:
