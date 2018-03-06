@@ -1,6 +1,6 @@
 {
   "name": "maxmiltoncom",
-  "version": "2.0.0",
+  "version": "2.0.0-alpha.0",
   "private": true,
   "description": "The personal website of Max Milton",
   "repository": "https://github.com/MaxMilton/MaxMilton.com",
@@ -9,28 +9,31 @@
     "start": "npm run dev",
     "clean": "rm -rf dist && mkdir dist",
     "static": "cp static/* dist/",
-    "dev": "NODE_ENV=development rollup -c --watch",
+    "dev": "APP_RELEASE=$(git describe --always --dirty=\"-dev\") NODE_ENV=development rollup -c --watch",
     "prebuild": "npm run clean && npm run static",
-    "build": "NODE_ENV=production rollup -c",
-    "serve": "serve -n -o -l -s dist"
+    "build": "APP_RELEASE=$(git describe --always --dirty=\"-dev\") NODE_ENV=production rollup -c",
+    "serve": "serve -n -l -s -p 1234 dist",
+    "_make": "OVERRIDE_ENV=development npm run build && npm run serve",
+    "make": "OVERRIDE_ENV=development npm run build && testserver dist",
+    "__make": "npm run build && npm run serve"
   },
   "dependencies": {
     "@hyperapp/router": "^0.4.1",
-    "@wearegenki/ui": "^0.4.2",
+    "@wearegenki/ui": "0.5.0-alpha.f1eec7f5",
     "hyperapp": "^1.1.2"
   },
   "devDependencies": {
     "browser-sync": "^2.23.6",
     "connect-history-api-fallback": "^1.5.0",
-    "eslint": "^4.13.1",
-    "postcss": "^6.0.14",
-    "rollup": "^0.56.3",
+    "eslint": "^4.18.2",
+    "postcss": "^6.0.19",
+    "rollup": "^0.56.4",
     "rollup-plugin-buble": "^0.19.2",
-    "rollup-plugin-commonjs": "^8.3.0",
+    "rollup-plugin-commonjs": "^9.0.0",
     "rollup-plugin-node-resolve": "^3.0.3",
-    "rollup-plugin-postcss": "^1.3.1",
+    "rollup-plugin-postcss": "^1.3.3",
     "rollup-plugin-uglify": "^3.0.0",
-    "stylelint": "^8.4.0"
+    "stylelint": "^9.1.1"
   },
   "engines": {
     "node": ">= 9.6.0"
