@@ -1,0 +1,33 @@
+{
+  "compilerOptions": {
+    // "target": "esnext",
+    // "module": "esnext",
+    "target": "es5",
+    "module": "es2015",
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "allowJs": true,
+    "checkJs": true,
+
+    "jsx": "react",
+    "jsxFactory": "h",
+
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+
+    "baseUrl": "."
+  },
+  "exclude": [
+    ".vscode",
+    "content",
+    "dist",
+    "node_modules"
+  ],
+  "typeAcquisition": {
+    "enable": true
+  }
+}

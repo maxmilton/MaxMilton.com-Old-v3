@@ -7,7 +7,6 @@ package-lock.json*
 .stylelintcache
 .cache
 
-
 # Hugo
 content/drafts/
 public

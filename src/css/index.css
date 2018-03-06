@@ -1,0 +1,12 @@
+@import "@wearegenki/css/src/_variables-colour";
+@import "@wearegenki/css/src/_variables";
+@import "./_variables";
+@import "@wearegenki/css/src";
+/* TODO: Remove if not used */
+@import "@wearegenki/vue-directive-view";
+
+/* ViewHomepage */
+
+.logo {
+  font-size: 1.3rem;
+}
