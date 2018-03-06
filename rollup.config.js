@@ -24,8 +24,8 @@ const uglifyOpts = {
   mangle: {
     properties: {
       // Bad patterns: children, pathname, previous
-      // ?? nodeName
-      regex: /^(__.*|state|actions|attributes|isExact|exact|subscribe|detail|params|render|oncreate|onupdate|onremove|ondestroy)$/,
+      // Suspect: nodeName
+      regex: /^(__.*|state|actions|attributes|isExact|exact|subscribe|detail|params|render|oncreate|onupdate|onremove|ondestroy|nodeName)$/,
       // debug: 'XX',
     },
   },
@@ -38,7 +38,6 @@ const uglifyOpts = {
   warnings: !!process.env.DEBUG,
 };
 
-// FIXME: Implement hot reloading / change injection: https://browsersync.io/docs/options
 function browsersync() {
   if (!bs.active) {
     bs.init({
@@ -87,6 +86,10 @@ export default {
 
     // PRODUCTION
     isProduction && uglify(uglifyOpts),
+    // TODO: Asset cache invalidation
+    // TODO: Service worker & other nice PWA features
+    //  ↳ https://github.com/GoogleChrome/workbox
+    //  ↳ https://developers.google.com/web/tools/workbox/
     // TODO: Add purgecss
     // TODO: Add clean-css
     // TODO: Add react-snap (as a package.json script NOT here)
@@ -95,3 +98,6 @@ export default {
     !isProduction && browsersync(),
   ],
 };
+
+// TODO: Custom rollup.watch setup (?)
+//  ↳ https://rollupjs.org/guide/en#rollup-watch

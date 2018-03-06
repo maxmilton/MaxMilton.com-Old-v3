@@ -6,6 +6,16 @@ import ViewAbout from './views/ViewAbout';
 import ViewError from './views/ViewError';
 
 // TODO: Figure out how to do dynamic imports/routes (on both rollup and hyperapp sides)
+//  ↳ It's not a thing yet: https://github.com/hyperapp/hyperapp/issues/533
+//  ↳ OR at least add in the ability to dynamically load content from JSON
+//    ↳ Work out the best logic for knowing which JSON file to fetch for which view
+//    ↳ Consider using hugo to generate the JSON
+//    ↳ Also need to figure out the best way to render the JSON
+//      ↳ Probably just use a JSX template + JSON.parse for objects
+//        ↳ Is there anything special that needs to happen for links or state/actions or child components?
+//      ↳ Might be dangerous injecting HTML; needs XSS mitigation
+//        ↳ Just loading from a trusted source might be enough
+
 // const ViewAbout = () => import('./views/ViewAbout');
 // const ViewError = () => import('./views/ViewError');
 
