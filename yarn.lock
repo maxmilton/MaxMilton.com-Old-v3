@@ -98,7 +98,7 @@
     lodash "^4.2.0"
     to-fast-properties "^2.0.0"
 
-"@hyperapp/router@^0.4.1":
+"@hyperapp/router@0.4.1":
   version "0.4.1"
   resolved "https://registry.yarnpkg.com/@hyperapp/router/-/router-0.4.1.tgz#f2c697c40565496bea6dbd1265822766b41e021b"
 
@@ -731,7 +731,7 @@ browser-sync-ui@v1.0.1:
     socket.io-client "2.0.4"
     stream-throttle "^0.1.3"
 
-browser-sync@^2.23.6:
+browser-sync@2.23.6:
   version "2.23.6"
   resolved "https://registry.yarnpkg.com/browser-sync/-/browser-sync-2.23.6.tgz#ed0721c92e5b98c71b7bf839b39092ac9f220650"
   dependencies:
@@ -1070,7 +1070,7 @@ concat-with-sourcemaps@^1.0.5:
   dependencies:
     source-map "^0.6.1"
 
-connect-history-api-fallback@^1.1.0, connect-history-api-fallback@^1.5.0:
+connect-history-api-fallback@1.5.0, connect-history-api-fallback@^1.1.0, connect-history-api-fallback@^1.5.0:
   version "1.5.0"
   resolved "https://registry.yarnpkg.com/connect-history-api-fallback/-/connect-history-api-fallback-1.5.0.tgz#b06873934bc5e344fef611a196a6faae0aee015a"
 
@@ -1640,7 +1640,7 @@ eslint-visitor-keys@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/eslint-visitor-keys/-/eslint-visitor-keys-1.0.0.tgz#3f3180fb2e291017716acb4c9d6d5b5c34a6a81d"
 
-eslint@^4.18.2:
+eslint@4.18.2:
   version "4.18.2"
   resolved "https://registry.yarnpkg.com/eslint/-/eslint-4.18.2.tgz#0f81267ad1012e7d2051e186a9004cc2267b8d45"
   dependencies:
@@ -2210,7 +2210,7 @@ http-signature@~1.1.0:
     jsprim "^1.2.2"
     sshpk "^1.7.0"
 
-hyperapp@^1.1.2:
+hyperapp@1.1.2:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/hyperapp/-/hyperapp-1.1.2.tgz#68a0087d2b28df04439ca43646f8b989d4d1d079"
 
@@ -3722,6 +3722,14 @@ postcss@6.0.1:
     source-map "^0.5.6"
     supports-color "^3.2.3"
 
+postcss@6.0.19, postcss@^6.0.0, postcss@^6.0.1, postcss@^6.0.11, postcss@^6.0.13, postcss@^6.0.14, postcss@^6.0.16, postcss@^6.0.18, postcss@^6.0.19, postcss@^6.0.6, postcss@^6.0.8, postcss@^6.0.9:
+  version "6.0.19"
+  resolved "https://registry.yarnpkg.com/postcss/-/postcss-6.0.19.tgz#76a78386f670b9d9494a655bf23ac012effd1555"
+  dependencies:
+    chalk "^2.3.1"
+    source-map "^0.6.1"
+    supports-color "^5.2.0"
+
 postcss@^5.0.10, postcss@^5.0.11, postcss@^5.0.12, postcss@^5.0.13, postcss@^5.0.14, postcss@^5.0.16, postcss@^5.0.2, postcss@^5.0.4, postcss@^5.0.5, postcss@^5.0.8, postcss@^5.2.16, postcss@^5.2.5:
   version "5.2.18"
   resolved "https://registry.yarnpkg.com/postcss/-/postcss-5.2.18.tgz#badfa1497d46244f6390f58b319830d9107853c5"
@@ -3730,14 +3738,6 @@ postcss@^5.0.10, postcss@^5.0.11, postcss@^5.0.12, postcss@^5.0.13, postcss@^5.0
     js-base64 "^2.1.9"
     source-map "^0.5.6"
     supports-color "^3.2.3"
-
-postcss@^6.0.0, postcss@^6.0.1, postcss@^6.0.11, postcss@^6.0.13, postcss@^6.0.14, postcss@^6.0.16, postcss@^6.0.18, postcss@^6.0.19, postcss@^6.0.6, postcss@^6.0.8, postcss@^6.0.9:
-  version "6.0.19"
-  resolved "https://registry.yarnpkg.com/postcss/-/postcss-6.0.19.tgz#76a78386f670b9d9494a655bf23ac012effd1555"
-  dependencies:
-    chalk "^2.3.1"
-    source-map "^0.6.1"
-    supports-color "^5.2.0"
 
 prelude-ls@~1.1.2:
   version "1.1.2"
@@ -4131,14 +4131,14 @@ rimraf@2, rimraf@^2.2.8, rimraf@^2.5.1, rimraf@^2.6.1, rimraf@^2.6.2:
   dependencies:
     glob "^7.0.5"
 
-rollup-plugin-buble@^0.19.2:
+rollup-plugin-buble@0.19.2:
   version "0.19.2"
   resolved "https://registry.yarnpkg.com/rollup-plugin-buble/-/rollup-plugin-buble-0.19.2.tgz#c0590c7d3d475b5ed59f129764ec93710cc6e8dd"
   dependencies:
     buble "^0.19.2"
     rollup-pluginutils "^2.0.1"
 
-rollup-plugin-commonjs@^9.0.0:
+rollup-plugin-commonjs@9.0.0:
   version "9.0.0"
   resolved "https://registry.yarnpkg.com/rollup-plugin-commonjs/-/rollup-plugin-commonjs-9.0.0.tgz#9118e9041b67cdd2a6d8c59dda6349556dce3d0c"
   dependencies:
@@ -4147,7 +4147,7 @@ rollup-plugin-commonjs@^9.0.0:
     resolve "^1.5.0"
     rollup-pluginutils "^2.0.1"
 
-rollup-plugin-node-resolve@^3.0.3:
+rollup-plugin-node-resolve@3.0.3:
   version "3.0.3"
   resolved "https://registry.yarnpkg.com/rollup-plugin-node-resolve/-/rollup-plugin-node-resolve-3.0.3.tgz#8f57b253edd00e5b0ad0aed7b7e9cf5982e98fa4"
   dependencies:
@@ -4155,7 +4155,7 @@ rollup-plugin-node-resolve@^3.0.3:
     is-module "^1.0.0"
     resolve "^1.1.6"
 
-rollup-plugin-postcss@^1.3.3:
+rollup-plugin-postcss@1.3.3:
   version "1.3.3"
   resolved "https://registry.yarnpkg.com/rollup-plugin-postcss/-/rollup-plugin-postcss-1.3.3.tgz#16f91e5a6240fa302735ea8a0ff3e6dec13735fc"
   dependencies:
@@ -4173,7 +4173,7 @@ rollup-plugin-postcss@^1.3.3:
     rollup-pluginutils "^2.0.1"
     style-inject "^0.3.0"
 
-rollup-plugin-uglify@^3.0.0:
+rollup-plugin-uglify@3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/rollup-plugin-uglify/-/rollup-plugin-uglify-3.0.0.tgz#a34eca24617709c6bf1778e9653baafa06099b86"
   dependencies:
@@ -4186,7 +4186,7 @@ rollup-pluginutils@^2.0.1:
     estree-walker "^0.3.0"
     micromatch "^2.3.11"
 
-rollup@^0.56.4:
+rollup@0.56.4:
   version "0.56.4"
   resolved "https://registry.yarnpkg.com/rollup/-/rollup-0.56.4.tgz#84c3d08b37bd63189c4517d2faad405412ebb8fc"
 
@@ -4527,7 +4527,7 @@ stylelint-order@^0.8.1:
     postcss "^6.0.14"
     postcss-sorting "^3.1.0"
 
-stylelint@^9.1.1:
+stylelint@9.1.1:
   version "9.1.1"
   resolved "https://registry.yarnpkg.com/stylelint/-/stylelint-9.1.1.tgz#bfabb7eb8ea6251a4732f4b2a0468963a30d3da9"
   dependencies:
