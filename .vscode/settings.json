@@ -1,0 +1,22 @@
+{
+  "cSpell.language": "en-GB",
+  "cSpell.enabledLanguageIds": [
+    "html",
+    "javascript",
+    "json",
+    "markdown",
+    "marko",
+    "plaintext",
+    "postcss",
+    "text",
+  ],
+  "cSpell.words": [
+    "browserslist",
+    "compat",
+    "marko",
+    "maxmiltoncom",
+    "mixins",
+    "mqpacker",
+    "uglifyjs"
+  ]
+}

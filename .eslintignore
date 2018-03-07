@@ -1,0 +1,4 @@
+/dist/
+/*.js
+*.marko.js
+/test/unit/coverage/
