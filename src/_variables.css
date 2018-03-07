@@ -1,4 +1,0 @@
-:root {
-  --container-width-max: 60rem; /* needed because of --font-size-fluid-enabled */
-  --font-size-fluid-enabled: true;
-}
