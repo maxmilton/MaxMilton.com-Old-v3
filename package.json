@@ -19,7 +19,7 @@
   },
   "dependencies": {
     "@hyperapp/router": "0.4.1",
-    "@wearegenki/ui": "0.5.0-nightly.8dc8f30",
+    "@wearegenki/ui": "0.5.0",
     "hyperapp": "1.1.2"
   },
   "devDependencies": {
