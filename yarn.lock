@@ -3060,9 +3060,9 @@ http-signature@~1.1.0:
     jsprim "^1.2.2"
     sshpk "^1.7.0"
 
-hyperapp@1.2.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/hyperapp/-/hyperapp-1.2.0.tgz#021dc2fdb2d5c068e495de3365b639f189df82ae"
+hyperapp@1.1.2:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/hyperapp/-/hyperapp-1.1.2.tgz#68a0087d2b28df04439ca43646f8b989d4d1d079"
 
 iconv-lite@^0.4.17:
   version "0.4.19"
@@ -5302,9 +5302,9 @@ rollup-pluginutils@^2.0.1:
     estree-walker "^0.3.0"
     micromatch "^2.3.11"
 
-rollup@0.57.0:
-  version "0.57.0"
-  resolved "https://registry.yarnpkg.com/rollup/-/rollup-0.57.0.tgz#0a57884477175592efe0c8bfc408ea12aa4c0f21"
+rollup@0.57.1:
+  version "0.57.1"
+  resolved "https://registry.yarnpkg.com/rollup/-/rollup-0.57.1.tgz#0bb28be6151d253f67cf4a00fea48fb823c74027"
   dependencies:
     "@types/acorn" "^4.0.3"
     acorn "^5.5.3"
