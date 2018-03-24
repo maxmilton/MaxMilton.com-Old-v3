@@ -20,7 +20,7 @@
     "autoprefixer": "8.2.0",
     "browser-sync": "2.23.6",
     "del": "3.0.0",
-    "eslint": "4.19.0",
+    "eslint": "4.19.1",
     "eslint-config-airbnb-base": "12.1.0",
     "eslint-plugin-import": "2.9.0",
     "gulp": "3.9.1",
