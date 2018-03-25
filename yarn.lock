@@ -693,9 +693,9 @@
     stylelint-config-standard "^18.2.0"
     stylelint-order "^0.8.1"
 
-"@wearegenki/test@0.6.2":
-  version "0.6.2"
-  resolved "https://registry.yarnpkg.com/@wearegenki/test/-/test-0.6.2.tgz#4be669936c7ba9729a09e761272b6f296dabef22"
+"@wearegenki/test@0.7.0":
+  version "0.7.0"
+  resolved "https://registry.yarnpkg.com/@wearegenki/test/-/test-0.7.0.tgz#3f88824747b0a6fee0f539a0e8728f93f2766bc8"
   dependencies:
     "@babel/core" "^7.0.0-beta.42"
     "@babel/plugin-transform-modules-commonjs" "^7.0.0-beta.42"
