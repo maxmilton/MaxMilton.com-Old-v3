@@ -6049,7 +6049,7 @@ punycode@^2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/punycode/-/punycode-2.1.0.tgz#5f863edc89b96db09074bad7947bf09056ca4e7d"
 
-puppeteer@1.2.0, puppeteer@^1.0.0, puppeteer@^1.2.0:
+puppeteer@1.2.0, puppeteer@^1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/puppeteer/-/puppeteer-1.2.0.tgz#6a8a1c618af073dfcf6fc7c7e3c12e54129ffa98"
   dependencies:
@@ -6127,9 +6127,9 @@ rc@^1.1.7:
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
 
-react-snap@1.11.5:
-  version "1.11.5"
-  resolved "https://registry.yarnpkg.com/react-snap/-/react-snap-1.11.5.tgz#a01325c495009c4f86540e771cff45bf55da5aa4"
+react-snap@1.12.0:
+  version "1.12.0"
+  resolved "https://registry.yarnpkg.com/react-snap/-/react-snap-1.12.0.tgz#12dc943b9628df5f65e194c20e86fafe042f2086"
   dependencies:
     clean-css "^4.1.9"
     express "^4.16.1"
@@ -6138,7 +6138,7 @@ react-snap@1.11.5:
     html-minifier "^3.5.5"
     minimalcss "^0.7.3"
     mkdirp "^0.5.1"
-    puppeteer "^1.0.0"
+    puppeteer "^1.2.0"
     serve-static "^1.13.1"
     sourcemapped-stacktrace-node "^2.1.6"
 
