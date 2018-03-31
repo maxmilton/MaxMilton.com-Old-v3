@@ -648,9 +648,9 @@
     "@types/events" "*"
     "@types/node" "*"
 
-"@wearegenki/css@0.7.0":
-  version "0.7.0"
-  resolved "https://registry.yarnpkg.com/@wearegenki/css/-/css-0.7.0.tgz#690f162ef6029f5622250ed5dcc9501e608693e0"
+"@wearegenki/css@0.8.0":
+  version "0.8.0"
+  resolved "https://registry.yarnpkg.com/@wearegenki/css/-/css-0.8.0.tgz#04496a962ca1b66696ab0dad0b47dedff3aece98"
 
 "@wearegenki/eslint-config@^0.7.0":
   version "0.7.0"
