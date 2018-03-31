@@ -31,7 +31,7 @@
   },
   "devDependencies": {
     "@wearegenki/test": "0.7.0",
-    "@wearegenki/ui": "0.7.0",
+    "@wearegenki/ui": "0.8.0",
     "browser-sync": "2.23.6",
     "codecov": "3.0.0",
     "connect-history-api-fallback": "1.5.0",
