@@ -26,7 +26,7 @@
   },
   "dependencies": {
     "@hyperapp/router": "0.5.1",
-    "@wearegenki/css": "0.8.0",
+    "@wearegenki/css": "0.9.0",
     "hyperapp": "1.2.5"
   },
   "devDependencies": {
