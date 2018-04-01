@@ -6347,12 +6347,12 @@ puppeteer@1.2.0, puppeteer@^1.2.0:
     rimraf "^2.6.1"
     ws "^3.0.0"
 
-purgecss@^0.20.0:
-  version "0.20.1"
-  resolved "https://registry.yarnpkg.com/purgecss/-/purgecss-0.20.1.tgz#179f637a0785239e2a67157d191fba9179ea16a4"
+purgecss@^0.21.0:
+  version "0.21.0"
+  resolved "https://registry.yarnpkg.com/purgecss/-/purgecss-0.21.0.tgz#64e62668ef11c9bc03d233843ad7006e1dfe578d"
   dependencies:
     glob "^7.1.2"
-    postcss "^6.0.19"
+    postcss "^6.0.20"
     postcss-selector-parser "^3.1.1"
     yargs "^11.1.0"
 
@@ -6919,11 +6919,11 @@ rollup-plugin-postcss@1.4.1:
     rollup-pluginutils "^2.0.1"
     style-inject "^0.3.0"
 
-rollup-plugin-purgecss@0.20.0:
-  version "0.20.0"
-  resolved "https://registry.yarnpkg.com/rollup-plugin-purgecss/-/rollup-plugin-purgecss-0.20.0.tgz#1e9dc299881462905318224f51f50babe2e347e3"
+rollup-plugin-purgecss@0.21.0:
+  version "0.21.0"
+  resolved "https://registry.yarnpkg.com/rollup-plugin-purgecss/-/rollup-plugin-purgecss-0.21.0.tgz#5ce40ff87bc5c80633376ce0e1a00f93fec3a1a4"
   dependencies:
-    purgecss "^0.20.0"
+    purgecss "^0.21.0"
     rollup-pluginutils "^2.0.1"
 
 rollup-plugin-uglify@3.0.0:
