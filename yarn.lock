@@ -662,21 +662,17 @@
   dependencies:
     lodash "^4.17.4"
 
-"@wearegenki/css@0.9.0":
+"@wearegenki/css@0.9.0", "@wearegenki/css@^0.9.0":
   version "0.9.0"
   resolved "https://registry.yarnpkg.com/@wearegenki/css/-/css-0.9.0.tgz#aaa047086ada08816260683e819de0194a8f103a"
 
-"@wearegenki/css@^0.8.0":
-  version "0.8.0"
-  resolved "https://registry.yarnpkg.com/@wearegenki/css/-/css-0.8.0.tgz#04496a962ca1b66696ab0dad0b47dedff3aece98"
-
-"@wearegenki/dev@^0.8.0":
-  version "0.8.0"
-  resolved "https://registry.yarnpkg.com/@wearegenki/dev/-/dev-0.8.0.tgz#a27348b21cc2337a84f50874e6b245076778695a"
+"@wearegenki/dev@^0.9.0":
+  version "0.9.0"
+  resolved "https://registry.yarnpkg.com/@wearegenki/dev/-/dev-0.9.0.tgz#dd7e5dfa9df1dcc680d384d9f0ab8f372713cef4"
   dependencies:
     "@wearegenki/eslint-config" "^0.7.0"
     "@wearegenki/postcss-config" "^0.7.0"
-    "@wearegenki/stylelint-config" "^0.7.0"
+    "@wearegenki/stylelint-config" "^0.9.0"
 
 "@wearegenki/eslint-config@^0.7.0":
   version "0.7.0"
@@ -694,11 +690,11 @@
   version "0.5.1"
   resolved "https://registry.yarnpkg.com/@wearegenki/icons/-/icons-0.5.1.tgz#0899cd32da1813bb6a0af3400f6006b7a2202eae"
 
-"@wearegenki/marko-modal@^0.8.0":
-  version "0.8.0"
-  resolved "https://registry.yarnpkg.com/@wearegenki/marko-modal/-/marko-modal-0.8.0.tgz#dd998f04345f3b594390ff0b5ac8f4f26a5cd399"
+"@wearegenki/marko-modal@^0.9.0":
+  version "0.9.0"
+  resolved "https://registry.yarnpkg.com/@wearegenki/marko-modal/-/marko-modal-0.9.0.tgz#47b9dc14c5106f4411ce22715f7af3eac92d6a49"
   dependencies:
-    "@wearegenki/css" "^0.8.0"
+    "@wearegenki/css" "^0.9.0"
 
 "@wearegenki/postcss-config@^0.7.0":
   version "0.7.0"
@@ -722,9 +718,9 @@
     postcss-nested "^3.0.0"
     postcss-url "^7.3.1"
 
-"@wearegenki/stylelint-config@^0.7.0":
-  version "0.7.0"
-  resolved "https://registry.yarnpkg.com/@wearegenki/stylelint-config/-/stylelint-config-0.7.0.tgz#9ccd89d46a773b4797c648ff92dc465f8acf5b18"
+"@wearegenki/stylelint-config@^0.9.0":
+  version "0.9.0"
+  resolved "https://registry.yarnpkg.com/@wearegenki/stylelint-config/-/stylelint-config-0.9.0.tgz#b60a2a0e4a97bba91812a3dd7f24193b4a72c081"
   dependencies:
     stylelint-config-standard "^18.2.0"
     stylelint-order "^0.8.1"
@@ -765,118 +761,118 @@
     node-static "^0.7.10"
     portfinder "^1.0.13"
 
-"@wearegenki/ui-marko@^0.8.0":
-  version "0.8.0"
-  resolved "https://registry.yarnpkg.com/@wearegenki/ui-marko/-/ui-marko-0.8.0.tgz#58487c716b453f944daf2316372e55f8da86fa55"
+"@wearegenki/ui-marko@^0.9.0":
+  version "0.9.0"
+  resolved "https://registry.yarnpkg.com/@wearegenki/ui-marko/-/ui-marko-0.9.0.tgz#7f378033d5967ed8c35844a112bc0a4203efb414"
   dependencies:
-    "@wearegenki/css" "^0.8.0"
-    "@wearegenki/marko-modal" "^0.8.0"
+    "@wearegenki/css" "^0.9.0"
+    "@wearegenki/marko-modal" "^0.9.0"
 
-"@wearegenki/ui-vue@^0.8.0":
-  version "0.8.0"
-  resolved "https://registry.yarnpkg.com/@wearegenki/ui-vue/-/ui-vue-0.8.0.tgz#e98a60f5209f71ecb61dd788211baa01fd682d59"
+"@wearegenki/ui-vue@^0.9.0":
+  version "0.9.0"
+  resolved "https://registry.yarnpkg.com/@wearegenki/ui-vue/-/ui-vue-0.9.0.tgz#58d025fe876abe65e253b33fd88c3bf1567e77ac"
   dependencies:
-    "@wearegenki/css" "^0.8.0"
-    "@wearegenki/vue-code-editor" "^0.8.0"
-    "@wearegenki/vue-debug-breakpoints" "^0.8.0"
-    "@wearegenki/vue-directive-tooltip" "^0.8.0"
+    "@wearegenki/css" "^0.9.0"
+    "@wearegenki/vue-code-editor" "^0.9.0"
+    "@wearegenki/vue-debug-breakpoints" "^0.9.0"
+    "@wearegenki/vue-directive-tooltip" "^0.9.0"
     "@wearegenki/vue-directive-view" "^0.7.0"
-    "@wearegenki/vue-dropdown" "^0.8.0"
-    "@wearegenki/vue-input-select" "^0.8.0"
-    "@wearegenki/vue-input-toggle" "^0.8.0"
-    "@wearegenki/vue-link-preloader" "^0.8.0"
-    "@wearegenki/vue-modal" "^0.8.0"
-    "@wearegenki/vue-navbar" "^0.8.0"
-    "@wearegenki/vue-tabs" "^0.8.0"
-    "@wearegenki/vue-toasts" "^0.8.0"
+    "@wearegenki/vue-dropdown" "^0.9.0"
+    "@wearegenki/vue-input-select" "^0.9.0"
+    "@wearegenki/vue-input-toggle" "^0.9.0"
+    "@wearegenki/vue-link-preloader" "^0.9.0"
+    "@wearegenki/vue-modal" "^0.9.0"
+    "@wearegenki/vue-navbar" "^0.9.0"
+    "@wearegenki/vue-tabs" "^0.9.0"
+    "@wearegenki/vue-toasts" "^0.9.0"
 
-"@wearegenki/ui@0.8.0":
-  version "0.8.0"
-  resolved "https://registry.yarnpkg.com/@wearegenki/ui/-/ui-0.8.0.tgz#a5687e1ffd1c9b77032cb126f7de92de24414ae3"
+"@wearegenki/ui@0.9.0":
+  version "0.9.0"
+  resolved "https://registry.yarnpkg.com/@wearegenki/ui/-/ui-0.9.0.tgz#808392464356ebb7c4c8fd9d7915f5dc70a099ef"
   dependencies:
-    "@wearegenki/dev" "^0.8.0"
+    "@wearegenki/dev" "^0.9.0"
     "@wearegenki/test" "^0.8.0"
     "@wearegenki/test-marko" "^0.7.0"
     "@wearegenki/test-vue" "^0.8.0"
-    "@wearegenki/ui-marko" "^0.8.0"
-    "@wearegenki/ui-vue" "^0.8.0"
+    "@wearegenki/ui-marko" "^0.9.0"
+    "@wearegenki/ui-vue" "^0.9.0"
 
-"@wearegenki/vue-code-editor@^0.8.0":
-  version "0.8.0"
-  resolved "https://registry.yarnpkg.com/@wearegenki/vue-code-editor/-/vue-code-editor-0.8.0.tgz#4cbe0034c0a6f1a1a6ec4e364ea401103d9abeaf"
+"@wearegenki/vue-code-editor@^0.9.0":
+  version "0.9.0"
+  resolved "https://registry.yarnpkg.com/@wearegenki/vue-code-editor/-/vue-code-editor-0.9.0.tgz#1a9d4f0567845e9f3571c1dd1adc024dfa55756e"
   dependencies:
-    "@wearegenki/css" "^0.8.0"
+    "@wearegenki/css" "^0.9.0"
     codemirror "^5.36.0"
 
-"@wearegenki/vue-debug-breakpoints@^0.8.0":
-  version "0.8.0"
-  resolved "https://registry.yarnpkg.com/@wearegenki/vue-debug-breakpoints/-/vue-debug-breakpoints-0.8.0.tgz#451880945c1810bcece5b4d9c106ac88bbe3f993"
+"@wearegenki/vue-debug-breakpoints@^0.9.0":
+  version "0.9.0"
+  resolved "https://registry.yarnpkg.com/@wearegenki/vue-debug-breakpoints/-/vue-debug-breakpoints-0.9.0.tgz#6785bdfa3781bbf4799360ae8976d514db89134c"
   dependencies:
-    "@wearegenki/css" "^0.8.0"
+    "@wearegenki/css" "^0.9.0"
 
-"@wearegenki/vue-directive-tooltip@^0.8.0":
-  version "0.8.0"
-  resolved "https://registry.yarnpkg.com/@wearegenki/vue-directive-tooltip/-/vue-directive-tooltip-0.8.0.tgz#d1ddb1f9270d37cf34930f63f6ae747027d447f9"
+"@wearegenki/vue-directive-tooltip@^0.9.0":
+  version "0.9.0"
+  resolved "https://registry.yarnpkg.com/@wearegenki/vue-directive-tooltip/-/vue-directive-tooltip-0.9.0.tgz#efe504c778980a59d1db8b5b0842d21fa99aaf0d"
   dependencies:
-    "@wearegenki/css" "^0.8.0"
+    "@wearegenki/css" "^0.9.0"
 
 "@wearegenki/vue-directive-view@^0.7.0":
   version "0.7.0"
   resolved "https://registry.yarnpkg.com/@wearegenki/vue-directive-view/-/vue-directive-view-0.7.0.tgz#8a63d6bcbc2e34b5c6b0f7de6ff1878c65e3be8c"
 
-"@wearegenki/vue-dropdown@^0.8.0":
-  version "0.8.0"
-  resolved "https://registry.yarnpkg.com/@wearegenki/vue-dropdown/-/vue-dropdown-0.8.0.tgz#93323bae6d642716f5922e44e6568e9843313977"
+"@wearegenki/vue-dropdown@^0.9.0":
+  version "0.9.0"
+  resolved "https://registry.yarnpkg.com/@wearegenki/vue-dropdown/-/vue-dropdown-0.9.0.tgz#b892416f24824cb849e2d021cd1bfdb52816be56"
   dependencies:
-    "@wearegenki/css" "^0.8.0"
+    "@wearegenki/css" "^0.9.0"
     "@wearegenki/icons" "^0.5.1"
 
-"@wearegenki/vue-input-select@^0.8.0":
-  version "0.8.0"
-  resolved "https://registry.yarnpkg.com/@wearegenki/vue-input-select/-/vue-input-select-0.8.0.tgz#a04e656f80adfd51b3300208f69a5b1d3fa415c2"
+"@wearegenki/vue-input-select@^0.9.0":
+  version "0.9.0"
+  resolved "https://registry.yarnpkg.com/@wearegenki/vue-input-select/-/vue-input-select-0.9.0.tgz#ea7e5858a60fe34ca7d4c8c44bc8f6ba1c86ada8"
   dependencies:
-    "@wearegenki/css" "^0.8.0"
+    "@wearegenki/css" "^0.9.0"
     "@wearegenki/vue-directive-view" "^0.7.0"
 
-"@wearegenki/vue-input-toggle@^0.8.0":
-  version "0.8.0"
-  resolved "https://registry.yarnpkg.com/@wearegenki/vue-input-toggle/-/vue-input-toggle-0.8.0.tgz#150585de99d9a93da39b4f7e23b929e457a52de2"
+"@wearegenki/vue-input-toggle@^0.9.0":
+  version "0.9.0"
+  resolved "https://registry.yarnpkg.com/@wearegenki/vue-input-toggle/-/vue-input-toggle-0.9.0.tgz#9a8f53bc33c42443fa521a96b19d4b81d3b195f3"
   dependencies:
-    "@wearegenki/css" "^0.8.0"
+    "@wearegenki/css" "^0.9.0"
     "@wearegenki/icons" "^0.5.1"
 
-"@wearegenki/vue-link-preloader@^0.8.0":
-  version "0.8.0"
-  resolved "https://registry.yarnpkg.com/@wearegenki/vue-link-preloader/-/vue-link-preloader-0.8.0.tgz#3931823b7a0062fbac8778c993678169ca1d47ce"
+"@wearegenki/vue-link-preloader@^0.9.0":
+  version "0.9.0"
+  resolved "https://registry.yarnpkg.com/@wearegenki/vue-link-preloader/-/vue-link-preloader-0.9.0.tgz#48c23ecc844bf39d527992e49a1ae9437d4d8fa8"
   dependencies:
-    "@wearegenki/css" "^0.8.0"
+    "@wearegenki/css" "^0.9.0"
     futurelink "^0.2.1"
 
-"@wearegenki/vue-modal@^0.8.0":
-  version "0.8.0"
-  resolved "https://registry.yarnpkg.com/@wearegenki/vue-modal/-/vue-modal-0.8.0.tgz#35458035802fe4b474b8bd15279cf3d49e27764a"
+"@wearegenki/vue-modal@^0.9.0":
+  version "0.9.0"
+  resolved "https://registry.yarnpkg.com/@wearegenki/vue-modal/-/vue-modal-0.9.0.tgz#8426a61d40a0acd2bb39c7ac47e3667bff67fd19"
   dependencies:
-    "@wearegenki/css" "^0.8.0"
+    "@wearegenki/css" "^0.9.0"
     "@wearegenki/icons" "^0.5.1"
 
-"@wearegenki/vue-navbar@^0.8.0":
-  version "0.8.0"
-  resolved "https://registry.yarnpkg.com/@wearegenki/vue-navbar/-/vue-navbar-0.8.0.tgz#f46321f652c75267f1edb565e5616295f58f9348"
+"@wearegenki/vue-navbar@^0.9.0":
+  version "0.9.0"
+  resolved "https://registry.yarnpkg.com/@wearegenki/vue-navbar/-/vue-navbar-0.9.0.tgz#cd45176e7b102934b6fab44dff7305826614f6c5"
   dependencies:
-    "@wearegenki/css" "^0.8.0"
+    "@wearegenki/css" "^0.9.0"
     "@wearegenki/icons" "^0.5.1"
 
-"@wearegenki/vue-tabs@^0.8.0":
-  version "0.8.0"
-  resolved "https://registry.yarnpkg.com/@wearegenki/vue-tabs/-/vue-tabs-0.8.0.tgz#a6c1599789874a30f8526c0e27a6721058d47f15"
+"@wearegenki/vue-tabs@^0.9.0":
+  version "0.9.0"
+  resolved "https://registry.yarnpkg.com/@wearegenki/vue-tabs/-/vue-tabs-0.9.0.tgz#00c67dcc0adb7ac345167fe3285acfff093e2dd8"
   dependencies:
-    "@wearegenki/css" "^0.8.0"
+    "@wearegenki/css" "^0.9.0"
 
-"@wearegenki/vue-toasts@^0.8.0":
-  version "0.8.0"
-  resolved "https://registry.yarnpkg.com/@wearegenki/vue-toasts/-/vue-toasts-0.8.0.tgz#dbd03c8ac86508a261c86ed4fc71d85dd629cad4"
+"@wearegenki/vue-toasts@^0.9.0":
+  version "0.9.0"
+  resolved "https://registry.yarnpkg.com/@wearegenki/vue-toasts/-/vue-toasts-0.9.0.tgz#5dc0d87bc3da2db9142b51ce4057192120a86d0d"
   dependencies:
-    "@wearegenki/css" "^0.8.0"
+    "@wearegenki/css" "^0.9.0"
 
 abab@^1.0.4:
   version "1.0.4"
