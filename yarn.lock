@@ -796,11 +796,7 @@
   dependencies:
     lodash "^4.17.4"
 
-"@wearegenki/css@0.9.0":
-  version "0.9.0"
-  resolved "https://registry.yarnpkg.com/@wearegenki/css/-/css-0.9.0.tgz#aaa047086ada08816260683e819de0194a8f103a"
-
-"@wearegenki/css@^0.10.0":
+"@wearegenki/css@0.10.0", "@wearegenki/css@^0.10.0":
   version "0.10.0"
   resolved "https://registry.yarnpkg.com/@wearegenki/css/-/css-0.10.0.tgz#5c509d2b2aa536b933316fc02e568e82cb46c66b"
 
