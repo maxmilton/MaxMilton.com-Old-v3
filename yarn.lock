@@ -5305,7 +5305,7 @@ mimic-fn@^1.0.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/mimic-fn/-/mimic-fn-1.2.0.tgz#820c86a39334640e99516928bd03fca88057d022"
 
-minimalcss@^0.7.3:
+minimalcss@^0.7.5:
   version "0.7.5"
   resolved "https://registry.yarnpkg.com/minimalcss/-/minimalcss-0.7.5.tgz#e1c43c6ac148404835d5d36a08e1ed60094862bf"
   dependencies:
@@ -6579,16 +6579,16 @@ rc@^1.1.7:
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
 
-react-snap@1.12.0:
-  version "1.12.0"
-  resolved "https://registry.yarnpkg.com/react-snap/-/react-snap-1.12.0.tgz#12dc943b9628df5f65e194c20e86fafe042f2086"
+react-snap@1.12.2:
+  version "1.12.2"
+  resolved "https://registry.yarnpkg.com/react-snap/-/react-snap-1.12.2.tgz#a15f74cd2ea591f0b0a144ff5eda62317a372398"
   dependencies:
     clean-css "^4.1.9"
     express "^4.16.1"
     express-history-api-fallback "^2.2.1"
     highland "^2.11.1"
     html-minifier "^3.5.5"
-    minimalcss "^0.7.3"
+    minimalcss "^0.7.5"
     mkdirp "^0.5.1"
     puppeteer "^1.2.0"
     serve-static "^1.13.1"
