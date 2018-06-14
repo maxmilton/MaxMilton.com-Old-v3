@@ -2378,9 +2378,9 @@ graceful-fs@~1.2.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/graceful-readlink/-/graceful-readlink-1.0.1.tgz#4cafad76bc62f02fa039b2f94e9a3dd3a391a725"
 
-gulp-clean-css@3.9.3:
-  version "3.9.3"
-  resolved "https://registry.yarnpkg.com/gulp-clean-css/-/gulp-clean-css-3.9.3.tgz#47bf7ad62f44970f86e4ac4bdeed68ad904e65c5"
+gulp-clean-css@3.9.4:
+  version "3.9.4"
+  resolved "https://registry.yarnpkg.com/gulp-clean-css/-/gulp-clean-css-3.9.4.tgz#c6d3f8bb7a600fbe661962a72348a330954d343b"
   dependencies:
     clean-css "4.1.11"
     plugin-error "1.0.1"
