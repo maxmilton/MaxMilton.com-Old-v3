@@ -790,7 +790,11 @@
   dependencies:
     lodash "^4.17.4"
 
-"@wearegenki/css@0.10.0", "@wearegenki/css@^0.10.0":
+"@wearegenki/css@0.11.0":
+  version "0.11.0"
+  resolved "https://registry.yarnpkg.com/@wearegenki/css/-/css-0.11.0.tgz#5d88ec804969e2ba6168fbf85796b0067e1b8886"
+
+"@wearegenki/css@^0.10.0":
   version "0.10.0"
   resolved "https://registry.yarnpkg.com/@wearegenki/css/-/css-0.10.0.tgz#5c509d2b2aa536b933316fc02e568e82cb46c66b"
 
