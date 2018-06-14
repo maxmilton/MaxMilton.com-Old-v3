@@ -44,7 +44,7 @@
     "rollup-plugin-buble": "0.19.2",
     "rollup-plugin-commonjs": "9.1.0",
     "rollup-plugin-node-resolve": "3.3.0",
-    "rollup-plugin-postcss": "1.6.1",
+    "rollup-plugin-postcss": "1.6.2",
     "rollup-plugin-purgecss": "0.21.0",
     "rollup-plugin-uglify": "3.0.0",
     "stylelint": "9.2.0"
