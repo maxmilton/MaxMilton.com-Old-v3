@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/MaxMilton/MaxMilton.com",
   "devDependencies": {
-    "autoprefixer": "8.3.0",
+    "autoprefixer": "8.6.2",
     "browser-sync": "2.24.4",
     "del": "3.0.0",
     "eslint": "4.19.1",
