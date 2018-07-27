@@ -1,24 +1,13 @@
 {
   "name": "maxmilton.com",
-  "private": true,
   "version": "3.0.0",
   "author": "Max Milton <max@wearegenki.com>",
   "scripts": {
     "dev": "yarn hugo server --bind=0.0.0.0 --buildDrafts --templateMetrics --templateMetricsHints",
     "build": "yarn hugo",
     "deploy": "./deploy.sh",
-    "predeploy": "yarn lint",
     "build:hugo-bin": "docker build -t local/hugo ./hugo",
-    "hugo": "docker run -ti --rm -u \"$(id -u):$(id -g)\" -v \"$PWD\":/data -p 1313:1313 local/hugo",
-    "lint": "yarn lint:css && yarn lint:js",
-    "lint:css": "stylelint **/*.{html,css} --cache",
-    "lint:js": "eslint --ignore-path .gitignore --ext js,html .",
-    "test": "echo 'TODO: Write tests'; exit 1"
+    "hugo": "docker run -ti --rm -u \"$(id -u):$(id -g)\" -v \"$PWD\":/data -p 1313:1313 local/hugo"
   },
-  "devDependencies": {
-    "@minna-ui/eslint-config": "0.9.0",
-    "@minna-ui/stylelint-config": "0.9.0",
-    "eslint": "5.2.0",
-    "stylelint": "9.4.0"
-  }
+  "private": true
 }

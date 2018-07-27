@@ -1,13 +1,8 @@
-<!-- markdownlint-disable first-line-h1 -->
-
-[![Build status](https://img.shields.io/travis/MaxMilton/MaxMilton.com.svg)](https://travis-ci.org/MaxMilton/MaxMilton.com)
-[![Licence](https://img.shields.io/github/license/MaxMilton/MaxMilton.com.svg)](https://github.com/MaxMilton/MaxMilton.com/blob/master/LICENCE)
-
 # MaxMilton.com
 
 Source code for the website <https://maxmilton.com>.
 
-_NOTE: The site theme is in a seperate repo: <https://github.com/MaxMilton/hugo-theme-mm>._
+_NOTE: The site theme is in a separate repo: <https://github.com/MaxMilton/hugo-theme-mm>._
 
 ## Overview
 

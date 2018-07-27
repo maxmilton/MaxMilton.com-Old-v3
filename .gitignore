@@ -1,6 +1,6 @@
 # Hugo
-content/drafts/
-public/
+/content/drafts/
+/public/
 
 # Node
 node_modules/
