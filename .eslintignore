@@ -1,4 +1,3 @@
-/dist/
-/*.js
-*.marko.js
+/node_modules/
+/public/
 /test/unit/coverage/

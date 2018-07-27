@@ -1,0 +1,9 @@
+baseURL = "https://maxmilton.com/"
+languageCode = "en-us"
+title = "Max Milton"
+theme = "mm"
+
+# Settings
+disableHugoGeneratorInject = true
+# enableEmoji = true # https://www.webpagefx.com/tools/emoji-cheat-sheet/
+# hasCJKLanguage = true

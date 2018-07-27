@@ -1,0 +1,3 @@
+[submodule "themes/mm"]
+	path = themes/mm
+	url = git@github.com:MaxMilton/hugo-theme-mm.git

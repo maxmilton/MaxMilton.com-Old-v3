@@ -1,12 +1,9 @@
+# Hugo
+content/drafts/
+public/
+
 # Node
 node_modules/
-dist/
-test/unit/coverage/
 package-lock.json*
 *.log*
 .stylelintcache
-.cache
-
-# Hugo
-content/drafts/
-public

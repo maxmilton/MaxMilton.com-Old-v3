@@ -1,33 +1,58 @@
+<!-- markdownlint-disable first-line-h1 -->
+
+[![Build status](https://img.shields.io/travis/MaxMilton/MaxMilton.com.svg)](https://travis-ci.org/MaxMilton/MaxMilton.com)
+[![Licence](https://img.shields.io/github/license/MaxMilton/MaxMilton.com.svg)](https://github.com/MaxMilton/MaxMilton.com/blob/master/LICENCE)
+
 # MaxMilton.com
 
-Source for the website of Max Milton — <https://maxmilton.com>.
+Source code for the website <https://maxmilton.com>.
+
+_NOTE: The site theme is in a seperate repo: <https://github.com/MaxMilton/hugo-theme-mm>._
 
 ## Overview
 
-TODO
+TODO: Write me.
 
-## Usage
+### Usage
 
-TODO
+#### Install
 
-## Writing style guide
+1. Install [yarn](https://yarnpkg.com/lang/en/docs/install/) and [docker](https://docs.docker.com/install/) if you haven't already.
+1. Install NPM dependencies:
+    ```sh
+    yarn install
+    ```
+1. Build the `hugo` bin docker image:
+    ```sh
+    yarn run build:hugo-bin
+    ```
+
+#### Development
+
+```sh
+yarn run dev
+```
+
+#### Production
+
+1. Run a production build:
+    ```sh
+    yarn run build
+    ```
+1. Edit the `deploy.sh` script to suit your deployment strategy.
+1. Run the deployment script:
+    ```sh
+    yarn run deploy
+    ```
+
+### Writing style guide
 
 See [content/styleguide.md](https://github.com/MaxMilton/MaxMilton.com/blob/master/content/styleguide.md).
 
-## Changelog
-
-See [CHANGELOG.md](https://github.com/MaxMilton/MaxMilton.com/blob/master/CHANGELOG.md).
-
 ## Licence
 
-Blog content licensed under the Creative Commons Attribution No Derivatives 4.0 ([CC-BY-ND-4.0](http://creativecommons.org/licenses/by-nd/4.0/legalcode)) licence. When quoting my posts, please link back to the original article.
-
-All code is licensed Apache-2.0, see [LICENCE](https://github.com/MaxMilton/MaxMilton.com/blob/master/LICENSE).
-
-## Author
-
-Proudly made by Max Milton &lt;<max@wearegenki.com>&gt;.
+`MaxMilton.com` is an MIT licensed open source project. See [LICENCE](https://github.com/MaxMilton/MaxMilton.com/blob/master/LICENCE).
 
 -----
 
-© 2018 [We Are Genki](https://wearegenki.com)
+© 2018 [Max Milton](https://maxmilton.com)

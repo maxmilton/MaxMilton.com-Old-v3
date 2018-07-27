@@ -2,7 +2,7 @@
   "extends": [
     "config:base"
   ],
-  "prHourlyLimit": 10,
+  "prHourlyLimit": 99,
   "baseBranches": [
     "master",
     "legacy-2017"

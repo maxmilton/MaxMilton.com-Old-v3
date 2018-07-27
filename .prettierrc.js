@@ -1,5 +1,7 @@
 // https://prettier.io/docs/en/options.html
 
+'use strict';
+
 module.exports = {
   semi: true,
   singleQuote: true,
