@@ -1,9 +1,2 @@
-# Hugo
 /content/drafts/
 /public/
-
-# Node
-node_modules/
-package-lock.json*
-*.log*
-.stylelintcache
