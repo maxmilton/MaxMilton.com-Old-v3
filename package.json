@@ -46,7 +46,7 @@
     "rollup-plugin-node-resolve": "3.3.0",
     "rollup-plugin-postcss": "1.6.2",
     "rollup-plugin-purgecss": "1.0.0",
-    "rollup-plugin-uglify": "4.0.0",
+    "rollup-plugin-uglify": "5.0.2",
     "stylelint": "9.2.0"
   },
   "engines": {
