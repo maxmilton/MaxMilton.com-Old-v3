@@ -37,7 +37,7 @@
     "connect-history-api-fallback": "1.5.0",
     "eslint": "4.19.1",
     "jest": "22.4.3",
-    "postcss": "6.0.21",
+    "postcss": "7.0.17",
     "puppeteer": "1.2.0",
     "react-snap": "1.11.5",
     "rollup": "0.57.1",
