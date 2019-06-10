@@ -2687,13 +2687,9 @@ estraverse@^4.0.0, estraverse@^4.1.0, estraverse@^4.1.1, estraverse@^4.2.0:
   version "4.2.0"
   resolved "https://registry.yarnpkg.com/estraverse/-/estraverse-4.2.0.tgz#0dee3fed31fcd469618ce7342099fc1afa0bdb13"
 
-estree-walker@^0.3.0:
-  version "0.3.1"
-  resolved "https://registry.yarnpkg.com/estree-walker/-/estree-walker-0.3.1.tgz#e6b1a51cf7292524e7237c312e5fe6660c1ce1aa"
-
-estree-walker@^0.5.1:
-  version "0.5.1"
-  resolved "https://registry.yarnpkg.com/estree-walker/-/estree-walker-0.5.1.tgz#64fc375053abc6f57d73e9bd2f004644ad3c5854"
+estree-walker@^0.6.0, estree-walker@^0.6.1:
+  version "0.6.1"
+  resolved "https://registry.yarnpkg.com/estree-walker/-/estree-walker-0.6.1.tgz#53049143f40c6eb918b23671d1fe3219f3a1b362"
 
 esutils@^2.0.2:
   version "2.0.2"
@@ -4694,6 +4690,12 @@ magic-string@^0.22.4:
   dependencies:
     vlq "^0.2.2"
 
+magic-string@^0.25.2:
+  version "0.25.2"
+  resolved "https://registry.yarnpkg.com/magic-string/-/magic-string-0.25.2.tgz#139c3a729515ec55e96e69e82a11fe890a293ad9"
+  dependencies:
+    sourcemap-codec "^1.4.4"
+
 makeerror@1.0.x:
   version "1.0.11"
   resolved "https://registry.yarnpkg.com/makeerror/-/makeerror-1.0.11.tgz#e01a5c9109f2af79660e4e8b9587790184f5a96c"
@@ -5381,6 +5383,10 @@ path-key@^2.0.0:
 path-parse@^1.0.5:
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/path-parse/-/path-parse-1.0.5.tgz#3c1adf871ea9cd6c9431b6ea2bd74a0ff055c4c1"
+
+path-parse@^1.0.6:
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/path-parse/-/path-parse-1.0.6.tgz#d62dbb5679405d72c4737ec58600e9ddcf06d24c"
 
 path-to-regexp@0.1.7:
   version "0.1.7"
@@ -6543,11 +6549,11 @@ resolve@1.1.7:
   version "1.1.7"
   resolved "https://registry.yarnpkg.com/resolve/-/resolve-1.1.7.tgz#203114d82ad2c5ed9e8e0411b3932875e889e97b"
 
-resolve@^1.1.6, resolve@^1.1.7, resolve@^1.3.2, resolve@^1.5.0:
-  version "1.5.0"
-  resolved "https://registry.yarnpkg.com/resolve/-/resolve-1.5.0.tgz#1f09acce796c9a762579f31b2c1cc4c3cddf9f36"
+resolve@^1.1.6, resolve@^1.1.7, resolve@^1.10.0, resolve@^1.3.2, resolve@^1.5.0:
+  version "1.11.1"
+  resolved "https://registry.yarnpkg.com/resolve/-/resolve-1.11.1.tgz#ea10d8110376982fef578df8fc30b9ac30a07a3e"
   dependencies:
-    path-parse "^1.0.5"
+    path-parse "^1.0.6"
 
 resp-modifier@6.0.2:
   version "6.0.2"
@@ -6598,14 +6604,14 @@ rollup-plugin-buble@0.19.2:
     buble "^0.19.2"
     rollup-pluginutils "^2.0.1"
 
-rollup-plugin-commonjs@9.1.0:
-  version "9.1.0"
-  resolved "https://registry.yarnpkg.com/rollup-plugin-commonjs/-/rollup-plugin-commonjs-9.1.0.tgz#468341aab32499123ee9a04b22f51d9bf26fdd94"
+rollup-plugin-commonjs@9.3.4:
+  version "9.3.4"
+  resolved "https://registry.yarnpkg.com/rollup-plugin-commonjs/-/rollup-plugin-commonjs-9.3.4.tgz#2b3dddbbbded83d45c36ff101cdd29e924fd23bc"
   dependencies:
-    estree-walker "^0.5.1"
-    magic-string "^0.22.4"
-    resolve "^1.5.0"
-    rollup-pluginutils "^2.0.1"
+    estree-walker "^0.6.0"
+    magic-string "^0.25.2"
+    resolve "^1.10.0"
+    rollup-pluginutils "^2.6.0"
 
 rollup-plugin-node-resolve@3.3.0:
   version "3.3.0"
@@ -6647,12 +6653,11 @@ rollup-plugin-uglify@3.0.0:
   dependencies:
     uglify-es "^3.3.7"
 
-rollup-pluginutils@^2.0.1:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/rollup-pluginutils/-/rollup-pluginutils-2.0.1.tgz#7ec95b3573f6543a46a6461bd9a7c544525d0fc0"
+rollup-pluginutils@^2.0.1, rollup-pluginutils@^2.6.0:
+  version "2.8.1"
+  resolved "https://registry.yarnpkg.com/rollup-pluginutils/-/rollup-pluginutils-2.8.1.tgz#8fa6dd0697344938ef26c2c09d2488ce9e33ce97"
   dependencies:
-    estree-walker "^0.3.0"
-    micromatch "^2.3.11"
+    estree-walker "^0.6.1"
 
 rollup@0.57.1:
   version "0.57.1"
@@ -6987,6 +6992,10 @@ source-map@^0.6.0, source-map@^0.6.1, source-map@~0.6.1:
 sourcemap-codec@^1.4.1:
   version "1.4.1"
   resolved "https://registry.yarnpkg.com/sourcemap-codec/-/sourcemap-codec-1.4.1.tgz#c8fd92d91889e902a07aee392bdd2c5863958ba2"
+
+sourcemap-codec@^1.4.4:
+  version "1.4.4"
+  resolved "https://registry.yarnpkg.com/sourcemap-codec/-/sourcemap-codec-1.4.4.tgz#c63ea927c029dd6bd9a2b7fa03b3fec02ad56e9f"
 
 sourcemapped-stacktrace-node@^2.1.6:
   version "2.1.6"
