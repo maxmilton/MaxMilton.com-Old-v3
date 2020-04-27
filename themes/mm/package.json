@@ -35,7 +35,7 @@
     "gulp-sourcemaps": "2.6.4",
     "gulp-uncss": "1.0.6",
     "imagemin-mozjpeg": "8.0.0",
-    "postcss-flexbugs-fixes": "4.1.0"
+    "postcss-flexbugs-fixes": "4.2.1"
   },
   "engines": {
     "node": ">= 6.9.0",
