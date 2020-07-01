@@ -39,7 +39,7 @@
     "jest": "23.1.0",
     "postcss": "6.0.22",
     "puppeteer": "1.5.0",
-    "react-snap": "1.14.0",
+    "react-snap": "1.23.0",
     "rollup": "0.60.7",
     "rollup-plugin-buble": "0.19.4",
     "rollup-plugin-commonjs": "9.1.3",
