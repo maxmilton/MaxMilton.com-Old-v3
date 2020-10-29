@@ -22,7 +22,7 @@
     "del": "3.0.0",
     "eslint": "5.11.1",
     "eslint-config-airbnb-base": "13.1.0",
-    "eslint-plugin-import": "2.14.0",
+    "eslint-plugin-import": "2.22.1",
     "gulp": "3.9.1",
     "gulp-clean-css": "3.10.0",
     "gulp-htmlmin": "5.0.1",
