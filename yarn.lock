@@ -3835,9 +3835,10 @@ https-proxy-agent@^2.2.1:
     agent-base "^4.1.0"
     debug "^3.1.0"
 
-hyperapp@1.2.6:
-  version "1.2.6"
-  resolved "https://registry.yarnpkg.com/hyperapp/-/hyperapp-1.2.6.tgz#fa3b42dad88e50f962b9d9f922dfa7bef3c8ebc8"
+hyperapp@2.0.12:
+  version "2.0.12"
+  resolved "https://registry.yarnpkg.com/hyperapp/-/hyperapp-2.0.12.tgz#0198158bf1257a07b9249a07cf3feb9accc7c698"
+  integrity sha512-kDwTunVPE9Lw8HIt7K4vNwEz2xBKhRUBYh4fiXUcZPtFEP6Pfe41bsNbbIO9a5NbI2IeTOwfPrQpTQxQC493MA==
 
 iconv-lite@0.4.19:
   version "0.4.19"
